@@ -1,2 +1,14 @@
-// this version uses SASS variables
+// override Bootstrap variables
 @import "colors";
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+html,
+button,
+select,
+textarea {
+  font-family: "Roboto", sans-serif;
+}

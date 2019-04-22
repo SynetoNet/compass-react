@@ -7,8 +7,9 @@ module.exports = {
   pagePerSection: true,
   version: pkg.version,
   require: [
-    "./src/foundation/custom-bootstrap.scss",
-    "./src/foundation/styles.css",
+    // include base styles
+    "./src/foundation/styles.scss",
+    // include styleguide layout styles
     "./docs/styles.css"
     // "./node_modules/bootstrap/dist/css/bootstrap.css",
     // path.join(__dirname, "node_modules/bootstrap/dist/css/bootstrap.css")
