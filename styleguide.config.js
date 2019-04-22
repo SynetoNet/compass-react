@@ -11,8 +11,6 @@ module.exports = {
     "./src/foundation/styles.scss",
     // include styleguide layout styles
     "./docs/styles.css"
-    // "./node_modules/bootstrap/dist/css/bootstrap.css",
-    // path.join(__dirname, "node_modules/bootstrap/dist/css/bootstrap.css")
   ],
   sections: [
     {
@@ -32,20 +30,10 @@ module.exports = {
           name: "Spacing",
           content: "docs/Spacing.md"
         }
-        // {
-        //   name: "Configuration",
-        //   content: "docs/configuration.md"
-        // },
-        // {
-        //   name: "Live Demo",
-        //   external: true,
-        //   href: "http://example.com"
-        // }
       ]
     },
     {
       name: "UI Components",
-      // content: "docs/ui.md",
       components: "src/**/components*/**/*.jsx",
       exampleMode: "expand",
       usageMode: "expand",
