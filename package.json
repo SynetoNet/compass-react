@@ -1,0 +1,105 @@
+{
+  "name": "compass-react",
+  "version": "0.2.0",
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "scripts": {
+    "build": "run-s build:*",
+    "build:test": "npm run test",
+    "build:clean": "rm -rf lib",
+    "build:rollup": "rollup --config",
+    "build:styleguide": "npx styleguidist build",
+    "develop": "npx styleguidist server",
+    "format": "prettier --write",
+    "lint": "npx lint-staged",
+    "lint:css": "stylelint --fix",
+    "lint:js": "eslint --fix",
+    "lint:scss": "stylelint --fix --syntax scss",
+    "release:major": "npm run build && git add docs && git add lib && changelog --major && git add CHANGELOG.md && git commit -m 'Build major release' && npm version major",
+    "release:minor": "npm run build && git add docs && git add lib && changelog --minor && git add CHANGELOG.md && git commit -m 'Build minor release' && npm version minor",
+    "release:patch": "npm run build && git add docs && git add lib && changelog --patch && git add CHANGELOG.md && git commit -m 'Build patch release' && npm version patch",
+    "start": "npm-run-all build:rollup --parallel start:*",
+    "start:rollup": "rollup --config --sourcemap --watch",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.css": [
+      "npm run lint:css",
+      "npm run format",
+      "git add"
+    ],
+    "*.js": [
+      "npm run lint:js",
+      "npm run format",
+      "git add"
+    ],
+    "*.scss": [
+      "npm run lint:scss",
+      "npm run format",
+      "git add"
+    ],
+    "*.{json,md,yml}": [
+      "npm run format",
+      "git add"
+    ]
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "prop-types": "^15.6.2",
+    "reactstrap": "^7.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.4.7",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.7.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "generate-changelog": "^1.7.1",
+    "husky": "^1.3.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.7.1",
+    "lint-staged": "^8.1.3",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.14",
+    "prettier": "^1.16.4",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-styleguidist": "^9.0.4",
+    "react-test-renderer": "^16.8.6",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-postcss": "^2.0.3",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.3.0",
+    "webpack": "^4.29.6",
+    "webpack-blocks": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0"
+  }
+}

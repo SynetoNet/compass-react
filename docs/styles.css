@@ -1,0 +1,7 @@
+main p {
+  /*
+    increase font size for content paragraphs,
+    which are generated with markdown
+  */
+  font-size: 1.6rem !important;
+}
