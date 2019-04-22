@@ -11,7 +11,7 @@ module.exports = {
   version: pkg.version,
   require: [
     // include base styles
-    "./src/foundation/styles.scss",
+    "./src/base/styles.scss",
     // include styleguide layout styles
     "./docs/styles.css"
   ],

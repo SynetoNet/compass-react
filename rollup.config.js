@@ -31,7 +31,7 @@ export default [
   },
   // build base css separately
   {
-    input: "src/foundation/styles.scss",
+    input: "src/base/styles.scss",
     output: {
       file: "lib/styles.css",
       format: "esm"
