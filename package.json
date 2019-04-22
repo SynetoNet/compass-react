@@ -21,8 +21,6 @@
     "release:major": "npm run build && git add docs && git add lib && changelog --major && git add CHANGELOG.md && git commit -m 'Build major release' && npm version major",
     "release:minor": "npm run build && git add docs && git add lib && changelog --minor && git add CHANGELOG.md && git commit -m 'Build minor release' && npm version minor",
     "release:patch": "npm run build && git add docs && git add lib && changelog --patch && git add CHANGELOG.md && git commit -m 'Build patch release' && npm version patch",
-    "start": "npm-run-all build:rollup --parallel start:*",
-    "start:rollup": "rollup --config --sourcemap --watch",
     "test": "jest"
   },
   "lint-staged": {
