@@ -2,25 +2,16 @@
 
 React implementation of Syneto's Compass Design System.
 
-Based on this [starter kit](https://github.com/samuelmeuli/react-library-boilerplate).
-
-What's included:
-
-- Rollup and Babel for generating a bundle of your library in ES5
-- React Styleguidist and Webpack for developing/testing the UI components interactively
-- Prettier, ESLint, and Stylelint for code formatting/linting
-- Sass and Autoprefixer support for simple styling
-
-## How to use it?
+## Setup
 
 ```
-npm install [this package]
+npm install https://github.com/SynetoNet/compass-react.git
 ```
 
 Include styles in your main file:
 
 ```
-import "compass-react/src/foundation/styles.css"
+import "compass-react/lib/styles.css"
 ```
 
 Import and use components:
@@ -37,16 +28,16 @@ import { Button } from "compass-react"
 npm install
 ```
 
-2. Run the development server using React Styleguidist:
+2. Use `develop` branch (or a `feature/branch`, then merge to `develop`):
+
+```
+git checkout develop
+```
+
+3. Run the development server using React Styleguidist:
 
 ```
 npm run develop
-```
-
-3. Build components:
-
-```
-npm run build
 ```
 
 ### Commit messages
@@ -90,3 +81,51 @@ build(docs): add loading Button examples
 
 fix(Button): changed prop loading to isLoaded [breaking]
 ```
+
+## Release
+
+We use **Semantic Versions** for releases.
+
+```
+// merge into master
+git checkout master
+git pull develop
+```
+
+### Patch version
+
+A release that contains fixes, without breaking changes or new features:
+
+```
+npm run release:patch
+```
+
+### Minor version
+
+A release that contains at least one new feature, without breaking changes:
+
+```
+npm run release:minor
+```
+
+### Major version
+
+A release that contains at least one breaking change:
+
+```
+npm run release:major
+```
+
+## About this project
+
+Based on this [starter kit](https://github.com/samuelmeuli/react-library-boilerplate).
+
+What's included:
+
+- Rollup and Babel for generating a bundle of your library in ES5
+- React Styleguidist and Webpack for developing/testing the UI components interactively
+- Prettier, ESLint, and Stylelint for code formatting/linting
+- Sass and Autoprefixer support for simple styling
+- Jest for unit testing components
+- Changelog generator
+
