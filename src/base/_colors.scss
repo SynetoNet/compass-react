@@ -1,5 +1,46 @@
+/* BRAND */
 $brand: #d21d86;
-$accent: #5b69e1;
 
-$info: #1e96e6;
-$confirm: #00a865;
+/* ACCENT COLORS */
+$accent: #5b69e1;
+$accent-light-85: #ebf2ff;
+
+/* NEUTRAL COLORS */
+$neutral-100: #181c37;
+$neutral-90: #2e324b;
+$neutral-60: #70758b;
+$neutral-40: #9fa2b3;
+$neutral-12: #dde3f0;
+$neutral-6: #edf1f7;
+$neutral-3: #f5f8fa;
+$neutral-0: #fff;
+
+/* ADJUST COLORS */
+$neutral-90-vivid: #27335c;
+$accent-contrast: #4554d1;
+
+/* SEMANTIC COLORS */
+
+// info
+$semantic-info: #1e96e6;
+$semantic-info-dark-30: #1569a1;
+$semantic-info-light-60: #a5d5f5;
+$semantic-info-light-85: #ddeffb;
+
+// confirm
+$semantic-confirm: #00a865;
+$semantic-confirm-dark-30: #007547;
+$semantic-confirm-light-60: #99dcc1;
+$semantic-confirm-light-85: #d9f2e8;
+
+// warn
+$semantic-warn: #b88a00;
+$semantic-warn-dark-30: #806000;
+$semantic-warn-light-60: #e3d099;
+$semantic-warn-light-85: #f4eed9;
+
+// danger
+$semantic-danger: #e04c59;
+$semantic-danger-dark-30: #9c353e;
+$semantic-danger-light-60: #f3b7bd;
+$semantic-danger-light-85: #fae4e6;
