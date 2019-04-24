@@ -1,0 +1,103 @@
+@import "../../base/styles";
+// @import "../../base/variables";
+
+.badge {
+  height: 24px;
+  width: 96px;
+  display: inline-block;
+  padding: 0 0;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 3px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: $neutral-0;
+}
+.elastic {
+  padding: 0 12px;
+}
+.badge-success {
+  background-color: $semantic-confirm;
+  &.light-background {
+    background-color: $semantic-confirm-light-85;
+    color: $semantic-confirm-dark-30;
+  }
+  &.light-border {
+    background-color: $neutral-0;
+    border: 1px solid $semantic-confirm-light-60;
+    color: $semantic-confirm-dark-30;
+  }
+}
+.badge-danger {
+  background-color: $semantic-danger;
+  &.light-background {
+    background-color: $semantic-danger-light-85;
+    color: $semantic-danger-dark-30;
+  }
+  &.light-border {
+    background-color: $neutral-0;
+    border: 1px solid $semantic-danger-light-60;
+    color: $semantic-danger-dark-30;
+  }
+}
+.badge-primary {
+  background-color: $semantic-info;
+  &.light-background {
+    background-color: $semantic-info-light-85;
+    color: $semantic-info-dark-30;
+  }
+  &.light-border {
+    background-color: $neutral-0;
+    border: 1px solid $semantic-info-light-85;
+    color: $semantic-info-dark-30;
+  }
+}
+.badge-warning {
+  background-color: $semantic-warn;
+  &.light-background {
+    background-color: $semantic-warn-light-85;
+    color: $semantic-warn-dark-30;
+  }
+  &.light-border {
+    background-color: $neutral-0;
+    border: 1px solid $semantic-warn-light-60;
+    color: $semantic-warn-dark-30;
+  }
+}
+.badge-secondary {
+  background-color: $neutral-60;
+  &.light-background {
+    background-color: $neutral-12;
+    color: $neutral-90;
+  }
+  &.light-border {
+    background-color: $neutral-0;
+    border: 1px solid $neutral-12;
+    color: $neutral-40;
+  }
+}
+
+.elastic-width {
+  width: auto;
+  padding: 0 12px;
+}
+
+.width-32 {
+  width: $spacer * 8;
+}
+.width-64 {
+  width: $spacer * 16;
+}
+.width-96 {
+  width: $spacer * 24;
+}
+.width-128 {
+  width: $spacer * 32;
+}
+.width-160 {
+  width: $spacer * 40;
+}
