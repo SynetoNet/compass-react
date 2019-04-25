@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 
 import { Badge as ReactStrapBadge } from "reactstrap";
 
-// import styles from "./Button.module.scss";
-import "./Badge.module.scss";
+import "./Badge.scss";
 
 const Badge = ({
   lightBackground,
