@@ -90,6 +90,8 @@
     "react-test-renderer": "^16.8.6",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-postcss": "^2.0.3",
     "sass-loader": "^7.1.0",
     "stylelint": "^9.10.1",
