@@ -1,1 +1,1 @@
-export { default as Button } from "./components/Button.jsx";
+export { default as Badge } from "./components/Badge/Badge.jsx";
