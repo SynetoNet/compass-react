@@ -1,0 +1,41 @@
+@import "../../base/colors";
+
+.btn {
+  background: white;
+  color: $accent;
+  border-color: $accent;
+  border-radius: 3px;
+  text-align: center;
+
+  font-size: 1.2rem;
+}
+.btn-primary {
+  background: $accent;
+  color: white;
+  border-color: $accent;
+}
+.btn:active,
+.btn:focus,
+.btn:hover {
+  background: white;
+  color: $accent;
+  border-color: $accent;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  background: white;
+  color: $accent;
+  border-color: $accent;
+}
+
+.btn:disabled {
+  /* background-color: var(--color-accent); */
+  color: var(--color-neutral-40);
+  border-color: var(--color-neutral-40);
+}
+.btn:disabled {
+  background-color: var(--color-neutral-6);
+  border-color: var(--color-neutral-6);
+}

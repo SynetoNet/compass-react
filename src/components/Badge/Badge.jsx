@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Badge as ReactStrapBadge } from "reactstrap";
+import { Badge as ReactStrapBadge } from "react-bootstrap";
 
 // import styles from "./Button.module.scss";
 import "./Badge.module.scss";
@@ -23,12 +23,13 @@ const Badge = ({
     ${widthSize && !elasticWidth && modularWidth ? "width-" + widthSize : ""}
     `}
     {...props}
+    pill
   />
 );
 
 Badge.propTypes = {
   /** Color base that is inherited from Bootstrap */
-  color: PropTypes.string,
+  variant: PropTypes.string,
   /** Enables modular width */
   modularWidth: PropTypes.bool,
   /** Enables elastic width */
@@ -47,7 +48,7 @@ Badge.defaultProps = {
   modularWidth: false,
   elasticWidth: false,
   widthSize: 32,
-  color: "primary"
+  variant: "primary"
 };
 
 const modularWidthSizes = ["32px", "64px", "96px", "128px"];
