@@ -12,12 +12,28 @@ A badge is composed of:<br/>
 Label (regular text)<br/>
 Background (variant fill)<br/>
 
-### **variant variations**
+### **Default**
+
+---
+
+```jsx
+<Badge>Default Badge</Badge>
+```
+
+### **Color variations**
 
 ---
 
 ```jsx
 <h5>Strong Background</h5>
+<Badge variant="success" strong>Green</Badge>
+<Badge variant="danger" strong>Red</Badge>
+<Badge variant="warning" strong>Yellow</Badge>
+<Badge variant="primary" strong>Blue</Badge>
+<Badge variant="secondary" strong>Neutral</Badge>
+<br />
+<br />
+<h5>Light Background - Default</h5>
 <Badge variant="success">Green</Badge>
 <Badge variant="danger">Red</Badge>
 <Badge variant="warning">Yellow</Badge>
@@ -25,20 +41,12 @@ Background (variant fill)<br/>
 <Badge variant="secondary">Neutral</Badge>
 <br />
 <br />
-<h5>Light Background</h5>
-<Badge variant="success" lightBackground>Green</Badge>
-<Badge variant="danger" lightBackground>Red</Badge>
-<Badge variant="warning" lightBackground>Yellow</Badge>
-<Badge variant="primary" lightBackground>Blue</Badge>
-<Badge variant="secondary" lightBackground>Neutral</Badge>
-<br />
-<br />
 <h5>Light Border</h5>
-<Badge variant="success" lightBorder>Green</Badge>
-<Badge variant="danger" lightBorder>Red</Badge>
-<Badge variant="warning" lightBorder>Yellow</Badge>
-<Badge variant="primary" lightBorder>Blue</Badge>
-<Badge variant="secondary" lightBorder>Neutral</Badge>
+<Badge variant="success" border>Green</Badge>
+<Badge variant="danger" border>Red</Badge>
+<Badge variant="warning" border>Yellow</Badge>
+<Badge variant="primary" border>Blue</Badge>
+<Badge variant="secondary" border>Neutral</Badge>
 ```
 
 ### **Sizes**

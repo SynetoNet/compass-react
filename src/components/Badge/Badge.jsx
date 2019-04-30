@@ -1,26 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Badge as ReactStrapBadge } from "react-bootstrap";
+import { Badge as BootstrapBadge } from "react-bootstrap";
 
 // import styles from "./Button.module.scss";
 import "./Badge.module.scss";
 
 const Badge = ({
-  lightBackground,
-  lightBorder,
+  strong,
+  border,
   modularWidth,
   elasticWidth,
   widthSize,
   ...props
 }) => (
-  <ReactStrapBadge
+  <BootstrapBadge
     className={`
-    ${lightBackground ? "light-background" : ""}
-    ${lightBorder ? "light-border" : ""}
+    ${!border && !strong ? "light-background" : ""}
+    ${border ? "light-border" : ""}
     ${modularWidth ? "modular-width" : ""}
-    ${elasticWidth ? "elastic-width" : ""}
-    ${widthSize && !elasticWidth && modularWidth ? "width-" + widthSize : ""}
+    ${elasticWidth && !modularWidth ? "elastic-width" : ""}
+    ${widthSize && modularWidth ? "width-" + widthSize : ""}
     `}
     {...props}
     pill
@@ -36,19 +36,19 @@ Badge.propTypes = {
   elasticWidth: PropTypes.bool,
   /** Width size if modular with is enabled */
   widthSize: PropTypes.number,
-  /** Enabled light background */
-  lightBackground: PropTypes.bool,
-  /** Enabled light border */
-  lightBorder: PropTypes.bool
+  /** Enables strong background */
+  strong: PropTypes.bool,
+  /** Enables light border */
+  border: PropTypes.bool
 };
 
 Badge.defaultProps = {
-  lightBackground: false,
-  lightBorder: false,
+  variant: "secondary",
+  strong: false,
+  border: false,
   modularWidth: false,
-  elasticWidth: false,
-  widthSize: 32,
-  variant: "primary"
+  elasticWidth: true,
+  widthSize: 32
 };
 
 const modularWidthSizes = ["32px", "64px", "96px", "128px"];
