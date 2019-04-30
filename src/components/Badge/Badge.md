@@ -18,9 +18,26 @@ Background (variant fill)<br/>
 
 ```jsx
 <Badge>Default Badge</Badge>
+<Badge>On/Off</Badge>
+<Badge>This is an example with longer text</Badge>
 ```
 
-### **Color variations**
+### **Colors**
+
+---
+
+```jsx
+<h5>Default</h5>
+<Badge variant="success">Green</Badge>
+<Badge variant="danger">Red</Badge>
+<Badge variant="warning">Yellow</Badge>
+<Badge variant="primary">Blue</Badge>
+<Badge>Neutral</Badge>
+<br />
+<br />
+```
+
+### **Strong**
 
 ---
 
@@ -30,48 +47,35 @@ Background (variant fill)<br/>
 <Badge variant="danger" strong>Red</Badge>
 <Badge variant="warning" strong>Yellow</Badge>
 <Badge variant="primary" strong>Blue</Badge>
-<Badge variant="secondary" strong>Neutral</Badge>
+<Badge strong>Neutral</Badge>
 <br />
 <br />
-<h5>Light Background - Default</h5>
-<Badge variant="success">Green</Badge>
-<Badge variant="danger">Red</Badge>
-<Badge variant="warning">Yellow</Badge>
-<Badge variant="primary">Blue</Badge>
-<Badge variant="secondary">Neutral</Badge>
-<br />
-<br />
-<h5>Light Border</h5>
-<Badge variant="success" border>Green</Badge>
-<Badge variant="danger" border>Red</Badge>
-<Badge variant="warning" border>Yellow</Badge>
-<Badge variant="primary" border>Blue</Badge>
-<Badge variant="secondary" border>Neutral</Badge>
 ```
 
-### **Sizes**
+### **Bordered**
 
 ---
 
 ```jsx
+<h5>Light Border</h5>
+<Badge variant="success" light>Green</Badge>
+<Badge variant="danger" light>Red</Badge>
+<Badge variant="warning" light>Yellow</Badge>
+<Badge variant="primary" light>Blue</Badge>
+<Badge light>Neutral</Badge>
+```
+
+### **Modular Size**
+
+---
+
+```jsx
+
+<Badge variant="success" modularWidth size={32}>32px</Badge>
 <br />
+<Badge variant="primary" modularWidth size={64}>64px</Badge>
 <br />
-<h5>Modular Size Badges</h5>
-<Badge variant="success" modularWidth widthSize={32}>32px</Badge>
+<Badge variant="danger" modularWidth size={96}>96px</Badge>
 <br />
-<Badge variant="success" modularWidth widthSize={64}>64px</Badge>
-<br />
-<Badge variant="success" modularWidth widthSize={96}>96px</Badge>
-<br />
-<Badge variant="success" modularWidth widthSize={128}>128px</Badge>
-<br />
-<br />
-<h5>Elastic Size Badges</h5>
-<Badge variant="success" elasticWidth>Short</Badge>
-<br />
-<Badge variant="warning" >Medium Size</Badge>
-<br />
-<Badge variant="danger" elasticWidth>Longer ass Badge</Badge>
-<br />
-<br />
+<Badge modularWidth size={128}>128px</Badge>
 ```
