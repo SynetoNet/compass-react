@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 
 import { Badge as BootstrapBadge } from "react-bootstrap";
 
-// import styles from "./Button.module.scss";
-import "./Badge.module.scss";
+import "./Badge.scss";
 
 const Badge = ({
   strong,

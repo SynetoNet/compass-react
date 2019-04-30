@@ -1,6 +1,6 @@
 # Compass
 
-React implementation of Syneto's Compass Design System.
+React implementation of Syneto's Compass Design System: https://synetonet.github.io/compass-react/
 
 ## Setup
 
