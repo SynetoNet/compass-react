@@ -18,7 +18,13 @@ const Badge = ({ strong, light, size, ...props }) => (
 );
 
 Badge.propTypes = {
-  variant: PropTypes.oneOf(["primary", "warning", "success", "danger"]),
+  variant: PropTypes.oneOf([
+    "primary",
+    "secondary",
+    "warning",
+    "success",
+    "danger"
+  ]),
   /** Enables modular width */
   size: PropTypes.oneOf([32, 64, 96, 128]),
   /** Enables strong background */
