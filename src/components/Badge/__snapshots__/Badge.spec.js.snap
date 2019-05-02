@@ -6,8 +6,6 @@ exports[`renders default Badge 1`] = `
     
     
     
-    
-    
-     badge badge-primary"
+     badge badge-pill badge-secondary"
 />
 `;
