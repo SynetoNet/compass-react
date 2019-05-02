@@ -22,7 +22,7 @@ Badge.propTypes = {
     "success",
     "danger",
     "warning",
-    "primary",
+    "info",
     "neutral"
   ]),
   /** Enables modular/fixed width */

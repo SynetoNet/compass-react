@@ -18,7 +18,7 @@ Used to communicates various objects states or exceptional situations.
 <Badge variant="success">Success</Badge>
 <Badge variant="danger">Error</Badge>
 <Badge variant="warning">Warning</Badge>
-<Badge variant="primary">Info</Badge>
+<Badge variant="info">Info</Badge>
 <Badge variant="neutral">Neutral</Badge>
 ```
 
@@ -28,7 +28,7 @@ Used to communicates various objects states or exceptional situations.
 <Badge variant="success" strong>Success</Badge>
 <Badge variant="danger" strong>Error</Badge>
 <Badge variant="warning" strong>Warning</Badge>
-<Badge variant="primary" strong>Info</Badge>
+<Badge variant="info" strong>Info</Badge>
 <Badge strong>Neutral</Badge>
 ```
 
@@ -38,7 +38,7 @@ Used to communicates various objects states or exceptional situations.
 <Badge variant="success" light>Success</Badge>
 <Badge variant="danger" light>Error</Badge>
 <Badge variant="warning" light>Warning</Badge>
-<Badge variant="primary" light>Info</Badge>
+<Badge variant="info" light>Info</Badge>
 <Badge light>Neutral</Badge>
 ```
 
