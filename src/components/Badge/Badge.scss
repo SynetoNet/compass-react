@@ -23,7 +23,7 @@
     background-color: $semantic-confirm;
     color: $neutral-0;
   }
-  &.light-border {
+  &.light {
     background-color: $neutral-0;
     border: 1px solid $semantic-confirm-light-60;
   }
@@ -35,7 +35,7 @@
     background-color: $semantic-danger;
     color: $neutral-0;
   }
-  &.light-border {
+  &.light {
     background-color: $neutral-0;
     border: 1px solid $semantic-danger-light-60;
   }
@@ -47,7 +47,7 @@
     background-color: $semantic-info;
     color: $neutral-0;
   }
-  &.light-border {
+  &.light {
     border: 1px solid $semantic-info-light-60;
     background-color: $neutral-0;
   }
@@ -59,7 +59,7 @@
     background-color: $semantic-warn;
     color: $neutral-0;
   }
-  &.light-border {
+  &.light {
     background-color: $neutral-0;
     border: 1px solid $semantic-warn-light-60;
   }
@@ -71,7 +71,7 @@
     background-color: $neutral-60;
     color: $neutral-0;
   }
-  &.light-border {
+  &.light {
     background-color: $neutral-0;
     border: 1px solid $neutral-12;
     color: $neutral-40;

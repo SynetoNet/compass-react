@@ -8,7 +8,7 @@ import "./Badge.scss";
 const Badge = ({ strong, light, size, ...props }) => (
   <BootstrapBadge
     className={`
-    ${light ? "light-border" : ""}
+    ${light ? "light" : ""}
     ${strong ? "strong" : ""}
     ${size ? "width-" + size : ""}
     `}
