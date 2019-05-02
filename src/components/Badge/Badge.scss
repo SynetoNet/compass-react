@@ -78,21 +78,23 @@
   }
 }
 
-.modular-width {
-  padding: 0 0;
-}
 .width-32 {
   width: $spacer * 8;
+  padding: 0 0;
 }
 .width-64 {
   width: $spacer * 16;
+  padding: 0 0;
 }
 .width-96 {
   width: $spacer * 24;
+  padding: 0 0;
 }
 .width-128 {
   width: $spacer * 32;
+  padding: 0 0;
 }
 .width-160 {
   width: $spacer * 40;
+  padding: 0 0;
 }

@@ -71,11 +71,11 @@ Background (variant fill)<br/>
 
 ```jsx
 
-<Badge variant="success" modularWidth size={32}>32px</Badge>
+<Badge variant="success" size={32}>32px</Badge>
 <br />
-<Badge variant="primary" modularWidth size={64}>64px</Badge>
+<Badge variant="primary" size={64}>64px</Badge>
 <br />
-<Badge variant="danger" modularWidth size={96}>96px</Badge>
+<Badge variant="danger" size={96}>96px</Badge>
 <br />
-<Badge modularWidth size={128}>128px</Badge>
+<Badge size={128}>128px</Badge>
 ```
