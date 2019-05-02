@@ -20,7 +20,7 @@ export default [
         sourcemap: true
       }
     ],
-    external: ["react", "prop-types"],
+    external: ["react", "react-dom", "prop-types"],
     plugins: [
       postcss({
         plugins: [autoprefixer]
