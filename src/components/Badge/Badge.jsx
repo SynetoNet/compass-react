@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Badge as BootstrapBadge } from "react-bootstrap";
+import BootstrapBadge from "react-bootstrap/Badge";
 
 import "./Badge.scss";
 
