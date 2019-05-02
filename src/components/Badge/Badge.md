@@ -15,30 +15,30 @@ Used to communicates various objects states or exceptional situations.
 ### Colors
 
 ```jsx
-<Badge variant="success">Green</Badge>
-<Badge variant="danger">Red</Badge>
-<Badge variant="warning">Yellow</Badge>
-<Badge variant="primary">Blue</Badge>
+<Badge variant="success">Success</Badge>
+<Badge variant="danger">Error</Badge>
+<Badge variant="warning">Warning</Badge>
+<Badge variant="primary">Info</Badge>
 <Badge variant="neutral">Neutral</Badge>
 ```
 
 ### Strong
 
 ```jsx
-<Badge variant="success" strong>Green</Badge>
-<Badge variant="danger" strong>Red</Badge>
-<Badge variant="warning" strong>Yellow</Badge>
-<Badge variant="primary" strong>Blue</Badge>
+<Badge variant="success" strong>Success</Badge>
+<Badge variant="danger" strong>Error</Badge>
+<Badge variant="warning" strong>Warning</Badge>
+<Badge variant="primary" strong>Info</Badge>
 <Badge strong>Neutral</Badge>
 ```
 
 ### Light
 
 ```jsx
-<Badge variant="success" light>Green</Badge>
-<Badge variant="danger" light>Red</Badge>
-<Badge variant="warning" light>Yellow</Badge>
-<Badge variant="primary" light>Blue</Badge>
+<Badge variant="success" light>Success</Badge>
+<Badge variant="danger" light>Error</Badge>
+<Badge variant="warning" light>Warning</Badge>
+<Badge variant="primary" light>Info</Badge>
 <Badge light>Neutral</Badge>
 ```
 
