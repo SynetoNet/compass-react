@@ -29,7 +29,7 @@ Badge.propTypes = {
   width: PropTypes.oneOf([32, 64, 96, 128]),
   /** Enables strong background */
   strong: PropTypes.bool,
-  /** Enables light border */
+  /** Enables light background, with a border */
   light: PropTypes.bool
 };
 
