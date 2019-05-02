@@ -19,11 +19,11 @@ const Badge = ({ strong, light, width, ...props }) => (
 
 Badge.propTypes = {
   variant: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "warning",
     "success",
-    "danger"
+    "danger",
+    "warning",
+    "primary",
+    "neutral"
   ]),
   /** Enables modular/fixed width */
   width: PropTypes.oneOf([32, 64, 96, 128]),
@@ -34,7 +34,7 @@ Badge.propTypes = {
 };
 
 Badge.defaultProps = {
-  variant: "secondary",
+  variant: "neutral",
   strong: false,
   light: false
 };
