@@ -5,12 +5,12 @@ import BootstrapBadge from "react-bootstrap/Badge";
 
 import "./Badge.scss";
 
-const Badge = ({ strong, light, size, ...props }) => (
+const Badge = ({ strong, light, width, ...props }) => (
   <BootstrapBadge
     className={`
     ${light ? "light" : ""}
     ${strong ? "strong" : ""}
-    ${size ? "width-" + size : ""}
+    ${width ? "width-" + width : ""}
     `}
     {...props}
     pill
@@ -25,8 +25,8 @@ Badge.propTypes = {
     "success",
     "danger"
   ]),
-  /** Enables modular width */
-  size: PropTypes.oneOf([32, 64, 96, 128]),
+  /** Enables modular/fixed width */
+  width: PropTypes.oneOf([32, 64, 96, 128]),
   /** Enables strong background */
   strong: PropTypes.bool,
   /** Enables light border */
@@ -36,8 +36,7 @@ Badge.propTypes = {
 Badge.defaultProps = {
   variant: "secondary",
   strong: false,
-  light: false,
-  size: null
+  light: false
 };
 
 export default Badge;
