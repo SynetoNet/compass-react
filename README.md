@@ -128,4 +128,4 @@ What's included:
 - Sass and Autoprefixer support for simple styling
 - Jest for unit testing components
 - Changelog generator
-
+- Bundle [vizualizer](./docs/statistics.html)

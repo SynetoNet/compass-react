@@ -3,6 +3,7 @@ import babel from "rollup-plugin-babel";
 import postcss from "rollup-plugin-postcss";
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
+import visualizer from "rollup-plugin-visualizer";
 import pkg from "./package.json";
 
 export default [
@@ -32,6 +33,11 @@ export default [
       resolve(),
       commonjs({
         include: /node_modules/
+      }),
+      visualizer({
+        filename: "./docs/statistics.html",
+        title: "Compass React Bundle",
+        sourcemap: true
       })
     ]
   },

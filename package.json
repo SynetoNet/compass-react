@@ -93,6 +93,7 @@
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-visualizer": "^1.1.1",
     "sass-loader": "^7.1.0",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.3.0",
