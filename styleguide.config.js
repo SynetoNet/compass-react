@@ -20,18 +20,7 @@ module.exports = {
     },
     {
       name: "Base",
-      sectionDepth: 1,
-      pagePerSection: true,
-      sections: [
-        {
-          name: "Colors",
-          content: "docs/Colors.md"
-        },
-        {
-          name: "Spacing",
-          content: "docs/Spacing.md"
-        }
-      ]
+      content: "docs/Base.md"
     },
     {
       name: "UI Components",
@@ -57,10 +46,10 @@ module.exports = {
           use: [
             "style-loader",
             {
-              loader: "css-loader",
-              options: {
-                modules: true
-              }
+              loader: "css-loader"
+              // options: {
+              //   modules: true
+              // }
             }
           ]
         },

@@ -5,14 +5,14 @@ Used to communicates various objects states or exceptional situations.
 <br />
 <br />
 
-### Default
+#### **Default**
 
 ```jsx
 <Badge>Default Badge</Badge>
 <Badge>This is an example with longer text</Badge>
 ```
 
-### Colors
+#### **Colors**
 
 ```jsx
 <Badge variant="success">Success</Badge>
@@ -22,7 +22,7 @@ Used to communicates various objects states or exceptional situations.
 <Badge variant="neutral">Neutral</Badge>
 ```
 
-### Strong
+#### **Strong**
 
 ```jsx
 <Badge variant="success" strong>Success</Badge>
@@ -32,7 +32,7 @@ Used to communicates various objects states or exceptional situations.
 <Badge strong>Neutral</Badge>
 ```
 
-### Light
+#### **Light**
 
 ```jsx
 <Badge variant="success" light>Success</Badge>
@@ -42,7 +42,7 @@ Used to communicates various objects states or exceptional situations.
 <Badge light>Neutral</Badge>
 ```
 
-### Modular width
+#### **Modular width**
 
 ```jsx
 
