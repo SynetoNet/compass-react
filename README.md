@@ -92,25 +92,19 @@ git checkout master
 git pull develop
 ```
 
-### Patch version
-
-A release that contains fixes, without breaking changes or new features:
+**Patch version**: a release that contains fixes, without breaking changes or new features:
 
 ```
 npm run release:patch
 ```
 
-### Minor version
-
-A release that contains at least one new feature, without breaking changes:
+**Minor version**: a release that contains at least one new feature, without breaking changes:
 
 ```
 npm run release:minor
 ```
 
-### Major version
-
-A release that contains at least one breaking change:
+**Major version**: a release that contains at least one breaking change:
 
 ```
 npm run release:major
