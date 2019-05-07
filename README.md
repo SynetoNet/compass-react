@@ -40,6 +40,16 @@ git checkout develop
 npm run develop
 ```
 
+4. Run tests:
+
+```
+// run tests
+npm test
+
+// update snapshots
+npm run test:update
+```
+
 ### Commit messages
 
 All **relevant** commits should have the following message:
