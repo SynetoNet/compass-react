@@ -5,65 +5,52 @@ Information is displayed in tabs by grouping it in several categories, each cate
 
 <br />
 <br />
-### Default
+### Vertical Tabs - Default
 
 ---
 
 ```jsx
-import Tab from "../Tab/Tab.jsx";
-
 <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-  <Tab eventKey="home" title="Home">
-    Lorem Ipsum first
-  </Tab>
-  <Tab eventKey="profile" title="Profile">
-    Lorem Ipsum second
-  </Tab>
-  <Tab eventKey="contact" title="Contact" disabled>
-    Lorem Ipsum third
-  </Tab>
-</Tabs>;
+  <Tabs.Tab eventKey="home" title="Home">
+    My heavy fox, you inspire me to write. How I love the way you skip, sleep
+    and sneer, Invading my mind day and through the night, Always dreaming about
+    the cunning smear.
+  </Tabs.Tab>
+  <Tabs.Tab eventKey="profile" title="Profile">
+    Let me compare you to an ideal spoon? You are more deadpan, stunning and
+    scaly. Fun sun heats the surreal peaches of June, And summertime has the
+    vernal qualey.
+  </Tabs.Tab>
+  <Tabs.Tab eventKey="contact" title="Contact" disabled>
+    How do I love you? Let me count the ways. I love your clad ankle, elbows and
+    smile. Thinking of your glad elbows fills my days. My love for you is the
+    bally air mile.
+  </Tabs.Tab>
+</Tabs>
 ```
 
-```jsx
-import Tab from "../Tab/Tab.jsx";
-<Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" vertical>
-  <Tab eventKey="home" title="Home">
-    Lorem Ipsum first
-  </Tab>
-  <Tab eventKey="profile" title="Profile">
-    Lorem Ipsum second
-  </Tab>
-  <Tab eventKey="contact" title="Contact">
-    Lorem Ipsum third
-  </Tab>
-</Tabs>;
-```
+### Horizontal Tabs
 
 ```jsx
-import Tab from "../Tab/Tab.jsx";
-// import TestInput from "../TestInput/TestInput.jsx";
-import Form from "react-bootstrap/Form";
-<Form noValidate>
-  <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" vertical>
-    <Tab
-      eventKey="home"
-      title={<Form.Check type={"radio"} label={"Home"} id={"home"} />}
-    >
-      Lorem Ipsum first
-    </Tab>
-    <Tab
-      eventKey="profile"
-      title={<Form.Check type={"radio"} label={"Profile"} id={"profile"} />}
-    >
-      Lorem Ipsum second
-    </Tab>
-    <Tab
-      eventKey="contact"
-      title={<Form.Check type={"radio"} label={"Contact"} id={"contact"} />}
-    >
-      Lorem Ipsum third
-    </Tab>
-  </Tabs>
-</Form>;
+<Tabs
+  defaultActiveKey="profile"
+  id="uncontrolled-tab-example"
+  layout="vertical"
+>
+  <Tabs.Tab eventKey="home" title="Home">
+    My heavy fox, you inspire me to write. How I love the way you skip, sleep
+    and sneer, Invading my mind day and through the night, Always dreaming about
+    the cunning smear.
+  </Tabs.Tab>
+  <Tabs.Tab eventKey="profile" title="Profile" disabled>
+    Let me compare you to an ideal spoon? You are more deadpan, stunning and
+    scaly. Fun sun heats the surreal peaches of June, And summertime has the
+    vernal qualey.
+  </Tabs.Tab>
+  <Tabs.Tab eventKey="contact" title="Contact">
+    How do I love you? Let me count the ways. I love your clad ankle, elbows and
+    smile. Thinking of your glad elbows fills my days. My love for you is the
+    bally air mile.
+  </Tabs.Tab>
+</Tabs>
 ```
