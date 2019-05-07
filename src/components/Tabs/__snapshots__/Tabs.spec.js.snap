@@ -6,6 +6,7 @@ exports[`renders Horizontal Tabs 1`] = `
 >
   <nav
     className="nav nav-tabs"
+    layout="horizontal"
     onKeyDown={[Function]}
     role="tablist"
   >
@@ -87,12 +88,14 @@ exports[`renders Horizontal Tabs 1`] = `
 
 exports[`renders Vertical Tabs 1`] = `
 <div
-  className="tabs-vertical"
+  className="tabs-horizontal"
 >
   <nav
     className="nav nav-tabs"
+    layout="horizontal"
     onKeyDown={[Function]}
     role="tablist"
+    vertical={true}
   >
     <a
       aria-controls={null}
