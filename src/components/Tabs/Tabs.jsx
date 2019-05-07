@@ -12,19 +12,8 @@ class Tabs extends React.Component {
   }
   render() {
     return (
-      <div
-        className={`
-         ${
-           this.props.layout == "vertical"
-             ? "verticalContainer"
-             : "horizontalContainer"
-         }`}
-      >
-        <BootstrapTabs
-          className={`
-        ${this.props.layout == "vertical" ? "vertical" : "horizontal"}`}
-          {...this.props}
-        />
+      <div className={`tabs-${this.props.layout}`}>
+        <BootstrapTabs {...this.props} />
       </div>
     );
   }
