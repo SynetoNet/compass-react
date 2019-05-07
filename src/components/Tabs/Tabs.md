@@ -5,7 +5,7 @@ Information is displayed in tabs by grouping it in several categories, each cate
 
 <br />
 <br />
-### Vertical Tabs - Default
+### Horizontal Tabs - Default
 
 ---
 
@@ -29,7 +29,7 @@ Information is displayed in tabs by grouping it in several categories, each cate
 </Tabs>
 ```
 
-### Horizontal Tabs
+### Vertical Tabs
 
 ```jsx
 <Tabs layout="vertical">
