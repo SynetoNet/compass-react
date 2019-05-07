@@ -10,7 +10,7 @@ Information is displayed in tabs by grouping it in several categories, each cate
 ---
 
 ```jsx
-<Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+<Tabs>
   <Tabs.Tab eventKey="home" title="Home">
     My heavy fox, you inspire me to write. How I love the way you skip, sleep
     and sneer, Invading my mind day and through the night, Always dreaming about
@@ -32,11 +32,7 @@ Information is displayed in tabs by grouping it in several categories, each cate
 ### Horizontal Tabs
 
 ```jsx
-<Tabs
-  defaultActiveKey="profile"
-  id="uncontrolled-tab-example"
-  layout="vertical"
->
+<Tabs layout="vertical">
   <Tabs.Tab eventKey="home" title="Home">
     My heavy fox, you inspire me to write. How I love the way you skip, sleep
     and sneer, Invading my mind day and through the night, Always dreaming about
