@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Horizontal Tabs 1`] = `
+<div
+  className="tabs-horizontal"
+>
+  <nav
+    className="nav nav-tabs"
+    onKeyDown={[Function]}
+    role="tablist"
+  >
+    <a
+      aria-controls={null}
+      aria-selected={true}
+      className="nav-item nav-link active"
+      data-rb-event-key="tab1"
+      href="#"
+      id={null}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+    >
+      tab1 title
+    </a>
+    <a
+      aria-controls={null}
+      aria-selected={false}
+      className="nav-item nav-link"
+      data-rb-event-key="tab2"
+      href="#"
+      id={null}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+      tabIndex={-1}
+    >
+      tab2 title
+    </a>
+    <a
+      aria-controls={null}
+      aria-selected={false}
+      className="nav-item nav-link"
+      data-rb-event-key="tab3"
+      href="#"
+      id={null}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+      tabIndex={-1}
+    >
+      tab3 title
+    </a>
+  </nav>
+  <div
+    className="tab-content"
+  >
+    <div
+      aria-hidden={false}
+      aria-labelledby={null}
+      className="fade tab-pane active show"
+      id={null}
+      role="tabpanel"
+    >
+      tab1 content
+    </div>
+    <div
+      aria-hidden={true}
+      aria-labelledby={null}
+      className="fade tab-pane"
+      id={null}
+      role="tabpanel"
+    >
+      tab2 content
+    </div>
+    <div
+      aria-hidden={true}
+      aria-labelledby={null}
+      className="fade tab-pane"
+      id={null}
+      role="tabpanel"
+    >
+      tab3 content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders Vertical Tabs 1`] = `
+<div
+  className="tabs-vertical"
+>
+  <nav
+    className="nav nav-tabs"
+    onKeyDown={[Function]}
+    role="tablist"
+  >
+    <a
+      aria-controls={null}
+      aria-selected={true}
+      className="nav-item nav-link active"
+      data-rb-event-key="tab1"
+      href="#"
+      id={null}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+    >
+      tab1 title
+    </a>
+    <a
+      aria-controls={null}
+      aria-selected={false}
+      className="nav-item nav-link"
+      data-rb-event-key="tab2"
+      href="#"
+      id={null}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+      tabIndex={-1}
+    >
+      tab2 title
+    </a>
+    <a
+      aria-controls={null}
+      aria-selected={false}
+      className="nav-item nav-link"
+      data-rb-event-key="tab3"
+      href="#"
+      id={null}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="tab"
+      tabIndex={-1}
+    >
+      tab3 title
+    </a>
+  </nav>
+  <div
+    className="tab-content"
+  >
+    <div
+      aria-hidden={false}
+      aria-labelledby={null}
+      className="fade tab-pane active show"
+      id={null}
+      role="tabpanel"
+    >
+      tab1 content
+    </div>
+    <div
+      aria-hidden={true}
+      aria-labelledby={null}
+      className="fade tab-pane"
+      id={null}
+      role="tabpanel"
+    >
+      tab2 content
+    </div>
+    <div
+      aria-hidden={true}
+      aria-labelledby={null}
+      className="fade tab-pane"
+      id={null}
+      role="tabpanel"
+    >
+      tab3 content
+    </div>
+  </div>
+</div>
+`;
