@@ -30,7 +30,7 @@ module.exports = {
       name: "UI Components",
       components: "src/**/components*/**/*.jsx",
       exampleMode: "expand",
-      // usageMode: "expand",
+      usageMode: "expand",
       sectionDepth: 1,
       pagePerSection: true
     }
@@ -51,9 +51,6 @@ module.exports = {
             "style-loader",
             {
               loader: "css-loader"
-              // options: {
-              //   modules: true
-              // }
             }
           ]
         },
