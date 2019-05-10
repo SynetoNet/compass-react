@@ -13,6 +13,10 @@ module.exports = {
     // include base styles
     "./src/base/styles.scss"
   ],
+  ribbon: {
+    url: "https://github.com/SynetoNet/compass-react",
+    text: "Fork me on GitHub"
+  },
   sections: [
     {
       name: "Setup",
