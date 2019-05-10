@@ -122,12 +122,9 @@ npm run release:minor
 npm run release:major
 ```
 
-Push release to repo:
+Merge into master, which will cause an auto-deploy to Github Pages:
 
 ```
-git push origin develop
-git push --tags
-
 // merge into master
 git checkout master
 git merge develop
