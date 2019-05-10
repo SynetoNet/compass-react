@@ -3,9 +3,9 @@
 exports[`renders default Badge 1`] = `
 <span
   className="
-    
-    
-    
-     badge badge-pill badge-neutral"
+
+
+
+     badge badge-pill badge-secondary"
 />
 `;
