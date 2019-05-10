@@ -12,7 +12,11 @@ class Tabs extends React.Component {
   }
   render() {
     return (
-      <div className={`tabs-${this.props.layout}`}>
+      <div
+        className={`tabs-${this.props.layout} alignment-${
+          this.props.alignment
+        }`}
+      >
         <BootstrapTabs {...this.props} />
       </div>
     );
@@ -20,11 +24,13 @@ class Tabs extends React.Component {
 }
 
 Tabs.propTypes = {
-  layout: PropTypes.oneOf(["vertical", "horizontal"])
+  layout: PropTypes.oneOf(["vertical", "horizontal"]),
+  alignment: PropTypes.oneOf(["left", "right"])
 };
 
 Tabs.defaultProps = {
-  layout: "horizontal"
+  layout: "horizontal",
+  alignment: "left"
 };
 
 export default Tabs;
