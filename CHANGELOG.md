@@ -1,3 +1,9 @@
+#### 0.1.4 (2019-05-10)
+
+##### Bug Fixes
+
+* **Badge:**  add library for handling conditional classnames ([1d90ec4a](https://github.com/SynetoNet/compass-react/commit/1d90ec4aea77dfa964193b25e4f06e727f68f368))
+
 #### 0.1.3 (2019-05-10)
 
 #### 0.1.1 (2019-05-10)
