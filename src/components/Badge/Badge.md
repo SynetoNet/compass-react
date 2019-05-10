@@ -46,11 +46,10 @@ Used to communicates various objects states or exceptional situations.
 
 ```jsx
 <div style={{ width: '250px'}}>
-<Badge color="success" block>250px container</Badge>
-<br />
+  <Badge color="success" block>250px container</Badge>
 </div>
-<Badge color="danger" block>Full width</Badge>
 <br />
+<Badge color="danger" block>Full width</Badge>
 ```
 
 #### **Modular width**
