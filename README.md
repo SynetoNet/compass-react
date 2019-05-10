@@ -16,13 +16,13 @@ npm i @syneto/compass-react
 
 Include styles in your main file:
 
-```
+```js
 import "@syneto/compass-react/lib/styles.css"
 ```
 
 Import and use components:
 
-```
+```js
 import { Badge } from "@syneto/compass-react"
 ```
 
