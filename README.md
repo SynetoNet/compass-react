@@ -51,7 +51,6 @@ npm run develop
 4. Run tests:
 
 ```
-// run tests
 npm test
 
 // update snapshots
@@ -104,36 +103,30 @@ fix(Button): changed prop loading to isLoaded [breaking]
 
 ## Release
 
-We use **Semantic Versions** for releases.
+We use **Semantic Versioning** for releases.
 
-**Patch version**: a release that contains fixes, without breaking changes or new features:
+1. **Choose between Major/Minor/Patch release**:
 
-```
+```js
+// patch version: a release that contains fixes, without breaking changes or new features
 npm run release:patch
-```
 
-**Minor version**: a release that contains at least one new feature, without breaking changes:
-
-```
+// minor version: a release that contains at least one new feature, without breaking changes
 npm run release:minor
-```
 
-**Major version**: a release that contains at least one breaking change:
-
-```
+// major version: a release that contains at least one breaking change
 npm run release:major
 ```
 
-Merge into master, which will cause an auto-deploy to Github Pages:
+2. **Merge into master, which will cause an auto-deploy to Github Pages**:
 
 ```
-// merge into master
 git checkout master
 git merge develop
 git push origin master
 ```
 
-Publish to npm registry:
+3. **Publish to npm registry**:
 
 ```
 npm publish --access public
