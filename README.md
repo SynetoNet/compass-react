@@ -96,12 +96,6 @@ fix(Button): changed prop loading to isLoaded [breaking]
 
 We use **Semantic Versions** for releases.
 
-```
-// merge into master
-git checkout master
-git pull develop
-```
-
 **Patch version**: a release that contains fixes, without breaking changes or new features:
 
 ```
@@ -119,6 +113,25 @@ npm run release:minor
 ```
 npm run release:major
 ```
+
+Push release to repo:
+
+```
+git push origin develop
+git push --tags
+
+// merge into master
+git checkout master
+git merge develop
+git push origin master
+```
+
+Publish to npm registry:
+
+```
+npm publish --access public
+```
+
 
 ## About this project
 
