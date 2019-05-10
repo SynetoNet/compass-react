@@ -1,24 +1,30 @@
 # Compass
 
-React implementation of Syneto's Compass Design System: https://synetonet.github.io/compass-react/
+React implementation of Syneto's Compass Design System.
+
+[View DOCS](https://synetonet.github.io/compass-react/)
+
+---
 
 ## Setup
 
 ```
-npm install https://github.com/SynetoNet/compass-react.git
+npm i @syneto/compass-react
 ```
 
 Include styles in your main file:
 
 ```
-import "compass-react/lib/styles.css"
+import "@syneto/compass-react/lib/styles.css"
 ```
 
 Import and use components:
 
 ```
-import { Button } from "compass-react"
+import { Badge } from "@syneto/compass-react"
 ```
+
+---
 
 ## Development
 
@@ -92,6 +98,8 @@ build(docs): add loading Button examples
 fix(Button): changed prop loading to isLoaded [breaking]
 ```
 
+---
+
 ## Release
 
 We use **Semantic Versions** for releases.
@@ -132,6 +140,7 @@ Publish to npm registry:
 npm publish --access public
 ```
 
+---
 
 ## About this project
 
