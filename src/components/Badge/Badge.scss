@@ -2,22 +2,25 @@
 @import "../../base/variables";
 
 .badge {
-  height: 24px;
+  height: 20px;
   width: auto;
   display: inline-block;
   padding: 0 12px;
   font-size: 12px;
   font-weight: normal;
-  line-height: 24px;
+  line-height: 20px;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-  &.light {
+  &.outline {
     // it contains borders, so content is only 22px height
-    line-height: 22px;
+    line-height: 18px;
+  }
+  &.block {
+    display: block;
   }
 }
 
@@ -28,7 +31,7 @@
     background-color: $semantic-confirm;
     color: $neutral-0;
   }
-  &.light {
+  &.outline {
     background-color: $neutral-0;
     border: 1px solid $semantic-confirm-light-60;
   }
@@ -40,7 +43,7 @@
     background-color: $semantic-danger;
     color: $neutral-0;
   }
-  &.light {
+  &.outline {
     background-color: $neutral-0;
     border: 1px solid $semantic-danger-light-60;
   }
@@ -52,7 +55,7 @@
     background-color: $semantic-info;
     color: $neutral-0;
   }
-  &.light {
+  &.outline {
     border: 1px solid $semantic-info-light-60;
     background-color: $neutral-0;
   }
@@ -64,19 +67,19 @@
     background-color: $semantic-warn;
     color: $neutral-0;
   }
-  &.light {
+  &.outline {
     background-color: $neutral-0;
     border: 1px solid $semantic-warn-light-60;
   }
 }
-.badge-neutral {
+.badge-secondary {
   background-color: $neutral-12;
   color: $neutral-90;
   &.strong {
     background-color: $neutral-60;
     color: $neutral-0;
   }
-  &.light {
+  &.outline {
     background-color: $neutral-0;
     border: 1px solid $neutral-12;
     color: $neutral-40;

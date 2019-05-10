@@ -15,31 +15,48 @@ Used to communicates various objects states or exceptional situations.
 #### **Colors**
 
 ```jsx
-<Badge variant="success">Success</Badge>
-<Badge variant="danger">Error</Badge>
-<Badge variant="warning">Warning</Badge>
-<Badge variant="info">Info</Badge>
-<Badge variant="neutral">Neutral</Badge>
+<Badge color="success">Success</Badge>
+<Badge color="danger">Error</Badge>
+<Badge color="warning">Warning</Badge>
+<Badge color="info">Info</Badge>
+<Badge color="secondary">Neutral</Badge>
 ```
 
 #### **Strong**
 
 ```jsx
-<Badge variant="success" strong>Success</Badge>
-<Badge variant="danger" strong>Error</Badge>
-<Badge variant="warning" strong>Warning</Badge>
-<Badge variant="info" strong>Info</Badge>
-<Badge strong>Neutral</Badge>
+<Badge color="success" variant="strong">Success</Badge>
+<Badge color="danger" variant="strong">Error</Badge>
+<Badge color="warning" variant="strong">Warning</Badge>
+<Badge color="info" variant="strong">Info</Badge>
+<Badge variant="strong">Neutral</Badge>
 ```
 
-#### **Light**
+#### **Outline**
 
 ```jsx
-<Badge variant="success" light>Success</Badge>
-<Badge variant="danger" light>Error</Badge>
-<Badge variant="warning" light>Warning</Badge>
-<Badge variant="info" light>Info</Badge>
-<Badge light>Neutral</Badge>
+<Badge color="success" variant="outline">Success</Badge>
+<Badge color="danger" variant="outline">Error</Badge>
+<Badge color="warning" variant="outline">Warning</Badge>
+<Badge color="info" variant="outline">Info</Badge>
+<Badge variant="outline">Neutral</Badge>
+```
+
+#### **Stretch width**
+
+```jsx
+<div style={{ width: '250px'}}>
+<Badge color="success" block>Success - 250px container</Badge>
+<br />
+</div>
+<Badge color="danger" block>Error - Full width</Badge>
+<br />
+<Badge color="warning" block>Warning</Badge>
+<br />
+<Badge color="info" block>Info</Badge>
+<br />
+<Badge color="secondary" block>Neutral</Badge>
+<br />
 ```
 
 #### **Modular width**
@@ -48,9 +65,9 @@ Used to communicates various objects states or exceptional situations.
 
 <Badge width={32}>32px</Badge>
 <br />
-<Badge variant="success" width={64}>64px</Badge>
+<Badge color="success" width={64}>64px</Badge>
 <br />
-<Badge variant="warning" width={96}>96px</Badge>
+<Badge color="warning" width={96}>96px</Badge>
 <br />
-<Badge variant="danger" width={128}>128px</Badge>
+<Badge color="danger" width={128}>128px</Badge>
 ```
