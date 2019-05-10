@@ -1,5 +1,7 @@
 # Compass
 
+[![npm version](https://badge.fury.io/js/%40syneto%2Fcompass-react.svg)](https://badge.fury.io/js/%40syneto%2Fcompass-react)
+
 React implementation of Syneto's Compass Design System.
 
 [View DOCS](https://synetonet.github.io/compass-react/)
