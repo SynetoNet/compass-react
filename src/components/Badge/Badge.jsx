@@ -21,7 +21,7 @@ const Badge = ({ color, variant, width, block, ...props }) => (
 
 Badge.propTypes = {
   color: PropTypes.oneOf(["success", "danger", "warning", "info", "secondary"]),
-  variant: PropTypes.oneOf(["strong", "outline"]),
+  variant: PropTypes.oneOf(["default", "strong", "outline"]),
   width: PropTypes.oneOf([32, 64, 96, 128, "auto"]),
   /** Makes badge stretch to the size of it's parent */
   block: PropTypes.bool
@@ -29,7 +29,7 @@ Badge.propTypes = {
 
 Badge.defaultProps = {
   color: "secondary",
-  variant: false,
+  variant: "default",
   width: "auto",
   block: false
 };
