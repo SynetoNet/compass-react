@@ -5,7 +5,7 @@ This document describes **Compass**, which is the design system used for [Syneto
 ### **1. Install**
 
 ```jsx static
-npm install https://github.com/SynetoNet/compass-react.git
+npm i @syneto/compass-react
 ```
 
 <br />
@@ -15,7 +15,7 @@ npm install https://github.com/SynetoNet/compass-react.git
 Include the following `.css` in your project's main file:
 
 ```jsx static
-import "compass-react/lib/styles.css";
+import "@syneto/compass-react/lib/styles.css"
 ```
 
 <br />
@@ -23,5 +23,5 @@ import "compass-react/lib/styles.css";
 ### **3. Import and use components:**
 
 ```jsx static
-import { Badge } from "compass-react";
+import { Badge } from "@syneto/compass-react"
 ```
