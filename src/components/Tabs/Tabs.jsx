@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import BootstrapTabs from "react-bootstrap/Tabs";
 import BootstrapTab from "react-bootstrap/Tab";
@@ -11,13 +12,16 @@ class Tabs extends React.Component {
     super(props);
   }
   render() {
+    const { layout, align, ...props } = this.props;
+
+    const classes = classNames({
+      ["tabs-" + layout]: layout,
+      ["tabs-" + align]: align
+    });
+
     return (
-      <div
-        className={`tabs-${this.props.layout} alignment-${
-          this.props.alignment
-        }`}
-      >
-        <BootstrapTabs {...this.props} />
+      <div className={classes}>
+        <BootstrapTabs {...props} />
       </div>
     );
   }
@@ -25,12 +29,12 @@ class Tabs extends React.Component {
 
 Tabs.propTypes = {
   layout: PropTypes.oneOf(["vertical", "horizontal"]),
-  alignment: PropTypes.oneOf(["left", "right"])
+  align: PropTypes.oneOf(["left", "right"])
 };
 
 Tabs.defaultProps = {
   layout: "horizontal",
-  alignment: "left"
+  align: "left"
 };
 
 export default Tabs;
