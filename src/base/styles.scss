@@ -1,10 +1,15 @@
 // override Bootstrap variables
 // Bootstrap and its default variables
-@import "node_modules/bootstrap/scss/bootstrap";
 @import "colors";
 @import "variables";
+@import "node_modules/bootstrap/scss/bootstrap";
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-/* @import "_colors.css"; */
+
+html {
+  // make base font 13px, as defined in Compass
+  // everything else is relativ to this value
+  font-size: 13px;
+}
 
 html,
 button,

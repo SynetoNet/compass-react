@@ -1,2 +1,6 @@
 // Bootstrap and its default variables
 $spacer: 4px;
+
+$font-size-base: 1rem !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
