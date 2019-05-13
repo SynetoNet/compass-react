@@ -1,21 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import BootstrapBadge from "react-bootstrap/Badge";
-import classNames from "classnames";
 
 import "./Badge.scss";
 
 const Badge = ({ color, variant, width, block, ...props }) => {
-  const badgeClass = classNames({
+  const classes = classNames({
     outline: variant === "outline",
     strong: variant === "strong",
     ["width-" + width]: width,
     block
   });
-  return (
-    <BootstrapBadge variant={color} className={badgeClass} {...props} pill />
-  );
+
+  return <BootstrapBadge variant={color} className={classes} {...props} pill />;
 };
 
 Badge.propTypes = {
