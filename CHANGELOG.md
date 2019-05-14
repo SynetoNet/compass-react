@@ -1,3 +1,25 @@
+#### 0.2.0 (2019-05-14)
+
+##### Documentation Changes
+
+*  show props by default ([fc6ab16a](https://github.com/SynetoNet/compass-react/commit/fc6ab16ae07bbbfad4bcc613571719e41ef0b6b6))
+
+##### New Features
+
+* **Tabs:**
+  *  add extra content prop ([c3c37149](https://github.com/SynetoNet/compass-react/commit/c3c3714975ca1b9e264cf46d43a5ce27de1872f6))
+  *  add right align option ([3b1e13dd](https://github.com/SynetoNet/compass-react/commit/3b1e13dd927f133a86268879144e3f3f4bd59393))
+*  handle font-size ([a5b0392d](https://github.com/SynetoNet/compass-react/commit/a5b0392d32826e8d556849e35af4b9cdf9d61df6))
+
+##### Bug Fixes
+
+* **Badge:**  adjust props ([f2a1a863](https://github.com/SynetoNet/compass-react/commit/f2a1a863d23f71712f6c4d88f365038a4338f1d5))
+
+##### Refactors
+
+* **Badge:**  rename vars ([bae844ba](https://github.com/SynetoNet/compass-react/commit/bae844ba5255875cb25fac27952d32fe8a05be15))
+*  remove $spacer variable ([1e2fac5c](https://github.com/SynetoNet/compass-react/commit/1e2fac5c8291e534ac773af58cd442fedb8820ca))
+
 #### 0.1.4 (2019-05-10)
 
 ##### Bug Fixes

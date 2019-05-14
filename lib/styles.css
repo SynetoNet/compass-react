@@ -1,3 +1,8 @@
+/* BRAND */
+/* ACCENT COLORS */
+/* NEUTRAL COLORS */
+/* ADJUST COLORS */
+/* SEMANTIC COLORS */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7090,12 +7095,9 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-/* BRAND */
-/* ACCENT COLORS */
-/* NEUTRAL COLORS */
-/* ADJUST COLORS */
-/* SEMANTIC COLORS */
-/* @import "_colors.css"; */
+html {
+  font-size: 13px; }
+
 html,
 button,
 select,
