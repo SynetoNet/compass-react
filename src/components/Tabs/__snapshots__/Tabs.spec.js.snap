@@ -2,56 +2,67 @@
 
 exports[`renders Horizontal Tabs 1`] = `
 <div
-  className="tabs-horizontal"
+  className="tabs-horizontal tabs-align-start"
 >
-  <nav
-    className="nav nav-tabs"
-    layout="horizontal"
+  <div
+    className="nav-tabs nav"
     onKeyDown={[Function]}
     role="tablist"
   >
-    <a
-      aria-controls={null}
-      aria-selected={true}
-      className="nav-item nav-link active"
-      data-rb-event-key="tab1"
-      href="#"
-      id={null}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="tab"
+    <div
+      className="nav-item"
     >
-      tab1 title
-    </a>
-    <a
-      aria-controls={null}
-      aria-selected={false}
-      className="nav-item nav-link"
-      data-rb-event-key="tab2"
-      href="#"
-      id={null}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="tab"
-      tabIndex={-1}
+      <a
+        aria-controls={null}
+        aria-selected={true}
+        className="nav-link active"
+        data-rb-event-key="tab1"
+        href="#"
+        id={null}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        tab1 title
+      </a>
+    </div>
+    <div
+      className="nav-item"
     >
-      tab2 title
-    </a>
-    <a
-      aria-controls={null}
-      aria-selected={false}
-      className="nav-item nav-link"
-      data-rb-event-key="tab3"
-      href="#"
-      id={null}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="tab"
-      tabIndex={-1}
+      <a
+        aria-controls={null}
+        aria-selected={false}
+        className="nav-link"
+        data-rb-event-key="tab2"
+        href="#"
+        id={null}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+        tabIndex={-1}
+      >
+        tab2 title
+      </a>
+    </div>
+    <div
+      className="nav-item"
     >
-      tab3 title
-    </a>
-  </nav>
+      <a
+        aria-controls={null}
+        aria-selected={false}
+        className="nav-link"
+        data-rb-event-key="tab3"
+        href="#"
+        id={null}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+        tabIndex={-1}
+      >
+        tab3 title
+      </a>
+    </div>
+  </div>
   <div
     className="tab-content"
   >
@@ -61,6 +72,7 @@ exports[`renders Horizontal Tabs 1`] = `
       className="fade tab-pane active show"
       id={null}
       role="tabpanel"
+      title="tab1 title"
     >
       tab1 content
     </div>
@@ -70,6 +82,7 @@ exports[`renders Horizontal Tabs 1`] = `
       className="fade tab-pane"
       id={null}
       role="tabpanel"
+      title="tab2 title"
     >
       tab2 content
     </div>
@@ -79,6 +92,7 @@ exports[`renders Horizontal Tabs 1`] = `
       className="fade tab-pane"
       id={null}
       role="tabpanel"
+      title="tab3 title"
     >
       tab3 content
     </div>
@@ -88,57 +102,67 @@ exports[`renders Horizontal Tabs 1`] = `
 
 exports[`renders Vertical Tabs 1`] = `
 <div
-  className="tabs-horizontal"
+  className="tabs-horizontal tabs-align-start"
 >
-  <nav
-    className="nav nav-tabs"
-    layout="horizontal"
+  <div
+    className="nav-tabs nav"
     onKeyDown={[Function]}
     role="tablist"
-    vertical={true}
   >
-    <a
-      aria-controls={null}
-      aria-selected={true}
-      className="nav-item nav-link active"
-      data-rb-event-key="tab1"
-      href="#"
-      id={null}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="tab"
+    <div
+      className="nav-item"
     >
-      tab1 title
-    </a>
-    <a
-      aria-controls={null}
-      aria-selected={false}
-      className="nav-item nav-link"
-      data-rb-event-key="tab2"
-      href="#"
-      id={null}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="tab"
-      tabIndex={-1}
+      <a
+        aria-controls={null}
+        aria-selected={true}
+        className="nav-link active"
+        data-rb-event-key="tab1"
+        href="#"
+        id={null}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+      >
+        tab1 title
+      </a>
+    </div>
+    <div
+      className="nav-item"
     >
-      tab2 title
-    </a>
-    <a
-      aria-controls={null}
-      aria-selected={false}
-      className="nav-item nav-link"
-      data-rb-event-key="tab3"
-      href="#"
-      id={null}
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      role="tab"
-      tabIndex={-1}
+      <a
+        aria-controls={null}
+        aria-selected={false}
+        className="nav-link"
+        data-rb-event-key="tab2"
+        href="#"
+        id={null}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+        tabIndex={-1}
+      >
+        tab2 title
+      </a>
+    </div>
+    <div
+      className="nav-item"
     >
-      tab3 title
-    </a>
-  </nav>
+      <a
+        aria-controls={null}
+        aria-selected={false}
+        className="nav-link"
+        data-rb-event-key="tab3"
+        href="#"
+        id={null}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="tab"
+        tabIndex={-1}
+      >
+        tab3 title
+      </a>
+    </div>
+  </div>
   <div
     className="tab-content"
   >
@@ -148,6 +172,7 @@ exports[`renders Vertical Tabs 1`] = `
       className="fade tab-pane active show"
       id={null}
       role="tabpanel"
+      title="tab1 title"
     >
       tab1 content
     </div>
@@ -157,6 +182,7 @@ exports[`renders Vertical Tabs 1`] = `
       className="fade tab-pane"
       id={null}
       role="tabpanel"
+      title="tab2 title"
     >
       tab2 content
     </div>
@@ -166,6 +192,7 @@ exports[`renders Vertical Tabs 1`] = `
       className="fade tab-pane"
       id={null}
       role="tabpanel"
+      title="tab3 title"
     >
       tab3 content
     </div>
