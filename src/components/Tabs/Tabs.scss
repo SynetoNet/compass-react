@@ -1,5 +1,4 @@
 @import "../../base/colors";
-@import "../../base/colors";
 @import "../../base/variables";
 
 // override Bootstrap styles
@@ -45,7 +44,17 @@
     }
   }
 
-  &.tabs-right .nav-tabs {
+  .nav-item {
+    // when we have extra content, with higher height
+    // we need to align items to bottom
+    align-self: flex-end;
+
+    &.tabs-extra {
+      align-self: stretch;
+    }
+  }
+
+  &.tabs-align-end .nav-tabs {
     justify-content: flex-end;
   }
 }
@@ -87,4 +96,14 @@
       }
     }
   }
+}
+
+.tabs-extra {
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  // this is to accomodate the top border of tab buttons
+  // so content is vertically centered
+  padding-top: 1px;
 }

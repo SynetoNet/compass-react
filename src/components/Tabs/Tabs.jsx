@@ -2,39 +2,75 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import BootstrapTabs from "react-bootstrap/Tabs";
-import BootstrapTab from "react-bootstrap/Tab";
+import Tab from "react-bootstrap/Tab";
+import Nav from "react-bootstrap/Nav";
 import "./Tabs.scss";
 
 class Tabs extends React.Component {
-  static Tab = BootstrapTab;
-  constructor(props) {
-    super(props);
-  }
+  static Tab = Tab;
+
   render() {
-    const { layout, align, ...props } = this.props;
+    const { layout, align, children, extra, ...props } = this.props;
+    const childrenArray = Array.isArray(children) ? children : [children];
 
     const classes = classNames({
       ["tabs-" + layout]: layout,
-      ["tabs-" + align]: align
+      ["tabs-align-" + align]: align
     });
 
     return (
       <div className={classes}>
-        <BootstrapTabs {...props} />
+        <Tab.Container
+          defaultActiveKey={childrenArray[0].props.eventKey}
+          {...props}
+        >
+          <Nav className="nav-tabs">
+            {extra && align === "end" && this._renderExtra(extra)}
+
+            {childrenArray.map(({ props }) => {
+              const { eventKey, title, ...others } = props;
+
+              return (
+                <Nav.Item key={eventKey}>
+                  <Nav.Link eventKey={eventKey} {...others}>
+                    {title}
+                  </Nav.Link>
+                </Nav.Item>
+              );
+            })}
+
+            {extra && align === "start" && this._renderExtra(extra)}
+          </Nav>
+          <Tab.Content>
+            {childrenArray.map(({ props }) => {
+              const { eventKey, children, ...others } = props;
+              return (
+                <Tab.Pane key={eventKey} eventKey={eventKey} {...others}>
+                  {children}
+                </Tab.Pane>
+              );
+            })}
+          </Tab.Content>
+        </Tab.Container>
       </div>
     );
+  }
+
+  _renderExtra(extra) {
+    return <div className="tabs-extra">{extra}</div>;
   }
 }
 
 Tabs.propTypes = {
   layout: PropTypes.oneOf(["vertical", "horizontal"]),
-  align: PropTypes.oneOf(["left", "right"])
+  align: PropTypes.oneOf(["start", "end"]),
+  /** additional content you want to render inline with the Tab Navigation */
+  extra: PropTypes.element
 };
 
 Tabs.defaultProps = {
   layout: "horizontal",
-  align: "left"
+  align: "start"
 };
 
 export default Tabs;
