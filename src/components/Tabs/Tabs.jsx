@@ -38,6 +38,7 @@ class Tabs extends React.Component {
                 </Nav.Item>
               );
             })}
+            {layout === "vertical" ? this._renderBorderFiller() : ""}
 
             {extra && align === "start" && this._renderExtra(extra)}
           </Nav>
@@ -54,6 +55,10 @@ class Tabs extends React.Component {
         </Tab.Container>
       </div>
     );
+  }
+
+  _renderBorderFiller() {
+    return <div className="border-filler" />;
   }
 
   _renderExtra(extra) {

@@ -11,6 +11,7 @@
 
     &.active {
       color: $accent;
+      border-color: #dde3f0 #dde3f0 #fff;
     }
 
     &:hover::before,
@@ -62,6 +63,7 @@
 // add Compass specific styles for Vertical tabs
 .tabs-vertical {
   display: flex;
+  border: none;
 
   .tab-content {
     margin-left: 20px;
@@ -71,9 +73,11 @@
     flex-flow: column;
     border-bottom: none;
 
-    .nav-link {
+    .border-filler {
+      height: 100%;
       border-right: 1px solid $neutral-12;
-
+    }
+    .nav-link {
       // remove hover border
       &:hover:not(.active) {
         border-top-color: transparent;
@@ -81,7 +85,9 @@
         border-bottom-color: transparent;
         color: $accent;
       }
-
+      &:not(.active) {
+        border-right: 1px solid $neutral-12;
+      }
       &.active {
         border-right: none;
         border-bottom: 1px solid $neutral-12;
