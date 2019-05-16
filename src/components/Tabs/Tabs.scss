@@ -48,10 +48,13 @@
   .nav-item {
     // when we have extra content, with higher height
     // we need to align items to bottom
-    align-self: flex-end;
-
+    text-align: center;
+    display: flex;
     &.tabs-extra {
       align-self: stretch;
+    }
+    .nav-link.active {
+      height: 100%;
     }
   }
 
@@ -72,26 +75,23 @@
   .nav-tabs {
     flex-flow: column;
     border-bottom: none;
+    border-right: 1px solid $neutral-12;
 
-    .border-filler {
-      height: 100%;
-      border-right: 1px solid $neutral-12;
-    }
     .nav-link {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 200px;
       // remove hover border
       &:hover:not(.active) {
-        border-top-color: transparent;
-        border-left-color: transparent;
-        border-bottom-color: transparent;
+        border-color: transparent;
         color: $accent;
-      }
-      &:not(.active) {
-        border-right: 1px solid $neutral-12;
       }
       &.active {
         border-right: none;
         border-bottom: 1px solid $neutral-12;
         border-left-color: transparent;
+        margin-right: -1px;
       }
 
       &.active::before {
