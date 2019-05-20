@@ -1,0 +1,13 @@
+.popover-datepicker {
+  max-width: none !important;
+  background-color: transparent;
+  border: none;
+
+  .popover-body {
+    padding: 0;
+  }
+
+  .arrow {
+    display: none;
+  }
+}

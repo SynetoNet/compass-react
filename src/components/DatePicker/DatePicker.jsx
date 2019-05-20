@@ -8,26 +8,29 @@ import { Overlay, Popover } from "react-bootstrap";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
 
-const DatePicker = ({ selected, append, customInput, onChange, ...props }) => {
+const DatePicker = ({ selected, customInput, onChange, ...props }) => {
   const [show, setShow] = useState(false);
   const [date, setDate] = useState(selected);
   const inputRef = useRef(null);
   const classes = classNames({});
 
-  console.log({ append, customInput, show, date });
+  if (customInput) {
+    const CustomInput = React.cloneElement(
+      customInput,
+      {
+        onFocus: () => setShow(true),
+        value: date,
+        onChange: onChange,
+        ref: inputRef
+      },
+      null
+    );
 
-  if (append && customInput) {
-    const Custom = customInput;
     return (
       <>
-        <Custom
-          onFocus={() => setShow(true)}
-          value={date}
-          onChange={onChange}
-          ref={inputRef}
-        />
-        <Overlay target={inputRef.current} show={show} placement="bottom">
-          <Popover>
+        {CustomInput}
+        <Overlay target={inputRef.current} show={show} placement="auto">
+          <Popover className="popover-datepicker">
             <ReactDatePicker
               inline
               selected={date}
@@ -46,14 +49,33 @@ const DatePicker = ({ selected, append, customInput, onChange, ...props }) => {
   }
 
   return (
-    <ReactDatePicker className={classes} customInput={customInput} {...props} />
+    <ReactDatePicker
+      className={classes}
+      selected={selected}
+      onChange={onChange}
+      {...props}
+    />
   );
 };
 
 DatePicker.propTypes = {
-  append: PropTypes.bool
+  /**
+   * You must pass a __`Date Object`__, not a `string`
+   */
+  selected: PropTypes.oneOfType([
+    PropTypes.oneOf(["", undefined]),
+    PropTypes.instanceOf(Date)
+  ]),
+  onChange: PropTypes.func.isRequired,
+  /**
+   * You can pass your custom input element
+   * (otherwise it will render a default `<input />` tag)
+   */
+  customInput: PropTypes.element
 };
 
-DatePicker.defaultProps = {};
+DatePicker.defaultProps = {
+  selected: undefined
+};
 
 export default DatePicker;
