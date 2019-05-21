@@ -6,7 +6,6 @@ DatePicker will render a default **`<input />`** element.
 
 ```jsx
 import { useState } from "react";
-import { Form } from "react-bootstrap";
 
 const DefaultExample = () => {
   const [date, setState] = useState(new Date());
