@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import format from "date-fns/format";
 
 import ReactDatePicker from "react-datepicker";
 import { Overlay, Popover } from "react-bootstrap";
@@ -20,7 +21,9 @@ const DatePicker = props => {
         onFocus: () => toggleDatePicker(true),
         ref: inputRef,
         onChange: () => {},
-        value: props.selected
+        value: format(props.selected, props.dateFormat, {
+          awareOfUnicodeTokens: true
+        })
       },
       null
     );
@@ -81,11 +84,14 @@ DatePicker.propTypes = {
    *
    * @param {Object} currentDay
    */
-  filterDate: PropTypes.func
+  filterDate: PropTypes.func,
+  /** see [documentation](https://date-fns.org/v2.0.0-alpha.23/docs/format) for details */
+  dateFormat: PropTypes.string
 };
 
 DatePicker.defaultProps = {
-  selected: undefined
+  selected: undefined,
+  dateFormat: "dd/MM/yyyy"
 };
 
 export default DatePicker;

@@ -10,10 +10,27 @@ import { useState } from "react";
 const DefaultExample = () => {
   const [date, setDate] = useState(new Date());
 
+  return <DatePicker selected={date} onChange={val => setDate(val)} />;
+};
+
+<DefaultExample />;
+```
+
+#### **Date format**
+
+We use [date-fns](https://date-fns.org/) to format date, see [documentation](https://date-fns.org/v2.0.0-alpha.23/docs/format) for details.
+
+```jsx
+import { useState } from "react";
+
+const DefaultExample = () => {
+  const [date, setDate] = useState(new Date());
+
   return (
     <DatePicker
       selected={date}
       onChange={val => setDate(val)}
+      dateFormat="dd-MMM-yyyy h:mm aa"
     />
   );
 };
@@ -28,7 +45,6 @@ If you use another library for form handling, like **Formik** or **redux-forms**
 ```jsx
 import { useState } from "react";
 import { Form } from "react-bootstrap";
-import { tomorrow, yesterday } from "./example.utils.js";
 
 const CustomInputExample = () => {
   const [date, setDate] = useState(new Date());
@@ -38,6 +54,7 @@ const CustomInputExample = () => {
       selected={date}
       onChange={val => setDate(val)}
       customInput={<Form.Control type="text" />}
+      dateFormat="dd-MMM-yyyy h:mm aa"
     />
   );
 };
