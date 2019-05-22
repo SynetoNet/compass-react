@@ -8,20 +8,19 @@ import { Overlay, Popover } from "react-bootstrap";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
 
-const DatePicker = ({ selected, customInput, onChange, ...props }) => {
-  const [show, setShow] = useState(false);
-  const [date, setDate] = useState(selected || "");
+const DatePicker = props => {
+  const [showDatePicker, toggleDatePicker] = useState(false);
   const inputRef = useRef(null);
   const classes = classNames({});
 
-  if (customInput) {
+  if (props.customInput) {
     const CustomInput = React.cloneElement(
-      customInput,
+      props.customInput,
       {
-        onFocus: () => setShow(true),
-        value: date,
-        onChange: onChange,
-        ref: inputRef
+        onFocus: () => toggleDatePicker(true),
+        ref: inputRef,
+        onChange: () => {},
+        value: props.selected
       },
       null
     );
@@ -29,17 +28,20 @@ const DatePicker = ({ selected, customInput, onChange, ...props }) => {
     return (
       <>
         {CustomInput}
-        <Overlay target={inputRef.current} show={show} placement="auto">
+        <Overlay
+          target={inputRef.current}
+          show={showDatePicker}
+          placement="auto"
+        >
           <Popover className="popover-datepicker">
             <ReactDatePicker
               inline
-              selected={date}
               className={classes}
               onSelect={val => {
-                setDate(val);
-                setShow(false);
+                props.onChange(val);
+                toggleDatePicker(false);
               }}
-              onClickOutside={() => setShow(false)}
+              onClickOutside={() => toggleDatePicker(false)}
               {...props}
             />
           </Popover>
@@ -48,14 +50,7 @@ const DatePicker = ({ selected, customInput, onChange, ...props }) => {
     );
   }
 
-  return (
-    <ReactDatePicker
-      className={classes}
-      selected={selected}
-      onChange={onChange}
-      {...props}
-    />
-  );
+  return <ReactDatePicker className={classes} {...props} />;
 };
 
 DatePicker.propTypes = {
