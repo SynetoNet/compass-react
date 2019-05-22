@@ -1,3 +1,6 @@
+@import "../../base/colors";
+@import "../../base/variables";
+
 .popover-datepicker {
   max-width: none !important;
   background-color: transparent;
@@ -10,4 +13,88 @@
   .arrow {
     display: none;
   }
+}
+.react-datepicker__month-container {
+  padding: 0px 5px;
+}
+
+.react-datepicker {
+  border-radius: 2px;
+  border: 1px solid $neutral-12;
+  box-shadow: 0px 2px 10px 2px $neutral-12;
+}
+.react-datepicker__header {
+  background: $neutral-0;
+  border-bottom: 1px solid $neutral-12;
+  .react-datepicker__current-month {
+    color: $neutral-90;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    margin-bottom: 11px;
+  }
+}
+.react-datepicker__month {
+  color: $neutral-90;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+.react-datepicker-popper[data-placement^="bottom"] {
+  margin-top: 0;
+}
+.react-datepicker-popper[data-placement^="top"] {
+  top: 4px !important;
+  margin-bottom: 0;
+}
+.react-datepicker__day:hover {
+  border-radius: 1px;
+  background-color: $accent-light-85;
+  color: $neutral-90;
+  &::after {
+    border: 1px solid $neutral-90;
+  }
+}
+.react-datepicker__day-names {
+  display: none;
+}
+
+.react-datepicker__day--today {
+  background-color: $accent;
+  border-radius: 1px;
+  color: $neutral-0;
+  position: relative;
+}
+.react-datepicker__day--today::after {
+  position: absolute;
+  content: "";
+  border: 1px solid white;
+  border-radius: 1px;
+  bottom: 3px;
+  right: 45%;
+}
+.react-datepicker__day--selected {
+  background-color: $accent;
+  border-radius: 1px;
+  color: $neutral-0;
+}
+.react-datepicker__input-container {
+  & input {
+    width: 207px;
+    border: 1px solid $neutral-12;
+    background-color: #f7fcff;
+    padding: 6px;
+    &:focus {
+      border: 2px solid $accent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+.react-datepicker__navigation--next {
+  border-left-color: $neutral-60;
+}
+.react-datepicker__navigation--previous {
+  border-right-color: $neutral-60;
+}
+.react-datepicker__triangle {
+  display: none;
 }
