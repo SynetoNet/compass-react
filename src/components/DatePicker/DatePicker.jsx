@@ -17,19 +17,16 @@ const DatePicker = ({ selected, ...props }) => {
   const classes = classNames({});
 
   if (props.customInput) {
-    const _formattedInternalDate =
-      internalDate &&
-      format(internalDate, props.dateFormat, {
-        awareOfUnicodeTokens: true
-      });
-
     const CustomInput = React.cloneElement(
       props.customInput,
       {
         onFocus: () => toggleDatePicker(true),
         ref: inputRef,
+        // empty handler, to avoid the warning of passing a value without onChange handler
+        // the actual update is handled when a date is selected
         onChange: () => {},
-        value: _formattedInternalDate
+        // format the value, so it appears properly on the input
+        value: formatDate(internalDate, props.dateFormat)
       },
       null
     );
@@ -101,5 +98,14 @@ DatePicker.defaultProps = {
   selected: undefined,
   dateFormat: "dd/MM/yyyy"
 };
+
+function formatDate(dateObject, format) {
+  return (
+    dateObject &&
+    format(dateObject, format, {
+      awareOfUnicodeTokens: true
+    })
+  );
+}
 
 export default DatePicker;
