@@ -8,9 +8,14 @@ DatePicker will render a default **`<input />`** element.
 import { useState } from "react";
 
 const DefaultExample = () => {
-  const [date, setState] = useState(new Date());
+  const [date, setDate] = useState(new Date());
 
-  return <DatePicker selected={date} onChange={val => setState(val)} />;
+  return (
+    <DatePicker
+      selected={date}
+      onChange={val => setDate(val)}
+    />
+  );
 };
 
 <DefaultExample />;
@@ -21,13 +26,18 @@ const DefaultExample = () => {
 If you use another library for form handling, like **Formik** or **redux-forms**, you can pass a custom element.
 
 ```jsx
+import { useState } from "react";
 import { Form } from "react-bootstrap";
+import { tomorrow, yesterday } from "./example.utils.js";
 
 const CustomInputExample = () => {
+  const [date, setDate] = useState(new Date());
+
   return (
     <DatePicker
+      selected={date}
+      onChange={val => setDate(val)}
       customInput={<Form.Control type="text" />}
-      onChange={console.log}
     />
   );
 };
@@ -42,15 +52,16 @@ import { useState } from "react";
 import { Form, Modal, Button } from "react-bootstrap";
 
 const ExampleModal = () => {
-  const [show, setShow] = useState(false);
+  const [showModal, toggleModal] = useState(false);
+  const [date, setDate] = useState(new Date());
 
   return (
     <>
-      <Button variant="primary" onClick={() => setShow(true)}>
+      <Button variant="primary" onClick={() => toggleModal(true)}>
         Open modal
       </Button>
 
-      <Modal show={show} onHide={() => setShow(false)}>
+      <Modal show={showModal} onHide={() => toggleModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
@@ -64,8 +75,9 @@ const ExampleModal = () => {
 
           {/* our DatePicker with custom Input */}
           <DatePicker
+            selected={date}
+            onChange={val => setDate(val)}
             customInput={<Form.Control type="text" />}
-            onChange={console.log}
           />
 
           {/* continue the long scroll */}
@@ -76,7 +88,7 @@ const ExampleModal = () => {
           ))}
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => setShow(false)}>Close</Button>
+          <Button onClick={() => toggleModal(false)}>Close</Button>
         </Modal.Footer>
       </Modal>
     </>
@@ -89,15 +101,42 @@ const ExampleModal = () => {
 #### **Highlight specific dates**
 
 ```jsx
+import { useState } from "react";
 import { tomorrow, yesterday } from "./example.utils.js";
 
-<DatePicker onChange={console.log} highlightDates={[tomorrow, yesterday]} />;
+const HighlightExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={date}
+      onChange={val => setDate(val)}
+      highlightDates={[tomorrow, yesterday]}
+    />
+  );
+};
+
+<HighlightExample />;
 ```
 
 #### **Placeholder**
 
 ```jsx
-<DatePicker onChange={console.log} placeholderText="Custom placeholder" />
+import { useState } from "react";
+
+const PlaceholderExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={date}
+      onChange={val => setDate(val)}
+      placeholderText="Custom placeholder"
+    />
+  );
+};
+
+<PlaceholderExample />;
 ```
 
 #### **Filter available dates**
@@ -105,49 +144,109 @@ import { tomorrow, yesterday } from "./example.utils.js";
 **Minimum date:**
 
 ```jsx
+import { useState } from "react";
 import { yesterday } from "./example.utils.js";
 
-<DatePicker onChange={console.log} minDate={yesterday} />;
+const MinDateExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={date}
+      onChange={val => setDate(val)}
+      minDate={yesterday}
+    />
+  );
+};
+
+<MinDateExample />;
 ```
 
 **Maximum date:**
 
 ```jsx
+import { useState } from "react";
 import { tomorrow } from "./example.utils.js";
 
-<DatePicker onChange={console.log} maxDate={tomorrow} />;
+const MaxDateExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={date}
+      onChange={val => setDate(val)}
+      maxDate={tomorrow}
+    />
+  );
+};
+
+<MaxDateExample />;
 ```
 
 **Include specific dates:**
 
 ```jsx
+import { useState } from "react";
 import { tomorrow, today, yesterday } from "./example.utils.js";
 
-<DatePicker
-  onChange={console.log}
-  includeDates={[tomorrow, today, yesterday]}
-/>;
+const IncludeDatesExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={date}
+      onChange={val => setDate(val)}
+      includeDates={[tomorrow, today, yesterday]}
+    />
+  );
+};
+
+<IncludeDatesExample />;
 ```
 
 **Exclude specific dates:**
 
 ```jsx
+import { useState } from "react";
 import { tomorrow, yesterday } from "./example.utils.js";
 
-<DatePicker onChange={console.log} excludeDates={[tomorrow, yesterday]} />;
+const ExcludeDatesExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={date}
+      onChange={val => setDate(val)}
+      excludeDates={[tomorrow, yesterday]}
+    />
+  );
+};
+
+<ExcludeDatesExample />;
 ```
 
 **Filter out dates based on a rule:**
 
 ```jsx
+import { useState } from "react";
+
 function isWeekday(dateObject) {
   const weekDay = dateObject.getDay();
   return weekDay > 0 && weekDay < 6;
 }
 
-<DatePicker
-  onChange={console.log}
-  filterDate={isWeekday}
-  placeholderText="Select weekdays only "
-/>;
+const FilterDatesExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={date}
+      onChange={val => setDate(val)}
+      filterDate={isWeekday}
+      placeholderText="Select weekdays only "
+    />
+  );
+};
+
+<FilterDatesExample />;
 ```
