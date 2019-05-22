@@ -142,13 +142,13 @@ const HighlightExample = () => {
 import { useState } from "react";
 
 const PlaceholderExample = () => {
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState("");
 
   return (
     <DatePicker
       selected={date}
       onChange={val => setDate(val)}
-      placeholderText="Custom placeholder"
+      placeholderText="Please select a date"
     />
   );
 };
