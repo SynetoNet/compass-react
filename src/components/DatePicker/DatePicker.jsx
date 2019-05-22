@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import format from "date-fns/format";
 
 import ReactDatePicker from "react-datepicker";
 import { Overlay, Popover } from "react-bootstrap";
@@ -8,20 +9,21 @@ import { Overlay, Popover } from "react-bootstrap";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
 
-const DatePicker = ({ selected, customInput, onChange, ...props }) => {
-  const [show, setShow] = useState(false);
-  const [date, setDate] = useState(selected || "");
+const DatePicker = props => {
+  const [showDatePicker, toggleDatePicker] = useState(false);
   const inputRef = useRef(null);
   const classes = classNames({});
 
-  if (customInput) {
+  if (props.customInput) {
     const CustomInput = React.cloneElement(
-      customInput,
+      props.customInput,
       {
-        onFocus: () => setShow(true),
-        value: date,
-        onChange: onChange,
-        ref: inputRef
+        onFocus: () => toggleDatePicker(true),
+        ref: inputRef,
+        onChange: () => {},
+        value: format(props.selected, props.dateFormat, {
+          awareOfUnicodeTokens: true
+        })
       },
       null
     );
@@ -29,17 +31,20 @@ const DatePicker = ({ selected, customInput, onChange, ...props }) => {
     return (
       <>
         {CustomInput}
-        <Overlay target={inputRef.current} show={show} placement="auto">
+        <Overlay
+          target={inputRef.current}
+          show={showDatePicker}
+          placement="auto"
+        >
           <Popover className="popover-datepicker">
             <ReactDatePicker
               inline
-              selected={date}
               className={classes}
               onSelect={val => {
-                setDate(val);
-                setShow(false);
+                props.onChange(val);
+                toggleDatePicker(false);
               }}
-              onClickOutside={() => setShow(false)}
+              onClickOutside={() => toggleDatePicker(false)}
               {...props}
             />
           </Popover>
@@ -48,14 +53,7 @@ const DatePicker = ({ selected, customInput, onChange, ...props }) => {
     );
   }
 
-  return (
-    <ReactDatePicker
-      className={classes}
-      selected={selected}
-      onChange={onChange}
-      {...props}
-    />
-  );
+  return <ReactDatePicker className={classes} {...props} />;
 };
 
 DatePicker.propTypes = {
@@ -86,11 +84,14 @@ DatePicker.propTypes = {
    *
    * @param {Object} currentDay
    */
-  filterDate: PropTypes.func
+  filterDate: PropTypes.func,
+  /** see [documentation](https://date-fns.org/v2.0.0-alpha.23/docs/format) for details */
+  dateFormat: PropTypes.string
 };
 
 DatePicker.defaultProps = {
-  selected: undefined
+  selected: undefined,
+  dateFormat: "dd/MM/yyyy"
 };
 
 export default DatePicker;
