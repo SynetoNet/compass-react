@@ -4,7 +4,8 @@ import classNames from "classnames";
 import format from "date-fns/format";
 
 import ReactDatePicker from "react-datepicker";
-import { Overlay, Popover } from "react-bootstrap";
+import Overlay from "react-bootstrap/Overlay";
+import Popover from "react-bootstrap/Popover";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
