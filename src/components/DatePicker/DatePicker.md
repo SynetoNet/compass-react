@@ -20,6 +20,14 @@ const DefaultExample = () => {
 
 We use [date-fns](https://date-fns.org/) to format date, see [documentation](https://date-fns.org/v2.0.0-alpha.23/docs/format) for details.
 
+---
+
+> **IMPORTANT NOTE**: This doesn't work with **`redux-form`**, because the update is handled outside this component.
+
+> You should manually format the **initial value** and the **updated value**.
+
+---
+
 ```jsx
 import { useState } from "react";
 

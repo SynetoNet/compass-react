@@ -9,21 +9,26 @@ import { Overlay, Popover } from "react-bootstrap";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
 
-const DatePicker = props => {
+const DatePicker = ({ selected, ...props }) => {
+  const [internalDate, setInternalDate] = useState(selected);
   const [showDatePicker, toggleDatePicker] = useState(false);
   const inputRef = useRef(null);
   const classes = classNames({});
 
   if (props.customInput) {
+    const _formattedInternalDate =
+      internalDate &&
+      format(internalDate, props.dateFormat, {
+        awareOfUnicodeTokens: true
+      });
+
     const CustomInput = React.cloneElement(
       props.customInput,
       {
         onFocus: () => toggleDatePicker(true),
         ref: inputRef,
         onChange: () => {},
-        value: format(props.selected, props.dateFormat, {
-          awareOfUnicodeTokens: true
-        })
+        value: _formattedInternalDate
       },
       null
     );
@@ -38,9 +43,11 @@ const DatePicker = props => {
         >
           <Popover className="popover-datepicker">
             <ReactDatePicker
+              selected={internalDate}
               inline
               className={classes}
               onSelect={val => {
+                setInternalDate(val);
                 props.onChange(val);
                 toggleDatePicker(false);
               }}
@@ -53,7 +60,7 @@ const DatePicker = props => {
     );
   }
 
-  return <ReactDatePicker className={classes} {...props} />;
+  return <ReactDatePicker selected={selected} className={classes} {...props} />;
 };
 
 DatePicker.propTypes = {
