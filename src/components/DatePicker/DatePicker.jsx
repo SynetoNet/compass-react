@@ -99,10 +99,10 @@ DatePicker.defaultProps = {
   dateFormat: "dd/MM/yyyy"
 };
 
-function formatDate(dateObject, format) {
+function formatDate(dateObject, dateFormat) {
   return (
     dateObject &&
-    format(dateObject, format, {
+    format(dateObject, dateFormat, {
       awareOfUnicodeTokens: true
     })
   );
