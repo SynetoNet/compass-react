@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders DatePicker with custom input 1`] = `
+<input
+  className="custom-input"
+  onChange={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  value="23/05/2019"
+/>
+`;
+
+exports[`renders default DatePicker 1`] = `
+<div
+  className="react-datepicker-wrapper"
+>
+  <div
+    className="react-datepicker__input-container"
+  >
+    <input
+      className=""
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      readOnly={false}
+      type="text"
+      value="23/05/2019"
+    />
+  </div>
+</div>
+`;
