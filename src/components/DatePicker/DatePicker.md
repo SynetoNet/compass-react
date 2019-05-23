@@ -289,3 +289,24 @@ const FilterDatesExample = () => {
 
 <FilterDatesExample />;
 ```
+
+#### **Date & Time picker**
+
+```jsx
+import { useState } from "react";
+
+const TimeExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={date}
+      showTimeSelect
+      onChange={val => setDate(val)}
+      dateFormat="dd-MMM-yyyy hh:mm"
+    />
+  );
+};
+
+<TimeExample />;
+```
