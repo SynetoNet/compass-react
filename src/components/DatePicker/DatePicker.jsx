@@ -21,6 +21,7 @@ const DatePicker = ({ selected, ...props }) => {
       props.customInput,
       {
         onFocus: () => toggleDatePicker(true),
+        onClick: () => toggleDatePicker(true),
         ref: inputRef,
         // empty handler, to avoid the warning of passing a value without onChange handler
         // the actual update is handled when a date is selected
