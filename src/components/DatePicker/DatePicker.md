@@ -144,6 +144,20 @@ const HighlightExample = () => {
 <HighlightExample />;
 ```
 
+#### **Inline calendar**
+
+```jsx
+import { useState } from "react";
+
+const InlineExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return <DatePicker selected={date} onChange={val => setDate(val)} inline />;
+};
+
+<InlineExample />;
+```
+
 #### **Placeholder**
 
 ```jsx
