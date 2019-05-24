@@ -2,19 +2,40 @@ import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import format from "date-fns/format";
-
+import getYear from "date-fns/getYear";
+import getMonth from "date-fns/getMonth";
+import subDays from "date-fns/subDays";
+import addDays from "date-fns/addDays";
+import addMonths from "date-fns/addMonths";
+import range from "lodash/range";
 import ReactDatePicker from "react-datepicker";
 import Overlay from "react-bootstrap/Overlay";
 import Popover from "react-bootstrap/Popover";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
+import { getDate } from "date-fns";
 
 const DatePicker = ({ selected, ...props }) => {
   const [internalDate, setInternalDate] = useState(selected);
   const [showDatePicker, toggleDatePicker] = useState(false);
   const inputRef = useRef(null);
   const classes = classNames({});
+  const years = range(1960, getYear(new Date()) + 20, 1);
+  const months = Object.entries({
+    0: "January",
+    1: "February",
+    2: "March",
+    3: "April",
+    4: "May",
+    5: "June",
+    6: "July",
+    7: "August",
+    8: "September",
+    9: "October",
+    10: "November",
+    11: "December"
+  });
 
   if (props.customInput) {
     const CustomInput = React.cloneElement(
@@ -59,7 +80,71 @@ const DatePicker = ({ selected, ...props }) => {
     );
   }
 
-  return <ReactDatePicker selected={selected} className={classes} {...props} />;
+  return (
+    <ReactDatePicker
+      selected={internalDate}
+      className={classes}
+      onSelect={val => {
+        setInternalDate(val);
+        props.onChange(val);
+      }}
+      renderCustomHeader={({
+        date,
+        changeYear,
+        changeMonth,
+        decreaseMonth,
+        increaseMonth,
+        prevMonthButtonDisabled,
+        nextMonthButtonDisabled
+      }) => {
+        return (
+          <div
+            style={{
+              margin: 20,
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
+            <button
+              className="react-datepicker__navigation react-datepicker__navigation--previous"
+              onClick={decreaseMonth}
+              disabled={prevMonthButtonDisabled}
+            />
+            <select
+              value={getYear(date)}
+              onChange={({ target: { value } }) => changeYear(value)}
+              className="datepicker-dropdown datepicker-year-dropdown"
+            >
+              {years.map(option => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+
+            <select
+              value={getMonth(date)}
+              onChange={({ target: { value } }) => changeMonth(value)}
+              className="datepicker-dropdown datepicker-month-dropdown"
+            >
+              {months.map(month => (
+                <option key={month[0]} value={month[0]}>
+                  {month[1]}
+                </option>
+              ))}
+            </select>
+
+            <button
+              className="react-datepicker__navigation react-datepicker__navigation--next"
+              onClick={increaseMonth}
+              disabled={nextMonthButtonDisabled}
+            />
+          </div>
+        );
+      }}
+      {...props}
+    />
+  );
 };
 
 DatePicker.propTypes = {
