@@ -44,3 +44,14 @@ $semantic-danger: #e04c59;
 $semantic-danger-dark-30: #9c353e;
 $semantic-danger-light-60: #f3b7bd;
 $semantic-danger-light-85: #fae4e6;
+
+
+// override Bootstrap semantic color variables
+$primary:       $accent;
+$secondary:     $neutral-40;
+$success:       $semantic-confirm;
+$info:          $semantic-info;
+$warning:       $semantic-warn;
+$danger:        $semantic-danger;
+// $light:         $gray-100;
+// $dark:          $gray-800;
