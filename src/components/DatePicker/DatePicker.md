@@ -16,6 +16,20 @@ const DefaultExample = () => {
 <DefaultExample />;
 ```
 
+#### **Inline calendar**
+
+```jsx
+import { useState } from "react";
+
+const InlineExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return <DatePicker selected={date} onChange={val => setDate(val)} inline />;
+};
+
+<InlineExample />;
+```
+
 #### **Date format**
 
 We use [date-fns](https://date-fns.org/) to format date, see [documentation](https://date-fns.org/v2.0.0-alpha.23/docs/format) for details.
@@ -142,20 +156,6 @@ const HighlightExample = () => {
 };
 
 <HighlightExample />;
-```
-
-#### **Inline calendar**
-
-```jsx
-import { useState } from "react";
-
-const InlineExample = () => {
-  const [date, setDate] = useState(new Date());
-
-  return <DatePicker selected={date} onChange={val => setDate(val)} inline />;
-};
-
-<InlineExample />;
 ```
 
 #### **Placeholder**
