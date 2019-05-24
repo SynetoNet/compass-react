@@ -1,26 +1,24 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
+// import classNames from "classnames";
 import format from "date-fns/format";
 import getYear from "date-fns/getYear";
 import getMonth from "date-fns/getMonth";
-import subDays from "date-fns/subDays";
-import addDays from "date-fns/addDays";
-import addMonths from "date-fns/addMonths";
 import range from "lodash/range";
+
 import ReactDatePicker from "react-datepicker";
 import Overlay from "react-bootstrap/Overlay";
 import Popover from "react-bootstrap/Popover";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
-import { getDate } from "date-fns";
 
 const DatePicker = ({ selected, ...props }) => {
   const [internalDate, setInternalDate] = useState(selected);
   const [showDatePicker, toggleDatePicker] = useState(false);
   const inputRef = useRef(null);
-  const classes = classNames({});
+  // const classes = classNames({});
+
   const years = range(1960, getYear(new Date()) + 20, 1);
   const months = Object.entries({
     0: "January",
@@ -65,7 +63,7 @@ const DatePicker = ({ selected, ...props }) => {
             <ReactDatePicker
               selected={internalDate}
               inline
-              className={classes}
+              // className={classes}
               onSelect={val => {
                 setInternalDate(val);
                 props.onChange(val);
@@ -83,7 +81,7 @@ const DatePicker = ({ selected, ...props }) => {
   return (
     <ReactDatePicker
       selected={internalDate}
-      className={classes}
+      // className={classes}
       onSelect={val => {
         setInternalDate(val);
         props.onChange(val);
