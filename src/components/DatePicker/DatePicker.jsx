@@ -46,14 +46,14 @@ const DatePicker = ({ selected, ...props }) => {
               selected={internalDate}
               inline
               // className={classes}
-              onSelect={val => {
+              onClickOutside={() => toggleDatePicker(false)}
+              renderCustomHeader={CustomHeader}
+              {...props}
+              onChange={val => {
                 setInternalDate(val);
                 props.onChange(val);
                 toggleDatePicker(false);
               }}
-              onClickOutside={() => toggleDatePicker(false)}
-              renderCustomHeader={CustomHeader}
-              {...props}
             />
           </Popover>
         </Overlay>
@@ -65,12 +65,12 @@ const DatePicker = ({ selected, ...props }) => {
     <ReactDatePicker
       selected={internalDate}
       // className={classes}
-      onSelect={val => {
+      renderCustomHeader={CustomHeader}
+      {...props}
+      onChange={val => {
         setInternalDate(val);
         props.onChange(val);
       }}
-      renderCustomHeader={CustomHeader}
-      {...props}
     />
   );
 };
