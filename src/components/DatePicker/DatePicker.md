@@ -88,7 +88,8 @@ const CustomInputExample = () => {
 
 ```jsx
 import { useState } from "react";
-import { Form, Modal, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
+import { Modal, Button } from "../../";
 
 const ExampleModal = () => {
   const [showModal, toggleModal] = useState(false);
@@ -100,36 +101,24 @@ const ExampleModal = () => {
         Open modal
       </Button>
 
-      <Modal show={showModal} onHide={() => toggleModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {/* create a long scroll */}
-          {Array.from(Array(30), (_, i) => (
-            <p key={i}>... scroll down</p>
-          ))}
-          <br />
-          <br />
-
-          {/* our DatePicker with custom Input */}
-          <DatePicker
-            selected={date}
-            onChange={val => setDate(val)}
-            customInput={<Form.Control type="text" />}
-          />
-
-          {/* continue the long scroll */}
-          <br />
-          <br />
-          {Array.from(Array(30), (_, i) => (
-            <p key={i}>...</p>
-          ))}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={() => toggleModal(false)}>Close</Button>
-        </Modal.Footer>
-      </Modal>
+      <Modal
+        show={showModal}
+        onHide={() => toggleModal(false)}
+        scrollable
+        content={
+          <div>
+            <p>Scroll down</p>
+            <div style={{ height: "100vh" }} />
+            <DatePicker
+              selected={date}
+              onChange={val => setDate(val)}
+              customInput={<Form.Control type="text" />}
+            />
+            <div style={{ height: "100vh" }} />
+          </div>
+        }
+        title="Modal title"
+      />
     </>
   );
 };
