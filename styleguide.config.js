@@ -28,7 +28,7 @@ module.exports = {
     },
     {
       name: "UI Components",
-      components: "src/**/components*/**/*.jsx",
+      components: "src/components*/**/*.jsx",
       exampleMode: "expand",
       usageMode: "expand",
       sectionDepth: 1,
