@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default Button 1`] = `
+<button
+  className="btn-default width-auto btn btn-secondary"
+  disabled={false}
+  type="button"
+/>
+`;
+
+exports[`renders disabled Button 1`] = `
+<button
+  className=" width-auto disabled btn btn-primary"
+  disabled={false}
+  type="button"
+>
+  Primary Button
+</button>
+`;
+
+exports[`renders primary danger Button 1`] = `
+<button
+  className="btn-danger width-auto btn btn-primary"
+  disabled={false}
+  type="button"
+>
+  Primary Button
+</button>
+`;
