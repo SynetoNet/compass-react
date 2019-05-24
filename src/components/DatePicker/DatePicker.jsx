@@ -105,7 +105,8 @@ DatePicker.propTypes = {
    */
   filterDate: PropTypes.func,
   /** see [documentation](https://date-fns.org/v2.0.0-alpha.23/docs/format) for details */
-  dateFormat: PropTypes.string
+  dateFormat: PropTypes.string,
+  inline: PropTypes.bool
 };
 
 DatePicker.defaultProps = {
