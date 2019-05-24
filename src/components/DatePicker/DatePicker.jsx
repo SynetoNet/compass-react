@@ -6,7 +6,7 @@ import format from "date-fns/format";
 import ReactDatePicker from "react-datepicker";
 import Overlay from "react-bootstrap/Overlay";
 import Popover from "react-bootstrap/Popover";
-import CustomHeader from "./CustomHeader";
+import CustomHeader from "./CustomHeader.js";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
