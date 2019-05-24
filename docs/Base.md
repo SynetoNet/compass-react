@@ -41,3 +41,14 @@ For a comprehensive documentation on layout, please checkout react-bootstrap's [
   </Row>
 </Container>
 ```
+
+<br/>
+
+### **Spacing**
+
+For a comprehensive documentation on margins and paddings, please checkout Bootstrap's [Spacing System](https://getbootstrap.com/docs/4.3/utilities/spacing/).
+
+```jsx
+<span className="bg-primary p-3">Padded text</span>
+<span className="bg-secondary ml-3 py-3">Margin left, padded vertical</span>
+```
