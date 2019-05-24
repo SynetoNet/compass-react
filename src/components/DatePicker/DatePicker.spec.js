@@ -4,7 +4,7 @@ import renderer from "react-test-renderer";
 
 test("renders default DatePicker", () => {
   const Component = () => {
-    return <DatePicker selected={new Date()} onChange={() => {}} />;
+    return <DatePicker selected={new Date(2019, 4, 23)} onChange={() => {}} />;
   };
 
   const component = renderer.create(<Component />);
@@ -17,7 +17,7 @@ test("renders DatePicker with custom input", () => {
     return (
       <DatePicker
         customInput={<input className="custom-input" value="" />}
-        selected={new Date()}
+        selected={new Date(2019, 4, 23)}
         onChange={() => {}}
       />
     );
