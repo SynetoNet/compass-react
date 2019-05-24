@@ -14,6 +14,14 @@
   &:focus {
     background-color: darken($accent, 20%);
   }
+  &.disabled {
+    background-color: $neutral-12;
+    color: $neutral-40;
+    border-color: $neutral-12;
+    &:focus {
+      box-shadow: none;
+    }
+  }
   &.btn-success {
     background-color: $semantic-confirm;
     &:hover {
@@ -33,11 +41,6 @@
       outline: none;
     }
   }
-  &.disabled {
-    background-color: $neutral-12;
-    color: $neutral-40;
-    border-color: $neutral-12;
-  }
 }
 
 .btn-secondary {
@@ -45,8 +48,27 @@
   border: 1px solid $accent;
   color: $accent;
   &.disabled {
-    border: 1px solid $neutral-12 !important;
-    color: $neutral-40 !important;
+    border: 1px solid $neutral-12;
+    color: $neutral-40;
+    box-shadow: none !important;
+    background-color: $neutral-0;
+    &:active,
+    &:hover,
+    &:focus {
+      border: 1px solid $neutral-12 !important;
+      color: $neutral-40;
+      background-color: $neutral-0 !important;
+    }
+    &:active:focus {
+      box-shadow: none !important;
+    }
+  }
+  &:active:focus {
+    box-shadow: 0 0 0 0.2rem rgb(172, 179, 240) !important;
+  }
+  &:active {
+    background-color: $accent !important;
+    border-color: $accent !important;
   }
   &:hover {
     background-color: $neutral-0;
@@ -57,11 +79,16 @@
     background-color: $neutral-0;
     border: 1px solid darken($accent, 20%);
     color: darken($accent, 40%);
+    box-shadow: 0 0 0 0.2rem rgb(172, 179, 240);
   }
   &.btn-success {
     background-color: $neutral-0;
     border: 1px solid $semantic-confirm;
     color: $semantic-confirm;
+    &:active {
+      background-color: $semantic-confirm !important;
+      border-color: $semantic-confirm !important;
+    }
     &:hover {
       background-color: $neutral-0;
       border: 1px solid darken($semantic-confirm, 20%);
@@ -71,12 +98,17 @@
       background-color: $neutral-0;
       border: 1px solid darken($semantic-confirm, 20%);
       color: darken($semantic-confirm, 40%);
+      box-shadow: 0 0 0 0.2rem $semantic-confirm !important;
     }
   }
   &.btn-danger {
     background-color: $neutral-0;
     border: 1px solid $semantic-danger;
     color: $semantic-danger;
+    &:active {
+      background-color: $semantic-danger !important;
+      border-color: $semantic-danger !important;
+    }
     &:hover {
       background-color: $neutral-0;
       border: 1px solid darken($semantic-danger, 20%);
@@ -86,6 +118,7 @@
       background-color: $neutral-0;
       border: 1px solid darken($semantic-danger, 20%);
       color: darken($semantic-danger, 40%);
+      box-shadow: 0 0 0 0.2rem $semantic-danger !important;
     }
   }
 }
@@ -97,6 +130,7 @@
   }
   &.disabled {
     color: $neutral-40 !important;
+    box-shadow: none;
   }
   &.btn-success {
     background-color: $neutral-0;
@@ -113,7 +147,7 @@
     color: $semantic-danger;
     &:hover,
     &:focus {
-      color: darken($semantic-confirm, 20%);
+      color: darken($semantic-danger, 20%);
     }
   }
 }

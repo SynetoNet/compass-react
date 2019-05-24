@@ -1,6 +1,6 @@
 ### **Description**
 
-Used to communicates various objects states or exceptional situations.
+Used throughout the UI, enabling the user interaction with the application.
 
 <br />
 <br />
@@ -11,6 +11,8 @@ Used to communicates various objects states or exceptional situations.
 <Button variant="primary">Primary Button</Button>{" "}
 <Button>Secondary Button - Default</Button>{" "}
 <Button variant="tertiary">Tertiary Button</Button>
+<Button variant="link">Link</Button>
+
 ```
 
 #### **Accept**
@@ -40,7 +42,6 @@ Used to communicates various objects states or exceptional situations.
 #### **Modular width**
 
 ```jsx
-
 <Button width={32}>32px</Button>
 <br />
 <Button width={64}>64px</Button>
@@ -48,4 +49,31 @@ Used to communicates various objects states or exceptional situations.
 <Button width={96}>96px</Button>
 <br />
 <Button width={128}>128px</Button>
+```
+
+#### **Button loading state**
+
+```jsx
+import { useState } from "react";
+
+const LoadingExample = () => {
+  const [isLoading, toggleLoading] = useState(false);
+  const handleClick = () => {
+    toggleLoading(true);
+    new Promise(resolve => setTimeout(resolve, 5000)).then(() => {
+      toggleLoading(false);
+    });
+  };
+  return (
+    <Button
+      variant="primary"
+      disabled={isLoading}
+      onClick={!isLoading ? handleClick : null}
+    >
+      {isLoading ? "Loading…" : "Click to load"}
+    </Button>
+  );
+};
+
+<LoadingExample />;
 ```
