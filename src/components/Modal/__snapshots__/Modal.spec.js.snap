@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Actions Modal modal with actions snapshop 1`] = `
+<Bootstrap(Modal)
+  show={true}
+>
+  <ModalFooter>
+    <div
+      className="modal-footer_tertiary"
+      key="tertiary"
+    >
+      <Button
+        color="default"
+        disabled={false}
+        variant="tertiary"
+        width="auto"
+      >
+        Tertiary
+      </Button>
+    </div>
+    <Button
+      color="default"
+      disabled={false}
+      key="secondary"
+      variant="secondary"
+      width="auto"
+    >
+      Cancel
+    </Button>
+    <Button
+      color="default"
+      disabled={false}
+      key="primary"
+      variant="primary"
+      width="auto"
+    >
+      Primary
+    </Button>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
+
+exports[`Default Modal modal without header or content snapshop 1`] = `
+<Bootstrap(Modal)
+  show={true}
+>
+  <ModalFooter>
+    <Button
+      color="default"
+      disabled={false}
+      key="secondary"
+      variant="secondary"
+      width="auto"
+    >
+      Close
+    </Button>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
+
+exports[`Extended Modal extended modal snapshop 1`] = `
+<Bootstrap(Modal)
+  show={true}
+>
+  <ModalHeader
+    closeButton={false}
+    closeLabel="Close"
+  >
+    <div
+      className="custom-title"
+    >
+      title
+    </div>
+  </ModalHeader>
+  <ModalBody>
+    <p
+      className="custom-body"
+    >
+      body
+    </p>
+  </ModalBody>
+  <ModalFooter>
+    <div
+      className="custom-footer"
+    >
+      footer
+    </div>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
+
+exports[`Simple Modal modal with title and content snapshop 1`] = `
+<Bootstrap(Modal)
+  show={true}
+>
+  <ModalHeader
+    closeButton={false}
+    closeLabel="Close"
+  >
+    <ModalTitle>
+      modal title
+    </ModalTitle>
+  </ModalHeader>
+  <ModalBody>
+    modal content
+  </ModalBody>
+  <ModalFooter>
+    <Button
+      color="default"
+      disabled={false}
+      key="secondary"
+      variant="secondary"
+      width="auto"
+    >
+      Close
+    </Button>
+  </ModalFooter>
+</Bootstrap(Modal)>
+`;
