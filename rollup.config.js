@@ -26,11 +26,13 @@ export default [
       postcss({
         plugins: [autoprefixer]
       }),
+      resolve({
+        extensions: [".mjs", ".js", ".jsx"]
+      }),
       babel({
         exclude: "node_modules/**",
         externalHelpers: true
       }),
-      resolve(),
       commonjs({
         include: /node_modules/
       }),
