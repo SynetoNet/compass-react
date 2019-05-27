@@ -1,8 +1,3 @@
-/* BRAND */
-/* ACCENT COLORS */
-/* NEUTRAL COLORS */
-/* ADJUST COLORS */
-/* SEMANTIC COLORS */
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7101,5 +7096,7 @@ html {
 html,
 button,
 select,
-textarea {
+textarea,
+a:link,
+a:visited {
   font-family: "Roboto", sans-serif; }
