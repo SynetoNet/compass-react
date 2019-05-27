@@ -1,3 +1,9 @@
+#### 0.3.3 (2019-05-27)
+
+##### Bug Fixes
+
+* **Modal:**  adjust action buttons spacing & padding ([b82dc865](https://github.com/SynetoNet/compass-react/commit/b82dc86570c576afbdab1849446a7ab6a23603c4))
+
 # 0.3.2 (2019-05-27)
 
 ### Documentation Changes
