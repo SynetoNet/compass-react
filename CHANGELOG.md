@@ -1,36 +1,36 @@
-#### 0.3.2 (2019-05-27)
+## 0.3.2 (2019-05-27)
 
-##### Documentation Changes
+#### Documentation Changes
 
 * **Button:**  add spacing between examples ([5e201119](https://github.com/SynetoNet/compass-react/commit/5e20111950308e978b5e3cd5100898d6f97d3303))
 * **Badge:**  add spacing between examples ([b90e3a9b](https://github.com/SynetoNet/compass-react/commit/b90e3a9b38f0e9873cbf43acc003e3e0c1654298))
 
-#### 0.3.1 (2019-05-27)
+## 0.3.1 (2019-05-27)
 
-##### New Features
+#### New Features
 
 * **Base:**  include local fonts ([a0e8f351](https://github.com/SynetoNet/compass-react/commit/a0e8f3512668e86590cf7232d2608d78c3da32cf))
 
-##### Bug Fixes
+#### Bug Fixes
 
 * **Modal:**  adjust styling to match design ([0b7e32ba](https://github.com/SynetoNet/compass-react/commit/0b7e32baa76efab1d5fbaf0be4d18b090d417f3f))
 * **Button:**  remove padding for tertiary & link variations ([7c127e14](https://github.com/SynetoNet/compass-react/commit/7c127e14cf746d58e89cca4ec516a0ad0405f38a))
 
-#### 0.3.0 (2019-05-27)
+## 0.3.0 (2019-05-27)
 
-##### New Features
+#### New Features
 
 * **Modal:**  add Modal component
 * **Button:**  add Button component
 * **DatePicker:**  add DatePicker component
 * **Base:**  override bootstrap color variables ([be66ac22](https://github.com/SynetoNet/compass-react/commit/be66ac22a96aeca56d4a1af8f811d51a5c767ece))
 
-##### Bug Fixes
+#### Bug Fixes
 
 * **Tabs:**
   *  make border stretch as far as content height for vertical tabs ([#4](https://github.com/SynetoNet/compass-react/pull/4)) ([d38d3e68](https://github.com/SynetoNet/compass-react/commit/d38d3e68855ea36007ac32708c7d95e5cc4d0161))
 
-##### Documentation Changes
+#### Documentation Changes
 
 * **Base:**  add Spacing examples ([b26b3a6a](https://github.com/SynetoNet/compass-react/commit/b26b3a6aabd98f7bc024e8832a3b8e5c5de1cb86))
 
