@@ -1,9 +1,12 @@
 #### **Default**
 
 ```jsx
-<Button>Default Button</Button>{" "}
-<Button variant="primary">Primary Button</Button>{" "}
+<Button>Default Button</Button>
+<i class="pr-4" />
+<Button variant="primary">Primary Button</Button>
+<i class="pr-4" />
 <Button variant="tertiary">Tertiary Button</Button>
+<i class="pr-4" />
 <Button variant="link" href="https://github.com/SynetoNet/compass-react">Link</Button>
 
 ```
@@ -11,24 +14,30 @@
 #### **Accept**
 
 ```jsx
-<Button color="success">Accept</Button>{" "}
-<Button color="success" variant="primary" >Primary Accept</Button>{" "}
+<Button color="success">Accept</Button>
+<i class="pr-4" />
+<Button color="success" variant="primary" >Primary Accept</Button>
+<i class="pr-4" />
 <Button color="success" variant="tertiary">Tertiary Accept</Button>
 ```
 
 #### **Reject**
 
 ```jsx
-<Button color="danger">Reject</Button>{" "}
-<Button color="danger" variant="primary">Primary Reject</Button>{" "}
+<Button color="danger">Reject</Button>
+<i class="pr-4" />
+<Button color="danger" variant="primary">Primary Reject</Button>
+<i class="pr-4" />
 <Button color="danger" variant="tertiary">Tertiary Reject</Button>
 ```
 
 #### **Disabled**
 
 ```jsx
-<Button disabled>Default Disabled</Button>{" "}
-<Button variant="primary" color="success" disabled>Primary Disabled</Button>{" "}
+<Button disabled>Default Disabled</Button>
+<i class="pr-4" />
+<Button variant="primary" color="success" disabled>Primary Disabled</Button>
+<i class="pr-4" />
 <Button variant="tertiary" color="danger" disabled>Tertiary Disabled</Button>
 ```
 
@@ -36,11 +45,11 @@
 
 ```jsx
 <Button width={32}>32px</Button>
-<br />
+<div class="pt-3" />
 <Button width={64}>64px</Button>
-<br />
+<div class="pt-3" />
 <Button width={96}>96px</Button>
-<br />
+<div class="pt-3" />
 <Button width={128}>128px</Button>
 ```
 
