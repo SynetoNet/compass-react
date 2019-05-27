@@ -124,9 +124,6 @@
 
 .btn-tertiary {
   color: $accent;
-  padding-left: 0;
-  padding-right: 0;
-
   &:hover {
     color: darken($accent, 20%);
   }
@@ -152,9 +149,4 @@
       color: darken($semantic-danger, 20%);
     }
   }
-}
-
-.btn-link {
-  padding-left: 0;
-  padding-right: 0;
 }
