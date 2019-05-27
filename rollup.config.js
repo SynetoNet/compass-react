@@ -3,6 +3,7 @@ import babel from "rollup-plugin-babel";
 import postcss from "rollup-plugin-postcss";
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
+import copy from "rollup-plugin-copy";
 import visualizer from "rollup-plugin-visualizer";
 import pkg from "./package.json";
 
@@ -35,6 +36,10 @@ export default [
       }),
       commonjs({
         include: /node_modules/
+      }),
+      copy({
+        targets: ["src/base/assets"],
+        outputFolder: "lib"
       }),
       visualizer({
         filename: "./docs/statistics.html",

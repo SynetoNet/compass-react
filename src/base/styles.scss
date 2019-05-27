@@ -3,7 +3,6 @@
 @import "colors";
 @import "variables";
 @import "node_modules/bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 html {
   // make base font 13px, as defined in Compass
@@ -11,11 +10,35 @@ html {
   font-size: 13px;
 }
 
-html,
+body,
 button,
+input,
 select,
-textarea,
-a:link,
-a:visited {
+textarea {
   font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Italic.ttf") format("ttf");
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-BoldItalic.ttf") format("ttf");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
 }
