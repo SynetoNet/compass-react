@@ -1,42 +1,35 @@
-### **Description**
-
-Used throughout the UI, enabling the user interaction with the application.
-
-<br />
-<br />
-
 #### **Default**
 
 ```jsx
+<Button>Default Button</Button>{" "}
 <Button variant="primary">Primary Button</Button>{" "}
-<Button>Secondary Button - Default</Button>{" "}
 <Button variant="tertiary">Tertiary Button</Button>
-<Button variant="link">Link</Button>
+<Button variant="link" href="https://github.com/SynetoNet/compass-react">Link</Button>
 
 ```
 
 #### **Accept**
 
 ```jsx
-<Button variant="primary" color="success">Primary Button</Button>{" "}
-<Button color="success">Secondary Button</Button>{" "}
-<Button variant="tertiary" color="success">Tertiary Button</Button>
+<Button color="success">Accept</Button>{" "}
+<Button color="success" variant="primary" >Primary Accept</Button>{" "}
+<Button color="success" variant="tertiary">Tertiary Accept</Button>
 ```
 
-#### **Deny**
+#### **Reject**
 
 ```jsx
-<Button variant="primary" color="danger">Primary Button</Button>{" "}
-<Button color="danger">Secondary Button</Button>{" "}
-<Button variant="tertiary" color="danger">Tertiary Button</Button>
+<Button color="danger">Reject</Button>{" "}
+<Button color="danger" variant="primary">Primary Reject</Button>{" "}
+<Button color="danger" variant="tertiary">Tertiary Reject</Button>
 ```
 
 #### **Disabled**
 
 ```jsx
-<Button variant="primary" color="danger" disabled>Primary Button</Button>{" "}
-<Button color="danger" disabled>Secondary Button</Button>{" "}
-<Button variant="tertiary" color="danger" disabled>Tertiary Button</Button>
+<Button disabled>Default Disabled</Button>{" "}
+<Button variant="primary" color="success" disabled>Primary Disabled</Button>{" "}
+<Button variant="tertiary" color="danger" disabled>Tertiary Disabled</Button>
 ```
 
 #### **Modular width**
@@ -58,19 +51,19 @@ import { useState } from "react";
 
 const LoadingExample = () => {
   const [isLoading, toggleLoading] = useState(false);
+
   const handleClick = () => {
     toggleLoading(true);
-    new Promise(resolve => setTimeout(resolve, 5000)).then(() => {
-      toggleLoading(false);
-    });
+    setTimeout(() => toggleLoading(false), 2000);
   };
+
   return (
     <Button
       variant="primary"
       disabled={isLoading}
       onClick={!isLoading ? handleClick : null}
     >
-      {isLoading ? "Loading…" : "Click to load"}
+      {isLoading ? "Please wait 2s" : "Click to load"}
     </Button>
   );
 };
