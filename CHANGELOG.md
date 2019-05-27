@@ -1,3 +1,10 @@
+#### 0.3.2 (2019-05-27)
+
+##### Documentation Changes
+
+* **Button:**  add spacing between examples ([5e201119](https://github.com/SynetoNet/compass-react/commit/5e20111950308e978b5e3cd5100898d6f97d3303))
+* **Badge:**  add spacing between examples ([b90e3a9b](https://github.com/SynetoNet/compass-react/commit/b90e3a9b38f0e9873cbf43acc003e3e0c1654298))
+
 #### 0.3.1 (2019-05-27)
 
 ##### New Features
