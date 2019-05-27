@@ -1,29 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders default Button 1`] = `
+exports[`Accept Button primary success Button 1`] = `
+<button
+  className="btn-success width-auto btn btn-primary"
+  disabled={false}
+  type="button"
+>
+  Primary
+</button>
+`;
+
+exports[`Accept Button secondary success Button 1`] = `
+<button
+  className="btn-success width-auto btn btn-secondary"
+  disabled={false}
+  type="button"
+>
+  Secondary
+</button>
+`;
+
+exports[`Accept Button tertiary success Button 1`] = `
+<button
+  className="btn-success width-auto btn btn-tertiary"
+  disabled={false}
+  type="button"
+>
+  Primary
+</button>
+`;
+
+exports[`Default Button primary Button 1`] = `
+<button
+  className="btn-default width-auto btn btn-primary"
+  disabled={false}
+  type="button"
+>
+  Primary
+</button>
+`;
+
+exports[`Default Button secondary Button 1`] = `
 <button
   className="btn-default width-auto btn btn-secondary"
   disabled={false}
   type="button"
-/>
+>
+  Secondary
+</button>
 `;
 
-exports[`renders disabled Button 1`] = `
+exports[`Default Button tertiary Button 1`] = `
+<button
+  className="btn-default width-auto btn btn-tertiary"
+  disabled={false}
+  type="button"
+>
+  Tertiary
+</button>
+`;
+
+exports[`Disabled Button primary disabled Button 1`] = `
 <button
   className=" width-auto disabled btn btn-primary"
   disabled={false}
   type="button"
 >
-  Primary Button
+  Primary
 </button>
 `;
 
-exports[`renders primary danger Button 1`] = `
+exports[`Disabled Button secondary disabled Button 1`] = `
 <button
-  className="btn-danger width-auto btn btn-primary"
+  className=" width-auto disabled btn btn-secondary"
   disabled={false}
   type="button"
 >
-  Primary Button
+  Secondary
+</button>
+`;
+
+exports[`Disabled Button tertiary disabled Button 1`] = `
+<button
+  className=" width-auto disabled btn btn-tertiary"
+  disabled={false}
+  type="button"
+>
+  Primary
 </button>
 `;
