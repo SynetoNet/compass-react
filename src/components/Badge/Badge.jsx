@@ -5,6 +5,7 @@ import classNames from "classnames";
 import BootstrapBadge from "react-bootstrap/Badge";
 
 import "./Badge.scss";
+import "../../base/fixed-width.scss";
 
 const Badge = ({ color, variant, width, block, ...props }) => {
   const classes = classNames({

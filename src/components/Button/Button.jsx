@@ -5,6 +5,7 @@ import classNames from "classnames";
 import BootstrapButton from "react-bootstrap/Button";
 
 import "./Button.scss";
+import "../../base/fixed-width.scss";
 
 const Button = ({ color, width, loading, loadingText, disabled, ...props }) => {
   let classes = classNames({

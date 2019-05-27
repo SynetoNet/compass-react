@@ -1,0 +1,5 @@
+@mixin fixed-width($width) {
+  width: $width;
+  padding-left: 0;
+  padding-right: 0;
+}
