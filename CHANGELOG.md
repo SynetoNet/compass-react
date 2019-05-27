@@ -1,3 +1,14 @@
+#### 0.3.1 (2019-05-27)
+
+##### New Features
+
+* **Base:**  include local fonts ([a0e8f351](https://github.com/SynetoNet/compass-react/commit/a0e8f3512668e86590cf7232d2608d78c3da32cf))
+
+##### Bug Fixes
+
+* **Modal:**  adjust styling to match design ([0b7e32ba](https://github.com/SynetoNet/compass-react/commit/0b7e32baa76efab1d5fbaf0be4d18b090d417f3f))
+* **Button:**  remove padding for tertiary & link variations ([7c127e14](https://github.com/SynetoNet/compass-react/commit/7c127e14cf746d58e89cca4ec516a0ad0405f38a))
+
 #### 0.3.0 (2019-05-27)
 
 ##### Documentation Changes

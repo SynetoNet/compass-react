@@ -4,7 +4,6 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7093,10 +7092,33 @@ a.text-dark:hover, a.text-dark:focus {
 html {
   font-size: 13px; }
 
-html,
+body,
 button,
+input,
 select,
-textarea,
-a:link,
-a:visited {
+textarea {
   font-family: "Roboto", sans-serif; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("ttf");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Italic.ttf") format("ttf");
+  font-style: italic;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-BoldItalic.ttf") format("ttf");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap; }
