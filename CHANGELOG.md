@@ -18,71 +18,21 @@
 
 #### 0.3.0 (2019-05-27)
 
-##### Documentation Changes
-
-* **Button:**  update examples ([4754b4ec](https://github.com/SynetoNet/compass-react/commit/4754b4ec67651167ddc8c07736e9d20b975a7b38))
-* **DatePicker:**
-  *  update scrollable Modal example ([3f1189ba](https://github.com/SynetoNet/compass-react/commit/3f1189ba2f66a545f3c363397228f5bc286135b3))
-  *  add inline prop ([5721bfae](https://github.com/SynetoNet/compass-react/commit/5721bfaee940387ca4318a2c693c4f4a2b37ec15))
-  *  reorder examples ([a7de95ef](https://github.com/SynetoNet/compass-react/commit/a7de95efe58e26dda98c59d7060550838f48f339))
-  *  add time picker example ([a8f89b38](https://github.com/SynetoNet/compass-react/commit/a8f89b38d27fa2be733d778ce58cdcd8905fd85d))
-  *  add inline example ([9748c146](https://github.com/SynetoNet/compass-react/commit/9748c146efc4eccbcf6345aef2e733b0b8420499))
-  *  update placeholder example ([4b703ba4](https://github.com/SynetoNet/compass-react/commit/4b703ba41f8308675e88400b9650e901c65d75e6))
-  *  update examples to contain state ([7d8c60f4](https://github.com/SynetoNet/compass-react/commit/7d8c60f408f0d6afbdd68e39523e767945a492f2))
-* **Base:**  add Spacing examples ([b26b3a6a](https://github.com/SynetoNet/compass-react/commit/b26b3a6aabd98f7bc024e8832a3b8e5c5de1cb86))
-
 ##### New Features
 
-* **Modal:**  add Modal component ([ebb7d6be](https://github.com/SynetoNet/compass-react/commit/ebb7d6be8f0a64906a29e97a54842a3082d47fab))
-* **Button:**
-  *  add tests; export Button component ([2b04a99a](https://github.com/SynetoNet/compass-react/commit/2b04a99a121bc5130479af7286e634e07a31a851))
-  *  add load example; several small fixes ([1e9331b2](https://github.com/SynetoNet/compass-react/commit/1e9331b2bbedf64ff5ee5c9a83bfafa53594e13e))
-  *  implement button component ([613a84ec](https://github.com/SynetoNet/compass-react/commit/613a84ec363f85f9cc0c922ac866fc226c69ca5d))
-* **Datepicker:**
-  *  add styling for states and custom header ([e4574f35](https://github.com/SynetoNet/compass-react/commit/e4574f354c8b69295efc38261e570d7cf1569596))
-  *  Add styling to datepicker ([117bb360](https://github.com/SynetoNet/compass-react/commit/117bb360f12047d1cba512b2a3a37821389fa849))
+* **Modal:**  add Modal component
+* **Button:**  add Button component
+* **DatePicker:**  add DatePicker component
 * **Base:**  override bootstrap color variables ([be66ac22](https://github.com/SynetoNet/compass-react/commit/be66ac22a96aeca56d4a1af8f811d51a5c767ece))
-* **DatePicker:**
-  *  add date format support ([b59bce2f](https://github.com/SynetoNet/compass-react/commit/b59bce2f43e525ebc4eac2412185885aae968cf6))
-  *  support redux-form Field elements ([94d71188](https://github.com/SynetoNet/compass-react/commit/94d7118853e50cd8df014b939266e715a7bab81e))
-  *  add examples for date filtering, highlight, placeholder ([b898ea63](https://github.com/SynetoNet/compass-react/commit/b898ea636ee21a55a46f21c84f6512c6cbc7a8ee))
-  *  simplify public API with customInput ([f9bac8c2](https://github.com/SynetoNet/compass-react/commit/f9bac8c2d35d15b3447712b48382ad3d02f93aea))
-  *  add DatePicker component, appendable to DOM ([3cc6e777](https://github.com/SynetoNet/compass-react/commit/3cc6e777e932d85ae4538b8a671b0398e1368970))
-* **Tabs:**  add max-width for vertical tabs; align top items for horizontal tabs ([5029be18](https://github.com/SynetoNet/compass-react/commit/5029be18927a9bc2bba99704174c07ba366240ec))
 
 ##### Bug Fixes
 
-* **Button:**  adjust styling ([cbda15ba](https://github.com/SynetoNet/compass-react/commit/cbda15ba98dabf828811df2b81b96931a5b134c7))
-* **DatePicker:**
-  *  update selected time ([bb4fd3f1](https://github.com/SynetoNet/compass-react/commit/bb4fd3f1f90f887e6531e82983c53e0ef707c20e))
-  *  fixes [#5](https://github.com/SynetoNet/compass-react/pull/5) DatePicker doesn't open on multiple clicks on input ([8e425042](https://github.com/SynetoNet/compass-react/commit/8e425042f6a9f71470bf417cea221cfa882b1c44))
-  *  eliminate format function name collision ([a3f2d2c8](https://github.com/SynetoNet/compass-react/commit/a3f2d2c8c18872c0e1937b8f659caa51d62fa62e))
-  *  add internal state, to remember the selected date ([0304c6b5](https://github.com/SynetoNet/compass-react/commit/0304c6b5240c1932877a1bef30eb921f40cd4946))
 * **Tabs:**
-  *  remove useless example ([6f251634](https://github.com/SynetoNet/compass-react/commit/6f251634351894f4e69a0a26ba47833bb161f6dc))
   *  make border stretch as far as content height for vertical tabs ([#4](https://github.com/SynetoNet/compass-react/pull/4)) ([d38d3e68](https://github.com/SynetoNet/compass-react/commit/d38d3e68855ea36007ac32708c7d95e5cc4d0161))
-*  fix styles typo ([d36384ee](https://github.com/SynetoNet/compass-react/commit/d36384ee8cfc124aded195327630f719524bd9ea))
 
-##### Performance Improvements
+##### Documentation Changes
 
-* **DatePicker:**  import only needed modules ([a58a90be](https://github.com/SynetoNet/compass-react/commit/a58a90be658284e934740140dd9cfceeacd87507))
-
-##### Refactors
-
-*  extract fixed width styles ([2a00a2f8](https://github.com/SynetoNet/compass-react/commit/2a00a2f864cdde725b9169191e34e2f9cbdcf96d))
-* **DatePicker:**
-  *  styling ([aabc0241](https://github.com/SynetoNet/compass-react/commit/aabc0241ef994836a1493ee3f98ba37ee30dd3b0))
-  *  rename custom header component ([9c9f31ae](https://github.com/SynetoNet/compass-react/commit/9c9f31ae223ad8894f5b20a630b20fcc047e0fc7))
-  *  extract custom header component ([300cc6bb](https://github.com/SynetoNet/compass-react/commit/300cc6bb355180ed2905134f8184321125325346))
-  *  extract function ([2eb495f2](https://github.com/SynetoNet/compass-react/commit/2eb495f2d17fd4c09bef54b8e8a003f9deb3c853))
-* **Base:**  move Layout components ([84be3d5d](https://github.com/SynetoNet/compass-react/commit/84be3d5d67cf58c4348caa0fad288ae524d528cb))
-
-##### Tests
-
-* **Button:**  add snapshop tests ([65c3e34e](https://github.com/SynetoNet/compass-react/commit/65c3e34e9ca48863d856b216d553558b00f15d57))
-* **DatePicker:**
-  *  fix tests non-determinism ([6db7c61d](https://github.com/SynetoNet/compass-react/commit/6db7c61df77f30052e7b575152df8622f48119d7))
-  *  add snapshot tests ([5acf89f4](https://github.com/SynetoNet/compass-react/commit/5acf89f491c55fa05f0e99525b3b9242a3044fda))
+* **Base:**  add Spacing examples ([b26b3a6a](https://github.com/SynetoNet/compass-react/commit/b26b3a6aabd98f7bc024e8832a3b8e5c5de1cb86))
 
 ## 0.2.0 (2019-05-14)
 
