@@ -1,5 +1,12 @@
-@import "../../base/colors";
-@import "../../base/variables";
+.modal-header,
+.modal-footer {
+  border: 0;
+  padding: 1.5rem;
+}
+
+.modal-body {
+  padding: 1rem 1.5rem;
+}
 
 .modal-footer_tertiary {
   display: flex;
