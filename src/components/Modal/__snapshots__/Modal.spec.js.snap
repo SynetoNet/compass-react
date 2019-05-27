@@ -10,6 +10,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       key="tertiary"
     >
       <Button
+        className="px-0"
         color="default"
         disabled={false}
         variant="tertiary"
@@ -28,6 +29,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       Cancel
     </Button>
     <Button
+      className="ml-2"
       color="default"
       disabled={false}
       key="primary"
