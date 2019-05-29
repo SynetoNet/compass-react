@@ -102,3 +102,30 @@ import Button from "../Button/Button";
   </Tabs.Tab>
 </Tabs>;
 ```
+
+#### **Controlled Tabs**
+
+By default, the Tabs are uncontrolled, having their own internal state regarding the activeTab. If you specify the **`activeKey`** and the **`onSelect`** handler, you can turn this into a controlled component:
+
+```jsx
+import { useState } from "react";
+
+const ControlledTabs = () => {
+  const [activeKey, setActiveKey] = useState("home");
+
+  return (
+    <>
+      <Tabs activeKey={activeKey} onSelect={tab => setActiveKey(tab)}>
+        <Tabs.Tab eventKey="home" title="Home">
+          Home tab content, my heavy fox, you inspire me to write.
+        </Tabs.Tab>
+        <Tabs.Tab eventKey="profile" title="Profile">
+          Profile tab, let me compare you to an ideal spoon?
+        </Tabs.Tab>
+      </Tabs>
+    </>
+  );
+};
+
+<ControlledTabs />;
+```
