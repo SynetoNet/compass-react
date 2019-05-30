@@ -78,10 +78,6 @@
     border-right: 1px solid $neutral-12;
 
     .nav-link {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      max-width: 200px;
       // remove hover border
       &:hover:not(.active) {
         border-color: transparent;
@@ -97,7 +93,7 @@
       &.active::before {
         width: 3px;
         top: -1px;
-        left: 0;
+        left: -1px;
         bottom: -1px;
       }
     }
@@ -112,4 +108,11 @@
   // this is to accomodate the top border of tab buttons
   // so content is vertically centered
   padding-top: 1px;
+}
+
+.nav-link_content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 200px;
 }

@@ -34,7 +34,7 @@ class Tabs extends React.Component {
               return (
                 <Nav.Item key={eventKey}>
                   <Nav.Link eventKey={eventKey} {...others}>
-                    {title}
+                    <div className="nav-link_content">{title}</div>
                   </Nav.Link>
                 </Nav.Item>
               );
