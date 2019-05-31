@@ -2,11 +2,11 @@
 
 ```jsx
 <Button>Default Button</Button>
-<i class="pr-4" />
+<i className="pr-4" />
 <Button variant="primary">Primary Button</Button>
-<i class="pr-4" />
+<i className="pr-4" />
 <Button variant="tertiary">Tertiary Button</Button>
-<i class="pr-4" />
+<i className="pr-4" />
 <Button variant="link" href="https://github.com/SynetoNet/compass-react">Link</Button>
 
 ```
@@ -15,9 +15,9 @@
 
 ```jsx
 <Button color="success">Accept</Button>
-<i class="pr-4" />
+<i className="pr-4" />
 <Button color="success" variant="primary" >Primary Accept</Button>
-<i class="pr-4" />
+<i className="pr-4" />
 <Button color="success" variant="tertiary">Tertiary Accept</Button>
 ```
 
@@ -25,9 +25,9 @@
 
 ```jsx
 <Button color="danger">Reject</Button>
-<i class="pr-4" />
+<i className="pr-4" />
 <Button color="danger" variant="primary">Primary Reject</Button>
-<i class="pr-4" />
+<i className="pr-4" />
 <Button color="danger" variant="tertiary">Tertiary Reject</Button>
 ```
 
@@ -35,9 +35,9 @@
 
 ```jsx
 <Button disabled>Default Disabled</Button>
-<i class="pr-4" />
+<i className="pr-4" />
 <Button variant="primary" color="success" disabled>Primary Disabled</Button>
-<i class="pr-4" />
+<i className="pr-4" />
 <Button variant="tertiary" color="danger" disabled>Tertiary Disabled</Button>
 ```
 
@@ -45,11 +45,11 @@
 
 ```jsx
 <Button width={32}>32px</Button>
-<div class="pt-3" />
+<div className="pt-3" />
 <Button width={64}>64px</Button>
-<div class="pt-3" />
+<div className="pt-3" />
 <Button width={96}>96px</Button>
-<div class="pt-3" />
+<div className="pt-3" />
 <Button width={128}>128px</Button>
 ```
 
