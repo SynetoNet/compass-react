@@ -1,0 +1,8 @@
+@import "../../base/colors";
+@import "../../base/variables";
+
+.dropdown-toggle::after {
+  margin-left: 0.5rem;
+  border-top-width: 0.4em;
+  transform: translateY(50%);
+}

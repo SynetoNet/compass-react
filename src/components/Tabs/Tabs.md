@@ -129,3 +129,47 @@ const ControlledTabs = () => {
 
 <ControlledTabs />;
 ```
+
+#### **Extra Dropdown**
+
+To handle additional actions, it is required to make the Tab a controlled component:
+
+```jsx
+import { useState } from "react";
+import Dropdown from "../Dropdown/Dropdown";
+
+const ControlledTabsWithDropdown = () => {
+  const [activeKey, setActiveKey] = useState("home");
+
+  return (
+    <>
+      <Tabs
+        activeKey={activeKey}
+        onSelect={tab => {
+          setActiveKey(tab);
+          console.log("selected tab", tab);
+        }}
+        extra={
+          <Dropdown
+            label="Dropdown"
+            variant="tertiary"
+            onSelect={eventKey =>
+              console.log("selected dropdown option", eventKey)
+            }
+            items={[{ label: "Option 1" }, { label: "Option 2" }]}
+          />
+        }
+      >
+        <Tabs.Tab eventKey="home" title="Home">
+          Home tab content, my heavy fox, you inspire me to write.
+        </Tabs.Tab>
+        <Tabs.Tab eventKey="profile" title="Profile">
+          Profile tab, let me compare you to an ideal spoon?
+        </Tabs.Tab>
+      </Tabs>
+    </>
+  );
+};
+
+<ControlledTabsWithDropdown />;
+```

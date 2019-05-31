@@ -42,6 +42,9 @@
   }
 }
 
+// .btn-secondary:not(:disabled):not(.disabled):active,
+// .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle,
 .btn-secondary {
   background-color: $neutral-0;
   border: 1px solid $accent;

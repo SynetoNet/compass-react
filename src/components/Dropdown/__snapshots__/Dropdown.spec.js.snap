@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
+<Dropdown
+  as="div"
+  navbar={false}
+  show={true}
+>
+  <Bootstrap(DropdownToggle)
+    variant="secondary"
+  >
+    Dropdown Label
+  </Bootstrap(DropdownToggle)>
+  <DropdownMenu
+    alignRight={false}
+    as="div"
+    flip={true}
+  >
+    <DropdownItem
+      as={[Function]}
+      disabled={false}
+      eventKey="option1"
+      key="option1"
+    >
+      option1
+    </DropdownItem>
+    <DropdownItem
+      as={[Function]}
+      disabled={false}
+      eventKey="option2"
+      key="option2"
+    >
+      option2
+    </DropdownItem>
+  </DropdownMenu>
+</Dropdown>
+`;
