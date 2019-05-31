@@ -65,6 +65,98 @@ const ActionsModal = () => {
 <ActionsModal />;
 ```
 
+#### **Scrollable Modal**
+
+```jsx
+import { useState } from "react";
+import { Button } from "../../index";
+
+const ScrollableModal = () => {
+  const [showModal, toggleModal] = useState(false);
+
+  return (
+    <>
+      <Button variant="primary" onClick={() => toggleModal(true)}>
+        Toggle modal
+      </Button>
+      <Modal
+        show={showModal}
+        onHide={() => toggleModal(false)}
+        scrollable
+        content={
+          <div>
+            <div style={{ height: "100vh" }} />
+            content
+            <div style={{ height: "100vh" }} />
+          </div>
+        }
+        title="Modal title"
+      />
+    </>
+  );
+};
+
+<ScrollableModal />;
+```
+
+#### **Sizes**
+
+```jsx
+import { useState } from "react";
+import { Button } from "../../index";
+
+const SizedModal = () => {
+  const [showModalSm, toggleModalSm] = useState(false);
+  const [showModalMd, toggleModalMd] = useState(false);
+  const [showModalLg, toggleModalLg] = useState(false);
+
+  return (
+    <>
+      <Button variant="primary" onClick={() => toggleModalSm(true)}>
+        Small modal
+      </Button>
+      <Modal
+        show={showModalSm}
+        size="sm"
+        onHide={() => toggleModalSm(false)}
+        scrollable
+        content="..."
+        title="Small Modal"
+      />
+
+      <i className="px-2" />
+
+      <Button variant="primary" onClick={() => toggleModalMd(true)}>
+        Normal modal
+      </Button>
+      <Modal
+        show={showModalMd}
+        onHide={() => toggleModalMd(false)}
+        scrollable
+        content="..."
+        title="Normal Modal"
+      />
+
+      <i className="px-2" />
+
+      <Button variant="primary" onClick={() => toggleModalLg(true)}>
+        Large modal
+      </Button>
+      <Modal
+        show={showModalLg}
+        size="lg"
+        onHide={() => toggleModalLg(false)}
+        scrollable
+        content="..."
+        title="Large Modal"
+      />
+    </>
+  );
+};
+
+<SizedModal />;
+```
+
 #### **Extended usage**
 
 ```jsx
@@ -137,38 +229,4 @@ const ExtendedModal = () => {
 };
 
 <ExtendedModal />;
-```
-
-#### **Scrollable Modal**
-
-```jsx
-import { useState } from "react";
-import { Button, Badge } from "../../index";
-
-const ScrollableModal = () => {
-  const [showModal, toggleModal] = useState(false);
-
-  return (
-    <>
-      <Button variant="primary" onClick={() => toggleModal(true)}>
-        Toggle modal
-      </Button>
-      <Modal
-        show={showModal}
-        onHide={() => toggleModal(false)}
-        scrollable
-        content={
-          <div>
-            <div style={{ height: "100vh" }} />
-            content
-            <div style={{ height: "100vh" }} />
-          </div>
-        }
-        title="Modal title"
-      />
-    </>
-  );
-};
-
-<ScrollableModal />;
 ```

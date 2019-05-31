@@ -92,7 +92,7 @@ Modal.propTypes = {
    *
    * `{ label: "button text", onClick: () => {} }`
    *
-   * Defaults to **`Close`** secondary button
+   * Defaults to secondary button with **`Close`** label
    */
   actions: PropTypes.shape({
     primary: PropTypes.shape({
@@ -111,7 +111,8 @@ Modal.propTypes = {
   /** String or any component to be rendered */
   content: PropTypes.node,
   /** String or any component to be rendered */
-  title: PropTypes.node
+  title: PropTypes.node,
+  size: PropTypes.oneOf(["sm", "lg"])
 };
 
 Modal.defaultProps = {
