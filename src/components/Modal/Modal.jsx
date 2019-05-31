@@ -28,7 +28,7 @@ class Modal extends React.Component {
     }
 
     return (
-      <BSModal {...props}>
+      <BSModal {...props} onEntering={this.onEnter}>
         {title && (
           <BSModal.Header closeButton={closeButton}>
             <BSModal.Title>{title}</BSModal.Title>
@@ -83,6 +83,21 @@ class Modal extends React.Component {
     }
 
     return elements;
+  };
+
+  onEnter = modal => {
+    const { onEntering } = this.props;
+
+    // support stacked modals
+    const START_Z_INDEX = 1040;
+    const nrModals = document.querySelectorAll(".modal.show").length;
+    modal.style.zIndex = START_Z_INDEX + 2 * nrModals + 1;
+    const modalBackdrop = document.querySelectorAll(".modal-backdrop.show")[
+      nrModals - 1
+    ];
+    modalBackdrop.style.zIndex = START_Z_INDEX + 2 * nrModals;
+
+    onEntering && onEntering();
   };
 }
 

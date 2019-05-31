@@ -157,6 +157,54 @@ const SizedModal = () => {
 <SizedModal />;
 ```
 
+#### **Stacked Modals**
+
+```jsx
+import { useState } from "react";
+import { Button } from "../../index";
+
+const SmallModal = () => {
+  const [show, toggle] = useState(false);
+  return (
+    <>
+      <Button onClick={() => toggle(true)}>Third Modal</Button>
+      <Modal show={show} size="sm" onHide={() => toggle(false)} content="..." />
+    </>
+  );
+};
+
+const MediumModal = () => {
+  const [show, toggle] = useState(false);
+  return (
+    <>
+      <Button onClick={() => toggle(true)}>Second modal</Button>
+      <Modal
+        show={show}
+        onHide={() => toggle(false)}
+        content={<SmallModal />}
+      />
+    </>
+  );
+};
+
+const FirstModal = () => {
+  const [show, toggle] = useState(false);
+  return (
+    <>
+      <Button onClick={() => toggle(true)}>First modal</Button>
+      <Modal
+        show={show}
+        size="lg"
+        onHide={() => toggle(false)}
+        content={<MediumModal />}
+      />
+    </>
+  );
+};
+
+<FirstModal />;
+```
+
 #### **Extended usage**
 
 ```jsx
