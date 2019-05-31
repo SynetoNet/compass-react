@@ -9,9 +9,7 @@ const SimpleModal = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={() => toggleModal(true)}>
-        Toggle modal
-      </Button>
+      <Button onClick={() => toggleModal(true)}>Toggle modal</Button>
       <Modal
         show={showModal}
         onHide={() => toggleModal(false)}
@@ -36,9 +34,7 @@ const ActionsModal = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={() => toggleModal(true)}>
-        Toggle modal
-      </Button>
+      <Button onClick={() => toggleModal(true)}>Toggle modal</Button>
       <Modal
         show={showModal}
         onHide={() => toggleModal(false)}
@@ -76,9 +72,7 @@ const ScrollableModal = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={() => toggleModal(true)}>
-        Toggle modal
-      </Button>
+      <Button onClick={() => toggleModal(true)}>Toggle modal</Button>
       <Modal
         show={showModal}
         onHide={() => toggleModal(false)}
@@ -112,9 +106,7 @@ const SizedModal = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={() => toggleModalSm(true)}>
-        Small modal
-      </Button>
+      <Button onClick={() => toggleModalSm(true)}>Small modal</Button>
       <Modal
         show={showModalSm}
         size="sm"
@@ -126,9 +118,7 @@ const SizedModal = () => {
 
       <i className="px-2" />
 
-      <Button variant="primary" onClick={() => toggleModalMd(true)}>
-        Normal modal
-      </Button>
+      <Button onClick={() => toggleModalMd(true)}>Normal modal</Button>
       <Modal
         show={showModalMd}
         onHide={() => toggleModalMd(false)}
@@ -139,9 +129,7 @@ const SizedModal = () => {
 
       <i className="px-2" />
 
-      <Button variant="primary" onClick={() => toggleModalLg(true)}>
-        Large modal
-      </Button>
+      <Button onClick={() => toggleModalLg(true)}>Large modal</Button>
       <Modal
         show={showModalLg}
         size="lg"
@@ -216,9 +204,7 @@ const ExtendedModal = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={() => toggleModal(true)}>
-        Toggle modal
-      </Button>
+      <Button onClick={() => toggleModal(true)}>Toggle modal</Button>
       <Modal show={showModal} onHide={() => toggleModal(false)}>
         <Modal.Header>
           <div
@@ -262,11 +248,7 @@ const ExtendedModal = () => {
             >
               No way!!!
             </Button>
-            <Button
-              variant="primary"
-              color="success"
-              onClick={() => toggleModal(false)}
-            >
+            <Button color="success" onClick={() => toggleModal(false)}>
               Sure, anytime
             </Button>
           </div>
