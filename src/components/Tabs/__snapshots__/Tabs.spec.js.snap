@@ -23,7 +23,11 @@ exports[`renders Horizontal Tabs 1`] = `
         onKeyDown={[Function]}
         role="tab"
       >
-        tab1 title
+        <div
+          className="nav-link_content"
+        >
+          tab1 title
+        </div>
       </a>
     </div>
     <div
@@ -41,7 +45,11 @@ exports[`renders Horizontal Tabs 1`] = `
         role="tab"
         tabIndex={-1}
       >
-        tab2 title
+        <div
+          className="nav-link_content"
+        >
+          tab2 title
+        </div>
       </a>
     </div>
     <div
@@ -59,7 +67,11 @@ exports[`renders Horizontal Tabs 1`] = `
         role="tab"
         tabIndex={-1}
       >
-        tab3 title
+        <div
+          className="nav-link_content"
+        >
+          tab3 title
+        </div>
       </a>
     </div>
   </div>
@@ -123,7 +135,11 @@ exports[`renders Vertical Tabs 1`] = `
         onKeyDown={[Function]}
         role="tab"
       >
-        tab1 title
+        <div
+          className="nav-link_content"
+        >
+          tab1 title
+        </div>
       </a>
     </div>
     <div
@@ -141,7 +157,11 @@ exports[`renders Vertical Tabs 1`] = `
         role="tab"
         tabIndex={-1}
       >
-        tab2 title
+        <div
+          className="nav-link_content"
+        >
+          tab2 title
+        </div>
       </a>
     </div>
     <div
@@ -159,7 +179,11 @@ exports[`renders Vertical Tabs 1`] = `
         role="tab"
         tabIndex={-1}
       >
-        tab3 title
+        <div
+          className="nav-link_content"
+        >
+          tab3 title
+        </div>
       </a>
     </div>
   </div>
