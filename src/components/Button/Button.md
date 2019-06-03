@@ -53,7 +53,13 @@
 <Button width={128}>128px</Button>
 ```
 
-#### **Button loading state**
+#### **Button loading controlled**
+
+To handle Loading state, you could manually control the:
+
+* disabled state
+* onClick handler
+* Button text
 
 ```jsx
 import { useState } from "react";
@@ -73,6 +79,34 @@ const LoadingExample = () => {
       onClick={!isLoading ? handleClick : null}
     >
       {isLoading ? "Please wait 2s" : "Click to load"}
+    </Button>
+  );
+};
+
+<LoadingExample />;
+```
+
+#### **Button loading uncontrolled**
+
+For easier usage and for long running actions, you should use the **`loading`** prop:
+
+* defaults to "Please wait..." when passing true;
+* cycles through various messages every 10s;
+
+```jsx
+import { useState } from "react";
+
+const LoadingExample = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handleClick = () => {
+    setLoading("Hold on");
+    setTimeout(() => setLoading(false), 2500);
+  };
+
+  return (
+    <Button variant="primary" loading={loading} onClick={handleClick}>
+      {"Click to load"}
     </Button>
   );
 };
