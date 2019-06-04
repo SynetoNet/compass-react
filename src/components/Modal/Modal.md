@@ -79,9 +79,11 @@ const ScrollableModal = () => {
         scrollable
         content={
           <div>
+            scroll down
             <div style={{ height: "100vh" }} />
-            content
+            ...
             <div style={{ height: "100vh" }} />
+            end
           </div>
         }
         title="Modal title"
@@ -111,7 +113,6 @@ const SizedModal = () => {
         show={showModalSm}
         size="sm"
         onHide={() => toggleModalSm(false)}
-        scrollable
         content="..."
         title="Small Modal"
       />
@@ -122,7 +123,6 @@ const SizedModal = () => {
       <Modal
         show={showModalMd}
         onHide={() => toggleModalMd(false)}
-        scrollable
         content="..."
         title="Normal Modal"
       />
@@ -134,7 +134,6 @@ const SizedModal = () => {
         show={showModalLg}
         size="lg"
         onHide={() => toggleModalLg(false)}
-        scrollable
         content="..."
         title="Large Modal"
       />

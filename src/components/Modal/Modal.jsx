@@ -9,7 +9,17 @@ import "./Modal.scss";
 class Modal extends React.Component {
   static Header = BSModal.Header;
   static Title = BSModal.Title;
-  static Body = BSModal.Body;
+  static Body = ({ children, ...props }) => {
+    return (
+      <>
+        <div className="modal-shadow-top" />
+        <BSModal.Body {...props}>
+          <div className="modal-body-inner">{children}</div>
+        </BSModal.Body>
+        <div className="modal-shadow-bottom" />
+      </>
+    );
+  };
   static Footer = BSModal.Footer;
 
   render() {
@@ -30,12 +40,12 @@ class Modal extends React.Component {
     return (
       <BSModal {...props} onEntering={this.onEnter}>
         {title && (
-          <BSModal.Header closeButton={closeButton}>
-            <BSModal.Title>{title}</BSModal.Title>
-          </BSModal.Header>
+          <Modal.Header closeButton={closeButton}>
+            <Modal.Title>{title}</Modal.Title>
+          </Modal.Header>
         )}
-        {content && <BSModal.Body>{content}</BSModal.Body>}
-        <BSModal.Footer>{this._renderFooter(actions)}</BSModal.Footer>
+        {content && <Modal.Body>{content}</Modal.Body>}
+        <Modal.Footer>{this._renderFooter(actions)}</Modal.Footer>
       </BSModal>
     );
   }
