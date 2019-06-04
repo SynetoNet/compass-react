@@ -46,11 +46,6 @@ const Button = ({
     buttonTexts = [initialLoadingText, ...LOADING_TEXTS];
   }
 
-  if (_disabled) {
-    const replace = "btn-" + color;
-    classes = classes.replace(replace, "");
-  }
-
   useEffect(() => {
     let timer;
 
@@ -86,7 +81,7 @@ const Button = ({
   }
 
   function _onClick() {
-    !_disabled && onClick();
+    !_disabled && onClick && onClick();
   }
 
   return (
@@ -104,7 +99,7 @@ const Button = ({
 
 Button.propTypes = {
   variant: PropTypes.oneOf(["primary", "tertiary", "secondary", "link"]),
-  color: PropTypes.oneOf(["success", "danger", "default"]),
+  color: PropTypes.oneOf(["accent", "success", "danger", "warning", "info"]),
   width: PropTypes.oneOf([32, 64, 96, 128, "auto"]),
   disabled: PropTypes.bool,
   loading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
@@ -114,7 +109,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   variant: "secondary",
-  color: "default",
+  color: "accent",
   width: "auto",
   disabled: false
 };

@@ -1,44 +1,91 @@
-#### **Default**
+#### **Default Buttons**
 
 ```jsx
 <Button>Default Button</Button>
-<i className="pr-4" />
-<Button variant="primary">Primary Button</Button>
-<i className="pr-4" />
-<Button variant="tertiary">Tertiary Button</Button>
-<i className="pr-4" />
-<Button variant="link" href="https://github.com/SynetoNet/compass-react">Link</Button>
-
+<i className="pr-2" />
+<Button color="success">Success</Button>
+<i className="pr-2" />
+<Button color="danger">Danger</Button>
+<i className="pr-2" />
+<Button color="warning">Warning</Button>
+<i className="pr-2" />
+<Button color="info">Info</Button>
 ```
 
-#### **Accept**
+#### **Primary Buttons**
 
 ```jsx
-<Button color="success">Accept</Button>
-<i className="pr-4" />
-<Button color="success" variant="primary" >Primary Accept</Button>
-<i className="pr-4" />
-<Button color="success" variant="tertiary">Tertiary Accept</Button>
+<Button variant="primary">Primary</Button>
+<i className="pr-2" />
+<Button variant="primary" color="success">Success</Button>
+<i className="pr-2" />
+<Button variant="primary" color="danger">Danger</Button>
+<i className="pr-2" />
+<Button variant="primary" color="warning">Warning</Button>
+<i className="pr-2" />
+<Button variant="primary" color="info">Info</Button>
 ```
 
-#### **Reject**
+#### **Tertiary Buttons**
 
 ```jsx
-<Button color="danger">Reject</Button>
-<i className="pr-4" />
-<Button color="danger" variant="primary">Primary Reject</Button>
-<i className="pr-4" />
-<Button color="danger" variant="tertiary">Tertiary Reject</Button>
+<Button variant="tertiary">Tertiary</Button>
+<i className="pr-2" />
+<Button variant="tertiary" color="success">Success</Button>
+<i className="pr-2" />
+<Button variant="tertiary" color="danger">Danger</Button>
+<i className="pr-2" />
+<Button variant="tertiary" color="warning">Warning</Button>
+<i className="pr-2" />
+<Button variant="tertiary" color="info">Info</Button>
 ```
 
-#### **Disabled**
+#### **Link**
 
 ```jsx
-<Button disabled>Default Disabled</Button>
-<i className="pr-4" />
-<Button variant="primary" color="success" disabled>Primary Disabled</Button>
-<i className="pr-4" />
-<Button variant="tertiary" color="danger" disabled>Tertiary Disabled</Button>
+<Button variant="link" href="https://github.com/SynetoNet/compass-react">
+  Link
+</Button>
+```
+
+#### **Disabled Buttons**
+
+```jsx
+<div>
+  <Button disabled>Disabled</Button>
+  <i className="pr-2" />
+  <Button disabled color="success">Success</Button>
+  <i className="pr-2" />
+  <Button disabled color="danger">Danger</Button>
+  <i className="pr-2" />
+  <Button disabled color="warning">Warning</Button>
+  <i className="pr-2" />
+  <Button disabled color="info">Info</Button>
+</div>
+
+<div className="mt-2">
+  <Button disabled variant="primary">Disabled</Button>
+  <i className="pr-2" />
+  <Button disabled variant="primary" color="success">Success</Button>
+  <i className="pr-2" />
+  <Button disabled variant="primary" color="danger">Danger</Button>
+  <i className="pr-2" />
+  <Button disabled variant="primary" color="warning">Warning</Button>
+  <i className="pr-2" />
+  <Button disabled variant="primary" color="info">Info</Button>
+</div>
+
+<div className="mt-2">
+  <Button disabled variant="tertiary">Disabled</Button>
+  <i className="pr-2" />
+  <Button disabled variant="tertiary" color="success">Success</Button>
+  <i className="pr-2" />
+  <Button disabled variant="tertiary" color="danger">Danger</Button>
+  <i className="pr-2" />
+  <Button disabled variant="tertiary" color="warning">Warning</Button>
+  <i className="pr-2" />
+  <Button disabled variant="tertiary" color="info">Info</Button>
+</div>
 ```
 
 #### **Modular width**
@@ -53,13 +100,13 @@
 <Button width={128}>128px</Button>
 ```
 
-#### **Button loading controlled**
+#### **Loading Button controlled**
 
 To handle Loading state, you could manually control the:
 
-* disabled state
-* onClick handler
-* Button text
+- disabled state
+- onClick handler
+- Button text
 
 ```jsx
 import { useState } from "react";
@@ -86,12 +133,12 @@ const LoadingExample = () => {
 <LoadingExample />;
 ```
 
-#### **Button loading uncontrolled**
+#### **Loading Button uncontrolled**
 
 For easier usage and for long running actions, you should use the **`loading`** prop:
 
-* defaults to "Please wait..." when passing true;
-* cycles through various messages every 10s;
+- defaults to "Please wait..." when passing true;
+- cycles through various messages every 10s;
 
 ```jsx
 import { useState } from "react";

@@ -2,6 +2,7 @@
 
 exports[`Actions Modal modal with actions snapshop 1`] = `
 <Bootstrap(Modal)
+  onEntering={[Function]}
   show={true}
 >
   <ModalFooter>
@@ -11,7 +12,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
     >
       <Button
         className="px-0"
-        color="default"
+        color="accent"
         disabled={false}
         variant="tertiary"
         width="auto"
@@ -20,7 +21,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       </Button>
     </div>
     <Button
-      color="default"
+      color="accent"
       disabled={false}
       key="secondary"
       variant="secondary"
@@ -30,7 +31,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
     </Button>
     <Button
       className="ml-2"
-      color="default"
+      color="accent"
       disabled={false}
       key="primary"
       variant="primary"
@@ -44,11 +45,12 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
 
 exports[`Default Modal modal without header or content snapshop 1`] = `
 <Bootstrap(Modal)
+  onEntering={[Function]}
   show={true}
 >
   <ModalFooter>
     <Button
-      color="default"
+      color="accent"
       disabled={false}
       key="secondary"
       variant="secondary"
@@ -93,6 +95,7 @@ exports[`Extended Modal extended modal snapshop 1`] = `
 
 exports[`Simple Modal modal with title and content snapshop 1`] = `
 <Bootstrap(Modal)
+  onEntering={[Function]}
   show={true}
 >
   <ModalHeader
@@ -108,7 +111,7 @@ exports[`Simple Modal modal with title and content snapshop 1`] = `
   </ModalBody>
   <ModalFooter>
     <Button
-      color="default"
+      color="accent"
       disabled={false}
       key="secondary"
       variant="secondary"

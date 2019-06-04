@@ -3,41 +3,59 @@
 
 .btn {
   border-radius: 2px;
+
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 }
 
 .btn-primary {
   background-color: $accent;
-  &:hover {
-    background-color: darken($accent, 10%);
+
+  &:hover:not(:disabled) {
+    background-color: $semantic-accent-dark-20;
   }
-  &:focus {
-    background-color: darken($accent, 20%);
+  &:active:not(:disabled) {
+    background-color: $semantic-accent-dark-30;
   }
-  &.disabled {
-    background-color: $neutral-12;
-    color: $neutral-40;
-    border-color: $neutral-12;
-    &:focus {
-      box-shadow: none;
-    }
-  }
+
   &.btn-success {
     background-color: $semantic-confirm;
-    &:hover {
-      background-color: darken($semantic-confirm, 10%);
+    &:hover:not(:disabled) {
+      background-color: $semantic-confirm-dark-20;
     }
-    &:focus {
-      background-color: darken($semantic-confirm, 20%);
+    &:active:not(:disabled) {
+      background-color: $semantic-confirm-dark-30;
     }
   }
   &.btn-danger {
     background-color: $semantic-danger;
-    &:hover {
-      background-color: darken($semantic-danger, 10%);
+    &:hover:not(:disabled) {
+      background-color: $semantic-danger-dark-20;
     }
-    &:focus {
-      background-color: darken($semantic-danger, 20%);
-      outline: none;
+    &:active:not(:disabled) {
+      background-color: $semantic-danger-dark-30;
+    }
+  }
+  &.btn-info {
+    background-color: $semantic-info;
+    &:hover:not(:disabled) {
+      background-color: $semantic-info-dark-20;
+    }
+    &:active:not(:disabled) {
+      background-color: $semantic-info-dark-30;
+    }
+  }
+  &.btn-warning {
+    background-color: $semantic-warn;
+    color: $neutral-0;
+    &:hover:not(:disabled) {
+      background-color: $semantic-warn-dark-20;
+    }
+    &:active:not(:disabled) {
+      background-color: $semantic-warn-dark-30;
     }
   }
 }
@@ -47,109 +65,178 @@
 .show > .btn-secondary.dropdown-toggle,
 .btn-secondary {
   background-color: $neutral-0;
-  border: 1px solid $accent;
-  color: $accent;
-  &.disabled {
-    border: 1px solid $neutral-12;
-    color: $neutral-40;
-    box-shadow: none !important;
-    background-color: $neutral-0;
-    &:active,
-    &:hover,
-    &:focus {
-      border: 1px solid $neutral-12 !important;
-      color: $neutral-40;
-      background-color: $neutral-0 !important;
-    }
-    &:active:focus {
-      box-shadow: none !important;
-    }
+  border: 1px solid $semantic-accent-contrast;
+  color: $semantic-accent-contrast;
+
+  &:hover:not(:disabled) {
+    background-color: $semantic-accent-dark-20;
+    border-color: $semantic-accent-dark-20;
+    color: $neutral-0;
   }
-  &:active:focus {
-    box-shadow: 0 0 0 0.2rem rgb(172, 179, 240) !important;
-  }
-  &:active {
-    background-color: $accent !important;
-    border-color: $accent !important;
-  }
-  &:hover {
-    background-color: $neutral-0;
-    border: 1px solid darken($accent, 20%);
-    color: darken($accent, 20%);
+  &:active:not(:disabled) {
+    background-color: $semantic-accent-dark-30 !important;
+    border-color: $semantic-accent-dark-30 !important;
+    color: $neutral-0;
   }
   &:focus {
-    background-color: $neutral-0;
-    border: 1px solid darken($accent, 20%);
-    color: darken($accent, 40%);
-    box-shadow: 0 0 0 0.2rem rgb(172, 179, 240);
+    box-shadow: 0 0 0 0.2rem $semantic-accent-light-60 !important;
   }
+  &:disabled {
+    border-color: $semantic-accent-contrast;
+    color: $semantic-accent-contrast;
+    background-color: $neutral-0;
+  }
+
   &.btn-success {
     background-color: $neutral-0;
-    border: 1px solid $semantic-confirm;
-    color: $semantic-confirm;
-    &:active {
-      background-color: $semantic-confirm !important;
-      border-color: $semantic-confirm !important;
+    border-color: $semantic-confirm;
+    color: $semantic-confirm-dark-30;
+
+    &:hover:not(:disabled) {
+      background-color: $semantic-confirm-dark-20;
+      border-color: $semantic-confirm-dark-20;
+      color: $neutral-0;
     }
-    &:hover {
-      background-color: $neutral-0;
-      border: 1px solid darken($semantic-confirm, 20%);
-      color: darken($semantic-confirm, 20%);
+    &:active:not(:disabled) {
+      background-color: $semantic-confirm-dark-30 !important;
+      border-color: $semantic-confirm-dark-30 !important;
+      color: $neutral-0;
     }
     &:focus {
-      background-color: $neutral-0;
-      border: 1px solid darken($semantic-confirm, 20%);
-      color: darken($semantic-confirm, 40%);
-      box-shadow: 0 0 0 0.2rem $semantic-confirm !important;
+      box-shadow: 0 0 0 0.2rem $semantic-confirm-light-60 !important;
     }
   }
+
   &.btn-danger {
     background-color: $neutral-0;
-    border: 1px solid $semantic-danger;
-    color: $semantic-danger;
-    &:active {
-      background-color: $semantic-danger !important;
-      border-color: $semantic-danger !important;
+    border-color: $semantic-danger;
+    color: $semantic-danger-dark-30;
+
+    &:hover:not(:disabled) {
+      background-color: $semantic-danger-dark-20;
+      border-color: $semantic-danger-dark-20;
+      color: $neutral-0;
     }
-    &:hover {
-      background-color: $neutral-0;
-      border: 1px solid darken($semantic-danger, 20%);
-      color: darken($semantic-danger, 20%);
+    &:active:not(:disabled) {
+      background-color: $semantic-danger-dark-30 !important;
+      border-color: $semantic-danger-dark-30 !important;
+      color: $neutral-0;
     }
     &:focus {
-      background-color: $neutral-0;
-      border: 1px solid darken($semantic-danger, 20%);
-      color: darken($semantic-danger, 40%);
-      box-shadow: 0 0 0 0.2rem $semantic-danger !important;
+      box-shadow: 0 0 0 0.2rem $semantic-danger-light-60 !important;
+    }
+  }
+
+  &.btn-warning {
+    background-color: $neutral-0;
+    border-color: $semantic-warn;
+    color: $semantic-warn-dark-30;
+
+    &:hover:not(:disabled) {
+      background-color: $semantic-warn-dark-20;
+      border-color: $semantic-warn-dark-20;
+      color: $neutral-0;
+    }
+    &:active:not(:disabled) {
+      background-color: $semantic-warn-dark-30 !important;
+      border-color: $semantic-warn-dark-30 !important;
+      color: $neutral-0;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $semantic-warn-light-60 !important;
+    }
+  }
+
+  &.btn-info {
+    background-color: $neutral-0;
+    border-color: $semantic-info;
+    color: $semantic-info-dark-30;
+
+    &:hover:not(:disabled) {
+      background-color: $semantic-info-dark-20;
+      border-color: $semantic-info-dark-20;
+      color: $neutral-0;
+    }
+    &:active:not(:disabled) {
+      background-color: $semantic-info-dark-30 !important;
+      border-color: $semantic-info-dark-30 !important;
+      color: $neutral-0;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $semantic-info-light-60 !important;
     }
   }
 }
 
 .btn-tertiary {
-  color: $accent;
-  &:hover {
-    color: darken($accent, 20%);
+  color: $semantic-accent-contrast;
+  border-color: transparent !important;
+
+  &:hover:not(:disabled) {
+    background-color: $semantic-accent-light-85;
+    color: $semantic-accent-dark-30;
   }
-  &.disabled {
-    color: $neutral-40 !important;
-    box-shadow: none;
+  &:active:not(:disabled) {
+    background-color: $semantic-accent-light-60;
+    color: $semantic-accent-dark-30;
   }
+  &:disabled {
+    color: $semantic-accent-contrast;
+  }
+
   &.btn-success {
-    background-color: $neutral-0;
-    border: none;
     color: $semantic-confirm;
-    &:hover,
-    &:focus {
-      color: darken($semantic-confirm, 20%);
+    background-color: $neutral-0;
+
+    &:hover:not(:disabled) {
+      background-color: $semantic-confirm-light-85;
+      color: $semantic-confirm-dark-30;
+    }
+    &:active:not(:disabled) {
+      background-color: $semantic-confirm-light-60 !important;
+      color: $semantic-confirm-dark-30 !important;
     }
   }
+
   &.btn-danger {
-    background-color: $neutral-0;
-    border: none;
     color: $semantic-danger;
-    &:hover,
-    &:focus {
-      color: darken($semantic-danger, 20%);
+    background-color: $neutral-0;
+
+    &:hover:not(:disabled) {
+      background-color: $semantic-danger-light-85;
+      color: $semantic-danger-dark-30;
+    }
+    &:active:not(:disabled) {
+      background-color: $semantic-danger-light-60 !important;
+      color: $semantic-danger-dark-30 !important;
+    }
+  }
+
+  &.btn-warning {
+    color: $semantic-warn-dark-20;
+    background-color: $neutral-0;
+
+    &:hover:not(:disabled) {
+      background-color: $semantic-warn-light-85;
+      color: $semantic-warn-dark-30;
+    }
+    &:active:not(:disabled) {
+      background-color: $semantic-warn-light-60 !important;
+      color: $semantic-warn-dark-30 !important;
+    }
+  }
+
+  &.btn-info {
+    color: $semantic-info;
+    background-color: $neutral-0;
+
+    &:hover:not(:disabled) {
+      background-color: $semantic-info-light-85;
+      color: $semantic-info-dark-30;
+    }
+    &:active:not(:disabled) {
+      background-color: $semantic-info-light-60 !important;
+      color: $semantic-info-dark-30 !important;
     }
   }
 }
