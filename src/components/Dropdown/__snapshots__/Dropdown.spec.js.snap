@@ -2,7 +2,6 @@
 
 exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
 <Dropdown
-  as="div"
   navbar={false}
   show={true}
 >
@@ -10,10 +9,17 @@ exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
     variant="secondary"
   >
     Dropdown Label
+    <e
+      background={true}
+      className="ink"
+      duration={1000}
+      opacity={0.25}
+      radius={150}
+      recenter={true}
+    />
   </Bootstrap(DropdownToggle)>
   <DropdownMenu
     alignRight={false}
-    as="div"
     flip={true}
   >
     <DropdownItem

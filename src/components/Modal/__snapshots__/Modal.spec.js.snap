@@ -76,13 +76,13 @@ exports[`Extended Modal extended modal snapshop 1`] = `
       title
     </div>
   </ModalHeader>
-  <ModalBody>
+  <Component>
     <p
       className="custom-body"
     >
       body
     </p>
-  </ModalBody>
+  </Component>
   <ModalFooter>
     <div
       className="custom-footer"
@@ -106,9 +106,9 @@ exports[`Simple Modal modal with title and content snapshop 1`] = `
       modal title
     </ModalTitle>
   </ModalHeader>
-  <ModalBody>
+  <Component>
     modal content
-  </ModalBody>
+  </Component>
   <ModalFooter>
     <Button
       color="accent"
