@@ -5,7 +5,6 @@ import getYear from "date-fns/getYear";
 import range from "lodash/range";
 import uniq from "lodash/uniq";
 
-const years = range(1960, getYear(new Date()) + 20, 1);
 const months = [
   "January",
   "February",
