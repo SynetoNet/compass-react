@@ -20,10 +20,10 @@ class Dropdown extends React.Component {
 
     return (
       <BSDropdown {...props}>
-        <BSDropdown.Toggle variant={variant}>
+        <Dropdown.Toggle variant={variant}>
           {label}
           <Ink />
-        </BSDropdown.Toggle>
+        </Dropdown.Toggle>
         {items ? this.renderItems(items) : children}
       </BSDropdown>
     );
@@ -31,16 +31,16 @@ class Dropdown extends React.Component {
 
   renderItems(items) {
     return (
-      <BSDropdown.Menu>
+      <Dropdown.Menu>
         {items.map(({ label, eventKey, ...otherProps }) => {
           const key = eventKey || label;
           return (
-            <BSDropdown.Item key={key} eventKey={key} {...otherProps}>
+            <Dropdown.Item key={key} eventKey={key} {...otherProps}>
               {label}
-            </BSDropdown.Item>
+            </Dropdown.Item>
           );
         })}
-      </BSDropdown.Menu>
+      </Dropdown.Menu>
     );
   }
 }
