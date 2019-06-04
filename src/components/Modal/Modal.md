@@ -215,22 +215,13 @@ const ExtendedModal = () => {
               alignItems: "center"
             }}
           >
-            <Modal.Title>
-              Custom title <Badge variant="outline">With Badge</Badge>
-            </Modal.Title>
-            <Badge color="info" variant="strong">
-              Extra
-            </Badge>
+            <Modal.Title>Custom title</Modal.Title>
+            <Badge>Info Badge</Badge>
           </div>
         </Modal.Header>
 
         <Modal.Body>
-          <p>Lorem ipsum dolor sit amet:</p>
-          <ul>
-            <li>option 1</li>
-            <li>option 2</li>
-            <li>option 3</li>
-          </ul>
+          <p>Lorem ipsum dolor sit amet.</p>
         </Modal.Body>
 
         <Modal.Footer>
@@ -241,11 +232,7 @@ const ExtendedModal = () => {
               justifyContent: "space-between"
             }}
           >
-            <Button
-              variant="secondary"
-              color="danger"
-              onClick={() => toggleModal(false)}
-            >
+            <Button color="danger" onClick={() => toggleModal(false)}>
               No way!!!
             </Button>
             <Button color="success" onClick={() => toggleModal(false)}>
