@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Ink from "react-ink";
 // import classNames from "classnames";
 
 import BSDropdown from "react-bootstrap/Dropdown";
@@ -19,7 +20,10 @@ class Dropdown extends React.Component {
 
     return (
       <BSDropdown {...props}>
-        <BSDropdown.Toggle variant={variant}>{label}</BSDropdown.Toggle>
+        <BSDropdown.Toggle variant={variant}>
+          {label}
+          <Ink />
+        </BSDropdown.Toggle>
         {items ? this.renderItems(items) : children}
       </BSDropdown>
     );

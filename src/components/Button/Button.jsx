@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import Ink from "react-ink";
 
 import BootstrapButton from "react-bootstrap/Button";
 
@@ -93,6 +94,7 @@ const Button = ({
       {...props}
     >
       {text}
+      <Ink />
     </BootstrapButton>
   );
 };
