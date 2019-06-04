@@ -5,20 +5,20 @@ import getYear from "date-fns/getYear";
 import range from "lodash/range";
 
 const years = range(1960, getYear(new Date()) + 20, 1);
-const months = Object.entries({
-  0: "January",
-  1: "February",
-  2: "March",
-  3: "April",
-  4: "May",
-  5: "June",
-  6: "July",
-  7: "August",
-  8: "September",
-  9: "October",
-  10: "November",
-  11: "December"
-});
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
 
 const CustomHeader = ({
   date,
@@ -59,9 +59,9 @@ const CustomHeader = ({
         onChange={({ target: { value } }) => changeMonth(value)}
         className="datepicker-dropdown datepicker-month-dropdown"
       >
-        {months.map(month => (
-          <option key={month[0]} value={month[0]}>
-            {month[1]}
+        {months.map((month, index) => (
+          <option key={index} value={index}>
+            {month}
           </option>
         ))}
       </select>
