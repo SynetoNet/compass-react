@@ -3,6 +3,7 @@ import React from "react";
 import getMonth from "date-fns/getMonth";
 import getYear from "date-fns/getYear";
 import range from "lodash/range";
+import uniq from "lodash/uniq";
 
 const years = range(1960, getYear(new Date()) + 20, 1);
 const months = [
@@ -27,8 +28,11 @@ const CustomHeader = ({
   decreaseMonth,
   increaseMonth,
   prevMonthButtonDisabled,
-  nextMonthButtonDisabled
+  nextMonthButtonDisabled,
+  ...props
 }) => {
+  const years = getYearsRange(props);
+
   return (
     <div
       style={{
@@ -76,3 +80,21 @@ const CustomHeader = ({
 };
 
 export default CustomHeader;
+
+function getYearsRange({ minDate, maxDate, includeDates }) {
+  if (includeDates) {
+    return uniq(includeDates.map(getYear)).sort();
+  }
+
+  let startYear = 2000;
+  let endYear = getYear(new Date()) + 10;
+
+  if (minDate) {
+    startYear = Math.max(startYear, getYear(minDate));
+  }
+  if (maxDate) {
+    endYear = Math.min(endYear, getYear(maxDate));
+  }
+
+  return range(startYear, endYear, 1);
+}
