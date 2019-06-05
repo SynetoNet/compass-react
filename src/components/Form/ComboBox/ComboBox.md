@@ -1,7 +1,7 @@
 ### Combo box
 
 ```jsx
-import { Form } from "../../index";
+import { Form } from "../../../index";
 <Form>
   <ComboBox
     options={[
@@ -21,7 +21,7 @@ import { Form } from "../../index";
 ### Combo box - Multi Select
 
 ```jsx
-import { Form } from "../../index";
+import { Form } from "../../../index";
 <Form>
   <ComboBox
     options={[
