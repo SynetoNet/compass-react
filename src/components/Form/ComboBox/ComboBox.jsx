@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import RSelect from "react-select";
 
+import "./ComboBox.scss";
+
 const ComboBox = ({
   options,
   placeholder,

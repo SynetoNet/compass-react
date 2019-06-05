@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import BSForm from "react-bootstrap/Form";
 import RSwitch from "react-switch";
 
+import "./Switch.scss";
+
 const Switch = props => {
   return (
     <RSwitch

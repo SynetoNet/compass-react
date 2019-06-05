@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import BSForm from "react-bootstrap/Form";
 
+import "./Check.scss";
+
 const Check = props => {
   return <BSForm.Check custom {...props} />;
 };

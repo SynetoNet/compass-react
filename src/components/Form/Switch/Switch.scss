@@ -1,0 +1,11 @@
+@import "../../../base/colors";
+@import "../../../base/variables";
+
+.custom-switch .custom-control-label::before {
+  left: -2.25rem;
+  width: 1.25rem;
+  pointer-events: all;
+  border-radius: 0.5rem;
+  height: 2px;
+  top: 8px;
+}
