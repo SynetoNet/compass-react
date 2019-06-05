@@ -265,18 +265,3 @@ import { Col, Button } from "../../index";
   </Button>
 </Form>;
 ```
-
-### Switch
-
-```jsx
-import { useState } from "react";
-const SwitchExample = () => {
-  const [checked, setChecked] = useState(false);
-  const handleChange = checked => {
-    setChecked(checked);
-  };
-  return <Form.Switch onChange={handleChange} checked={checked} />;
-};
-
-<SwitchExample />;
-```
