@@ -2,7 +2,7 @@
 
 By default, **`DatePicker`** should be treated as a controlled component, by binding the **`selected`** value and the **`onChange`** handler.
 
-DatePicker will render a default **`<input />`** element.
+DatePicker will render a **`<Form.Control />`** element by default.
 
 ```jsx
 import { useState } from "react";
@@ -69,14 +69,21 @@ import { useState } from "react";
 import { Form } from "react-bootstrap";
 
 const CustomInputExample = () => {
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState("");
 
   return (
     <DatePicker
       selected={date}
       onChange={val => setDate(val)}
-      customInput={<Form.Control type="text" />}
-      dateFormat="dd-MMM-yyyy h:mm aa"
+      customInput={
+        <Form.Control
+          isValid={!!date}
+          isInvalid={!date}
+          type="text"
+          placeholder="You must select a date"
+        />
+      }
+      dateFormat="dd MMM, yyyy h:mm aa"
     />
   );
 };

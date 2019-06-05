@@ -15,6 +15,11 @@
   }
 }
 
+.react-datepicker__input-container,
+.react-datepicker-wrapper {
+  display: block;
+}
+
 .react-datepicker-popper[data-placement^="bottom"] {
   margin-top: 0;
 }
@@ -155,20 +160,6 @@
     font-weight: normal;
     &:hover {
       background-color: $neutral-0;
-    }
-  }
-}
-
-.react-datepicker__input-container {
-  & input {
-    width: 294px;
-    border: 2px solid $neutral-12;
-    background-color: #f7fcff;
-    padding: 6px;
-    &:focus {
-      border: 2px solid $accent;
-      box-shadow: none;
-      outline: none;
     }
   }
 }
