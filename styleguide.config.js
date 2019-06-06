@@ -32,7 +32,13 @@ module.exports = {
       // exampleMode: "expand",
       usageMode: "expand",
       ignore: "src/components*/Form/**/*.jsx",
-      sections: [{ name: "Form", components: "src/components*/Form/**/*.jsx" }],
+      sections: [
+        {
+          name: "Form",
+          components: "src/components*/Form/**/*.jsx",
+          ignore: "src/components*/Form/Form.jsx"
+        }
+      ],
       sectionDepth: 1,
       pagePerSection: true
     }
