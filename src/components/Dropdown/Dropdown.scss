@@ -6,3 +6,8 @@
   border-top-width: 0.4em;
   transform: translateY(50%);
 }
+
+.dropdown-align-end {
+  display: flex;
+  justify-content: flex-end;
+}

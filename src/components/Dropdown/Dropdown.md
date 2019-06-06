@@ -21,6 +21,30 @@
 />
 ```
 
+#### **Simple Dropdown - Align to the end**
+
+```jsx
+<Dropdown
+  label="Toggle Dropdown"
+  onSelect={eventKey => console.log(eventKey)}
+  items={[
+    {
+      label: "Action",
+      eventKey: "action-key",
+      onSelect: () => console.log("Additional handler")
+    },
+    {
+      label: "No event key",
+      onSelect: () => console.log("eventKey is the label")
+    },
+    {
+      label: "No additional handler"
+    }
+  ]}
+  align="end"
+/>
+```
+
 #### **Extended usage**
 
 ```jsx

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Ink from "react-ink";
-// import classNames from "classnames";
+import classNames from "classnames";
 
 import BSDropdown from "react-bootstrap/Dropdown";
 
@@ -15,17 +15,20 @@ class Dropdown extends React.Component {
   static Divider = BSDropdown.Divider;
 
   render() {
-    const { items, label, variant, children, ...props } = this.props;
-    // let classes = classNames({});
-
+    const { items, label, variant, children, align, ...props } = this.props;
+    const classes = classNames({
+      ["dropdown-align-" + align]: align
+    });
     return (
-      <BSDropdown {...props}>
-        <Dropdown.Toggle variant={variant}>
-          {label}
-          <Ink />
-        </Dropdown.Toggle>
-        {items ? this.renderItems(items) : children}
-      </BSDropdown>
+      <div className={classes}>
+        <BSDropdown {...props}>
+          <Dropdown.Toggle variant={variant}>
+            {label}
+            <Ink />
+          </Dropdown.Toggle>
+          {items ? this.renderItems(items) : children}
+        </BSDropdown>
+      </div>
     );
   }
 
@@ -48,6 +51,7 @@ class Dropdown extends React.Component {
 Dropdown.propTypes = {
   variant: PropTypes.string,
   label: PropTypes.string.isRequired,
+  align: PropTypes.oneOf(["start", "end"]),
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -58,7 +62,8 @@ Dropdown.propTypes = {
 };
 
 Dropdown.defaultProps = {
-  variant: "secondary"
+  variant: "secondary",
+  align: "start"
 };
 
 export default Dropdown;
