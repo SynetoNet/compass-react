@@ -13,7 +13,7 @@ const Switch = props => {
       checkedIcon={false}
       boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
       height={10}
-      // width={40}
+      width={40}
       offColor="#e04c59"
       {...props}
     />
