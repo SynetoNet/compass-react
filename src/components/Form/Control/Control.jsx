@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import BSForm from "react-bootstrap/Form";
 
@@ -18,9 +18,7 @@ Control.propTypes = {
 };
 
 Control.defaultProps = {
-  as: "input",
-  type: "",
-  placeholder: ""
+  as: "input"
 };
 
 export default Control;
