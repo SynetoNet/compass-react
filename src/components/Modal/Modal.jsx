@@ -9,17 +9,7 @@ import "./Modal.scss";
 class Modal extends React.Component {
   static Header = BSModal.Header;
   static Title = BSModal.Title;
-  static Body = ({ children, ...props }) => {
-    return (
-      <>
-        <div className="modal-shadow-top" />
-        <BSModal.Body {...props}>
-          <div className="modal-body-inner">{children}</div>
-        </BSModal.Body>
-        <div className="modal-shadow-bottom" />
-      </>
-    );
-  };
+  static Body = BSModal.Body;
   static Footer = BSModal.Footer;
 
   render() {
