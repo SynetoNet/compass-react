@@ -192,6 +192,35 @@ const FirstModal = () => {
 <FirstModal />;
 ```
 
+#### **Non-dismissible Modal**
+
+```jsx
+import { useState } from "react";
+import { Button } from "../../index";
+
+const NonDismissibleModal = () => {
+  const [showModal, toggleModal] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => toggleModal(true)}>Confirm</Button>
+      <Modal
+        show={showModal}
+        title="Do you confirm?"
+        actions={{
+          primary: {
+            label: "Yes, I confirm",
+            onClick: () => toggleModal(false)
+          }
+        }}
+      />
+    </>
+  );
+};
+
+<NonDismissibleModal />;
+```
+
 #### **Extended usage**
 
 ```jsx
