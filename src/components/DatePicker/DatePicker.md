@@ -1,5 +1,8 @@
 #### **Default usage**
 
+This is a custom version of [react-datepicker](https://reactdatepicker.com).
+
+
 By default, **`DatePicker`** should be treated as a controlled component, by binding the **`selected`** value and the **`onChange`** handler.
 
 DatePicker will render a **`<Form.Control />`** element by default.
@@ -286,7 +289,11 @@ const FilterDatesExample = () => {
 <FilterDatesExample />;
 ```
 
-#### **Date & Time picker**
+#### **Time picker**
+
+For a comprehensive list of options, please checkout [react-datepicker's docs](https://reactdatepicker.com).
+
+**Date & Time picker**
 
 ```jsx
 import { useState } from "react";
@@ -305,4 +312,49 @@ const TimeExample = () => {
 };
 
 <TimeExample />;
+```
+
+**Time picker only**
+
+```jsx
+import { useState } from "react";
+
+const TimeExample = () => {
+  const [date, setDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={date}
+      showTimeSelect
+      showTimeSelectOnly
+      onChange={val => setDate(val)}
+      dateFormat="hh:mm"
+    />
+  );
+};
+
+<TimeExample />;
+```
+
+**Control time intervals**
+
+```jsx
+import { useState } from "react";
+
+const EveryHour = () => {
+  const [date, setDate] = useState("");
+
+  return (
+    <DatePicker
+      selected={date}
+      showTimeSelect
+      showTimeSelectOnly
+      timeIntervals={60}
+      onChange={val => setDate(val)}
+      placeholderText="Select time (1 hour increments)"
+    />
+  );
+};
+
+<EveryHour />;
 ```
