@@ -1,7 +1,7 @@
-### Simple Form
+#### **Simple Form**
 
 ```jsx
-import { Button } from "../../index";
+import { Form, Button } from "../../index";
 <Form>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
@@ -24,177 +24,10 @@ import { Button } from "../../index";
 </Form>;
 ```
 
-### Form controls
+#### **Form Grid**
 
 ```jsx
-<Form>
-  <Form.Group controlId="exampleForm.ControlInput1">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="name@example.com" />
-  </Form.Group>
-  <Form.Group controlId="exampleForm.ControlInput1">
-    <Form.Label>Disabled Input</Form.Label>
-    <Form.Control disabled type="text" placeholder="Disabled Input" />
-  </Form.Group>
-  <Form.Group controlId="exampleForm.ControlSelect1">
-    <Form.Label>Example select</Form.Label>
-    <Form.Control as="select">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </Form.Control>
-  </Form.Group>
-  <Form.Group controlId="exampleForm.ControlSelect2">
-    <Form.Label>Example multiple select</Form.Label>
-    <Form.Control as="select" multiple>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </Form.Control>
-  </Form.Group>
-  <Form.Group controlId="exampleForm.ControlTextarea1">
-    <Form.Label>Example textarea</Form.Label>
-    <Form.Control as="textarea" rows="3" />
-  </Form.Group>
-</Form>
-```
-
-### Plaintext
-
-```jsx
-<Form>
-  <Form.Group controlId="formPlaintextEmail">
-    <Form.Label>Email</Form.Label>
-    <Form.Control plaintext readOnly defaultValue="email@example.com" />
-  </Form.Group>
-  <Form.Group controlId="formPlaintextPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
-  </Form.Group>
-</Form>
-```
-
-### Checkboxes and Radios - Default
-
-```jsx
-<Form>
-  {["checkbox", "radio"].map(type => (
-    <div key={`default-${type}`} className="mb-3">
-      <Form.Group>
-        <Form.Check
-          custom
-          name={type}
-          type={type}
-          id={`default-${type}`}
-          label={`default ${type}`}
-        />
-        <Form.Check
-          name={type}
-          type={type}
-          id={`default-${type}-1`}
-          label={`default ${type}`}
-        />
-        <Form.Check
-          name={type}
-          type={type}
-          id={`default-${type}-2`}
-          label={`default ${type}`}
-        />
-
-        <Form.Check
-          disabled
-          type={type}
-          label={`disabled ${type}`}
-          id={`disabled-default-${type}`}
-        />
-      </Form.Group>
-    </div>
-  ))}
-</Form>
-```
-
-### Checkboxes and Radios - Inline
-
-```jsx
-<Form>
-  {["checkbox", "radio"].map(type => (
-    <div key={`inline-${type}`} className="mb-3">
-      <Form.Check
-        inline
-        label="1"
-        name={type}
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="2"
-        name={type}
-        type={type}
-        id={`inline-${type}-2`}
-      />
-      <Form.Check
-        inline
-        disabled
-        label="3 (disabled)"
-        type={type}
-        name={type}
-        id={`inline-${type}-3`}
-      />
-    </div>
-  ))}
-</Form>
-```
-
-### Combo box
-
-```jsx
-import { ComboBox } from "../../index";
-<Form>
-  <ComboBox
-    options={[
-      { value: "chocolate", label: "Chocolate" },
-      { value: "strawberry", label: "Strawberry" },
-      { value: "vanilla", label: "Vanilla" },
-      { value: "cookieDough", label: "Cookie Dough" },
-      { value: "pistachio", label: "Pistachio" },
-      { value: "rockyRoad", label: "Rocky Road" }
-    ]}
-    selected={{ value: "vanilla", label: "Vanilla" }}
-    placeholder="Select ice cream flavor..."
-  />
-</Form>;
-```
-
-### Combo box - Multi Select
-
-```jsx
-import { ComboBox } from "../../index";
-<Form>
-  <ComboBox
-    options={[
-      { value: "chocolate", label: "Chocolate" },
-      { value: "strawberry", label: "Strawberry" },
-      { value: "vanilla", label: "Vanilla" },
-      { value: "cookieDough", label: "Cookie Dough" },
-      { value: "pistachio", label: "Pistachio" },
-      { value: "rockyRoad", label: "Rocky Road" }
-    ]}
-    multiSelect
-    selected={{ value: "vanilla", label: "Vanilla" }}
-    placeholder="Select ice cream flavor..."
-  />
-</Form>;
-```
-
-### Form Grid
-
-```jsx
-import { Col } from "../../index";
+import { Form, Col } from "../../index";
 
 <Form>
   <Form.Row>
@@ -208,10 +41,10 @@ import { Col } from "../../index";
 </Form>;
 ```
 
-### Complex Layout
+#### **Complex Layout**
 
 ```jsx
-import { Col, Button } from "../../index";
+import { Form, Col, Button } from "../../index";
 
 <Form>
   <Form.Row>
