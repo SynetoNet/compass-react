@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 // import classNames from "classnames";
 import format from "date-fns/format";
+import en from "date-fns/locale/en-GB";
 
 import ReactDatePicker from "react-datepicker";
 import Overlay from "react-bootstrap/Overlay";
@@ -33,6 +34,7 @@ const DatePicker = ({ selected, appendToBody, ...props }) => {
         renderCustomHeader={headerProps => (
           <CustomHeader {...headerProps} {...props} />
         )}
+        locale={en}
         {...props}
         onChange={val => {
           setInternalDate(val);
@@ -70,6 +72,7 @@ const DatePicker = ({ selected, appendToBody, ...props }) => {
             renderCustomHeader={headerProps => (
               <CustomHeader {...headerProps} {...props} />
             )}
+            locale={en}
             {...props}
             onChange={val => {
               setInternalDate(val);
@@ -117,7 +120,7 @@ DatePicker.propTypes = {
   filterDate: PropTypes.func,
   /** see [documentation](https://date-fns.org/v2.0.0-alpha.23/docs/format) for details */
   dateFormat: PropTypes.string,
-  inline: PropTypes.bool,
+  inline: PropTypes.bool
   // appendToBody: PropTypes.bool
 };
 
