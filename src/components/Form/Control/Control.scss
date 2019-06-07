@@ -1,13 +1,14 @@
 @import "../../../base/colors";
 @import "../../../base/variables";
 
-.form-control:focus {
-  border-color: $accent;
-}
-
 .form-control {
   border-color: $neutral-12;
   border-radius: 0.15rem;
+  -webkit-appearance: none;
+
+  &:focus {
+    border-color: $accent;
+  }
 }
 
 input:disabled {
