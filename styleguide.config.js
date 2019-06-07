@@ -29,18 +29,17 @@ module.exports = {
     {
       name: "UI Components",
       components: "src/components*/**/*.jsx",
-      // exampleMode: "expand",
       usageMode: "expand",
       ignore: "src/components*/Form/**/*.jsx",
-      sections: [
-        {
-          name: "Form",
-          components: "src/components*/Form/**/*.jsx",
-          ignore: "src/components*/Form/Form.jsx"
-        }
-      ],
-      sectionDepth: 1,
-      pagePerSection: true
+      sectionDepth: 1
+    },
+    {
+      name: "Form Components",
+      content: "src/components/Form/Form.md",
+      components: "src/components*/Form/**/*.jsx",
+      ignore: "src/components*/Form/Form.jsx",
+      usageMode: "expand",
+      sectionDepth: 1
     }
   ],
   webpackConfig: {
