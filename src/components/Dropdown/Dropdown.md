@@ -1,4 +1,4 @@
-#### **Simple Dropdown**
+#### **Basic Dropdown**
 
 ```jsx
 <Dropdown
@@ -16,51 +16,27 @@
     },
     {
       label: "No additional handler"
+    },
+    {
+      label: "Some very long action name"
     }
   ]}
 />
 ```
 
-#### **Simple Dropdown - Align to the right**
+#### **Right aligned Dropdown**
 
 ```jsx
 <Dropdown
-  label="Toggle Dropdown"
-  onSelect={eventKey => console.log(eventKey)}
-  items={[
-    {
-      label: "Action",
-      eventKey: "action-key",
-      onSelect: () => console.log("Additional handler")
-    },
-    {
-      label: "No event key",
-      onSelect: () => console.log("eventKey is the label")
-    },
-    {
-      label: "No additional handler"
-    }
-  ]}
   alignRight
+  label="Toggle Dropdown"
+  onSelect={eventKey => console.log(eventKey)}
+  items={[
+    {
+      label: "Some very long action name"
+    }
+  ]}
 />
-```
-
-#### **Extended usage**
-
-```jsx
-<Dropdown label="Toggle Dropdown" onSelect={eventKey => console.log(eventKey)}>
-  <Dropdown.Menu>
-    <Dropdown.Item disabled eventKey="action">
-      Action
-    </Dropdown.Item>
-    <Dropdown.Item eventKey="another">Another action</Dropdown.Item>
-    <Dropdown.Item eventKey="other">Something else</Dropdown.Item>
-    <Dropdown.Divider />
-    <Dropdown.Item onSelect={() => console.log("Separate action")}>
-      Separate action
-    </Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
 ```
 
 #### **Variants**
@@ -79,4 +55,32 @@
   onSelect={eventKey => console.log(eventKey)}
   items={[{ label: "Option 1" }, { label: "Option 2" }]}
 />
+```
+
+#### **Extended usage**
+
+```jsx
+import { Badge } from "../../index";
+
+<Dropdown label="Toggle Dropdown" onSelect={eventKey => console.log(eventKey)}>
+  <Dropdown.Menu>
+    <Dropdown.Header>Section header</Dropdown.Header>
+    <Dropdown.Item eventKey="action">Action</Dropdown.Item>
+    <Dropdown.Item disabled eventKey="disabled">
+      Disabled action
+    </Dropdown.Item>
+
+    <Dropdown.Divider />
+
+    <Dropdown.Header>Separate actions</Dropdown.Header>
+    <Dropdown.Item eventKey="normal">
+      <Badge block>Normal action</Badge>
+    </Dropdown.Item>
+    <Dropdown.Item eventKey="success">
+      <Badge color="success" block>
+        Success action
+      </Badge>
+    </Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>;
 ```
