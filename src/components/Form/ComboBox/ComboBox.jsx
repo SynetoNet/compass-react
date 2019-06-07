@@ -22,6 +22,7 @@ const ComboBox = ({
       onChange={handleChange}
       options={options}
       isMulti={multiSelect}
+      closeMenuOnSelect={!multiSelect}
       classNamePrefix={"combo-box"}
       className={"combo-box"}
     />
