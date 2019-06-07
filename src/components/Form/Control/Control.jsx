@@ -4,6 +4,9 @@ import BSForm from "react-bootstrap/Form";
 
 import "./Control.scss";
 
+/**
+ * @visibleName Inputs
+ */
 const Control = props => {
   return <BSForm.Control {...props} />;
 };
