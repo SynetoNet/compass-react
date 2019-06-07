@@ -1,73 +1,98 @@
-### Checkboxes and Radios
+#### **Checkbox input**
 
 ```jsx
 import { Form } from "../../../index";
 <Form>
-  {["checkbox", "radio"].map(type => (
-    <div key={`default-${type}`} className="mb-3">
-      <Form.Group>
-        <Form.Check
-          custom
-          name={type}
-          type={type}
-          id={`default-${type}`}
-          label={`default ${type}`}
-        />
-        <Form.Check
-          name={type}
-          type={type}
-          id={`default-${type}-1`}
-          label={`default ${type}`}
-        />
-        <Form.Check
-          name={type}
-          type={type}
-          id={`default-${type}-2`}
-          label={`default ${type}`}
-        />
-
-        <Form.Check
-          disabled
-          type={type}
-          label={`disabled ${type}`}
-          id={`disabled-default-${type}`}
-        />
-      </Form.Group>
-    </div>
-  ))}
+  <Form.Check type="checkbox" id="size11" label="S" />
+  <Form.Check type="checkbox" id="size12" label="M" />
+  <Form.Check type="checkbox" id="size13" label="L" disabled />
 </Form>;
 ```
 
-### Inline
+**Inline checkboxes**
 
 ```jsx
 import { Form } from "../../../index";
 <Form>
-  {["checkbox", "radio"].map(type => (
-    <div key={`inline-${type}`} className="mb-3">
-      <Form.Check
-        inline
-        label="1"
-        name={type}
-        type={type}
-        id={`inline-${type}-1`}
-      />
-      <Form.Check
-        inline
-        label="2"
-        name={type}
-        type={type}
-        id={`inline-${type}-2`}
-      />
-      <Form.Check
-        inline
-        disabled
-        label="3 (disabled)"
-        type={type}
-        name={type}
-        id={`inline-${type}-3`}
-      />
-    </div>
-  ))}
+  <Form.Check inline type="checkbox" id="size21" label="S" />
+  <Form.Check inline type="checkbox" id="size22" label="M" />
+  <Form.Check inline type="checkbox" id="size23" label="L" disabled />
 </Form>;
+```
+
+**Controlled checkbox**
+
+```jsx
+import { Form } from "../../../index";
+import { useState } from "react";
+
+const ControlledCheckbox = () => {
+  const [checked, setChecked] = useState(true);
+
+  return (
+    <Form>
+      <Form.Check
+        checked={checked}
+        onChange={() => setChecked(prev => !prev)}
+        type="checkbox"
+        id="controlled"
+        label="Controlled"
+      />
+    </Form>
+  );
+};
+
+<ControlledCheckbox />;
+```
+
+#### **Radio input**
+
+```jsx
+import { Form } from "../../../index";
+<Form>
+  <Form.Check type="radio" id="S11" name="size" label="S" />
+  <Form.Check type="radio" id="M12" name="size" label="M" />
+  <Form.Check type="radio" id="L13" name="size" label="L" disabled />
+</Form>;
+```
+
+**Inline radios**
+
+```jsx
+import { Form } from "../../../index";
+<Form>
+  <Form.Check inline type="radio" id="S21" name="size2" label="S" />
+  <Form.Check inline type="radio" id="M22" name="size2" label="M" />
+  <Form.Check inline type="radio" id="L23" name="size2" label="L" disabled />
+</Form>;
+```
+
+**Controlled radios**
+
+```jsx
+import { Form } from "../../../index";
+import { useState } from "react";
+
+const ControlledRadio = () => {
+  const [selected, setSelected] = useState("M");
+
+  return (
+    <Form>
+      {["S", "M", "L"].map(size => (
+        <Form.Check
+          key={`controlled-${size}`}
+          type="radio"
+          id={`controlled-${size}`}
+          name="controlled-radio"
+          label={size}
+          checked={selected === size}
+          onChange={() => setSelected(size)}
+          inline
+        />
+      ))}
+    </Form>
+  );
+};
+
+<ControlledRadio />;
 ```
