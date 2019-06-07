@@ -1,31 +1,29 @@
-### Switch
+#### **Basic example**
 
 ```jsx
-import { useState } from "react";
 import { Form } from "../../../index";
-const SwitchExample = () => {
-  const [checked, setChecked] = useState(false);
-  const handleChange = checked => {
-    setChecked(checked);
-  };
-  return <Form.Switch onChange={handleChange} checked={checked} />;
+import { useState } from "react";
+
+const BasicExample = () => {
+  const [checked, setChecked] = useState(true);
+
+  return <Form.Switch onChange={setChecked} checked={checked} />;
 };
 
-<SwitchExample />;
+<BasicExample />;
 ```
 
-### Disabled
+#### **Disabled example**
 
 ```jsx
-import { useState } from "react";
 import { Form } from "../../../index";
-const SwitchExample = () => {
+import { useState } from "react";
+
+const DisabledExample = () => {
   const [checked, setChecked] = useState(false);
-  const handleChange = checked => {
-    setChecked(checked);
-  };
-  return <Form.Switch disabled onChange={handleChange} checked={checked} />;
+
+  return <Form.Switch disabled onChange={setChecked} checked={checked} />;
 };
 
-<SwitchExample />;
+<DisabledExample />;
 ```
