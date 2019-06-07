@@ -50,7 +50,9 @@
 ```jsx
 <Dropdown label="Toggle Dropdown" onSelect={eventKey => console.log(eventKey)}>
   <Dropdown.Menu>
-    <Dropdown.Item eventKey="action">Action</Dropdown.Item>
+    <Dropdown.Item disabled eventKey="action">
+      Action
+    </Dropdown.Item>
     <Dropdown.Item eventKey="another">Another action</Dropdown.Item>
     <Dropdown.Item eventKey="other">Something else</Dropdown.Item>
     <Dropdown.Divider />

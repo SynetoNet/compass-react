@@ -11,3 +11,8 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.dropdown-item.disabled {
+  cursor: no-drop;
+  pointer-events: auto;
+}
