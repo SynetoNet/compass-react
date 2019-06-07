@@ -21,7 +21,7 @@
 />
 ```
 
-#### **Simple Dropdown - Align to the end**
+#### **Simple Dropdown - Align to the right**
 
 ```jsx
 <Dropdown
@@ -41,7 +41,7 @@
       label: "No additional handler"
     }
   ]}
-  align="end"
+  alignRight
 />
 ```
 
