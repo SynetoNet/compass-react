@@ -2,6 +2,7 @@
 
 exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
 <Dropdown
+  alignRight={false}
   navbar={false}
   show={true}
 >
