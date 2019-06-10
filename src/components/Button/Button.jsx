@@ -103,6 +103,7 @@ Button.propTypes = {
   variant: PropTypes.oneOf(["primary", "tertiary", "secondary", "link"]),
   color: PropTypes.oneOf(["accent", "success", "danger", "warning", "info"]),
   width: PropTypes.oneOf([32, 64, 96, 128, "auto"]),
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
   disabled: PropTypes.bool,
   loading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   children: PropTypes.string,
@@ -112,6 +113,7 @@ Button.propTypes = {
 Button.defaultProps = {
   variant: "secondary",
   color: "accent",
+  type: "button",
   width: "auto",
   disabled: false
 };

@@ -14,6 +14,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
         className="px-0"
         color="accent"
         disabled={false}
+        type="button"
         variant="tertiary"
         width="auto"
       >
@@ -24,6 +25,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       color="accent"
       disabled={false}
       key="secondary"
+      type="button"
       variant="secondary"
       width="auto"
     >
@@ -34,6 +36,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       color="accent"
       disabled={false}
       key="primary"
+      type="button"
       variant="primary"
       width="auto"
     >
@@ -53,6 +56,7 @@ exports[`Default Modal modal without header or content snapshop 1`] = `
       color="accent"
       disabled={false}
       key="secondary"
+      type="button"
       variant="secondary"
       width="auto"
     >
@@ -114,6 +118,7 @@ exports[`Simple Modal modal with title and content snapshop 1`] = `
       color="accent"
       disabled={false}
       key="secondary"
+      type="button"
       variant="secondary"
       width="auto"
     >

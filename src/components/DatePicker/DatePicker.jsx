@@ -13,23 +13,17 @@ import Form from "../Form/Form";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
 
-const DatePicker = ({ selected, appendToBody, ...props }) => {
+const DatePicker = ({ selected, appendToBody, customInput, ...props }) => {
   const [internalDate, setInternalDate] = useState(selected);
   const [showDatePicker, toggleDatePicker] = useState(false);
   const inputRef = useRef(null);
   // const classes = classNames({});
 
-  const InputComponent = props.customInput ? (
-    props.customInput
-  ) : (
-    <Form.Control placeholder={props.placeholderText} />
-  );
-
-  if (!appendToBody) {
+  if (!customInput && !appendToBody) {
     return (
       <ReactDatePicker
         selected={internalDate}
-        customInput={InputComponent}
+        customInput={<Form.Control placeholder={props.placeholderText} />}
         // className={classes}
         renderCustomHeader={headerProps => (
           <CustomHeader {...headerProps} {...props} />
@@ -44,8 +38,8 @@ const DatePicker = ({ selected, appendToBody, ...props }) => {
     );
   }
 
-  const CustomInput = React.cloneElement(
-    InputComponent,
+  const InputComponent = React.cloneElement(
+    customInput,
     {
       onFocus: () => toggleDatePicker(true),
       onClick: () => toggleDatePicker(true),
@@ -61,7 +55,7 @@ const DatePicker = ({ selected, appendToBody, ...props }) => {
 
   return (
     <>
-      {CustomInput}
+      {InputComponent}
       <Overlay target={inputRef.current} show={showDatePicker} placement="auto">
         <Popover className="popover-datepicker">
           <ReactDatePicker

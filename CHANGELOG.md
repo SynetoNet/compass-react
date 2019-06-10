@@ -1,3 +1,15 @@
+# 0.4.2 (2019-06-10)
+
+### Documentation Changes
+
+* **Button:**  add button types examples ([61400b23](https://github.com/SynetoNet/compass-react/commit/61400b23823d4fcef8fbc6e37e785026fcad36a8))
+
+# 0.4.1 (2019-06-10)
+
+### Bug Fixes
+
+* **DatePicker:**  always render as appended to body when customInput passed ([5b2af60a](https://github.com/SynetoNet/compass-react/commit/5b2af60a60eba067f2b504e5f87dc97154f05be4))
+
 # 0.4.0 (2019-06-07)
 
 ### New Features

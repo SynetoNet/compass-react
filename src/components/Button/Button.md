@@ -48,6 +48,16 @@
 </Button>
 ```
 
+#### **Button types**
+
+```jsx
+<Button>Normal button</Button>
+<i className="pr-2" />
+<Button type="submit">Submit button</Button>
+<i className="pr-2" />
+<Button type="reset">Reset button</Button>
+```
+
 #### **Disabled Buttons**
 
 ```jsx
