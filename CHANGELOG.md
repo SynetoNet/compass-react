@@ -1,3 +1,9 @@
+#### 0.4.2 (2019-06-10)
+
+##### Documentation Changes
+
+* **Button:**  add button types examples ([61400b23](https://github.com/SynetoNet/compass-react/commit/61400b23823d4fcef8fbc6e37e785026fcad36a8))
+
 #### 0.4.1 (2019-06-10)
 
 ##### Bug Fixes
