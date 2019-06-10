@@ -1,3 +1,9 @@
+#### 0.4.1 (2019-06-10)
+
+##### Bug Fixes
+
+* **DatePicker:**  always render appended to body when customInput passed ([5b2af60a](https://github.com/SynetoNet/compass-react/commit/5b2af60a60eba067f2b504e5f87dc97154f05be4))
+
 #### 0.4.0 (2019-06-07)
 
 ##### Documentation Changes
