@@ -1,3 +1,13 @@
+#### 0.4.3 (2019-06-12)
+
+##### Documentation Changes
+
+* **Form:**  fix typos ([a19f0940](https://github.com/SynetoNet/compass-react/commit/a19f0940df1d33d63259244107bc083a475b0d10))
+
+##### Bug Fixes
+
+* **Tabs:**  remove Fade transition by default ([086c6d07](https://github.com/SynetoNet/compass-react/commit/086c6d0788adbf1bdc6fea6745bc02b20940d98b))
+
 # 0.4.2 (2019-06-10)
 
 ### Documentation Changes
