@@ -145,3 +145,72 @@ import { Form, Col, Button } from "../../index";
   </Button>
 </Form>;
 ```
+
+#### **Validation feedback**
+
+```jsx
+import { useState } from "react";
+import { Form, Button } from "../../index";
+
+const FormValidation = () => {
+  const [isValidated, setValidated] = useState(false);
+
+  const [checked, setChecked] = useState(false);
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+
+  function submit(e) {
+    e.preventDefault();
+    setValidated(true);
+  }
+
+  return (
+    <Form noValidate validated={isValidated} onSubmit={submit}>
+      <Form.Group controlId="formValidationEmail">
+        <Form.Label>Email</Form.Label>
+        <Form.Control
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
+          type="email"
+          placeholder="Enter email"
+        />
+        <Form.Control.Feedback type="invalid">
+          A valid email is required
+        </Form.Control.Feedback>
+      </Form.Group>
+
+      <Form.Group controlId="formValidationSelect">
+        <Form.Label>Gender</Form.Label>
+        <Form.Control required as="select">
+          <option value="">Please select</option>
+          <option value="1">Female</option>
+          <option value="2">Male</option>
+          <option value="3">Non-binary</option>
+          <option value="4">I'd rather not say</option>
+        </Form.Control>
+        <Form.Control.Feedback type="invalid">
+          Please select your gender
+        </Form.Control.Feedback>
+      </Form.Group>
+
+      <Form.Group controlId="formValidationCheckbox">
+        <Form.Check
+          required
+          checked={checked}
+          onChange={() => setChecked(!checked)}
+          type="checkbox"
+          label="I agree with everything"
+          feedback="You must agree with everything"
+        />
+      </Form.Group>
+
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+  );
+};
+
+<FormValidation />;
+```
