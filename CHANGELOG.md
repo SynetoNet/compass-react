@@ -1,10 +1,12 @@
-#### 0.5.0 (2019-06-13)
+# 0.5.0 (2019-06-13)
 
-##### Build System / Dependencies
+### Build System / Dependencies
 
-*  export individual components ([8a298ebe](https://github.com/SynetoNet/compass-react/commit/8a298ebede21ac1c964b13b18c180038dd8c1a3d))
+* export individual components ([8a298ebe](https://github.com/SynetoNet/compass-react/commit/8a298ebede21ac1c964b13b18c180038dd8c1a3d))
+* bundle together in index only: Layout (Container, Col, Row), Badge, Button, Dropdown
+* export as separate bundles: DatePicker, Form, Modal, Tabs
 
-##### Documentation Changes
+### Documentation Changes
 
 * **Form:**  add validation feedback examples (fixes [#17](https://github.com/SynetoNet/compass-react/pull/17)) ([9c8cfd85](https://github.com/SynetoNet/compass-react/commit/9c8cfd855484f5ff7b489417e8d2a943d32f59a5))
 
