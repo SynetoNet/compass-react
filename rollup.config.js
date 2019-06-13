@@ -5,20 +5,27 @@ import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import copy from "rollup-plugin-copy";
 import visualizer from "rollup-plugin-visualizer";
-import pkg from "./package.json";
+// import pkg from "./package.json";
 
 export default [
   {
-    input: "src/index.js",
+    input: [
+      "src/index.js",
+      // "src/layout/Container.jsx",
+      // "src/layout/Col.jsx",
+      // "src/layout/Row.jsx",
+      // "src/components/Badge/Badge.jsx",
+      // "src/components/Button/Button.jsx",
+      // "src/components/Dropdown/Dropdown.jsx",
+      "src/components/DatePicker/DatePicker.jsx",
+      "src/components/Form/Form.jsx",
+      "src/components/Modal/Modal.jsx",
+      "src/components/Tabs/Tabs.jsx"
+    ],
     output: [
       {
-        file: pkg.main,
-        format: "cjs",
-        sourcemap: true
-      },
-      {
-        file: pkg.module,
-        format: "es",
+        dir: "lib",
+        format: "esm",
         sourcemap: true
       }
     ],
