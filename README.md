@@ -23,7 +23,14 @@ import "@syneto/compass-react/lib/styles.css"
 Import and use components:
 
 ```js
-import { Badge } from "@syneto/compass-react"
+// for simple components, use named exports
+import { Badge, Button, Dropdown } from "@syneto/compass-react"
+
+// for complex components, use separate default exports
+import DatePicker from "@syneto/compass-react/lib/DatePicker"
+import Form from "@syneto/compass-react/lib/Form"
+import Modal from "@syneto/compass-react/lib/Modal"
+import Tabs from "@syneto/compass-react/lib/Tabs"
 ```
 
 ---
