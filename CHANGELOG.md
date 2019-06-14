@@ -1,6 +1,6 @@
-#### 0.5.1 (2019-06-14)
+# 0.5.1 (2019-06-14)
 
-##### Documentation Changes
+### Documentation Changes
 
 *  fix documentation after export updates ([9f1e477f](https://github.com/SynetoNet/compass-react/commit/9f1e477ff43c87e807d22d3246950995714755a3))
 
