@@ -1,0 +1,27 @@
+@import "../../base/colors";
+@import "../../base/variables";
+
+.page-link {
+  padding: 0.5rem 0;
+  width: 2.5rem;
+  text-align: center;
+  color: $neutral-60;
+  border-color: $neutral-24;
+}
+
+.page-item {
+  &:not(.active) .page-link:hover {
+    background: $accent-light-85;
+    color: $accent;
+    z-index: 0;
+    border-color: $neutral-24;
+  }
+  &.disabled .page-link {
+    color: $neutral-24;
+  }
+
+  &:last-child .page-link,
+  &:first-child .page-link {
+    border-radius: 2px;
+  }
+}
