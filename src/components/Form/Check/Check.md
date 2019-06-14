@@ -45,6 +45,14 @@ const ControlledCheckbox = () => {
 <ControlledCheckbox />;
 ```
 
+**Indeterminate state**
+
+```jsx
+import Form from "../Form";
+
+<Form.Check inline type="checkbox" id="maybe" label="Maybe" indeterminate />;
+```
+
 #### **Radio input**
 
 ```jsx
