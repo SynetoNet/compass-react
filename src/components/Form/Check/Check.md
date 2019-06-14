@@ -1,7 +1,7 @@
 #### **Checkbox input**
 
 ```jsx
-import { Form } from "../../../index";
+import Form from "../Form";
 <Form>
   <Form.Check type="checkbox" id="size11" label="S" />
   <Form.Check type="checkbox" id="size12" label="M" />
@@ -12,7 +12,7 @@ import { Form } from "../../../index";
 **Inline checkboxes**
 
 ```jsx
-import { Form } from "../../../index";
+import Form from "../Form";
 <Form>
   <Form.Check inline type="checkbox" id="size21" label="S" />
   <Form.Check inline type="checkbox" id="size22" label="M" />
@@ -23,7 +23,7 @@ import { Form } from "../../../index";
 **Controlled checkbox**
 
 ```jsx
-import { Form } from "../../../index";
+import Form from "../Form";
 import { useState } from "react";
 
 const ControlledCheckbox = () => {
@@ -48,7 +48,7 @@ const ControlledCheckbox = () => {
 #### **Radio input**
 
 ```jsx
-import { Form } from "../../../index";
+import Form from "../Form";
 <Form>
   <Form.Check type="radio" id="S11" name="size" label="S" />
   <Form.Check type="radio" id="M12" name="size" label="M" />
@@ -59,7 +59,7 @@ import { Form } from "../../../index";
 **Inline radios**
 
 ```jsx
-import { Form } from "../../../index";
+import Form from "../Form";
 <Form>
   <Form.Check inline type="radio" id="S21" name="size2" label="S" />
   <Form.Check inline type="radio" id="M22" name="size2" label="M" />
@@ -70,7 +70,7 @@ import { Form } from "../../../index";
 **Controlled radios**
 
 ```jsx
-import { Form } from "../../../index";
+import Form from "../Form";
 import { useState } from "react";
 
 const ControlledRadio = () => {

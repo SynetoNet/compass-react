@@ -1,7 +1,7 @@
 #### **Form Controls**
 
 ```jsx
-import { Form } from "../../index";
+import Form from "./Form";
 
 <Form>
   <Form.Group controlId="exampleForm.ControlInput1">
@@ -46,7 +46,9 @@ import { Form } from "../../index";
 #### **Simple Form**
 
 ```jsx
-import { Form, Button } from "../../index";
+import Form from "./Form";
+import { Button } from "../../index";
+
 <Form>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
@@ -74,7 +76,8 @@ import { Form, Button } from "../../index";
 #### **Form Grid**
 
 ```jsx
-import { Form, Col } from "../../index";
+import Form from "./Form";
+import { Col } from "../../index";
 
 <Form>
   <Form.Row>
@@ -91,7 +94,8 @@ import { Form, Col } from "../../index";
 #### **Complex Layout**
 
 ```jsx
-import { Form, Col, Button } from "../../index";
+import Form from "./Form";
+import { Col, Button } from "../../index";
 
 <Form>
   <Form.Row>
@@ -150,7 +154,8 @@ import { Form, Col, Button } from "../../index";
 
 ```jsx
 import { useState } from "react";
-import { Form, Button } from "../../index";
+import Form from "./Form";
+import { Button } from "../../index";
 
 const FormValidation = () => {
   const [isValidated, setValidated] = useState(false);

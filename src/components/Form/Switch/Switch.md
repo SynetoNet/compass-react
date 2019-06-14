@@ -1,7 +1,7 @@
 #### **Basic example**
 
 ```jsx
-import { Form } from "../../../index";
+import Form from "../Form";
 import { useState } from "react";
 
 const BasicExample = () => {
@@ -16,7 +16,7 @@ const BasicExample = () => {
 #### **Disabled example**
 
 ```jsx
-import { Form } from "../../../index";
+import Form from "../Form";
 import { useState } from "react";
 
 const DisabledExample = () => {

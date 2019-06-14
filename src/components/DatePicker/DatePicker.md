@@ -2,7 +2,6 @@
 
 This is a custom version of [react-datepicker](https://reactdatepicker.com).
 
-
 By default, **`DatePicker`** should be treated as a controlled component, by binding the **`selected`** value and the **`onChange`** handler.
 
 DatePicker will render a **`<Form.Control />`** element by default.
@@ -99,7 +98,8 @@ const CustomInputExample = () => {
 ```jsx
 import { useState } from "react";
 import { Form } from "react-bootstrap";
-import { Modal, Button } from "../../";
+import Button from "../Button/Button";
+import Modal from "../Modal/Modal";
 
 const ExampleModal = () => {
   const [showModal, toggleModal] = useState(false);
