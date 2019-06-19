@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
+import ToolkitProvider from "react-bootstrap-table2-toolkit";
 import Form from "../Form/Form";
 
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
@@ -21,12 +22,50 @@ const IndeterminateCheck = ({ mode, checked, indeterminate }) => {
   );
 };
 
+const MySearch = props => {
+  let input;
+
+  const handleClick = () => {
+    props.onSearch(input.value);
+  };
+
+  return (
+    <div className="table-search">
+      <Form.Control
+        type="text"
+        ref={n => (input = n)}
+        onChange={handleClick}
+        placeholder="Search..."
+      />
+
+      {props.searchText && (
+        // @todo replace with icon button
+        <button
+          title="Clear search"
+          aria-label="Clear"
+          className="table-search__clear"
+          onClick={() => {
+            input.value = "";
+            props.onSearch("");
+          }}
+        >
+          &times;
+        </button>
+      )}
+    </div>
+  );
+};
+
 class Table extends React.Component {
   static Col = "tr";
 
   handleOnSelect = (row, isSelect, rowIndex, e) => {
     const { onSelect } = this.props;
     onSelect && onSelect({ item: row, isSelected: isSelect });
+  };
+
+  getSelected = () => {
+    return this.node.selectionContext.selected;
   };
 
   render() {
@@ -38,15 +77,49 @@ class Table extends React.Component {
       onSelect,
       pagination,
       children,
+      search,
+      actions,
       ...props
     } = this.props;
 
     // can be memoized
-    const _columns = columns || this.getColumnsProp(children);
+    const _columns = columns
+      ? this.getColumnsProp(columns)
+      : this.getColumnsFromChildren(children);
     const _selectable = this.getSelectableProp(selectable);
     const _pagination = this.getPaginationProp(pagination);
 
     // const classes = classNames({});
+
+    if (search) {
+      return (
+        <ToolkitProvider
+          keyField={keyField}
+          data={data}
+          columns={_columns}
+          search
+        >
+          {props => (
+            <>
+              <div className="table-filters-wrapper mb-2">
+                {actions || <div />}
+                <MySearch {...props.searchProps} />
+              </div>
+              <BootstrapTable
+                bootstrap4={true}
+                bordered={false}
+                hover={true}
+                noDataIndication="No items"
+                ref={n => (this.node = n)}
+                {..._selectable}
+                {..._pagination}
+                {...props.baseProps}
+              />
+            </>
+          )}
+        </ToolkitProvider>
+      );
+    }
 
     return (
       <BootstrapTable
@@ -56,6 +129,8 @@ class Table extends React.Component {
         bootstrap4={true}
         bordered={false}
         hover={true}
+        noDataIndication="No items"
+        ref={n => (this.node = n)}
         {..._selectable}
         {..._pagination}
         {...props}
@@ -63,22 +138,20 @@ class Table extends React.Component {
     );
   }
 
-  getColumnsProp(children) {
+  getColumnsProp(columns) {
+    if (!Array.isArray(columns)) {
+      throw "columns must be an array";
+    }
+
+    return columns.map(column => getColumn(column));
+  }
+
+  getColumnsFromChildren(children) {
     if (!Array.isArray(children)) {
       throw "children must be an array";
     }
 
-    return children.map(({ props }, index) => {
-      return {
-        dataField: props.field || "",
-        text: props.children || "",
-        sort: !!props.sort,
-        headerAlign: props.align,
-        align: props.align,
-        formatter: props.renderCell,
-        sortFunc: typeof props.sort === "function" ? props.sort : undefined
-      };
-    });
+    return children.map(({ props }) => getColumn(props));
   }
 
   getPaginationProp(pagination) {
@@ -93,16 +166,6 @@ class Table extends React.Component {
     );
 
     const options = {
-      onSizePerPageChange: (sizePerPage, page) => {
-        console.log("Size per page change!!!");
-        console.log("Newest size per page:" + sizePerPage);
-        console.log("Newest page:" + page);
-      },
-      onPageChange: (page, sizePerPage) => {
-        console.log("Page change!!!");
-        console.log("Newest size per page:" + sizePerPage);
-        console.log("Newest page:" + page);
-      },
       hidePageListOnlyOnePage: true,
       alwaysShowAllBtns: true,
       withFirstAndLast: false,
@@ -140,12 +203,12 @@ class Table extends React.Component {
             onSelect: (...args) => {
               this.handleOnSelect(...args);
             },
-            onSelect: (row, isSelect, rowIndex, e) => {
-              console.log("onSelect", { row, isSelect, rowIndex });
-            },
-            onSelectAll: (isSelect, rows, e) => {
-              console.log("onSelectAll", { isSelect, rows });
-            },
+            // onSelect: (row, isSelect, rowIndex, e) => {
+            //   console.log("onSelect", { row, isSelect, rowIndex });
+            // },
+            // onSelectAll: (isSelect, rows, e) => {
+            //   console.log("onSelectAll", { isSelect, rows });
+            // },
             selectionHeaderRenderer: props => {
               return <IndeterminateCheck {...props} />;
             },
@@ -173,15 +236,13 @@ Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object),
   columns: PropTypes.arrayOf(
     PropTypes.shape({
-      dataField: PropTypes.string,
-      text: PropTypes.string,
-      sort: PropTypes.bool,
+      field: PropTypes.string,
+      header: PropTypes.string,
+      /** `"bool", "function"` */
+      sort: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
       /** `"left", "center", "right"` */
-      headerAlign: PropTypes.oneOf(["left", "center", "right"]),
-      /** `"left", "center", "right"` */
-      align: PropTypes.oneOf(["left", "center", "right"]),
-      formatter: PropTypes.func,
-      sortFunc: PropTypes.func
+      align: PropTypes.oneOf(["left", "center", "right"])
+      // formatter: PropTypes.func
     })
   ),
   /** field name to be used as unique keys */
@@ -193,3 +254,31 @@ Table.propTypes = {
 Table.defaultProps = {};
 
 export default Table;
+
+function capitalize(s) {
+  if (typeof s !== "string") return "";
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function getColumn(column) {
+  const {
+    field,
+    children,
+    header,
+    sort,
+    align,
+    renderCell,
+    ...otherProps
+  } = column;
+
+  return {
+    dataField: field || "",
+    text: children || capitalize(header) || capitalize(field) || "",
+    sort: !!sort,
+    headerAlign: align,
+    align: align,
+    formatter: renderCell,
+    sortFunc: typeof sort === "function" ? sort : undefined,
+    ...otherProps
+  };
+}

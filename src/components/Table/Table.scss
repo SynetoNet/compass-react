@@ -10,6 +10,42 @@
   padding-left: 1em;
 }
 
+.table-filters-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-search {
+  position: relative;
+
+  & input {
+    // make space for clear button
+    padding-right: 30px;
+  }
+
+  & ::placeholder {
+    font-style: italic;
+    color: $neutral-40;
+  }
+}
+
+.table-search__clear {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  padding: 0 0.5em;
+  background: none;
+  border: 0;
+  font-size: 1.4em;
+  color: $neutral-60;
+
+  &:hover {
+    color: $accent;
+    background: $accent-light-85;
+  }
+}
+
 // overrides
 .react-bootstrap-table-pagination {
   justify-content: space-between;
