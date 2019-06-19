@@ -56,7 +56,12 @@ const DatePicker = ({ selected, appendToBody, customInput, ...props }) => {
   return (
     <>
       {InputComponent}
-      <Overlay target={inputRef.current} show={showDatePicker} placement="auto">
+      <Overlay
+        transition={false}
+        target={inputRef.current}
+        show={showDatePicker}
+        placement="auto"
+      >
         <Popover className="popover-datepicker">
           <ReactDatePicker
             selected={internalDate}
