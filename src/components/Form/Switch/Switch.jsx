@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import RSwitch from "react-switch";
+import RSwitch from "react-switch/dist/react-switch.min";
 
 import "./Switch.scss";
 
