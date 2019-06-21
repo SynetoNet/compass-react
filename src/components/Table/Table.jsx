@@ -6,6 +6,7 @@ import BootstrapTable from "react-bootstrap-table-next";
 import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider from "react-bootstrap-table2-toolkit";
 import Form from "../Form/Form";
+import Dropdown from "../Dropdown/Dropdown";
 
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "./Table.scss";
@@ -165,13 +166,36 @@ class Table extends React.Component {
       </span>
     );
 
+    const sizePerPageRenderer = ({
+      options,
+      currSizePerPage,
+      onSizePerPageChange
+    }) => (
+      <Dropdown label={currSizePerPage} className="d-inline-block">
+        <Dropdown.Menu>
+          {options.map(option => {
+            return (
+              <Dropdown.Item
+                key={option.text}
+                eventKey={option.text}
+                onClick={() => onSizePerPageChange(option.page)}
+              >
+                {option.text}
+              </Dropdown.Item>
+            );
+          })}
+        </Dropdown.Menu>
+      </Dropdown>
+    );
+
     const options = {
       hidePageListOnlyOnePage: true,
       alwaysShowAllBtns: true,
       withFirstAndLast: false,
       showTotal: true,
       sizePerPageList: [5, 10, 25],
-      paginationTotalRenderer: customTotal
+      paginationTotalRenderer: customTotal,
+      sizePerPageRenderer
     };
 
     return { pagination: paginationFactory(options) };
