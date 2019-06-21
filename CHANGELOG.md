@@ -1,17 +1,9 @@
-#### 0.5.2 (2019-06-21)
+# 0.5.2 (2019-06-21)
 
-##### Build System / Dependencies
+### Build System / Dependencies
 
 *  fix production build for Switch component ([216e0527](https://github.com/SynetoNet/compass-react/commit/216e05275922322717fe424e484b3a2ea80e9f08))
 *  fix production build for Fade/Transition component ([256cdd27](https://github.com/SynetoNet/compass-react/commit/256cdd27b2d5c81a0fe7a180bd12cfc1f327819b))
-
-##### Documentation Changes
-
-* **Switch:**  fix warnings ([9ee7c48f](https://github.com/SynetoNet/compass-react/commit/9ee7c48ff4ebcf65d502186115519df2b6289ddf))
-
-##### Bug Fixes
-
-* **Tabs:**  put back the default Fade transition ([98d150cd](https://github.com/SynetoNet/compass-react/commit/98d150cda316a6b59ff395dae0443fd13560dcba))
 
 # 0.5.1 (2019-06-14)
 
