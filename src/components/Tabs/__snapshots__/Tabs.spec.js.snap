@@ -81,7 +81,7 @@ exports[`renders Horizontal Tabs 1`] = `
     <div
       aria-hidden={false}
       aria-labelledby={null}
-      className="tab-pane active"
+      className="fade tab-pane active show"
       id={null}
       role="tabpanel"
       title="tab1 title"
@@ -91,7 +91,7 @@ exports[`renders Horizontal Tabs 1`] = `
     <div
       aria-hidden={true}
       aria-labelledby={null}
-      className="tab-pane"
+      className="fade tab-pane"
       id={null}
       role="tabpanel"
       title="tab2 title"
@@ -101,7 +101,7 @@ exports[`renders Horizontal Tabs 1`] = `
     <div
       aria-hidden={true}
       aria-labelledby={null}
-      className="tab-pane"
+      className="fade tab-pane"
       id={null}
       role="tabpanel"
       title="tab3 title"
@@ -193,7 +193,7 @@ exports[`renders Vertical Tabs 1`] = `
     <div
       aria-hidden={false}
       aria-labelledby={null}
-      className="tab-pane active"
+      className="fade tab-pane active show"
       id={null}
       role="tabpanel"
       title="tab1 title"
@@ -203,7 +203,7 @@ exports[`renders Vertical Tabs 1`] = `
     <div
       aria-hidden={true}
       aria-labelledby={null}
-      className="tab-pane"
+      className="fade tab-pane"
       id={null}
       role="tabpanel"
       title="tab2 title"
@@ -213,7 +213,7 @@ exports[`renders Vertical Tabs 1`] = `
     <div
       aria-hidden={true}
       aria-labelledby={null}
-      className="tab-pane"
+      className="fade tab-pane"
       id={null}
       role="tabpanel"
       title="tab3 title"
