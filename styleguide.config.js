@@ -2,8 +2,7 @@
 const pkg = require("./package.json");
 
 module.exports = {
-  // this should be false, so we know what components don't have examples
-  skipComponentsWithoutExample: false,
+  skipComponentsWithoutExample: true,
   // change build folder so we can deploy to Github Pages
   styleguideDir: "docs",
   // show only one section per page

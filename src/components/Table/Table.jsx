@@ -1,61 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 // import classNames from "classnames";
 
 import BootstrapTable from "react-bootstrap-table-next";
-import paginationFactory from "react-bootstrap-table2-paginator";
 import ToolkitProvider from "react-bootstrap-table2-toolkit";
-import Form from "../Form/Form";
-import Dropdown from "../Dropdown/Dropdown";
+
+import Search from "./components/Search";
+import { getPaginationOptions } from "./components/paginationOptions";
+import { getSelectableOptions } from "./components/selectableOptions";
 
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "./Table.scss";
-
-const IndeterminateCheck = ({ mode, checked, indeterminate }) => {
-  return (
-    <Form.Check
-      type={mode}
-      checked={checked}
-      indeterminate={indeterminate}
-      label=""
-      onChange={() => {}}
-    />
-  );
-};
-
-const MySearch = props => {
-  let input;
-
-  const handleClick = () => {
-    props.onSearch(input.value);
-  };
-
-  return (
-    <div className="table-search">
-      <Form.Control
-        type="text"
-        ref={n => (input = n)}
-        onChange={handleClick}
-        placeholder="Search..."
-      />
-
-      {props.searchText && (
-        // @todo replace with icon button
-        <button
-          title="Clear search"
-          aria-label="Clear"
-          className="table-search__clear"
-          onClick={() => {
-            input.value = "";
-            props.onSearch("");
-          }}
-        >
-          &times;
-        </button>
-      )}
-    </div>
-  );
-};
+import "./components/Pagination.scss";
 
 class Table extends React.Component {
   static Col = "tr";
@@ -87,8 +43,8 @@ class Table extends React.Component {
     const _columns = columns
       ? this.getColumnsProp(columns)
       : this.getColumnsFromChildren(children);
-    const _selectable = this.getSelectableProp(selectable);
-    const _pagination = this.getPaginationProp(pagination);
+    const _selectable = getSelectableOptions(selectable, this.handleOnSelect);
+    const _pagination = getPaginationOptions(pagination);
 
     // const classes = classNames({});
 
@@ -104,7 +60,7 @@ class Table extends React.Component {
             <>
               <div className="table-filters-wrapper mb-2">
                 {actions || <div />}
-                <MySearch {...props.searchProps} />
+                <Search {...props.searchProps} />
               </div>
               <BootstrapTable
                 bootstrap4={true}
@@ -153,106 +109,6 @@ class Table extends React.Component {
     }
 
     return children.map(({ props }) => getColumn(props));
-  }
-
-  getPaginationProp(pagination) {
-    if (!pagination) {
-      return {};
-    }
-
-    const customTotal = (from, to, size) => (
-      <span className="table-pagination_total">
-        Items {from} - {to} of {size}
-      </span>
-    );
-
-    const sizePerPageRenderer = ({
-      options,
-      currSizePerPage,
-      onSizePerPageChange
-    }) => (
-      <Dropdown label={currSizePerPage} className="d-inline-block">
-        <Dropdown.Menu>
-          {options.map(option => {
-            return (
-              <Dropdown.Item
-                key={option.text}
-                eventKey={option.text}
-                onClick={() => onSizePerPageChange(option.page)}
-              >
-                {option.text}
-              </Dropdown.Item>
-            );
-          })}
-        </Dropdown.Menu>
-      </Dropdown>
-    );
-
-    const options = {
-      hidePageListOnlyOnePage: true,
-      alwaysShowAllBtns: true,
-      withFirstAndLast: false,
-      showTotal: true,
-      sizePerPageList: [5, 10, 25],
-      paginationTotalRenderer: customTotal,
-      sizePerPageRenderer
-    };
-
-    return { pagination: paginationFactory(options) };
-  }
-
-  getSelectableProp(selectable) {
-    let prop;
-
-    if (!selectable) {
-      return {};
-    }
-
-    switch (selectable) {
-      case "single":
-        prop = {
-          selectRow: {
-            mode: "radio",
-            classes: "selected",
-            clickToSelect: true,
-            hideSelectColumn: true,
-            onSelect: this.handleOnSelect
-          }
-        };
-        break;
-      case "multiple":
-        prop = {
-          selectRow: {
-            mode: "checkbox",
-            onSelect: (...args) => {
-              this.handleOnSelect(...args);
-            },
-            // onSelect: (row, isSelect, rowIndex, e) => {
-            //   console.log("onSelect", { row, isSelect, rowIndex });
-            // },
-            // onSelectAll: (isSelect, rows, e) => {
-            //   console.log("onSelectAll", { isSelect, rows });
-            // },
-            selectionHeaderRenderer: props => {
-              return <IndeterminateCheck {...props} />;
-            },
-            selectionRenderer: ({ mode, checked, disabled, rowIndex }) => (
-              <Form.Check
-                type={mode}
-                checked={checked}
-                disabled={disabled}
-                label=""
-                onChange={() => console.log(rowIndex)}
-              />
-            )
-          }
-        };
-        break;
-      default:
-        prop = {};
-    }
-
-    return prop;
   }
 }
 
