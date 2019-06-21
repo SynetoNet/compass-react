@@ -22,7 +22,6 @@ class Tabs extends React.Component {
       <div className={classes}>
         <Tab.Container
           defaultActiveKey={this._getTabKeys()[0]}
-          transition={false}
           {...props}
           onSelect={this.onSelect}
         >

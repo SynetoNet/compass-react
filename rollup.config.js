@@ -11,12 +11,6 @@ export default [
   {
     input: [
       "src/index.js",
-      // "src/layout/Container.jsx",
-      // "src/layout/Col.jsx",
-      // "src/layout/Row.jsx",
-      // "src/components/Badge/Badge.jsx",
-      // "src/components/Button/Button.jsx",
-      // "src/components/Dropdown/Dropdown.jsx",
       "src/components/DatePicker/DatePicker.jsx",
       "src/components/Form/Form.jsx",
       "src/components/Modal/Modal.jsx",
@@ -25,7 +19,7 @@ export default [
     output: [
       {
         dir: "lib",
-        format: "esm",
+        format: "cjs",
         sourcemap: true
       }
     ],
@@ -34,15 +28,16 @@ export default [
       postcss({
         plugins: [autoprefixer]
       }),
+      commonjs({
+        include: /node_modules/
+      }),
       resolve({
-        extensions: [".mjs", ".js", ".jsx"]
+        extensions: [".js", ".jsx"],
+        mainFields: ["main"]
       }),
       babel({
         exclude: "node_modules/**",
         externalHelpers: true
-      }),
-      commonjs({
-        include: /node_modules/
       }),
       copy({
         targets: ["src/base/assets"],
