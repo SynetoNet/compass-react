@@ -74,6 +74,59 @@ By default, tabs are horizontal and left aligned:
 </Tabs>
 ```
 
+#### **Custom title**
+
+The `title` prop supports any React Component:
+
+```jsx
+import Badge from "../Badge/Badge";
+
+const Inbox = (
+  <>
+    Inbox{" "}
+    <Badge color="success" variant="strong" width={32} className="ml-2">
+      2
+    </Badge>
+  </>
+);
+
+const Urgent = (
+  <>
+    Urgent{" "}
+    <Badge color="danger" variant="strong" width={32} className="ml-2">
+      2
+    </Badge>
+  </>
+);
+
+const Trash = (
+  <>
+    Trash{" "}
+    <Badge variant="outline" width={32}>
+      99+
+    </Badge>
+  </>
+);
+
+<Tabs>
+  <Tabs.Tab eventKey="home" title={Inbox}>
+    My heavy fox, you inspire me to write. How I love the way you skip, sleep
+    and sneer, Invading my mind day and through the night, Always dreaming about
+    the cunning smear.
+  </Tabs.Tab>
+  <Tabs.Tab eventKey="profile" title={Urgent}>
+    Let me compare you to an ideal spoon? You are more deadpan, stunning and
+    scaly. Fun sun heats the surreal peaches of June, And summertime has the
+    vernal qualey.
+  </Tabs.Tab>
+  <Tabs.Tab eventKey="contact" title={Trash} disabled>
+    How do I love you? Let me count the ways. I love your clad ankle, elbows and
+    smile. Thinking of your glad elbows fills my days. My love for you is the
+    bally air mile.
+  </Tabs.Tab>
+</Tabs>;
+```
+
 #### **Extra content**
 
 You can render any additional content inline with the Tab Navigation. Your content will be rendered inside a flex container, that fills the entire empty space in the Navigation.
