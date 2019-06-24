@@ -7,13 +7,15 @@ import BootstrapBadge from "react-bootstrap/Badge";
 import "./Badge.scss";
 import "../../base/fixed-width.scss";
 
-const Badge = ({ color, variant, width, block, ...props }) => {
-  const classes = classNames({
-    outline: variant === "outline",
-    strong: variant === "strong",
-    ["width-" + width]: width,
-    block
-  });
+const Badge = ({ color, variant, width, block, className, ...props }) => {
+  const classes = (
+    classNames({
+      outline: variant === "outline",
+      strong: variant === "strong",
+      ["width-" + width]: width,
+      block
+    }) + ` ${className}`
+  ).trim();
 
   return <BootstrapBadge variant={color} className={classes} {...props} pill />;
 };
