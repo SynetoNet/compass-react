@@ -76,7 +76,7 @@ By default, tabs are horizontal and left aligned:
 
 #### **Custom title**
 
-The `title` prop supports any React Component:
+The **`title`** prop supports any React Component:
 
 ```jsx
 import Badge from "../Badge/Badge";
