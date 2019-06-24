@@ -44,6 +44,22 @@ const columns = [
 
 You can checkout [Column Props](https://react-bootstrap-table.github.io/react-bootstrap-table2/docs/column-props.html#optional) for advanced customization:
 
+```jsx
+const data = [
+  { id: 1, name: "Faulkner Henson", gender: "male", age: 35 },
+  { id: 2, name: "Haley Cotton", gender: "female", age: 92 },
+  { id: 3, name: "Lynda Kline", gender: "female", age: 25 }
+];
+
+const columns = [
+  { field: "id", header: "ID", width: "50px" },
+  { field: "name", header: "Full Name" },
+  { field: "age", header: "User Age", width: "100px" }
+];
+
+<Table data={data} columns={columns} keyField="id" />;
+```
+
 #### **Sorting columns**
 
 ```jsx

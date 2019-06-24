@@ -118,6 +118,8 @@ Table.propTypes = {
     PropTypes.shape({
       field: PropTypes.string,
       header: PropTypes.string,
+      oneline: PropTypes.bool,
+      width: PropTypes.string,
       /** `"bool", "function"` */
       sort: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
       /** `"left", "center", "right"` */
@@ -148,8 +150,39 @@ function getColumn(column) {
     sort,
     align,
     renderCell,
+    width,
+    style,
+    headerStyle,
+    oneline,
     ...otherProps
   } = column;
+
+  const _style = {
+    ...style
+  };
+  const _headerStyle = {
+    ...headerStyle
+  };
+
+  if (oneline) {
+    Object.assign(_style, {
+      ..._style,
+      textOverflow: "ellipsis",
+      overflow: "hidden",
+      whiteSpace: "nowrap"
+    });
+  }
+
+  if (width) {
+    Object.assign(_style, {
+      width,
+      flex: "none"
+    });
+    Object.assign(_headerStyle, {
+      width,
+      flex: "none"
+    });
+  }
 
   return {
     dataField: field || "",
@@ -159,6 +192,8 @@ function getColumn(column) {
     align: align,
     formatter: renderCell,
     sortFunc: typeof sort === "function" ? sort : undefined,
+    style: { ..._style },
+    headerStyle: { ..._headerStyle },
     ...otherProps
   };
 }
