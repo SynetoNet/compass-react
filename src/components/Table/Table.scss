@@ -51,28 +51,22 @@
   display: flex;
   flex-direction: column;
 
-  & thead {
+  thead {
     display: block;
-
-    & tr {
-      display: flex;
-    }
-    & th {
-      flex: 1;
-    }
   }
 
-  & tbody {
+  tbody {
     display: block;
     max-height: 200px;
     overflow-y: auto;
+  }
 
-    & tr {
-      display: flex;
-    }
-    & td {
-      flex: 1;
-    }
+  tr {
+    display: flex;
+  }
+  th,
+  td {
+    flex: 1;
   }
 }
 
