@@ -38,6 +38,7 @@ class Table extends React.Component {
       search,
       actions,
       scrollable,
+      className,
       ...props
     } = this.props;
 
@@ -48,9 +49,11 @@ class Table extends React.Component {
     const _selectable = getSelectableOptions(selectable, this.handleOnSelect);
     const _pagination = getPaginationOptions(pagination);
 
-    const classes = classNames({
-      "table-scrollable": scrollable
-    });
+    const classes = (
+      classNames({
+        "table-scrollable": scrollable
+      }) + ` ${className}`
+    ).trim();
 
     if (search) {
       return (
@@ -136,6 +139,7 @@ Table.propTypes = {
   /** field name to be used as unique keys */
   keyField: PropTypes.string,
   selectable: PropTypes.oneOf(["single", "multiple"]),
+  scrollable: PropTypes.bool,
   onSelect: PropTypes.func
 };
 

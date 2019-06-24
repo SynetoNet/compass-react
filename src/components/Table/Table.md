@@ -211,6 +211,19 @@ import { data, columns } from "./Table.utils";
 
 #### **Scrollable table**
 
+By default, a **`scrollable`** table has a fixed **200px** height on **`tbody`**. If you need to adjust this height, you should pass a custom CSS class on the table:
+
+```jsx static
+// Component
+<Table ... className="my-custom-table" />;
+
+// CSS
+.my-custom-table tbody {
+  max-height: 50vh;
+}
+
+```
+
 ```jsx
 import { dataBig } from "./Table.utils";
 
