@@ -38,7 +38,7 @@ class Table extends React.Component {
       search,
       actions,
       scrollable,
-      className,
+      className = "",
       ...props
     } = this.props;
 
