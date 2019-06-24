@@ -235,17 +235,8 @@ const ExtendedModal = () => {
       <Button onClick={() => toggleModal(true)}>Toggle modal</Button>
       <Modal show={showModal} onHide={() => toggleModal(false)}>
         <Modal.Header>
-          <div
-            style={{
-              flex: 1,
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center"
-            }}
-          >
-            <Modal.Title>Custom title</Modal.Title>
-            <Badge>Info Badge</Badge>
-          </div>
+          <Modal.Title>Custom title</Modal.Title>
+          <Badge>Info Badge</Badge>
         </Modal.Header>
 
         <Modal.Body>
