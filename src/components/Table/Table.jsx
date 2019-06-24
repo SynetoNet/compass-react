@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import classNames from "classnames";
+import classNames from "classnames";
 
 import BootstrapTable from "react-bootstrap-table-next";
 import ToolkitProvider from "react-bootstrap-table2-toolkit";
@@ -37,6 +37,7 @@ class Table extends React.Component {
       children,
       search,
       actions,
+      scrollable,
       ...props
     } = this.props;
 
@@ -47,7 +48,9 @@ class Table extends React.Component {
     const _selectable = getSelectableOptions(selectable, this.handleOnSelect);
     const _pagination = getPaginationOptions(pagination);
 
-    // const classes = classNames({});
+    const classes = classNames({
+      "table-scrollable": scrollable
+    });
 
     if (search) {
       return (
@@ -64,6 +67,7 @@ class Table extends React.Component {
                 <Search {...props.searchProps} />
               </div>
               <BootstrapTable
+                classes={classes}
                 bootstrap4={true}
                 bordered={false}
                 hover={true}
@@ -81,6 +85,7 @@ class Table extends React.Component {
 
     return (
       <BootstrapTable
+        classes={classes}
         data={data}
         columns={_columns}
         keyField={keyField}

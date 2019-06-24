@@ -209,6 +209,29 @@ import { data, columns } from "./Table.utils";
 <Table data={data} columns={columns} keyField="id" search />;
 ```
 
+#### **Scrollable table**
+
+```jsx
+import { dataBig } from "./Table.utils";
+
+const columns = [
+  {
+    field: "id",
+    header: "User ID",
+    width: "30%",
+    oneline: true
+  },
+  { field: "name", header: "Full Name" },
+  {
+    field: "age",
+    header: "User Age",
+    width: "80px"
+  }
+];
+
+<Table data={dataBig} columns={columns} keyField="id" scrollable />;
+```
+
 #### **Complex table**
 
 ```jsx
@@ -274,6 +297,7 @@ const tableActions = (
   search
   actions={tableActions}
   selectable="multiple"
+  scrollable
   onSelect={({ item, isSelected }) => console.log(item, isSelected)}
   ref={n => (tableRef = n)}
 >

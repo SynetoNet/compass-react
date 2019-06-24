@@ -38,11 +38,41 @@
   background: none;
   border: 0;
   font-size: 1.4em;
+  line-height: 1;
   color: $neutral-60;
 
   &:hover {
     color: $accent;
     background: $accent-light-85;
+  }
+}
+
+.table-scrollable {
+  display: flex;
+  flex-direction: column;
+
+  & thead {
+    display: block;
+
+    & tr {
+      display: flex;
+    }
+    & th {
+      flex: 1;
+    }
+  }
+
+  & tbody {
+    display: block;
+    max-height: 200px;
+    overflow-y: scroll;
+
+    & tr {
+      display: flex;
+    }
+    & td {
+      flex: 1;
+    }
   }
 }
 

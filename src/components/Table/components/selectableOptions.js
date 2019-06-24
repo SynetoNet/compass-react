@@ -19,6 +19,8 @@ function getMultipleOptions(onSelect) {
     selectRow: {
       mode: "checkbox",
       onSelect,
+      headerColumnStyle: { flex: "none", width: "40px" },
+      selectColumnStyle: { flex: "none", width: "40px" },
       // onSelect: (row, isSelect, rowIndex, e) => {
       //   console.log("onSelect", { row, isSelect, rowIndex });
       // },
