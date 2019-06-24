@@ -65,7 +65,7 @@
   & tbody {
     display: block;
     max-height: 200px;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     & tr {
       display: flex;
@@ -91,6 +91,7 @@
 
 .table {
   color: inherit;
+  border-bottom: 1px $neutral-6 solid;
 }
 .table thead th {
   border-width: 1px;
@@ -102,9 +103,6 @@
   border-color: $neutral-6;
   vertical-align: inherit;
   word-break: break-all;
-}
-.table tbody tr:last-child td {
-  border-bottom: 1px $neutral-6 solid;
 }
 
 .react-bootstrap-table th.sortable {
