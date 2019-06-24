@@ -71,6 +71,7 @@
 .table td {
   border-color: $neutral-6;
   vertical-align: inherit;
+  word-break: break-all;
 }
 .table tbody tr:last-child td {
   border-bottom: 1px $neutral-6 solid;
