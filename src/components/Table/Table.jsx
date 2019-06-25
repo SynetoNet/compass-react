@@ -6,6 +6,7 @@ import BootstrapTable from "react-bootstrap-table-next";
 import ToolkitProvider from "react-bootstrap-table2-toolkit";
 
 import Search from "./components/Search";
+import Dropdown from "../Dropdown/Dropdown";
 import { getPaginationOptions } from "./components/paginationOptions";
 import { getSelectableOptions } from "./components/selectableOptions";
 import { getColumn } from "./components/columnOptions";
@@ -17,13 +18,29 @@ import "./components/Pagination.scss";
 class Table extends React.Component {
   static Col = "tr";
 
+  state = {
+    selected: this.props.selected
+  };
+
   handleOnSelect = (row, isSelect, rowIndex, e) => {
     const { onSelect } = this.props;
     onSelect && onSelect({ item: row, isSelected: isSelect });
   };
 
   getSelected = () => {
-    return this.node.selectionContext.selected;
+    try {
+      const { data, keyField } = this.props;
+      return this.node.selectionContext.selected.map(key =>
+        data.find(item => item[keyField] === key)
+      );
+    } catch (error) {
+      console.warm("Cannot getSelected()", error);
+      return [];
+    }
+  };
+
+  clearSelection = () => {
+    this.setState({ selected: [] });
   };
 
   render() {
@@ -37,6 +54,7 @@ class Table extends React.Component {
       children,
       search,
       actions,
+      extra,
       scrollable,
       className = "",
       ...props
@@ -46,8 +64,15 @@ class Table extends React.Component {
     const _columns = columns
       ? this.getColumnsProp(columns)
       : this.getColumnsFromChildren(children);
-    const _selectable = getSelectableOptions(selectable, this.handleOnSelect);
+
+    const _selectable = getSelectableOptions(
+      selectable,
+      this.handleOnSelect,
+      this.state.selected
+    );
+
     const _pagination = getPaginationOptions(pagination);
+    const _actions = this.getActions(actions);
 
     const classes = (
       classNames({
@@ -55,52 +80,34 @@ class Table extends React.Component {
       }) + ` ${className}`
     ).trim();
 
-    if (search) {
-      return (
-        <ToolkitProvider
-          keyField={keyField}
-          data={data}
-          columns={_columns}
-          search
-        >
-          {props => (
-            <>
-              <div className="table-filters-wrapper mb-2">
-                {actions || <div />}
-                <Search {...props.searchProps} />
-              </div>
-              <BootstrapTable
-                classes={classes}
-                bootstrap4={true}
-                bordered={false}
-                hover={true}
-                noDataIndication="No items"
-                ref={n => (this.node = n)}
-                {..._selectable}
-                {..._pagination}
-                {...props.baseProps}
-              />
-            </>
-          )}
-        </ToolkitProvider>
-      );
-    }
-
     return (
-      <BootstrapTable
-        classes={classes}
+      <ToolkitProvider
+        keyField={keyField}
         data={data}
         columns={_columns}
-        keyField={keyField}
         bootstrap4={true}
-        bordered={false}
-        hover={true}
-        noDataIndication="No items"
-        ref={n => (this.node = n)}
-        {..._selectable}
-        {..._pagination}
-        {...props}
-      />
+        search
+      >
+        {props => (
+          <>
+            <div className="table-filters-wrapper mb-3">
+              {_actions || <div />}
+              {extra && extra}
+              {search && <Search {...props.searchProps} />}
+            </div>
+            <BootstrapTable
+              classes={classes}
+              bordered={false}
+              hover={true}
+              noDataIndication="No items"
+              ref={n => (this.node = n)}
+              {..._selectable}
+              {..._pagination}
+              {...props.baseProps}
+            />
+          </>
+        )}
+      </ToolkitProvider>
     );
   }
 
@@ -119,6 +126,34 @@ class Table extends React.Component {
 
     return children.map(({ props }) => getColumn(props));
   }
+
+  getActions = actions => {
+    if (!actions) {
+      return null;
+    }
+
+    return (
+      <Dropdown label="Actions" className="mr-5">
+        <Dropdown.Menu>
+          {actions.map(action => (
+            <Dropdown.Item
+              key={action.label}
+              eventKey="unselect"
+              onSelect={() => action.onClick(this.getSelected())}
+            >
+              {action.label}
+            </Dropdown.Item>
+          ))}
+
+          <Dropdown.Divider />
+
+          <Dropdown.Item eventKey="unselect" onSelect={this.clearSelection}>
+            Unselect all
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    );
+  };
 }
 
 Table.propTypes = {
@@ -140,7 +175,14 @@ Table.propTypes = {
   keyField: PropTypes.string,
   selectable: PropTypes.oneOf(["single", "multiple"]),
   scrollable: PropTypes.bool,
-  onSelect: PropTypes.func
+  onSelect: PropTypes.func,
+  actions: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      onClick: PropTypes.func
+    })
+  ),
+  extra: PropTypes.element
 };
 
 export default Table;

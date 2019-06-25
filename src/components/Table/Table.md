@@ -116,24 +116,23 @@ import { data, columns } from "./Table.utils";
 
 ```jsx
 import { data, columns } from "./Table.utils";
-import Button from "../Button/Button";
 
-let tableRef;
-
-<>
-  <Button onClick={() => console.log(tableRef.getSelected())} className="mb-3">
-    Get Selected
-  </Button>
-
-  <Table
-    data={data}
-    columns={columns}
-    keyField="id"
-    selectable="multiple"
-    onSelect={({ item, isSelected }) => console.log(item, isSelected)}
-    ref={n => (tableRef = n)}
-  />
-</>;
+<Table
+  data={data}
+  columns={columns}
+  keyField="id"
+  selectable="multiple"
+  actions={[
+    {
+      label: "Delete",
+      onClick: selected => console.log("Deleting", selected)
+    },
+    {
+      label: "Move to Trash",
+      onClick: selected => console.log("Moving to Trash", selected)
+    }
+  ]}
+/>;
 ```
 
 #### **Pagination**
@@ -251,10 +250,7 @@ const columns = [
 import { dataBig, columns } from "./Table.utils";
 import Badge from "../Badge/Badge";
 import Button from "../Button/Button";
-import Dropdown from "../Dropdown/Dropdown";
 import Form from "../Form/Form";
-
-let tableRef;
 
 function renderPrice(cell, row) {
   let color = "";
@@ -286,33 +282,32 @@ function renderCellActions(cell, row) {
   );
 }
 
-const tableActions = (
-  <Dropdown
-    label="Actions"
-    onSelect={eventKey => console.log(eventKey)}
-    items={[
-      {
-        label: "Delete selected",
-        onSelect: () => console.log(tableRef.getSelected())
-      },
-      {
-        label: "Move to trash",
-        onSelect: () => console.log(tableRef.getSelected())
-      }
-    ]}
-  />
-);
+const actions = [
+  {
+    label: "Delete selected",
+    onClick: selected => console.log(selected)
+  },
+  {
+    label: "Move to trash",
+    onClick: selected => console.log(selected)
+  }
+];
 
 <Table
   data={dataBig}
   keyField="id"
   pagination
   search
-  actions={tableActions}
+  actions={actions}
   selectable="multiple"
+  extra={
+    <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
+      <Form.Control placeholder="Extra" className="mr-2" />
+      <Form.Switch checked />
+    </div>
+  }
   scrollable
   onSelect={({ item, isSelected }) => console.log(item, isSelected)}
-  ref={n => (tableRef = n)}
 >
   <Table.Col field="name" align="left">
     User's Full Name

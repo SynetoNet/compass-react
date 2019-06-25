@@ -9,12 +9,13 @@ const Search = props => {
   };
 
   return (
-    <div className="table-search">
+    <div className="table-search ml-5">
       <Form.Control
         type="text"
         ref={n => (input = n)}
         onChange={handleClick}
         placeholder="Search..."
+        style={{ width: "200px" }}
       />
 
       {props.searchText && (

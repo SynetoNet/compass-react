@@ -2,23 +2,25 @@ import React from "react";
 import IndeterminateCheck from "./IndeterminateCheck";
 import Form from "../../Form/Form";
 
-function getSingleOptions(onSelect) {
+function getSingleOptions(onSelect, selected) {
   return {
     selectRow: {
       mode: "radio",
       classes: "selected",
       clickToSelect: true,
       hideSelectColumn: true,
+      selected,
       onSelect
     }
   };
 }
 
-function getMultipleOptions(onSelect) {
+function getMultipleOptions(onSelect, selected) {
   return {
     selectRow: {
       mode: "checkbox",
       onSelect,
+      selected,
       headerColumnStyle: { flex: "none", width: "40px" },
       selectColumnStyle: { flex: "none", width: "40px" },
       // onSelect: (row, isSelect, rowIndex, e) => {
@@ -43,12 +45,12 @@ function getMultipleOptions(onSelect) {
   };
 }
 
-export function getSelectableOptions(type, onSelect) {
+export function getSelectableOptions(type, onSelect, selected) {
   switch (type) {
     case "single":
-      return getSingleOptions(onSelect);
+      return getSingleOptions(onSelect, selected);
     case "multiple":
-      return getMultipleOptions(onSelect);
+      return getMultipleOptions(onSelect, selected);
     default:
       return {};
   }
