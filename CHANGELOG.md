@@ -1,3 +1,42 @@
+#### 0.6.0 (2019-06-26)
+
+##### Build System / Dependencies
+
+*  expose Table component for production build ([6284c33a](https://github.com/SynetoNet/compass-react/commit/6284c33abe680b2394008f1b8bce2ef0101634e7))
+*  prefer local modules instead of build-in node modules ([5d218d08](https://github.com/SynetoNet/compass-react/commit/5d218d085486717b014f59c48df10acfc457fb06))
+*  fix production build for Form component ([9468a437](https://github.com/SynetoNet/compass-react/commit/9468a43772e5d47f71ea0bf8ff583cfba44d3a9e))
+
+##### Documentation Changes
+
+* **Tabs:**  add example for custom tab title ([2088bbf6](https://github.com/SynetoNet/compass-react/commit/2088bbf6be43d7ce3b79e51629cf904add885257))
+
+##### New Features
+
+* **Table:**
+  *  abstract actions + add clear selection ([129cac67](https://github.com/SynetoNet/compass-react/commit/129cac670986c4f3ec15c97362c21e09eb467535))
+  *  add support for scrollable table (fixes [#23](https://github.com/SynetoNet/compass-react/pull/23)) ([4fbbf48a](https://github.com/SynetoNet/compass-react/commit/4fbbf48ad02fac2036353250abc73c82888b06d4))
+  *  add width and oneline props ([3fcf6fb8](https://github.com/SynetoNet/compass-react/commit/3fcf6fb8778450c5e23708d9bf5a4924c62b7aa5))
+  *  custom pagination dropdown (fixes [#21](https://github.com/SynetoNet/compass-react/pull/21)) ([c23433c7](https://github.com/SynetoNet/compass-react/commit/c23433c7d6bab7003f48e9c46ce70e07469a05fb))
+  *  add search and selected items actions ([dacc75c0](https://github.com/SynetoNet/compass-react/commit/dacc75c0f86b1015af0cf18a7ac365425977cedd))
+  *  add table component ([930505f2](https://github.com/SynetoNet/compass-react/commit/930505f2185f7032005e8a33d105c71470457403))
+* **Badge:**  support extra className ([1ad138bc](https://github.com/SynetoNet/compass-react/commit/1ad138bca631052a9fba423aa239a91a1021ab68))
+* **Check:**  add indeterminate state for checkbox ([38d8f016](https://github.com/SynetoNet/compass-react/commit/38d8f016111659d90f65186229e9d31125d565f4))
+
+##### Bug Fixes
+
+* **Badge:**  default className prop to empty string ([8950ba4b](https://github.com/SynetoNet/compass-react/commit/8950ba4bb64a23b6b9da38c4cf108d8214efc765))
+* **Table:**
+  *  force break word for table cells ([9b0ebaf1](https://github.com/SynetoNet/compass-react/commit/9b0ebaf18895e516f4248c75111d0d6cfc80a8a3))
+  *  force left align table header ([bd1afb70](https://github.com/SynetoNet/compass-react/commit/bd1afb70e47e59ea418701471af827ccd5fb5182))
+* **Form:**  export Combo Box ([7b4a610a](https://github.com/SynetoNet/compass-react/commit/7b4a610a4d27a413eaf29e94309456b1948e22dc))
+* **DatePicker:**  remove transition on custom Overlay ([bf97fe5b](https://github.com/SynetoNet/compass-react/commit/bf97fe5b3764c6f5762cadf7dbe13e2907e7b68e))
+
+##### Refactors
+
+* **Table:**
+  *  extract column options ([983f1406](https://github.com/SynetoNet/compass-react/commit/983f14060135c5aa7b1951efe27b07d4bfd3bf76))
+  *  extract components ([02a71a54](https://github.com/SynetoNet/compass-react/commit/02a71a5427e451500d65cb69c3118778d8fb89b1))
+
 # 0.5.2 (2019-06-21)
 
 ### Build System / Dependencies
