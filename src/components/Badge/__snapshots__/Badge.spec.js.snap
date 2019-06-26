@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders a Badge with custom className 1`] = `
+<span
+  className="width-auto custom-class badge badge-pill badge-secondary"
+/>
+`;
+
 exports[`renders default Badge 1`] = `
 <span
   className="width-auto badge badge-pill badge-secondary"

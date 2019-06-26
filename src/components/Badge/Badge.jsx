@@ -7,7 +7,7 @@ import BootstrapBadge from "react-bootstrap/Badge";
 import "./Badge.scss";
 import "../../base/fixed-width.scss";
 
-const Badge = ({ color, variant, width, block, className, ...props }) => {
+const Badge = ({ color, variant, width, block, className = "", ...props }) => {
   const classes = (
     classNames({
       outline: variant === "outline",

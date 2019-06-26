@@ -6,3 +6,8 @@ test("renders default Badge", () => {
   const component = renderer.create(<Badge />);
   expect(component.toJSON()).toMatchSnapshot();
 });
+
+test("renders a Badge with custom className", () => {
+  const component = renderer.create(<Badge className="custom-class" />);
+  expect(component.toJSON()).toMatchSnapshot();
+});
