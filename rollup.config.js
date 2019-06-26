@@ -33,7 +33,8 @@ export default [
       }),
       resolve({
         extensions: [".js", ".jsx"],
-        mainFields: ["main"]
+        mainFields: ["main"],
+        preferBuiltins: false
       }),
       babel({
         exclude: "node_modules/**",
