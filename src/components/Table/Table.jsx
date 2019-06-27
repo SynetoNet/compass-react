@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
@@ -15,106 +15,98 @@ import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "./Table.scss";
 import "./components/Pagination.scss";
 
-class Table extends React.Component {
-  static Col = "tr";
+const Table = ({
+  data,
+  columns,
+  keyField,
+  selectable,
+  onSelect,
+  pagination,
+  children,
+  search,
+  actions,
+  extra,
+  scrollable,
+  className = "",
+  wrapperClassName = "",
+  ...props
+}) => {
+  const [selected, setSelected] = useState([]);
+  const tableRef = useRef(null);
+  console.log(selected);
 
-  state = {
-    selected: this.props.selected
-  };
-
-  handleOnSelect = (row, isSelect, rowIndex, e) => {
-    const { onSelect } = this.props;
+  function handleOnSelect(row, isSelect, rowIndex, e) {
     onSelect && onSelect({ item: row, isSelected: isSelect });
-  };
+  }
 
-  getSelected = () => {
+  function getSelected() {
     try {
-      const { data, keyField } = this.props;
-      return this.node.selectionContext.selected.map(key =>
+      return tableRef.current.selectionContext.selected.map(key =>
         data.find(item => item[keyField] === key)
       );
     } catch (error) {
       console.warm("Cannot getSelected()", error);
       return [];
     }
-  };
-
-  clearSelection = () => {
-    this.setState({ selected: [] });
-  };
-
-  render() {
-    const {
-      data,
-      columns,
-      keyField,
-      selectable,
-      onSelect,
-      pagination,
-      children,
-      search,
-      actions,
-      extra,
-      scrollable,
-      className = "",
-      wrapperClassName = "",
-      ...props
-    } = this.props;
-
-    // can be memoized
-    const _columns = columns
-      ? this.getColumnsProp(columns)
-      : this.getColumnsFromChildren(children);
-
-    const _selectable = getSelectableOptions(
-      selectable,
-      this.handleOnSelect,
-      this.state.selected
-    );
-
-    const _pagination = getPaginationOptions(pagination);
-    const _actions = this.getActions(actions);
-
-    const classes = (classNames({}) + ` ${className}`).trim();
-
-    const wrapperClasses = (
-      classNames({ "react-bootstrap-table--scrollable": scrollable }) +
-      ` ${wrapperClassName}`
-    ).trim();
-
-    return (
-      <ToolkitProvider
-        keyField={keyField}
-        data={data}
-        columns={_columns}
-        bootstrap4={true}
-        search
-      >
-        {props => (
-          <>
-            <div className="table-filters-wrapper mb-3">
-              {_actions || <div />}
-              {extra && extra}
-              {search && <Search {...props.searchProps} />}
-            </div>
-            <BootstrapTable
-              wrapperClasses={wrapperClasses}
-              classes={classes}
-              bordered={false}
-              hover={true}
-              noDataIndication="No items"
-              ref={n => (this.node = n)}
-              {..._selectable}
-              {..._pagination}
-              {...props.baseProps}
-            />
-          </>
-        )}
-      </ToolkitProvider>
-    );
   }
 
-  getColumnsProp(columns) {
+  function clearSelection() {
+    setSelected([]);
+  }
+
+  // can be memoized
+  const _columns = columns
+    ? getColumnsProp(columns)
+    : getColumnsFromChildren(children);
+
+  const _selectable = getSelectableOptions(
+    selectable,
+    handleOnSelect,
+    selected
+  );
+
+  const _pagination = getPaginationOptions(pagination);
+  const _actions = getActions(actions);
+
+  const classes = (classNames({}) + ` ${className}`).trim();
+
+  const wrapperClasses = (
+    classNames({ "react-bootstrap-table--scrollable": scrollable }) +
+    ` ${wrapperClassName}`
+  ).trim();
+
+  return (
+    <ToolkitProvider
+      keyField={keyField}
+      data={data}
+      columns={_columns}
+      bootstrap4={true}
+      search
+    >
+      {props => (
+        <>
+          <div className="table-filters-wrapper mb-3">
+            {_actions || <div />}
+            {extra && extra}
+            {search && <Search {...props.searchProps} />}
+          </div>
+          <BootstrapTable
+            wrapperClasses={wrapperClasses}
+            classes={classes}
+            bordered={false}
+            hover={true}
+            noDataIndication="No items"
+            ref={tableRef}
+            {..._selectable}
+            {..._pagination}
+            {...props.baseProps}
+          />
+        </>
+      )}
+    </ToolkitProvider>
+  );
+
+  function getColumnsProp(columns) {
     if (!Array.isArray(columns)) {
       throw "columns must be an array";
     }
@@ -122,7 +114,7 @@ class Table extends React.Component {
     return columns.map(column => getColumn(column));
   }
 
-  getColumnsFromChildren(children) {
+  function getColumnsFromChildren(children) {
     if (!Array.isArray(children)) {
       throw "children must be an array";
     }
@@ -130,7 +122,7 @@ class Table extends React.Component {
     return children.map(({ props }) => getColumn(props));
   }
 
-  getActions = actions => {
+  function getActions(actions) {
     if (!actions) {
       return null;
     }
@@ -142,7 +134,7 @@ class Table extends React.Component {
             <Dropdown.Item
               key={action.label}
               eventKey="unselect"
-              onSelect={() => action.onClick(this.getSelected())}
+              onSelect={() => action.onClick(getSelected())}
             >
               {action.label}
             </Dropdown.Item>
@@ -150,14 +142,16 @@ class Table extends React.Component {
 
           <Dropdown.Divider />
 
-          <Dropdown.Item eventKey="unselect" onSelect={this.clearSelection}>
+          <Dropdown.Item eventKey="unselect" onSelect={clearSelection}>
             Unselect all
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     );
-  };
-}
+  }
+};
+
+Table.Col = "tr";
 
 Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object),
