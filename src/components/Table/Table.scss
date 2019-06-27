@@ -47,32 +47,22 @@
   }
 }
 
-.table-scrollable {
-  display: flex;
-  flex-direction: column;
+.react-bootstrap-table--scrollable {
+  position: relative;
+  max-height: 250px;
+  overflow: auto;
 
-  thead {
-    display: block;
-  }
-
-  tbody {
-    display: block;
-    max-height: 200px;
-    overflow-y: auto;
-  }
-
-  tr {
-    display: flex;
-  }
-  th,
-  td {
-    flex: 1;
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 }
 
 // overrides
 .react-bootstrap-table-pagination {
   justify-content: space-between;
+  margin-top: 1em;
 }
 
 .react-bootstrap-table-pagination-list {
@@ -85,18 +75,30 @@
 
 .table {
   color: inherit;
-  border-bottom: 1px $neutral-6 solid;
+  margin: 0;
 }
 .table thead th {
-  border-width: 1px;
-  border-color: $neutral-24;
+  border: 0;
   text-align: left;
+  background: linear-gradient(
+    to bottom,
+    $neutral-24 0 1px,
+    white 1px calc(100% - 1px),
+    $neutral-24 calc(100% - 1px) 100%
+  );
 }
 .table th,
 .table td {
-  border-color: $neutral-6;
+  border: 0;
   vertical-align: inherit;
   word-break: break-all;
+}
+.table tr:not(:last-child) td {
+  border-bottom: 1px $neutral-6 solid;
+}
+
+.react-bootstrap-table {
+  border-bottom: 1px $neutral-24 solid;
 }
 
 .react-bootstrap-table th.sortable {

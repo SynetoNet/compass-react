@@ -57,6 +57,7 @@ class Table extends React.Component {
       extra,
       scrollable,
       className = "",
+      wrapperClassName = "",
       ...props
     } = this.props;
 
@@ -74,10 +75,11 @@ class Table extends React.Component {
     const _pagination = getPaginationOptions(pagination);
     const _actions = this.getActions(actions);
 
-    const classes = (
-      classNames({
-        "table-scrollable": scrollable
-      }) + ` ${className}`
+    const classes = (classNames({}) + ` ${className}`).trim();
+
+    const wrapperClasses = (
+      classNames({ "react-bootstrap-table--scrollable": scrollable }) +
+      ` ${wrapperClassName}`
     ).trim();
 
     return (
@@ -96,6 +98,7 @@ class Table extends React.Component {
               {search && <Search {...props.searchProps} />}
             </div>
             <BootstrapTable
+              wrapperClasses={wrapperClasses}
               classes={classes}
               bordered={false}
               hover={true}
@@ -176,6 +179,10 @@ Table.propTypes = {
   selectable: PropTypes.oneOf(["single", "multiple"]),
   scrollable: PropTypes.bool,
   onSelect: PropTypes.func,
+  /** additional CSS classes to be set on the wrapper of the table component */
+  wrapperClassName: PropTypes.string,
+  /** additional CSS classes to be set on the table component */
+  className: PropTypes.string,
   actions: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
