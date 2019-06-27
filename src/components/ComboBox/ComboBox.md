@@ -11,8 +11,6 @@ npm i react-select@3.0.4
 #### **Basic example**
 
 ```jsx
-import ComboBox from "../../../lib/ComboBox";
-
 <ComboBox
   options={[
     { value: "chocolate", label: "Chocolate" },
