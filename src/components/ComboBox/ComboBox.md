@@ -1,6 +1,18 @@
+#### **Import**
+
+ComboBox is based on [react-select](https://react-select.com/home) which is NOT bundled within compass, because it's a big library and not necessary needed.
+
+So, you need to install it separately:
+
+```jsx static
+npm i react-select@3.0.4
+```
+
 #### **Basic example**
 
 ```jsx
+import ComboBox from "../../../lib/ComboBox";
+
 <ComboBox
   options={[
     { value: "chocolate", label: "Chocolate" },
@@ -12,7 +24,7 @@
   ]}
   selected={{ value: "vanilla", label: "Vanilla" }}
   placeholder="Select ice cream flavor..."
-/>
+/>;
 ```
 
 #### **Multi Select**
