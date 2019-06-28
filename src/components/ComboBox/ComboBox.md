@@ -22,7 +22,7 @@ npm i react-select@3.0.4
   ]}
   selected={{ value: "vanilla", label: "Vanilla" }}
   placeholder="Select ice cream flavor..."
-/>;
+/>
 ```
 
 #### **Multi Select**
