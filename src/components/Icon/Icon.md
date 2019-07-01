@@ -1,5 +1,5 @@
 #### **Default Icon**
 
 ```jsx
-<Icon type="fas fa-user"/>
+<Icon name="fas fa-user"/>
 ```

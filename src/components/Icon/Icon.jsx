@@ -1,21 +1,37 @@
-import React     from 'react'
-import PropTypes from "prop-types"
+import React      from 'react'
+import PropTypes  from "prop-types"
+import classNames from "classnames"
 
-const Icon = ({ type, color, size, rotate, animate }) => {
+const Icon = ({ name, color, size }) => {
+  const classes = classNames({
+    [ name ]: name,
+    [ size ]: size
+  })
+
+  console.log(classes)
+
   return (
     <i
-      className={ `${ type } ${ size } ${ rotate } ${ animate }` }
+      className={ classes }
       style={ { color } }
     />
   )
 }
 
 Icon.propTypes = {
-  type:    PropTypes.string.isRequired,
-  color:   PropTypes.string,
-  size:    PropTypes.oneOf([ 'fa-xs', 'fa-sm', 'fa-lg', 'fa-2x', 'fa-3x', 'fa-4x', 'fa-5x', 'fa-6x', 'fa-7x', 'fa-8x', 'fa-9x', 'fa-10x' ]),
-  rotate:  PropTypes.oneOf([ 'fa-rotate-90', 'fa-rotate-180', 'fa-rotate-270', 'fa-flip-horizontal', 'fa-flip-vertical', 'fa-flip-both' ]),
-  animate: PropTypes.oneOf([ 'fa-spin', 'fa-pulse' ])
+  name:  PropTypes.string.isRequired,
+  color: PropTypes.string,
+  size:  PropTypes.oneOf([ 'fa-xs', 'fa-sm', 'fa-md', 'fa-lg' ])
+}
+
+Icon.defaultProps = {
+  color: '#000000',
+  size:  'fa-lg'
 }
 
 export default Icon
+
+
+
+
+
