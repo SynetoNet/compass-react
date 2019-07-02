@@ -8,8 +8,6 @@ const Icon = ({ name, color, size }) => {
     [ size ]: size
   })
 
-  console.log(classes)
-
   return (
     <i
       className={ classes }
@@ -25,8 +23,7 @@ Icon.propTypes = {
 }
 
 Icon.defaultProps = {
-  color: '#000000',
-  size:  'fa-lg'
+  size:  'fa-lg',
 }
 
 export default Icon
