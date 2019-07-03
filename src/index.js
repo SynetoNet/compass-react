@@ -6,7 +6,8 @@ export { default as Icon }     from "./components/Icon/Icon.jsx"
 // export { default as Form } from "./components/Form/Form.jsx";
 // export { default as Modal } from "./components/Modal/Modal.jsx";
 // export { default as Tabs } from "./components/Tabs/Tabs.jsx";
-export { default as Table }    from "./components/Table/Table.jsx"
+export { default as Table } from "./components/Table/Table.jsx";
+export { default as ComboBox } from "./components/ComboBox/ComboBox.jsx";
 
 export { Container } from "./layout/Container.jsx"
 export { Row }       from "./layout/Row.jsx"

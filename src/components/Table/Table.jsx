@@ -33,7 +33,6 @@ const Table = ({
 }) => {
   const [selected, setSelected] = useState([]);
   const tableRef = useRef(null);
-  console.log(selected);
 
   function handleOnSelect(row, isSelect, rowIndex, e) {
     onSelect && onSelect({ item: row, isSelected: isSelect });

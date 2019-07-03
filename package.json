@@ -1,6 +1,6 @@
 {
   "name": "@syneto/compass-react",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "files": [
     "lib/"
   ],
@@ -73,7 +73,6 @@
     "react-bootstrap-table2-toolkit": "^2.0.1",
     "react-datepicker": "^2.5.0",
     "react-ink": "^6.4.0",
-    "react-select": "^3.0.4",
     "react-switch": "^5.0.0"
   },
   "devDependencies": {
@@ -109,6 +108,7 @@
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-styleguidist": "^9.0.4",
+    "react-select": "^3.0.4",
     "react-test-renderer": "^16.8.6",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
@@ -124,7 +124,8 @@
     "webpack-blocks": "^2.0.0"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "react-select": "^3.0.4"
   },
   "description": "React implementation of Syneto's Compass Design System: https://synetonet.github.io/compass-react/",
   "directories": {

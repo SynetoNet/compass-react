@@ -1,3 +1,15 @@
+#### 0.7.0 (2019-06-27)
+
+##### Build System / Dependencies
+
+* **ComboBox:**  export it as a peer dependency not bundled in compass ([931cc181](https://github.com/SynetoNet/compass-react/commit/931cc1812cc047596fe0057fe7acd007b7747f1e))
+
+##### Refactors
+
+* **Table:**
+  *  rewrite it as function component ([538b6624](https://github.com/SynetoNet/compass-react/commit/538b6624a75fdffac509f10bc83a9e4c88ab8ccc))
+  *  simplify scrollable feature ([fe6b1f5a](https://github.com/SynetoNet/compass-react/commit/fe6b1f5acc9c0fa94a79e0d7975cdbcdb5c0560c))
+
 #### 0.6.0 (2019-06-26)
 
 ##### Build System / Dependencies
