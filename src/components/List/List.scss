@@ -1,0 +1,95 @@
+@import "../../base/colors";
+@import "../../base/variables";
+
+.list-wrapper {
+  position: relative;
+}
+
+ul.list {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+dl.list {
+  display: grid;
+  grid-template-columns: minmax(2rem, max-content) 1fr;
+  margin: 0;
+}
+
+.list_header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.75rem;
+
+  .list-wrapper:not(.compact) & {
+    border-bottom: 1px $neutral-6 solid;
+  }
+}
+
+.list_title {
+  flex: 1;
+  margin: 0;
+}
+
+.list_item {
+  margin: 0;
+  padding: 0.15rem 0;
+
+  .list-wrapper:not(.compact) & {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .list-wrapper.compact.actions & {
+    max-width: calc(100% - 30px);
+  }
+}
+.list-wrapper:not(.compact) .list_item:not(:last-of-type) {
+  border-bottom: 1px $neutral-6 solid;
+}
+
+li.list_item {
+  display: flex;
+  align-items: center;
+
+  .list_value {
+    flex: 1;
+  }
+}
+
+.list_label {
+  font-weight: bold;
+}
+.list_value {
+  padding-left: 1em;
+  color: $neutral-40;
+}
+dd.list_value {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list_actions {
+  visibility: hidden;
+  padding-left: 1em;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .list-wrapper.compact.actions:hover & {
+    visibility: visible;
+  }
+
+  .list-wrapper.actions .list_item:hover & {
+    visibility: visible;
+  }
+}
+
+.list_actions--single {
+  position: absolute;
+  top: 0.25em;
+  right: 0;
+}

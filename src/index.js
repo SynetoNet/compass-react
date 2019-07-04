@@ -8,6 +8,7 @@ export { default as Icon }     from "./components/Icon/Icon.jsx"
 // export { default as Tabs } from "./components/Tabs/Tabs.jsx";
 export { default as Table } from "./components/Table/Table.jsx";
 export { default as ComboBox } from "./components/ComboBox/ComboBox.jsx";
+export { default as List } from "./components/List/List.jsx";
 
 export { Container } from "./layout/Container.jsx"
 export { Row }       from "./layout/Row.jsx"

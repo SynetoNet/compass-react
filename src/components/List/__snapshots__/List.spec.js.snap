@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders List with title 1`] = `
+<div
+  className="list-wrapper"
+>
+  <header
+    className="list_header"
+  >
+    <h4
+      className="list_title"
+    >
+      list title
+    </h4>
+  </header>
+  <ul
+    className="list"
+  >
+    <li
+      className="list_item"
+    >
+      <div
+        className="list_label"
+      >
+        label 1
+      </div>
+      <div
+        className="list_value"
+      >
+        value 1
+      </div>
+    </li>
+    <li
+      className="list_item"
+    >
+      <div
+        className="list_label"
+      >
+        label 2
+      </div>
+      <div
+        className="list_value"
+      >
+        value 2
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`renders tabbled List 1`] = `
+<div
+  className="list-wrapper"
+>
+  <dl
+    className="list"
+  >
+    <li
+      className="list_item"
+    >
+      <div
+        className="list_label"
+      >
+        label 1
+      </div>
+      <div
+        className="list_value"
+      >
+        value 1
+      </div>
+    </li>
+    <li
+      className="list_item"
+    >
+      <div
+        className="list_label"
+      >
+        label 2
+      </div>
+      <div
+        className="list_value"
+      >
+        value 2
+      </div>
+    </li>
+  </dl>
+</div>
+`;
