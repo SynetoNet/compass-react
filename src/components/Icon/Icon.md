@@ -12,16 +12,16 @@ The list of all icon names can be found [here](https://fontawesome.com/icons).
 #### **Sizes**
 
 ```jsx
-<Icon name="fas fa-user" size="fa-xs"/>
+<Icon name="fas fa-user" size="xs"/>
 <span className="mr-2"/>
 
-<Icon name="fas fa-user" size="fa-sm"/>
+<Icon name="fas fa-user" size="sm"/>
 <span className="mr-2"/>
 
-<Icon name="fas fa-user" size="fa-md"/>
+<Icon name="fas fa-user" size="md"/>
 <span className="mr-2"/>
 
-<Icon name="fas fa-user" size="fa-lg"/>
+<Icon name="fas fa-user" size="lg"/>
 <span className="mr-2"/>
 ```
 

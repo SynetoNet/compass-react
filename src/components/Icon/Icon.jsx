@@ -2,10 +2,17 @@ import React      from 'react'
 import PropTypes  from "prop-types"
 import classNames from "classnames"
 
+const allSizes = {
+  xs: 'fa-xs',
+  sm: 'fa-sm',
+  md: 'fa-md',
+  lg: 'fa-lg'
+}
+
 const Icon = ({ name, color, size }) => {
   const classes = classNames({
     [ name ]: name,
-    [ size ]: size
+    [ allSizes[size] ]: allSizes[size]
   })
 
   return (
@@ -19,11 +26,11 @@ const Icon = ({ name, color, size }) => {
 Icon.propTypes = {
   name:  PropTypes.string.isRequired,
   color: PropTypes.string,
-  size:  PropTypes.oneOf([ 'fa-xs', 'fa-sm', 'fa-md', 'fa-lg' ])
+  size:  PropTypes.oneOf([ 'xs', 'sm', 'md', 'lg' ])
 }
 
 Icon.defaultProps = {
-  size:  'fa-lg',
+  size: 'lg'
 }
 
 export default Icon
