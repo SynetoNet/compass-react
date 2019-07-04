@@ -16,3 +16,7 @@
   cursor: no-drop;
   pointer-events: auto;
 }
+
+.dropdown-no-caret::after {
+  content: none;
+}

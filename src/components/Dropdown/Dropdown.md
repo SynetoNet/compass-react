@@ -84,3 +84,19 @@ import { Badge } from "../../index";
   </Dropdown.Menu>
 </Dropdown>;
 ```
+
+#### **Custom dropdown**
+
+```jsx
+import { Badge } from "../../index";
+
+<Dropdown
+  label={
+    <Badge variant="outline" color="info">
+      Custom dropdown
+    </Badge>
+  }
+  onSelect={eventKey => console.log(eventKey)}
+  items={[{ label: "Option 1" }, { label: "Option 2" }]}
+/>;
+```

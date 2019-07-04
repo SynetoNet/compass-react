@@ -18,14 +18,36 @@ class Dropdown extends React.Component {
 
     return (
       <BSDropdown {...props}>
-        <Dropdown.Toggle variant={variant}>
-          {label}
-          <Ink />
-        </Dropdown.Toggle>
+        {this.renderTrigger(label, variant)}
         {items ? this.renderItems(items) : children}
       </BSDropdown>
     );
   }
+
+  renderTrigger = (label, variant) => {
+    if (typeof label !== "string") {
+      const trigger = React.forwardRef((props, ref) => {
+        return (
+          <div {...props} ref={ref} style={{ cursor: "pointer" }}>
+            {label}
+          </div>
+        );
+      });
+
+      return (
+        <Dropdown.Toggle as={trigger} className="dropdown-no-caret">
+          {label}
+        </Dropdown.Toggle>
+      );
+    }
+
+    return (
+      <Dropdown.Toggle variant={variant}>
+        {label}
+        <Ink />
+      </Dropdown.Toggle>
+    );
+  };
 
   renderItems(items) {
     return (
@@ -45,7 +67,7 @@ class Dropdown extends React.Component {
 
 Dropdown.propTypes = {
   variant: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   alignRight: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
