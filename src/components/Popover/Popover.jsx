@@ -8,13 +8,16 @@ import "./Popover.scss";
 class Popover extends React.Component {
   render() {
     const { content, placement, trigger, title, ...props } = this.props;
-    console.log(placement);
     return (
       <OverlayTrigger
         placement={placement}
         show={"false"}
         trigger={trigger}
-        overlay={<BSPopover title={title}>{content}</BSPopover>}
+        overlay={
+          <BSPopover title={title} {...props}>
+            {content}
+          </BSPopover>
+        }
       >
         {this.props.children}
       </OverlayTrigger>
@@ -23,7 +26,8 @@ class Popover extends React.Component {
 }
 
 Popover.propTypes = {
-  content: PropTypes.object,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.node,
   placement: PropTypes.oneOf(["top", "bottom", "left", "right", "auto"]),
   trigger: PropTypes.oneOf(["focus", "click", "hover"])
 };

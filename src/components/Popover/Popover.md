@@ -1,3 +1,13 @@
+#### **Default**
+
+```jsx
+import Badge from "../Badge/Badge";
+
+<Popover title="Default popover">
+  <Badge variant="strong">Hover over me!</Badge>
+</Popover>;
+```
+
 #### **Badge Example on hover**
 
 ```jsx
@@ -9,7 +19,7 @@ import Badge from "../Badge/Badge";
   content={"Some additional info"}
   trigger="hover"
 >
-  <Badge variant="strong">Over over me!</Badge>
+  <Badge variant="strong">Hover over me!</Badge>
 </Popover>;
 ```
 
