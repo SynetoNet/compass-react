@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default Tooltip popover snapshop 1`] = `
+<OverlayTrigger
+  defaultOverlayShown={false}
+  overlay={
+    <ForwardRef(render)
+      className="tooltip-black"
+    >
+      Some additional info
+    </ForwardRef(render)>
+  }
+  placement="auto"
+  show="false"
+  trigger="hover"
+>
+  <Badge
+    block={false}
+    color="secondary"
+    variant="strong"
+    width="auto"
+  >
+    Over over me!
+  </Badge>
+</OverlayTrigger>
+`;
