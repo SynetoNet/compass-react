@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default Popover popover snapshop 1`] = `
+<OverlayTrigger
+  defaultOverlayShown={false}
+  overlay={
+    <ForwardRef(render)
+      title="Default popover"
+    />
+  }
+  placement="auto"
+  show="false"
+  trigger="hover"
+>
+  <Badge
+    block={false}
+    color="secondary"
+    variant="strong"
+    width="auto"
+  >
+    Hover over me!
+  </Badge>
+</OverlayTrigger>
+`;
