@@ -73,11 +73,6 @@ dd.list_value {
 .list_actions {
   visibility: hidden;
   padding-left: 1em;
-  opacity: 0.5;
-
-  &:hover {
-    opacity: 1;
-  }
 
   .list-wrapper.compact.actions:hover & {
     visibility: visible;
