@@ -1,3 +1,13 @@
+#### **Default**
+
+```jsx
+import Badge from "../Badge/Badge";
+
+<Tooltip text="Some additional info">
+  <Badge variant="strong">Over over me!</Badge>
+</Tooltip>;
+```
+
 #### **Badge Example on hover**
 
 ```jsx
