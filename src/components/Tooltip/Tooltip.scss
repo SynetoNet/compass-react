@@ -1,0 +1,8 @@
+@import "../../base/colors";
+.tooltip-white {
+  .tooltip-inner {
+    color: $neutral-100;
+    background-color: $neutral-0;
+    border: 1px solid $neutral-100;
+  }
+}

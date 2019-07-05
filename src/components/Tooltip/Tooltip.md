@@ -13,7 +13,12 @@ import Badge from "../Badge/Badge";
 ```jsx
 import Badge from "../Badge/Badge";
 
-<Tooltip placement="top" text="Some additional info" trigger="hover">
+<Tooltip
+  placement="top"
+  text="Some additional info"
+  trigger="hover"
+  variant="white"
+>
   <Badge variant="strong">Over over me!</Badge>
 </Tooltip>;
 ```
