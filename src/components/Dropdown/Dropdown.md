@@ -48,7 +48,9 @@
   onSelect={eventKey => console.log(eventKey)}
   items={[{ label: "Option 1" }, { label: "Option 2" }]}
 />
-<div className="mt-3"></div>
+
+<i className="mx-2" />
+
 <Dropdown
   label="Tertiary Dropdown"
   variant="tertiary"
@@ -85,18 +87,24 @@ import { Badge } from "../../index";
 </Dropdown>;
 ```
 
-#### **Custom dropdown**
+#### **Custom dropdown trigger**
 
 ```jsx
-import { Badge } from "../../index";
+import { Badge, Icon } from "../../index";
 
-<Dropdown
-  label={
-    <Badge variant="outline" color="info">
-      Custom dropdown
-    </Badge>
-  }
-  onSelect={eventKey => console.log(eventKey)}
-  items={[{ label: "Option 1" }, { label: "Option 2" }]}
-/>;
+<>
+  <Dropdown
+    label={<Badge>Custom dropdown</Badge>}
+    onSelect={eventKey => console.log(eventKey)}
+    items={[{ label: "Option 1" }, { label: "Option 2" }]}
+  />
+
+  <i className="mx-2" />
+
+  <Dropdown
+    label={<Icon name="fas fa-arrow-down" />}
+    onSelect={eventKey => console.log(eventKey)}
+    items={[{ label: "Option 1" }, { label: "Option 2" }]}
+  />
+</>;
 ```
