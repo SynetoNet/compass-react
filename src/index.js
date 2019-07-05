@@ -9,6 +9,8 @@ export { default as Icon }     from "./components/Icon/Icon.jsx"
 export { default as Table } from "./components/Table/Table.jsx";
 export { default as ComboBox } from "./components/ComboBox/ComboBox.jsx";
 export { default as List } from "./components/List/List.jsx";
+export { default as Tooltip } from "./components/Tooltip/Tooltip.jsx";
+export { default as Popover } from "./components/Popover/Popover.jsx";
 
 export { Container } from "./layout/Container.jsx"
 export { Row }       from "./layout/Row.jsx"
