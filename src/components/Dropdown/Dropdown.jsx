@@ -28,7 +28,11 @@ class Dropdown extends React.Component {
     if (typeof label !== "string") {
       const trigger = React.forwardRef((props, ref) => {
         return (
-          <div {...props} ref={ref} style={{ cursor: "pointer" }}>
+          <div
+            {...props}
+            ref={ref}
+            style={{ cursor: "pointer", display: "inline-block" }}
+          >
             {label}
           </div>
         );
