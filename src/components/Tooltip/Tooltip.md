@@ -4,7 +4,7 @@
 import Badge from "../Badge/Badge";
 
 <Tooltip text="Some additional info">
-  <Badge variant="strong">Over over me!</Badge>
+  <Badge variant="strong">Hover over me!</Badge>
 </Tooltip>;
 ```
 
