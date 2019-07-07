@@ -7,9 +7,9 @@ import "./Tooltip.scss";
 
 class Tooltip extends React.Component {
   render() {
-    const { text, placement, trigger, variant, ...props } = this.props;
+    const { text, placement, trigger, theme, ...props } = this.props;
     const classes = classNames({
-      [`tooltip-${variant}`]: variant
+      [`tooltip-${theme}`]: theme
     });
     return (
       <OverlayTrigger
@@ -29,14 +29,14 @@ class Tooltip extends React.Component {
 }
 
 Tooltip.propTypes = {
-  variant: PropTypes.oneOf(["white", "black"]),
+  theme: PropTypes.oneOf(["light", "dark"]),
   text: PropTypes.string.isRequired,
   placement: PropTypes.oneOf(["top", "bottom", "left", "right", "auto"]),
   trigger: PropTypes.oneOf(["focus", "click", "hover"])
 };
 
 Tooltip.defaultProps = {
-  variant: "black",
+  theme: "dark",
   placement: "auto",
   trigger: "hover"
 };
