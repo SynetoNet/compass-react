@@ -27,7 +27,7 @@ class Popover extends React.Component {
 
 Popover.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.node,
+  content: PropTypes.node.isRequired,
   placement: PropTypes.oneOf(["top", "bottom", "left", "right", "auto"]),
   trigger: PropTypes.oneOf(["focus", "click", "hover"])
 };
