@@ -19,7 +19,7 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-  size: "lg"
+  size: "md"
 };
 
 export default Icon;
