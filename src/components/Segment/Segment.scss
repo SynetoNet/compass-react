@@ -1,0 +1,29 @@
+@import "../../base/colors";
+.segment {
+  .nav-item {
+    border: none;
+    display: block;
+    width: auto;
+    padding: 0;
+    width: 100%;
+    button {
+      width: 100%;
+    }
+  }
+
+  .nav-tabs {
+    border-bottom: none;
+    display: flex;
+    flex-flow: row;
+  }
+  .active {
+    button {
+      background-color: $semantic-accent-dark-20;
+      border-color: $semantic-accent-dark-20;
+      color: #ffffff;
+    }
+  }
+  .segment-content {
+    margin-top: 25px;
+  }
+}
