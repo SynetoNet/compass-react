@@ -5,20 +5,17 @@ exports[`Default Popover popover snapshop 1`] = `
   defaultOverlayShown={false}
   overlay={
     <ForwardRef(render)
-      title="Default popover"
-    />
+      title="title"
+    >
+      content
+    </ForwardRef(render)>
   }
   placement="auto"
   show="false"
   trigger="hover"
 >
-  <Badge
-    block={false}
-    color="secondary"
-    variant="strong"
-    width="auto"
-  >
-    Hover over me!
-  </Badge>
+  <span>
+    trigger
+  </span>
 </OverlayTrigger>
 `;

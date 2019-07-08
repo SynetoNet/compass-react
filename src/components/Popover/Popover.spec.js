@@ -10,8 +10,8 @@ configure({ adapter: new Adapter() });
 
 describe("Default Popover", () => {
   const defaultExample = (
-    <Popover title="Default popover">
-      <Badge variant="strong">Hover over me!</Badge>
+    <Popover title="title" content="content">
+      <span>trigger</span>
     </Popover>
   );
 
