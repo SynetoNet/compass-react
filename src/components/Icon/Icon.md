@@ -33,10 +33,20 @@ The list of all icon names can be found [here](https://fontawesome.com/icons).
 
 #### **Style inherited from parent tag**
 
+Icon component inherits the `font-size` of their parent container. We can increase or decrease the size
+of the icons, relative to that inherited `font-size`.
+In this example the icon has the default size `large`, relative to `font-size: 30px`.
+
 ```jsx
 <div style={{color: "#0000FF", fontSize: "30px"}}>
   <Icon name="fas fa-user"/>
 </div>
+```
+
+#### **Custom style the icon**
+
+```jsx
+<Icon name="fas fa-user" style={{color: "#9e379f", fontSize: "40px"}} className="test"/>
 ```
 
 #### **Icon sets**

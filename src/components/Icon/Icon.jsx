@@ -1,34 +1,25 @@
-import React      from 'react'
-import PropTypes  from "prop-types"
-import classNames from "classnames"
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-const Icon = ({ name, color, size }) => {
+const Icon = ({ name, color, size, style, className = "" }) => {
   const classes = classNames({
-    [ name ]: name,
-    [ `fa-${size}` ]: size
-  })
+    [name]: name,
+    [`fa-${size}`]: size,
+    [className]: className
+  });
 
-  return (
-    <i
-      className={ classes }
-      style={ { color } }
-    />
-  )
-}
+  return <i className={classes} style={{ color, ...style }} />;
+};
 
 Icon.propTypes = {
-  name:  PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   color: PropTypes.string,
-  size:  PropTypes.oneOf([ 'xs', 'sm', 'md', 'lg' ])
-}
+  size: PropTypes.oneOf(["xs", "sm", "md", "lg"])
+};
 
 Icon.defaultProps = {
-  size: 'lg'
-}
+  size: "lg"
+};
 
-export default Icon
-
-
-
-
-
+export default Icon;
