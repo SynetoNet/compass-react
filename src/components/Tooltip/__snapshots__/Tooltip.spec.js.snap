@@ -5,7 +5,7 @@ exports[`Default Tooltip popover snapshop 1`] = `
   defaultOverlayShown={false}
   overlay={
     <ForwardRef(render)
-      className="tooltip-black"
+      className="tooltip-dark"
     >
       Some additional info
     </ForwardRef(render)>
