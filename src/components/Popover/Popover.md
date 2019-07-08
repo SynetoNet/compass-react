@@ -3,8 +3,11 @@
 ```jsx
 import Badge from "../Badge/Badge";
 
-<Popover title="Some additional info" content="Some content">
-  <Badge variant="strong">Hover over me!</Badge>
+<Popover
+  title="Popover title"
+  content="Popover content. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+>
+  <Badge>Hover over me!</Badge>
 </Popover>;
 ```
 
@@ -14,36 +17,41 @@ import Badge from "../Badge/Badge";
 import Badge from "../Badge/Badge";
 <>
   <Popover
-    placement="top"
-    title="Some additional info"
-    trigger="hover"
-    content="Some content"
+    placement="left"
+    title="Title"
+    content="Lorem Ipsum is simply dummy text."
   >
-    <Badge variant="strong">Popover on top</Badge>
+    <Badge>Left</Badge>
   </Popover>
+
+  <i className="mx-1" />
+
+  <Popover
+    placement="top"
+    title="Title"
+    content="Lorem Ipsum is simply dummy text."
+  >
+    <Badge>Top</Badge>
+  </Popover>
+
+  <i className="mx-1" />
+
   <Popover
     placement="bottom"
-    title="Some additional info"
-    trigger="hover"
-    content="Some content"
+    title="Title"
+    content="Lorem Ipsum is simply dummy text."
   >
-    <Badge variant="strong">Popover on bottom</Badge>
+    <Badge>Bottom</Badge>
   </Popover>
+
+  <i className="mx-1" />
+
   <Popover
     placement="right"
-    title="Some additional info"
-    trigger="hover"
-    content="Some content"
+    title="Title"
+    content="Lorem Ipsum is simply dummy text."
   >
-    <Badge variant="strong">Popover on the right</Badge>
-  </Popover>
-  <Popover
-    placement="left"
-    title="Some additional info"
-    trigger="hover"
-    content="Some content"
-  >
-    <Badge variant="strong">Popover on the left</Badge>
+    <Badge>Right</Badge>
   </Popover>
 </>;
 ```
@@ -53,39 +61,33 @@ import Badge from "../Badge/Badge";
 ```jsx
 import Button from "../Button/Button";
 <>
-  <div>
-    Click -
-    <Popover
-      placement="right"
-      title="Some additional info"
-      trigger="click"
-      content="Some content"
-    >
-      <Button variant="primary">Click me!</Button>
-    </Popover>
-  </div>
-  <div>
-    Hover -
-    <Popover
-      placement="right"
-      title="Some additional info"
-      trigger="hover"
-      content="Some content"
-    >
-      <Button variant="primary">Hover over me!</Button>
-    </Popover>
-  </div>
-  <div>
-    Focus -
-    <Popover
-      placement="right"
-      title="Some additional info"
-      trigger="focus"
-      content="Some content"
-    >
-      <Button variant="primary">Focus me!</Button>
-    </Popover>
-  </div>
+  <Popover
+    trigger="click"
+    title="Title"
+    content="Lorem Ipsum is simply dummy text."
+  >
+    <Button>Click me!</Button>
+  </Popover>
+
+  <i className="mx-1" />
+
+  <Popover
+    trigger="hover"
+    title="Title"
+    content="Lorem Ipsum is simply dummy text."
+  >
+    <Button>Hover over me!</Button>
+  </Popover>
+
+  <i className="mx-1" />
+
+  <Popover
+    trigger="focus"
+    title="Title"
+    content="Lorem Ipsum is simply dummy text."
+  >
+    <Button>Focus me!</Button>
+  </Popover>
 </>;
 ```
 
@@ -101,11 +103,11 @@ import Button from "../Button/Button";
     <>
       <div>Here's an example of text and another component</div>
       <br />
-      <Button variant="primary">Click me!</Button>
+      <Button>Click me!</Button>
     </>
   }
   trigger="click"
 >
-  <Button variant="primary">Click me!</Button>
+  <Button>Click me!</Button>
 </Popover>;
 ```
