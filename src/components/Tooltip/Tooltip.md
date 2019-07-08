@@ -4,26 +4,37 @@
 import Badge from "../Badge/Badge";
 
 <Tooltip text="Some additional info">
-  <Badge variant="strong">Hover over me!</Badge>
+  <Badge>Hover over me!</Badge>
 </Tooltip>;
 ```
 
 #### **Placement**
 
+Default placement is **`auto`**, but you can specify where to place the tooltip:
+
 ```jsx
 import Badge from "../Badge/Badge";
 <>
-  <Tooltip placement="top" text="Some additional info" trigger="hover">
-    <Badge variant="strong">Tooltip on top</Badge>
+  <Tooltip placement="left" text="Some additional info">
+    <Badge>Left</Badge>
   </Tooltip>
-  <Tooltip placement="bottom" text="Some additional info" trigger="hover">
-    <Badge variant="strong">Tooltip on bottom</Badge>
+
+  <i className="mx-1" />
+
+  <Tooltip placement="top" text="Some additional info">
+    <Badge>Top</Badge>
   </Tooltip>
-  <Tooltip placement="right" text="Some additional info" trigger="hover">
-    <Badge variant="strong">Tooltip on the right</Badge>
+
+  <i className="mx-1" />
+
+  <Tooltip placement="bottom" text="Some additional info">
+    <Badge>Bottom</Badge>
   </Tooltip>
-  <Tooltip placement="left" text="Some additional info" trigger="hover">
-    <Badge variant="strong">Tooltip on the left</Badge>
+
+  <i className="mx-1" />
+
+  <Tooltip placement="right" text="Some additional info">
+    <Badge>Right</Badge>
   </Tooltip>
 </>;
 ```
@@ -32,25 +43,23 @@ import Badge from "../Badge/Badge";
 
 ```jsx
 import Button from "../Button/Button";
+
 <>
-  <div>
-    Click -
-    <Tooltip placement="right" text="Some additional info" trigger="click">
-      <Button variant="primary">Click me!</Button>
-    </Tooltip>
-  </div>
-  <div>
-    Hover -
-    <Tooltip placement="right" text="Some additional info" trigger="hover">
-      <Button variant="primary">Hover over me!</Button>
-    </Tooltip>
-  </div>
-  <div>
-    Focus -
-    <Tooltip placement="right" text="Some additional info" trigger="focus">
-      <Button variant="primary">Focus me!</Button>
-    </Tooltip>
-  </div>
+  <Tooltip text="Some additional info" trigger="click">
+    <Button>Click me!</Button>
+  </Tooltip>
+
+  <i className="mx-1" />
+
+  <Tooltip text="Some additional info" trigger="hover">
+    <Button>Hover over me!</Button>
+  </Tooltip>
+
+  <i className="mx-1" />
+
+  <Tooltip text="Some additional info" trigger="focus">
+    <Button>Focus me!</Button>
+  </Tooltip>
 </>;
 ```
 
@@ -59,21 +68,14 @@ import Button from "../Button/Button";
 ```jsx
 import Badge from "../Badge/Badge";
 <>
-  <Tooltip
-    placement="top"
-    text="Dark theme tooltip"
-    trigger="hover"
-    theme="dark"
-  >
-    <Badge variant="strong">Hover</Badge>
+  <Tooltip text="Dark theme tooltip" theme="dark">
+    <Badge>Dark</Badge>
   </Tooltip>
-  <Tooltip
-    placement="top"
-    text="Light theme tooltip"
-    trigger="hover"
-    theme="light"
-  >
-    <Badge variant="strong">Hover</Badge>
+
+  <i className="mx-1" />
+
+  <Tooltip text="Light theme tooltip" theme="light">
+    <Badge>Light</Badge>
   </Tooltip>
 </>;
 ```
