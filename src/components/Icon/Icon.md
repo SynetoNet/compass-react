@@ -1,12 +1,19 @@
-#### **Description**
-Compass uses [Font Awesome 5.9.0](https://fontawesome.com/) for its standard icon set.
+#### **Basic usage**
 
-The list of all icon names can be found [here](https://fontawesome.com/icons).
+Compass uses [Font Awesome 5.9.0](https://fontawesome.com/icons) for its standard icon set.
 
-#### **Default Icon**
+All free sets are included:
+
+- [Font-Awesome solid](https://fontawesome.com/icons?d=gallery&s=solid&m=free) (fa / fas)
+- [Font-Awesome regular](https://fontawesome.com/icons?d=gallery&s=regular&m=free) (far)
+- [Font-Awesome brands](https://fontawesome.com/icons?d=gallery&s=brands&m=free) (fab)
 
 ```jsx
-<Icon name="fas fa-user"/>
+<Icon name="fas fa-user" />
+<i className="mx-1" />
+<Icon name="far fa-user" />
+<i className="mx-1" />
+<Icon name="fab fa-github" />
 ```
 
 #### **Sizes**
@@ -22,47 +29,32 @@ The list of all icon names can be found [here](https://fontawesome.com/icons).
 <span className="mr-2"/>
 
 <Icon name="fas fa-user" size="lg"/>
-<span className="mr-2"/>
 ```
 
 #### **Colors**
 
 ```jsx
-<Icon name="fas fa-user" color="#0000FF"/>
+<Icon name="fas fa-user" color="#0000FF" />
 ```
 
-#### **Style inherited from parent tag**
+#### **Inherited styles**
 
-Icon component inherits the `font-size` of their parent container. We can increase or decrease the size
-of the icons, relative to that inherited `font-size`.
-In this example the icon has the default size `large`, relative to `font-size: 30px`.
+Icon component inherits the **`font-size`** and **`color`** styles of their parent:
 
 ```jsx
-<div style={{color: "#0000FF", fontSize: "30px"}}>
-  <Icon name="fas fa-user"/>
+<div style={{ color: "#0000FF", fontSize: "30px" }}>
+  <Icon name="fas fa-user" />
 </div>
 ```
 
-#### **Custom style the icon**
+#### **Custom styles**
+
+You can pass both **`style`** and **`className`** to customize the Icon:
 
 ```jsx
-<Icon name="fas fa-user" style={{color: "#9e379f", fontSize: "40px"}} className="test"/>
-```
-
-#### **Icon sets**
-All the free sets are included: font-awesome solid (```fa``` / ```fas```), regular (```far```) and brands (```fab```).
-
-
-[Font-Awesome solid](https://fontawesome.com/icons?d=gallery&s=solid&m=free)
-```jsx
-<Icon name="fas fa-user"/>
-```
-[Font-Awesome regular](https://fontawesome.com/icons?d=gallery&s=regular&m=free)
-```jsx
-<Icon name="far fa-user"/>
-```
-
-[Font-Awesome brands](https://fontawesome.com/icons?d=gallery&s=brands&m=free)
-```jsx
-<Icon name="fab fa-facebook-square"/>
+<Icon
+  name="fas fa-user"
+  style={{ fontSize: "30px" }}
+  className="text-success"
+/>
 ```
