@@ -106,7 +106,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   disabled: PropTypes.bool,
   loading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  children: PropTypes.string,
+  children: PropTypes.node,
   onClick: PropTypes.func
 };
 

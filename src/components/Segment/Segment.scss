@@ -6,8 +6,34 @@
     width: auto;
     padding: 0;
     width: 100%;
+
     button {
+      height: 100%;
       width: 100%;
+      border-radius: 0;
+      border-left: none;
+      border-right: 1px solid $semantic-accent-dark-20;
+      &:focus {
+        border-left: 1px solid $semantic-accent-dark-20 !important;
+      }
+    }
+
+    &:first-child {
+      border-left: 1px solid $semantic-accent-dark-20 !important;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+      button {
+        &:focus {
+          border-top-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+        }
+      }
+    }
+    &:last-child {
+      button {
+        border-top-right-radius: 2px !important;
+        border-bottom-right-radius: 2px !important;
+      }
     }
   }
 
@@ -16,13 +42,20 @@
     display: flex;
     flex-flow: row;
   }
+
   .active {
     button {
-      background-color: $semantic-accent-dark-20;
-      border-color: $semantic-accent-dark-20;
-      color: #ffffff;
+      background-color: $semantic-accent-light-85;
+      // border-color: $semantic-accent-dark-20;
+      color: $semantic-accent-dark-20;
+      &:hover {
+        background-color: $semantic-accent-light-85 !important;
+        // border-color: $semantic-accent-dark-20;
+        color: $semantic-accent-dark-20 !important;
+      }
     }
   }
+
   .segment-content {
     margin-top: 25px;
   }

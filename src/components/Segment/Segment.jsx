@@ -17,13 +17,11 @@ class Segment extends React.Component {
         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
           {childrenArray.map(({ props }, key) => {
             const { disabled } = props;
-
             return (
               <Segment.Tab
                 disabled={disabled}
                 eventKey={props.eventKey}
                 title={<Button disabled={disabled}>{props.title}</Button>}
-                className="segment-tab"
                 key={key}
               >
                 <div className="segment-content">{props.children}</div>
