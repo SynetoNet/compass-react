@@ -9,7 +9,6 @@ exports[`Default Segment popover snapshop 1`] = `
     id="uncontrolled-tab-example"
   >
     <Tab
-      className="segment-tab"
       eventKey="first"
       key="0"
       title={
@@ -31,7 +30,6 @@ exports[`Default Segment popover snapshop 1`] = `
       </div>
     </Tab>
     <Tab
-      className="segment-tab"
       eventKey="second"
       key="1"
       title={
@@ -53,7 +51,6 @@ exports[`Default Segment popover snapshop 1`] = `
       </div>
     </Tab>
     <Tab
-      className="segment-tab"
       disabled={true}
       eventKey="third"
       key="2"
@@ -76,7 +73,6 @@ exports[`Default Segment popover snapshop 1`] = `
       </div>
     </Tab>
     <Tab
-      className="segment-tab"
       eventKey="fourth"
       key="3"
       title={
