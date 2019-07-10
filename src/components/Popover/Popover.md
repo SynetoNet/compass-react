@@ -1,11 +1,21 @@
-#### **Default**
+#### **Basic usage**
+
+```jsx
+import Badge from "../Badge/Badge";
+
+<Popover content="Popover content. Lorem Ipsum is simply dummy text.">
+  <Badge>Hover over me!</Badge>
+</Popover>;
+```
+
+#### **Optional title**
 
 ```jsx
 import Badge from "../Badge/Badge";
 
 <Popover
   title="Popover title"
-  content="Popover content. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  content="Popover content. Lorem Ipsum is simply dummy text."
 >
   <Badge>Hover over me!</Badge>
 </Popover>;
