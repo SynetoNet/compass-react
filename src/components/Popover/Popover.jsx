@@ -3,24 +3,27 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import BSPopover from "react-bootstrap/Popover";
+
 import "./Popover.scss";
 
 class Popover extends React.Component {
   render() {
     const { content, placement, trigger, title, ...props } = this.props;
     return (
-      <OverlayTrigger
-        placement={placement}
-        show={"false"}
-        {...getTriggerProp(trigger)}
-        overlay={
-          <BSPopover title={title} {...props}>
-            {content}
-          </BSPopover>
-        }
-      >
-        {this.props.children}
-      </OverlayTrigger>
+      <div className="popover-container">
+        <OverlayTrigger
+          placement={placement}
+          {...getTriggerProp(trigger)}
+          container={this}
+          overlay={
+            <BSPopover title={title} {...props}>
+              {content}
+            </BSPopover>
+          }
+        >
+          {this.props.children}
+        </OverlayTrigger>
+      </div>
     );
   }
 }

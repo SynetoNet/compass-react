@@ -101,23 +101,38 @@ import Button from "../Button/Button";
 </>;
 ```
 
-#### **Extra content**
+#### **Nested Popovers**
 
 ```jsx
 import Button from "../Button/Button";
 
 <Popover
-  placement="right"
-  title="Popover title"
+  title="First popover"
   content={
-    <>
-      <div>Here's an example of text and another component</div>
-      <br />
-      <Button>Click me!</Button>
-    </>
+    <div>
+      <p>Lorem Ipsum is simply dummy text.</p>
+      <Popover
+        title="Second popover"
+        content={
+          <div>
+            <p>Lorem Ipsum is simply dummy text. </p>
+            <Popover
+              title="Third popover"
+              content={<div>Lorem Ipsum is simply dummy text.</div>}
+              trigger="click"
+            >
+              <Button>Click to open #3</Button>
+            </Popover>
+          </div>
+        }
+        trigger="click"
+      >
+        <Button>Click to open #2</Button>
+      </Popover>
+    </div>
   }
   trigger="click"
 >
-  <Button>Click me!</Button>
+  <Button>Click to open #1</Button>
 </Popover>;
 ```
