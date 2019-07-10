@@ -34,7 +34,7 @@ function getTriggerProp(trigger) {
 }
 
 Popover.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   content: PropTypes.node.isRequired,
   placement: PropTypes.oneOf(["top", "bottom", "left", "right", "auto"]),
   trigger: PropTypes.oneOf(["focus", "click", "hover"])
