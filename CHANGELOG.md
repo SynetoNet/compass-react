@@ -1,3 +1,15 @@
+#### 0.8.2 (2019-07-10)
+
+##### Documentation Changes
+
+* **Popover:**  include examples with and without title ([c695f195](https://github.com/SynetoNet/compass-react/commit/c695f195f2cce42433f7260dd8484bd6d131a4d9))
+
+##### New Features
+
+* **Popover:**
+  *  support nested Overlays ([d374e9da](https://github.com/SynetoNet/compass-react/commit/d374e9dad6dfdf44b56d76e0be48181516525895))
+  *  make title optional ([10a7169a](https://github.com/SynetoNet/compass-react/commit/10a7169a95ade49e2f57302a49a05e7952b3545c))
+
 #### 0.8.1 (2019-07-10)
 
 ##### Build System / Dependencies
