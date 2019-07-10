@@ -8,14 +8,16 @@ import "./Tooltip.scss";
 class Tooltip extends React.Component {
   render() {
     const { text, placement, trigger, theme, ...props } = this.props;
+
     const classes = classNames({
       [`tooltip-${theme}`]: theme
     });
+
     return (
       <OverlayTrigger
         placement={placement}
-        show={"false"}
-        trigger={trigger}
+        show={false}
+        {...getTriggerProp(trigger)}
         overlay={
           <BSTooltip className={classes} {...props}>
             {text}
@@ -26,6 +28,14 @@ class Tooltip extends React.Component {
       </OverlayTrigger>
     );
   }
+}
+
+function getTriggerProp(trigger) {
+  // force close on click outside
+  if (trigger === "click") {
+    return { trigger, rootClose: true };
+  }
+  return { trigger };
 }
 
 Tooltip.propTypes = {
