@@ -11,7 +11,6 @@ exports[`Default Tooltip popover snapshop 1`] = `
     </ForwardRef(render)>
   }
   placement="auto"
-  show={false}
   trigger="hover"
 >
   <Badge
