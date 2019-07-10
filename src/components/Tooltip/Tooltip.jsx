@@ -16,7 +16,6 @@ class Tooltip extends React.Component {
     return (
       <OverlayTrigger
         placement={placement}
-        show={false}
         {...getTriggerProp(trigger)}
         overlay={
           <BSTooltip className={classes} {...props}>
