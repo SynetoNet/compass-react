@@ -14,7 +14,9 @@ export default [
       "src/components/DatePicker/DatePicker.jsx",
       "src/components/Form/Form.jsx",
       "src/components/Modal/Modal.jsx",
-      "src/components/Tabs/Tabs.jsx"
+      "src/components/Tabs/Tabs.jsx",
+      "src/components/Table/Table.jsx",
+      "src/components/ComboBox/ComboBox.jsx"
     ],
     output: [
       {
