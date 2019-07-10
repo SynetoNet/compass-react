@@ -1,3 +1,19 @@
+#### 0.8.1 (2019-07-10)
+
+##### Build System / Dependencies
+
+*  export Table and ComboBox as separate bundles ([8873df47](https://github.com/SynetoNet/compass-react/commit/8873df47c2af39d6336998bf6c67bd6536f165b8))
+
+##### New Features
+
+* **Tooltip:**  close on click outside ([1490a826](https://github.com/SynetoNet/compass-react/commit/1490a82619a19fe2a09a63d3f1180b838ce0cad0))
+* **Popover:**  close on click outside ([0599245e](https://github.com/SynetoNet/compass-react/commit/0599245ebe74a699e0af895655c91515996770b8))
+* **Segment:**  add segment component ([71cf6058](https://github.com/SynetoNet/compass-react/commit/71cf605866973fa7b72d6265e7a8b8abcb93c78c))
+
+##### Bug Fixes
+
+* **Segment:**  small css fixes; added Badge examples ([9a1ef0a3](https://github.com/SynetoNet/compass-react/commit/9a1ef0a31cc9df92172176ffcc7dc1ec3709428f))
+
 # 0.8.0 (2019-07-08)
 
 ##### New Features
