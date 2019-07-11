@@ -1,42 +1,37 @@
-#### 0.8.2 (2019-07-10)
+# 0.8.2 (2019-07-10)
 
-##### Documentation Changes
-
-* **Popover:**  include examples with and without title ([c695f195](https://github.com/SynetoNet/compass-react/commit/c695f195f2cce42433f7260dd8484bd6d131a4d9))
-
-##### New Features
+### New Features
 
 * **Popover:**
   *  support nested Overlays ([d374e9da](https://github.com/SynetoNet/compass-react/commit/d374e9dad6dfdf44b56d76e0be48181516525895))
   *  make title optional ([10a7169a](https://github.com/SynetoNet/compass-react/commit/10a7169a95ade49e2f57302a49a05e7952b3545c))
 
-#### 0.8.1 (2019-07-10)
+### Documentation Changes
 
-##### Build System / Dependencies
+* **Popover:**  include examples with and without title ([c695f195](https://github.com/SynetoNet/compass-react/commit/c695f195f2cce42433f7260dd8484bd6d131a4d9))
 
-*  export Table and ComboBox as separate bundles ([8873df47](https://github.com/SynetoNet/compass-react/commit/8873df47c2af39d6336998bf6c67bd6536f165b8))
+# 0.8.1 (2019-07-10)
 
-##### New Features
+### New Features
 
 * **Tooltip:**  close on click outside ([1490a826](https://github.com/SynetoNet/compass-react/commit/1490a82619a19fe2a09a63d3f1180b838ce0cad0))
 * **Popover:**  close on click outside ([0599245e](https://github.com/SynetoNet/compass-react/commit/0599245ebe74a699e0af895655c91515996770b8))
-* **Segment:**  add segment component ([71cf6058](https://github.com/SynetoNet/compass-react/commit/71cf605866973fa7b72d6265e7a8b8abcb93c78c))
 
-##### Bug Fixes
+### Build System / Dependencies
 
-* **Segment:**  small css fixes; added Badge examples ([9a1ef0a3](https://github.com/SynetoNet/compass-react/commit/9a1ef0a31cc9df92172176ffcc7dc1ec3709428f))
+*  export Table and ComboBox as separate bundles ([8873df47](https://github.com/SynetoNet/compass-react/commit/8873df47c2af39d6336998bf6c67bd6536f165b8))
 
 # 0.8.0 (2019-07-08)
 
-##### New Features
+### New Features
 
-* **Icon:**  Add Icon component ([452094e1](https://github.com/SynetoNet/compass-react/commit/452094e125f6452248ad59d48565dc60a062b289))
+* **Icon:**  add Icon component ([452094e1](https://github.com/SynetoNet/compass-react/commit/452094e125f6452248ad59d48565dc60a062b289))
 * **Tooltip:**  add Tooltip component ([bc0d5ab1](https://github.com/SynetoNet/compass-react/commit/bc0d5ab10f755f5eb9d1ed09c7057db5d5c405c6))
 * **Popover:**  add Popover component ([acb6f890](https://github.com/SynetoNet/compass-react/commit/acb6f89058ae7335f6ce48453df9dd7e7508d916))
-* **List:**  added List component ([a7f5c78c](https://github.com/SynetoNet/compass-react/commit/a7f5c78c5f2d237ccfdcb8cf64bf3dce2d6088bb))
+* **List:**  add List component ([a7f5c78c](https://github.com/SynetoNet/compass-react/commit/a7f5c78c5f2d237ccfdcb8cf64bf3dce2d6088bb))
 * **Dropdown:**  support custom trigger ([72cc3a0d](https://github.com/SynetoNet/compass-react/commit/72cc3a0d73e50e6c80e1b1a76604799050e9cd68))
 
-##### Bug Fixes
+### Bug Fixes
 
 * **Dropdown:**  make dropdown inline-block ([07c19419](https://github.com/SynetoNet/compass-react/commit/07c194190e315b140e8a8e9d874fc2b1b20bfbf6))
 
