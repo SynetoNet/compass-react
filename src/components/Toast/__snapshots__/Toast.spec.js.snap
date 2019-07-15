@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default Toast popover snapshop 1`] = `
+<Bootstrap(Toast)
+  autohide={false}
+  delay={3000}
+  show={true}
+>
+  <ToastHeader
+    closeButton={true}
+    closeLabel="Close"
+  >
+    <strong
+      className="mr-auto"
+    >
+      Bootstrap
+    </strong>
+    <small>
+      11 mins ago
+    </small>
+  </ToastHeader>
+  <ToastBody>
+    Hello, world! This is a toast message.
+  </ToastBody>
+</Bootstrap(Toast)>
+`;
