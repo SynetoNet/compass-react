@@ -7,7 +7,7 @@ import Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
 
 describe("Default Modal", () => {
-  const example = <Modal show={true} />;
+  const example = <Modal show={true} backdrop={"static"} />;
 
   test("modal without header or content", () => {
     const component = mount(example);
