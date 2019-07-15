@@ -1,75 +1,40 @@
 #### 0.9.0 (2019-07-15)
 
-##### Build System / Dependencies
+### New Features
+
+* **Toast:**  Add Toast component ([b6c8042c](https://github.com/SynetoNet/compass-react/commit/b6c8042c5d640716ba937f92a2ffa88d8c5b4ab2))
+* **Alert:**  Add Alert component ([3bc1d0ef](https://github.com/SynetoNet/compass-react/commit/3bc1d0ef16887633d4fb7709487d5531de522ef9))
+* **Popover:**
+  *  Add Popover component ([acb6f890](https://github.com/SynetoNet/compass-react/commit/acb6f89058ae7335f6ce48453df9dd7e7508d916))
+* **Tooltip:**
+  *  Add Tooltip component ([bc0d5ab1](https://github.com/SynetoNet/compass-react/commit/bc0d5ab10f755f5eb9d1ed09c7057db5d5c405c6))
+* **Icon:**
+  *  Add Icon component ([452094e1](https://github.com/SynetoNet/compass-react/commit/452094e125f6452248ad59d48565dc60a062b289))
+* **List:**  Add List component ([a7f5c78c](https://github.com/SynetoNet/compass-react/commit/a7f5c78c5f2d237ccfdcb8cf64bf3dce2d6088bb))
+* **Dropdown:**  support custom trigger ([72cc3a0d](https://github.com/SynetoNet/compass-react/commit/72cc3a0d73e50e6c80e1b1a76604799050e9cd68))
+
+### Bug Fixes
+
+* **Modal:**
+  *  include backdrop to modal tests ([2901a533](https://github.com/SynetoNet/compass-react/commit/2901a533630a23d6bda05b342d9ec4f3d427aeef))
+  *  set backdrop prop default to static ([a3103f88](https://github.com/SynetoNet/compass-react/commit/a3103f888b41196d9c44b6112d9bd907985a3a3f))
+* **Dropdown:**  make dropdown inline-block ([07c19419](https://github.com/SynetoNet/compass-react/commit/07c194190e315b140e8a8e9d874fc2b1b20bfbf6))
+
+### Build System / Dependencies
 
 *  export Table and ComboBox as separate bundles ([8873df47](https://github.com/SynetoNet/compass-react/commit/8873df47c2af39d6336998bf6c67bd6536f165b8))
 *  export Tooltip and Popover ([0ceea4bb](https://github.com/SynetoNet/compass-react/commit/0ceea4bbfcf2cfbaa787e83aeae9aacb5bc882fe))
 
-##### Documentation Changes
+### Documentation Changes
 
-* **Popover:**
-  *  include examples with and without title ([c695f195](https://github.com/SynetoNet/compass-react/commit/c695f195f2cce42433f7260dd8484bd6d131a4d9))
-  *  update examples ([f80be721](https://github.com/SynetoNet/compass-react/commit/f80be7213591aa14b8fff4d406e654f7ede9062f))
-* **Icon:**  update examples ([87bc3c7a](https://github.com/SynetoNet/compass-react/commit/87bc3c7abc122f5f60e9741fe72546adbfffd029))
-* **Tooltip:**  update examples ([833112eb](https://github.com/SynetoNet/compass-react/commit/833112eb4863b71c42ea7a9bc2507a75be14d0b3))
 * **Dropdown:**  update Dropdown docs ([3fe48645](https://github.com/SynetoNet/compass-react/commit/3fe486452084ceb260e62c7707f4e604cf020dc4))
 
-##### New Features
-
-* **Toast:**  add Toast component ([b6c8042c](https://github.com/SynetoNet/compass-react/commit/b6c8042c5d640716ba937f92a2ffa88d8c5b4ab2))
-* **Alert:**  add Alert component ([3bc1d0ef](https://github.com/SynetoNet/compass-react/commit/3bc1d0ef16887633d4fb7709487d5531de522ef9))
-* **Popover:**
-  *  support nested Overlays ([d374e9da](https://github.com/SynetoNet/compass-react/commit/d374e9dad6dfdf44b56d76e0be48181516525895))
-  *  make title optional ([10a7169a](https://github.com/SynetoNet/compass-react/commit/10a7169a95ade49e2f57302a49a05e7952b3545c))
-  *  close on click outside ([0599245e](https://github.com/SynetoNet/compass-react/commit/0599245ebe74a699e0af895655c91515996770b8))
-  *  add Popover component ([acb6f890](https://github.com/SynetoNet/compass-react/commit/acb6f89058ae7335f6ce48453df9dd7e7508d916))
-* **Tooltip:**
-  *  close on click outside ([1490a826](https://github.com/SynetoNet/compass-react/commit/1490a82619a19fe2a09a63d3f1180b838ce0cad0))
-  *  add white variant ([9e64ba03](https://github.com/SynetoNet/compass-react/commit/9e64ba0391bf80c94a849b3d119fc573cdef2cdc))
-  *  add Tooltip component ([bc0d5ab1](https://github.com/SynetoNet/compass-react/commit/bc0d5ab10f755f5eb9d1ed09c7057db5d5c405c6))
-* **Segment:**  add segment component ([71cf6058](https://github.com/SynetoNet/compass-react/commit/71cf605866973fa7b72d6265e7a8b8abcb93c78c))
-* **Icon:**
-  *  set default icon size to md ([e03e78ef](https://github.com/SynetoNet/compass-react/commit/e03e78ef08dfacc87831382e79b41e523cd65e00))
-  *  Add Icon component ([452094e1](https://github.com/SynetoNet/compass-react/commit/452094e125f6452248ad59d48565dc60a062b289))
-* **List:**  added List component ([a7f5c78c](https://github.com/SynetoNet/compass-react/commit/a7f5c78c5f2d237ccfdcb8cf64bf3dce2d6088bb))
-* **Dropdown:**  support custom trigger ([72cc3a0d](https://github.com/SynetoNet/compass-react/commit/72cc3a0d73e50e6c80e1b1a76604799050e9cd68))
-
-##### Bug Fixes
-
-* **Toast:**  add Toast tests ([f64c00f1](https://github.com/SynetoNet/compass-react/commit/f64c00f151e282df1e6769fd253ea86876e47750))
-* **Alert:**  add Alert tests ([080ee9bd](https://github.com/SynetoNet/compass-react/commit/080ee9bd748eee9340ada3e05f73f78ab0f68f80))
-* **Modal:**
-  *  include backdrop to modal tests ([2901a533](https://github.com/SynetoNet/compass-react/commit/2901a533630a23d6bda05b342d9ec4f3d427aeef))
-  *  set backdrop prop default to static ([a3103f88](https://github.com/SynetoNet/compass-react/commit/a3103f888b41196d9c44b6112d9bd907985a3a3f))
-* **Segment:**
-  *  remove Segment component ([9dd8f0bc](https://github.com/SynetoNet/compass-react/commit/9dd8f0bc8d39b958723e3531fd8732cfe7c28de0))
-  *  small css fixes; added Badge examples ([9a1ef0a3](https://github.com/SynetoNet/compass-react/commit/9a1ef0a31cc9df92172176ffcc7dc1ec3709428f))
-* **Icon:**  Allow the usage of className and style props ([78546b60](https://github.com/SynetoNet/compass-react/commit/78546b607c375a51a128c647cbbabe75a3a38fef))
-* **Tooltip:**
-  *  fix typo ([c70c7138](https://github.com/SynetoNet/compass-react/commit/c70c71389dcc0d31b9872b79f23a91d29d4a306a))
-  *  fix documentation; change props ([2d046053](https://github.com/SynetoNet/compass-react/commit/2d04605351a9ca58300666b43711d02f214c789f))
-  *  add default example; fix prop types ([b9fe7676](https://github.com/SynetoNet/compass-react/commit/b9fe7676d3334a838a77993664148c61eaa4ea50))
-* **Dropdown:**  make dropdown inline-block ([07c19419](https://github.com/SynetoNet/compass-react/commit/07c194190e315b140e8a8e9d874fc2b1b20bfbf6))
-* **Popover:**  add default example; fix prop types ([7fdcaf81](https://github.com/SynetoNet/compass-react/commit/7fdcaf817ad64a1dcd6895cb35b438f49713fd1d))
-
-##### Other Changes
-
-* **Popover:**  fix documentation ([3d9ab8ae](https://github.com/SynetoNet/compass-react/commit/3d9ab8aeb809e5f249d205dcdc5dadf9428dde64))
-
-##### Refactors
+### Refactors
 
 * **Icon:**
   *  Change Icon size implementation - remove the mapping object ([586054be](https://github.com/SynetoNet/compass-react/commit/586054be97fa678009ebf5a835d246d1d5b37a84))
   *  Change Icon size implementation ([dbb62d3f](https://github.com/SynetoNet/compass-react/commit/dbb62d3f3e9ad8b5b29924f23315c8603f8a278f))
   *  Remove fonts and css that are not needed. Updated documentation ([a9d52807](https://github.com/SynetoNet/compass-react/commit/a9d52807b4fdd3ed9db93d8b7b7684ead2773a08))
-
-##### Tests
-
-* **Popover:**
-  *  fix tests ([a71b98df](https://github.com/SynetoNet/compass-react/commit/a71b98df40912a3a018afa8b652576c582f3c19c))
-  *  add tests ([1d8f8998](https://github.com/SynetoNet/compass-react/commit/1d8f8998459daac601969e133e6e4dd47ed9a352))
-* **Tooltip:**  add tests ([e7a9fefa](https://github.com/SynetoNet/compass-react/commit/e7a9fefa161cadf7b46650f3ae9e5f1adbb9703a))
-* **Icon:**  Add tests ([e0070b9d](https://github.com/SynetoNet/compass-react/commit/e0070b9d9a727be7a5f34b5658e07ecf78b0fc21))
 
 # 0.8.2 (2019-07-10)
 
