@@ -4,10 +4,6 @@
 
 * **Toast:**  Add Toast component ([b6c8042c](https://github.com/SynetoNet/compass-react/commit/b6c8042c5d640716ba937f92a2ffa88d8c5b4ab2))
 * **Alert:**  Add Alert component ([3bc1d0ef](https://github.com/SynetoNet/compass-react/commit/3bc1d0ef16887633d4fb7709487d5531de522ef9))
-* **Popover:**  Add Popover component ([acb6f890](https://github.com/SynetoNet/compass-react/commit/acb6f89058ae7335f6ce48453df9dd7e7508d916))
-* **Tooltip:**  Add Tooltip component ([bc0d5ab1](https://github.com/SynetoNet/compass-react/commit/bc0d5ab10f755f5eb9d1ed09c7057db5d5c405c6))
-* **Icon:**  Add Icon component ([452094e1](https://github.com/SynetoNet/compass-react/commit/452094e125f6452248ad59d48565dc60a062b289))
-* **List:**  Add List component ([a7f5c78c](https://github.com/SynetoNet/compass-react/commit/a7f5c78c5f2d237ccfdcb8cf64bf3dce2d6088bb))
 * **Dropdown:**  support custom trigger ([72cc3a0d](https://github.com/SynetoNet/compass-react/commit/72cc3a0d73e50e6c80e1b1a76604799050e9cd68))
 
 ### Bug Fixes
