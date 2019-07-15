@@ -137,6 +137,7 @@ Modal.propTypes = {
   content: PropTypes.node,
   /** String or any component to be rendered */
   title: PropTypes.node,
+  backdrop: PropTypes.oneOf([false, true, "static"]),
   size: PropTypes.oneOf(["sm", "lg"])
 };
 
@@ -145,7 +146,8 @@ Modal.defaultProps = {
     secondary: {
       label: "Close"
     }
-  }
+  },
+  backdrop: "static"
 };
 
 export default Modal;
