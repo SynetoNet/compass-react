@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Default Alert popover snapshop 1`] = `
+<Alert
+  closeLabel="Close alert"
+  dismissible={false}
+  show={true}
+  transition={[Function]}
+  variant="primary"
+>
+  This is a primary alert—check it out!
+</Alert>
+`;
