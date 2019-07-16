@@ -60,6 +60,7 @@ class Modal extends React.Component {
             variant="tertiary"
             onClick={tertiary.onClick}
             className="px-0"
+            disabled={tertiary.disabled ? true : false}
           >
             {tertiary.label}
           </Button>
@@ -73,6 +74,7 @@ class Modal extends React.Component {
           variant="secondary"
           onClick={secondary.onClick || this.props.onHide}
           key="secondary"
+          disabled={secondary.disabled ? true : false}
         >
           {secondary.label}
         </Button>
@@ -86,6 +88,7 @@ class Modal extends React.Component {
           onClick={primary.onClick}
           key="primary"
           className="ml-2"
+          disabled={primary.disabled ? true : false}
         >
           {primary.label}
         </Button>
@@ -111,6 +114,11 @@ class Modal extends React.Component {
   };
 }
 
+const actionsShape = {
+  label: PropTypes.string,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool
+};
 Modal.propTypes = {
   /**
    * Footer actions buttons: tertiary (left aligned), secondary & primary (right-aligned) in the form of:
@@ -120,18 +128,9 @@ Modal.propTypes = {
    * Defaults to secondary button with **`Close`** label
    */
   actions: PropTypes.shape({
-    primary: PropTypes.shape({
-      label: PropTypes.string,
-      onClick: PropTypes.func
-    }),
-    secondary: PropTypes.shape({
-      label: PropTypes.string,
-      onClick: PropTypes.func
-    }),
-    tertiary: PropTypes.shape({
-      label: PropTypes.string,
-      onClick: PropTypes.func
-    })
+    primary: PropTypes.shape(actionsShape),
+    secondary: PropTypes.shape(actionsShape),
+    tertiary: PropTypes.shape(actionsShape)
   }),
   /** String or any component to be rendered */
   content: PropTypes.node,
