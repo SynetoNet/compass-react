@@ -1,12 +1,8 @@
-#### 0.9.1 (2019-07-17)
+# 0.9.1 (2019-07-17)
 
-##### Build System / Dependencies
+### New Features
 
-*  update Modal action props ([07e3a65c](https://github.com/SynetoNet/compass-react/commit/07e3a65cdb766067d4c539bbdcf9040f5038e09e))
-
-##### New Features
-
-* **Modal:**  add disabled options to actions ([7c4637f2](https://github.com/SynetoNet/compass-react/commit/7c4637f2ccd1828d22aeac53bd86e10730e04d0f))
+* **Modal:**  add disabled prop to actions ([7c4637f2](https://github.com/SynetoNet/compass-react/commit/7c4637f2ccd1828d22aeac53bd86e10730e04d0f))
 
 # 0.9.0 (2019-07-15)
 
