@@ -71,6 +71,7 @@ exports[`Default Modal modal without header or content snapshop 1`] = `
 exports[`Extended Modal extended modal snapshop 1`] = `
 <Bootstrap(Modal)
   backdrop="static"
+  onEntering={[Function]}
   show={true}
 >
   <ModalHeader
