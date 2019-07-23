@@ -34,7 +34,11 @@ class Modal extends React.Component {
     // const classes = classNames({});
 
     if (children) {
-      return <BSModal {...props}>{children}</BSModal>;
+      return (
+        <BSModal {...props} onEntering={this.onEnter}>
+          {children}
+        </BSModal>
+      );
     }
 
     return (
