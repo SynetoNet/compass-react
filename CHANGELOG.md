@@ -1,13 +1,12 @@
-#### 0.10.0 (2019-07-23)
+# 0.10.0 (2019-07-23)
 
-##### New Features
+### New Features
 
 * **Card:**  add Card component ([ad7f9a75](https://github.com/SynetoNet/compass-react/commit/ad7f9a755e896259881978bab44a24ebb779aae4))
 
-##### Bug Fixes
+### Bug Fixes
 
 * **Modal:**
-  *  update snapshot ([15d75e60](https://github.com/SynetoNet/compass-react/commit/15d75e60f254372e22c36bb95ab5bad4f569f781))
   *  enable stacking modals on extended use ([88576c48](https://github.com/SynetoNet/compass-react/commit/88576c4843f288c3848870a0f5d6c43dbf4b1d74))
 
 # 0.9.1 (2019-07-17)
