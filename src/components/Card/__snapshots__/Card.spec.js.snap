@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default Badge 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="cardIconContainer"
+  >
+    <i
+      className="fas fa-user fa-md fa-md"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+    />
+  </div>
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title h5"
+    >
+      Icon Card Title
+    </div>
+    <p
+      className="card-text"
+    >
+       Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+  </div>
+  <div
+    className="cardActions"
+  />
+</div>
+`;
