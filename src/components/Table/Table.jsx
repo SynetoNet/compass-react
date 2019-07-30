@@ -115,7 +115,7 @@ const Table = ({
 
   function getColumnsFromChildren(children) {
     if (!Array.isArray(children)) {
-      throw "children must be an array";
+      children = [children];
     }
 
     return children.map(({ props }) => getColumn(props));
