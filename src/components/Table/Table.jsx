@@ -75,38 +75,40 @@ const Table = ({
   ).trim();
 
   return (
-    <ToolkitProvider
-      keyField={keyField}
-      data={data}
-      columns={_columns}
-      bootstrap4={true}
-      search
-    >
-      {props => (
-        <div className="table-container">
-          {_actions || extra || search ? (
-            <div className="table-filters-wrapper mb-3">
-              {_actions || <div />}
-              {extra && extra}
-              {search && <Search {...props.searchProps} />}
-            </div>
-          ) : (
-            ""
-          )}
-          <BootstrapTable
-            wrapperClasses={wrapperClasses}
-            classes={classes}
-            bordered={false}
-            hover={true}
-            noDataIndication="No items"
-            ref={tableRef}
-            {..._selectable}
-            {..._pagination}
-            {...props.baseProps}
-          />
-        </div>
-      )}
-    </ToolkitProvider>
+    <div className="table-container">
+      <ToolkitProvider
+        keyField={keyField}
+        data={data}
+        columns={_columns}
+        bootstrap4={true}
+        search
+      >
+        {props => (
+          <>
+            {_actions || extra || search ? (
+              <div className="table-filters-wrapper mb-3">
+                {_actions || <div />}
+                {extra && extra}
+                {search && <Search {...props.searchProps} />}
+              </div>
+            ) : (
+              ""
+            )}
+            <BootstrapTable
+              wrapperClasses={wrapperClasses}
+              classes={classes}
+              bordered={false}
+              hover={true}
+              noDataIndication="No items"
+              ref={tableRef}
+              {..._selectable}
+              {..._pagination}
+              {...props.baseProps}
+            />
+          </>
+        )}
+      </ToolkitProvider>
+    </div>
   );
 
   function getColumnsProp(columns) {
