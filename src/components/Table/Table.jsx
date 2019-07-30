@@ -84,11 +84,15 @@ const Table = ({
     >
       {props => (
         <>
-          <div className="table-filters-wrapper mb-3">
-            {_actions || <div />}
-            {extra && extra}
-            {search && <Search {...props.searchProps} />}
-          </div>
+          {_actions || extra || search ? (
+            <div className="table-filters-wrapper mb-3">
+              {_actions || <div />}
+              {extra && extra}
+              {search && <Search {...props.searchProps} />}
+            </div>
+          ) : (
+            ""
+          )}
           <BootstrapTable
             wrapperClasses={wrapperClasses}
             classes={classes}

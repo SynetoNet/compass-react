@@ -3,7 +3,7 @@ function capitalize(s) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-export function getColumn(column) {
+export function getColumn(column, key) {
   const {
     field,
     children,
@@ -47,7 +47,7 @@ export function getColumn(column) {
 
   return {
     dataField: field || "",
-    text: children || capitalize(header) || capitalize(field) || "",
+    text: children || capitalize(header) || "",
     sort: !!sort,
     headerAlign: align,
     align: align,

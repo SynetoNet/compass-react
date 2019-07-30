@@ -309,9 +309,7 @@ const actions = [
   scrollable
   onSelect={({ item, isSelected }) => console.log(item, isSelected)}
 >
-  <Table.Col field="name" align="left">
-    User's Full Name
-  </Table.Col>
+  <Table.Col field="name" align="left" />
   <Table.Col field="id" align="center">
     User ID
   </Table.Col>
