@@ -83,7 +83,7 @@ const Table = ({
       search
     >
       {props => (
-        <>
+        <div className="table-container">
           {_actions || extra || search ? (
             <div className="table-filters-wrapper mb-3">
               {_actions || <div />}
@@ -104,7 +104,7 @@ const Table = ({
             {..._pagination}
             {...props.baseProps}
           />
-        </>
+        </div>
       )}
     </ToolkitProvider>
   );
