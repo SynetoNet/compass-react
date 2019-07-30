@@ -154,6 +154,17 @@ Table.Col = "tr";
 
 Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object),
+  pagination: PropTypes.oneOf(
+    true,
+    false,
+    PropTypes.shape({
+      hidePageListOnlyOnePage: PropTypes.bool,
+      alwaysShowAllBtns: PropTypes.bool,
+      withFirstAndLast: PropTypes.bool,
+      showTotal: PropTypes.bool,
+      sizePerPageList: PropTypes.array
+    })
+  ),
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       field: PropTypes.string,

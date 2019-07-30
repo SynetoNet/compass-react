@@ -45,5 +45,5 @@ export function getPaginationOptions(pagination) {
     return {};
   }
 
-  return { pagination: paginationFactory(options) };
+  return { pagination: paginationFactory({ ...options, ...pagination }) };
 }
