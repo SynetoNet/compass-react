@@ -309,9 +309,21 @@ const actions = [
   scrollable
   onSelect={({ item, isSelected }) => console.log(item, isSelected)}
 >
-  <Table.Col field="name" align="left" />
+  <Table.Col field="name" align="left" filter="text" />
   <Table.Col field="id" align="center">
     User ID
+  </Table.Col>
+  <Table.Col
+    field="status"
+    align="center"
+    filter="select"
+    filterOptions={[
+      { value: "good", label: "good" },
+      { value: "bad", label: "bad" },
+      { value: "unknown", label: "unknown" }
+    ]}
+  >
+    Status
   </Table.Col>
   <Table.Col field="age" align="right" sort renderCell={renderPrice}>
     User Age

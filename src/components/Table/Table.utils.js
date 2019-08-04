@@ -10,6 +10,10 @@ export const columns = [
   { field: "id", header: "User ID" },
   { field: "name", header: "Full Name", sort: true },
   {
+    field: "status",
+    header: "Status"
+  },
+  {
     field: "age",
     header: "User Age",
     align: "right",
@@ -23,6 +27,7 @@ export const dataBig = [
     name: "Geneva Delacruz",
     gender: "female",
     email: "genevadelacruz@waterbaby.com",
+    status: "good",
     age: 85
   },
   {
@@ -30,6 +35,7 @@ export const dataBig = [
     name: "Pace Hopper",
     gender: "male",
     email: "pacehopper@waterbaby.com",
+    status: "good",
     age: 83
   },
   {
@@ -37,6 +43,7 @@ export const dataBig = [
     name: "Hickman Browning",
     gender: "male",
     email: "hickmanbrowning@waterbaby.com",
+    status: "good",
     age: 42
   },
   {
@@ -44,6 +51,7 @@ export const dataBig = [
     name: "Prince Bell",
     gender: "male",
     email: "princebell@waterbaby.com",
+    status: "good",
     age: 37
   },
   {
@@ -51,6 +59,7 @@ export const dataBig = [
     name: "Mccall Silva",
     gender: "male",
     email: "mccallsilva@waterbaby.com",
+    status: "good",
     age: 90
   },
   {
@@ -58,6 +67,7 @@ export const dataBig = [
     name: "Thornton Grant",
     gender: "male",
     email: "thorntongrant@waterbaby.com",
+    status: "good",
     age: 46
   },
   {
@@ -65,6 +75,7 @@ export const dataBig = [
     name: "Lynne Butler",
     gender: "female",
     email: "lynnebutler@waterbaby.com",
+    status: "bad",
     age: 99
   },
   {
@@ -72,6 +83,7 @@ export const dataBig = [
     name: "Weaver Rivas",
     gender: "male",
     email: "weaverrivas@waterbaby.com",
+    status: "bad",
     age: 32
   },
   {
@@ -79,6 +91,7 @@ export const dataBig = [
     name: "Kristi Little",
     gender: "female",
     email: "kristilittle@waterbaby.com",
+    status: "bad",
     age: 62
   },
   {
@@ -86,6 +99,7 @@ export const dataBig = [
     name: "Roach Kane",
     gender: "male",
     email: "roachkane@waterbaby.com",
+    status: "bad",
     age: 41
   },
   {
@@ -93,6 +107,7 @@ export const dataBig = [
     name: "Christian Abbott",
     gender: "female",
     email: "christianabbott@waterbaby.com",
+    status: "bad",
     age: 91
   },
   {
@@ -100,6 +115,7 @@ export const dataBig = [
     name: "Kitty Estrada",
     gender: "female",
     email: "kittyestrada@waterbaby.com",
+    status: "bad",
     age: 44
   },
   {
@@ -107,6 +123,7 @@ export const dataBig = [
     name: "Adrienne Foster",
     gender: "female",
     email: "adriennefoster@waterbaby.com",
+    status: "bad",
     age: 21
   },
   {
@@ -114,6 +131,7 @@ export const dataBig = [
     name: "Frazier Waters",
     gender: "male",
     email: "frazierwaters@waterbaby.com",
+    status: "bad",
     age: 40
   },
   {

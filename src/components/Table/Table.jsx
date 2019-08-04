@@ -11,9 +11,11 @@ import { getPaginationOptions } from "./components/paginationOptions";
 import { getSelectableOptions } from "./components/selectableOptions";
 import { getColumn } from "./components/columnOptions";
 
+import filterFactory from "react-bootstrap-table2-filter";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "./Table.scss";
 import "./components/Pagination.scss";
+import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css";
 
 const Table = ({
   data,
@@ -101,6 +103,7 @@ const Table = ({
               hover={true}
               noDataIndication="No items"
               ref={tableRef}
+              filter={filterFactory()}
               {..._selectable}
               {..._pagination}
               {...props.baseProps}

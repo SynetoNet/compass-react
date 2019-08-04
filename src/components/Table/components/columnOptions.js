@@ -1,3 +1,5 @@
+import { textFilter, selectFilter } from "react-bootstrap-table2-filter";
+
 function capitalize(s) {
   if (typeof s !== "string") return "";
   return s.charAt(0).toUpperCase() + s.slice(1);
@@ -15,6 +17,8 @@ export function getColumn(column, key) {
     style,
     headerStyle,
     oneline,
+    filter,
+    filterOptions,
     ...otherProps
   } = column;
 
@@ -44,11 +48,17 @@ export function getColumn(column, key) {
       flex: "none"
     });
   }
-
   return {
     dataField: field || "",
     text: children || capitalize(header) || "",
     sort: !!sort,
+    filter: filter
+      ? filter === "text"
+        ? textFilter()
+        : filter === "select"
+        ? selectFilter({ options: filterOptions })
+        : null
+      : null,
     headerAlign: align,
     align: align,
     formatter: renderCell,
