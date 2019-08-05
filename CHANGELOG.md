@@ -1,14 +1,12 @@
-#### 0.10.1 (2019-08-05)
+# 0.10.1 (2019-08-05)
 
-##### New Features
+### New Features
 
 * **Table:**
   *  add filter feature to tables ([a32c6cc8](https://github.com/SynetoNet/compass-react/commit/a32c6cc8425a46f5e74bc56662af715869219688))
-  *  add background to table container ([294c7ec9](https://github.com/SynetoNet/compass-react/commit/294c7ec987168bed473bfe078853c6041a4522ec))
-  *  add background to table container ([bab5fdd9](https://github.com/SynetoNet/compass-react/commit/bab5fdd9b3b3c2c19232fea03980140bc0d6c662))
   *  customize pagination props ([7fda9cc2](https://github.com/SynetoNet/compass-react/commit/7fda9cc2f3e1cfd39d6c0639e826e6ae1f3029ca))
 
-##### Bug Fixes
+### Bug Fixes
 
 * **Table:**
   *  remove filter div if empty; fix empty header ([8da69567](https://github.com/SynetoNet/compass-react/commit/8da69567e1ab03fc8537b99820c77d793f6d7c44))
