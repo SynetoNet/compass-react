@@ -1,3 +1,9 @@
+#### 0.10.2 (2019-08-20)
+
+##### Bug Fixes
+
+* **Table:**  wrap search input in a Form component to prevent Chrome autocomplete ([2ecef768](https://github.com/SynetoNet/compass-react/commit/2ecef7689e03833ead46b2bb87a13d5c45c3e6d6))
+
 # 0.10.1 (2019-08-05)
 
 ### New Features
