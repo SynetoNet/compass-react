@@ -10,28 +10,30 @@ const Search = props => {
 
   return (
     <div className="table-search ml-5">
-      <Form.Control
-        type="text"
-        ref={n => (input = n)}
-        onChange={handleClick}
-        placeholder="Search..."
-        style={{ width: "200px" }}
-      />
+      <Form>
+        <Form.Control
+          type="text"
+          ref={n => (input = n)}
+          onChange={handleClick}
+          placeholder="Search..."
+          style={{ width: "200px" }}
+        />
 
-      {props.searchText && (
-        // @todo replace with icon button
-        <button
-          title="Clear search"
-          aria-label="Clear"
-          className="table-search__clear"
-          onClick={() => {
-            input.value = "";
-            props.onSearch("");
-          }}
-        >
-          &times;
-        </button>
-      )}
+        {props.searchText && (
+          // @todo replace with icon button
+          <button
+            title="Clear search"
+            aria-label="Clear"
+            className="table-search__clear"
+            onClick={() => {
+              input.value = "";
+              props.onSearch("");
+            }}
+          >
+            &times;
+          </button>
+        )}
+      </Form>
     </div>
   );
 };
