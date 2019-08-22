@@ -1,3 +1,9 @@
+#### 0.10.4 (2019-08-22)
+
+##### Bug Fixes
+
+* **Table:**  prevent Search form submit ([c364d6d5](https://github.com/SynetoNet/compass-react/commit/c364d6d59bbca33a43c504838f382df594165cac))
+
 # 0.10.3 (2019-08-22)
 
 ### Bug Fixes
