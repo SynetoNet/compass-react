@@ -10,7 +10,7 @@ const Search = props => {
 
   return (
     <div className="table-search ml-5">
-      <Form>
+      <Form onSubmit={e => e.preventDefault()}>
         <Form.Control
           type="text"
           ref={n => (input = n)}
