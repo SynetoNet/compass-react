@@ -29,6 +29,7 @@ const Search = props => {
               input.value = "";
               props.onSearch("");
             }}
+            type="button"
           >
             &times;
           </button>
