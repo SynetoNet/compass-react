@@ -1,3 +1,9 @@
+#### 0.10.3 (2019-08-22)
+
+##### Bug Fixes
+
+* **Table:**  set type button on search clear button, to prevent form submit ([4cfd0316](https://github.com/SynetoNet/compass-react/commit/4cfd0316c3a055efdca190db208e62e5b3536961))
+
 # 0.10.2 (2019-08-20)
 
 ### Bug Fixes
