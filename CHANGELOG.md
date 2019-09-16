@@ -1,3 +1,9 @@
+#### 0.10.5 (2019-09-16)
+
+##### New Features
+
+* **DatePicker:**  add placement prop ([5f886492](https://github.com/SynetoNet/compass-react/commit/5f886492b075a62bcc98144e51a41612d4ac93c8))
+
 #### 0.10.4 (2019-08-22)
 
 ##### Bug Fixes
