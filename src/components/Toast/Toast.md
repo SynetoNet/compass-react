@@ -10,6 +10,42 @@
 </Toast>
 ```
 
+#### **Colors**
+
+```jsx
+<Toast color="success">
+  <Toast.Header>
+    <strong className="mr-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+  </Toast.Header>
+  <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
+</Toast>
+
+<Toast color="warning">
+  <Toast.Header>
+    <strong className="mr-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+  </Toast.Header>
+  <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
+</Toast>
+
+<Toast color="danger">
+  <Toast.Header>
+    <strong className="mr-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+  </Toast.Header>
+  <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
+</Toast>
+
+<Toast color="info">
+  <Toast.Header>
+    <strong className="mr-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+  </Toast.Header>
+  <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
+</Toast>
+```
+
 #### **Dismissible**
 
 ```jsx
