@@ -1,19 +1,15 @@
-#### 0.11.0 (2019-09-23)
+# 0.11.0 (2019-09-23)
 
-##### Build System / Dependencies
-
-*  export all components as named exports ([c7d18b8d](https://github.com/SynetoNet/compass-react/commit/c7d18b8ddcd218c4a5fcb63937735b3945072733))
-
-##### New Features
+### New Features
 
 * **Toast:**  add color variants ([c66f25c5](https://github.com/SynetoNet/compass-react/commit/c66f25c50e11a9e010022d6ec4c1bc274e22d80e))
 * **DatePicker:**  document enforceFocus prop ([d4af4b7a](https://github.com/SynetoNet/compass-react/commit/d4af4b7ac51ad1a127cb329ffa9ae4cc8d39d40d))
 * **Form:**  add inline option to form group ([266c64f4](https://github.com/SynetoNet/compass-react/commit/266c64f49786cc992284f059c86bb2295e2732c4))
 * **Table:**  add first and last page option ([4afa7149](https://github.com/SynetoNet/compass-react/commit/4afa7149a32ca8d1ebf1d06f7c91c88464ea290c))
 
-##### Bug Fixes
+### Build System / Dependencies
 
-* **Toast:**  update test ([b6f38182](https://github.com/SynetoNet/compass-react/commit/b6f381824b58dcdd673bf76dc8d9abacb2fcf51a))
+*  export all components as named exports ([c7d18b8d](https://github.com/SynetoNet/compass-react/commit/c7d18b8ddcd218c4a5fcb63937735b3945072733))
 
 # 0.10.5 (2019-09-16)
 
