@@ -10,13 +10,13 @@ import visualizer from "rollup-plugin-visualizer";
 export default [
   {
     input: [
-      "src/index.js",
-      "src/components/DatePicker/DatePicker.jsx",
-      "src/components/Form/Form.jsx",
-      "src/components/Modal/Modal.jsx",
-      "src/components/Tabs/Tabs.jsx",
-      "src/components/Table/Table.jsx",
-      "src/components/ComboBox/ComboBox.jsx"
+      "src/index.js"
+      // "src/components/DatePicker/DatePicker.jsx",
+      // "src/components/Form/Form.jsx",
+      // "src/components/Modal/Modal.jsx",
+      // "src/components/Tabs/Tabs.jsx",
+      // "src/components/Table/Table.jsx",
+      // "src/components/ComboBox/ComboBox.jsx"
     ],
     output: [
       {

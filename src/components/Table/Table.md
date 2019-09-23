@@ -296,7 +296,7 @@ const actions = [
 <Table
   data={dataBig}
   keyField="id"
-  pagination={{ sizePerPageList: [10, 15, 30], showTotal: true }}
+  pagination={{ sizePerPageList: [10, 15, 30], showTotal: true, withFirstAndLast: true }}
   search
   actions={actions}
   selectable="multiple"

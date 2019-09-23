@@ -94,8 +94,8 @@ const Table = ({
                 {search && <Search {...props.searchProps} />}
               </div>
             ) : (
-              ""
-            )}
+                ""
+              )}
             <BootstrapTable
               wrapperClasses={wrapperClasses}
               classes={classes}
@@ -163,9 +163,15 @@ Table.Col = "tr";
 
 Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object),
-  pagination: PropTypes.oneOf(
-    true,
-    false,
+  /**
+    hidePageListOnlyOnePage: bool<br/>
+    alwaysShowAllBtns: bool<br/>
+    withFirstAndLast: bool<br/>
+    showTotal: bool<br/>
+    sizePerPageList: array
+  */
+  pagination: PropTypes.oneOfType([
+    PropTypes.bool,
     PropTypes.shape({
       hidePageListOnlyOnePage: PropTypes.bool,
       alwaysShowAllBtns: PropTypes.bool,
@@ -173,7 +179,8 @@ Table.propTypes = {
       showTotal: PropTypes.bool,
       sizePerPageList: PropTypes.array
     })
-  ),
+  ]),
+
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       field: PropTypes.string,

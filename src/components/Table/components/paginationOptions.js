@@ -13,22 +13,22 @@ const sizePerPageRenderer = ({
   currSizePerPage,
   onSizePerPageChange
 }) => (
-  <Dropdown label={currSizePerPage} className="d-inline-block">
-    <Dropdown.Menu>
-      {options.map(option => {
-        return (
-          <Dropdown.Item
-            key={option.text}
-            eventKey={option.text}
-            onClick={() => onSizePerPageChange(option.page)}
-          >
-            {option.text}
-          </Dropdown.Item>
-        );
-      })}
-    </Dropdown.Menu>
-  </Dropdown>
-);
+    <Dropdown label={currSizePerPage} className="d-inline-block">
+      <Dropdown.Menu>
+        {options.map(option => {
+          return (
+            <Dropdown.Item
+              key={option.text}
+              eventKey={option.text}
+              onClick={() => onSizePerPageChange(option.page)}
+            >
+              {option.text}
+            </Dropdown.Item>
+          );
+        })}
+      </Dropdown.Menu>
+    </Dropdown>
+  );
 
 const options = {
   hidePageListOnlyOnePage: true,

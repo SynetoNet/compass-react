@@ -95,6 +95,8 @@ const CustomInputExample = () => {
 
 #### **Scrollable Modal example**
 
+Please use the **`enforceFocus={ false }`** prop on the Modal component, otherwise the month and year dropdowns may have unwanted behavior
+
 ```jsx
 import { useState } from "react";
 import { Form } from "react-bootstrap";
@@ -115,6 +117,7 @@ const ExampleModal = () => {
         show={showModal}
         onHide={() => toggleModal(false)}
         scrollable
+        enforceFocus={ false }
         content={
           <div>
             <p>Scroll down</p>
