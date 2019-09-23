@@ -53,14 +53,26 @@ import { Button } from "../../index";
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
     <Form.Control type="email" placeholder="Enter email" />
+  </Form.Group>
     <Form.Text className="text-muted">
       We'll never share your email with anyone else.
     </Form.Text>
-  </Form.Group>
 
   <Form.Group controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
     <Form.Control type="password" placeholder="Password" />
+  </Form.Group>
+
+  <p>Inline Form Group - add "form-group-inline" class on Form Group</p>
+
+  <Form.Group controlId="formBasicName" className="form-group-inline">
+    <Form.Label>Name</Form.Label>
+    <Form.Control type="text" placeholder="Name" />
+  </Form.Group>
+
+  <Form.Group controlId="formBasicOccupation" className="form-group-inline">
+    <Form.Label>Occupation</Form.Label>
+    <Form.Control type="text" placeholder="Occupation" />
   </Form.Group>
 
   <Form.Group controlId="formBasicCheckbox">
