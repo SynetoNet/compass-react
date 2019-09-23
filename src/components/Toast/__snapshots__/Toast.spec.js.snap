@@ -3,6 +3,7 @@
 exports[`Default Toast popover snapshop 1`] = `
 <Bootstrap(Toast)
   autohide={false}
+  className="toast-secondary"
   delay={3000}
   show={true}
 >
