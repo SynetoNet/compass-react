@@ -12,6 +12,9 @@ export { default as List } from "./components/List/List.jsx";
 export { default as Tooltip } from "./components/Tooltip/Tooltip.jsx";
 export { default as Popover } from "./components/Popover/Popover.jsx";
 export { default as Overlay } from "./components/Overlay/Overlay.jsx";
+export { default as Card } from "./components/Card/Card.jsx";
+export { default as Alert } from "./components/Alert/Alert.jsx";
+export { default as Toast } from "./components/Toast/Toast.jsx";
 export { default as OverlayTrigger } from "./components/OverlayTrigger/OverlayTrigger.jsx";
 
 export { Container } from "./layout/Container.jsx";
