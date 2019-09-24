@@ -1,4 +1,8 @@
-#### 0.11.1 (2019-09-24)
+# 0.11.1 (2019-09-24)
+
+### Build System / Dependencies
+
+*  export the rest of the components ([c4a78e2](https://github.com/SynetoNet/compass-react/commit/690142b5c963b41baec6513d427e79cf2738eeda))
 
 # 0.11.0 (2019-09-23)
 
