@@ -1,3 +1,13 @@
+#### 0.11.2 (2019-09-25)
+
+##### Bug Fixes
+
+* **Card:**  fix content prop ([1e2abdd6](https://github.com/SynetoNet/compass-react/commit/1e2abdd64c3ce9c1969bda473d8dec023ab45613))
+
+##### Tests
+
+* **Card:**  update Card snapshot ([474e5295](https://github.com/SynetoNet/compass-react/commit/474e5295bbc7f3797344c552ed573ba6b51c58f9))
+
 # 0.11.1 (2019-09-24)
 
 ### Build System / Dependencies
