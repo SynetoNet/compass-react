@@ -10,7 +10,7 @@ const Card = ({ title, content, dropdown, icon, ...props }) => {
       <div className="cardIconContainer">{icon}</div>
       <BSCard.Body>
         <BSCard.Title>{title}</BSCard.Title>
-        <BSCard.Text>{content}</BSCard.Text>
+        <BSCard.Text as={"div"}>{content}</BSCard.Text>
       </BSCard.Body>
       <div className="cardActions">{dropdown}</div>
     </BSCard>
@@ -19,7 +19,7 @@ const Card = ({ title, content, dropdown, icon, ...props }) => {
 
 Card.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.string,
+  content: PropTypes.node,
   dropdown: PropTypes.node,
   icon: PropTypes.node
 };
