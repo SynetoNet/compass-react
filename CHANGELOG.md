@@ -1,3 +1,9 @@
+#### 0.11.3 (2019-09-25)
+
+##### Bug Fixes
+
+* **Card:**  pass props to bootstrap Cards ([ff96bbc5](https://github.com/SynetoNet/compass-react/commit/ff96bbc5784aa60b3ae3ee777344007c91e8fb7b))
+
 # 0.11.2 (2019-09-25)
 
 ### Bug Fixes
