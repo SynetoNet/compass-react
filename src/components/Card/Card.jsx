@@ -6,7 +6,7 @@ import "./Card.scss";
 
 const Card = ({ title, content, dropdown, icon, ...props }) => {
   return (
-    <BSCard>
+    <BSCard {...props}>
       <div className="cardIconContainer">{icon}</div>
       <BSCard.Body>
         <BSCard.Title>{title}</BSCard.Title>
