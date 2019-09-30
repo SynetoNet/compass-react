@@ -1,3 +1,9 @@
+#### 0.11.4 (2019-09-30)
+
+##### Bug Fixes
+
+* **Icon:**  pass props to children ([93f8aff8](https://github.com/SynetoNet/compass-react/commit/93f8aff8659130fb7c583142fdd3853e4e08c564))
+
 # 0.11.3 (2019-09-25)
 
 ### Bug Fixes
