@@ -76,6 +76,9 @@ const Table = ({
     ` ${wrapperClassName}`
   ).trim();
 
+  // Props is overridden by the Toolkit Provider; We save the props in the initialProps variable;
+  const initialProps = props;
+
   return (
     <div className="table-container">
       <ToolkitProvider
@@ -85,7 +88,9 @@ const Table = ({
         bootstrap4={true}
         search
       >
-        {props => (
+        {props => {
+          // Here
+          return (
           <>
             {_actions || extra || search ? (
               <div className="table-filters-wrapper mb-3">
@@ -107,9 +112,10 @@ const Table = ({
               {..._selectable}
               {..._pagination}
               {...props.baseProps}
+              {...initialProps}
             />
-          </>
-        )}
+          </>)
+        }}
       </ToolkitProvider>
     </div>
   );
