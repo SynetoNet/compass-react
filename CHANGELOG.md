@@ -1,6 +1,6 @@
-#### 0.11.5 (2019-10-01)
+# 0.11.5 (2019-10-01)
 
-##### Bug Fixes
+### Bug Fixes
 
 * **Table:**  pass props to Bootstrap Table ([b5f86e8e](https://github.com/SynetoNet/compass-react/commit/b5f86e8ef5c82e9fd18592e038fec080198e67ac))
 
