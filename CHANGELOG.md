@@ -1,3 +1,9 @@
+#### 0.11.6 (2019-10-02)
+
+##### New Features
+
+* **Table:**  add custom search prop ([061c9c23](https://github.com/SynetoNet/compass-react/commit/061c9c23fedc80d7bd1c861ab31334540c25cdd9))
+
 # 0.11.5 (2019-10-01)
 
 ### Bug Fixes
