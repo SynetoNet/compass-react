@@ -90,6 +90,10 @@ const Table = ({
       >
         {props => {
           // Here
+          if (initialProps.onSearch) {
+            props.searchProps.onSearch = initialProps.onSearch;
+          }
+
           return (
           <>
             {_actions || extra || search ? (
@@ -205,6 +209,8 @@ Table.propTypes = {
   selectable: PropTypes.oneOf(["single", "multiple"]),
   scrollable: PropTypes.bool,
   onSelect: PropTypes.func,
+  /** custom search method */
+  onSearch: PropTypes.func,
   /** additional CSS classes to be set on the wrapper of the table component */
   wrapperClassName: PropTypes.string,
   /** additional CSS classes to be set on the table component */
