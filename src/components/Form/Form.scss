@@ -5,6 +5,12 @@
   font-weight: bold;
 }
 
+select {
+  &.form-control {
+    -webkit-appearance: menulist-button !important;
+  }
+}
+
 .form-control {
   border-color: $neutral-12;
   border-radius: 0.15rem;
