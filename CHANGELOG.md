@@ -1,3 +1,9 @@
+#### 0.11.7 (2019-10-08)
+
+##### Bug Fixes
+
+* **Form:**  fix select webkit appearance ([ec784dc3](https://github.com/SynetoNet/compass-react/commit/ec784dc394b40b1fd82fb32ede2fd760a24f544b))
+
 # 0.11.6 (2019-10-02)
 
 ### New Features
