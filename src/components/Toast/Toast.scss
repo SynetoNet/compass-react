@@ -5,6 +5,9 @@
   border: 1px solid $semantic-confirm-light-60;
   background-color: $semantic-confirm-light-85;
   color: $neutral-90;
+  & .toast-header {
+    color: $semantic-confirm-dark-30;
+  }
 }
 
 .toast-warning {
@@ -20,6 +23,9 @@
   border: 1px solid $semantic-info-light-60;
   background-color: $semantic-info-light-85;
   color: $neutral-90;
+  & .toast-header {
+    color: $semantic-info-dark-30;
+  }
 }
 
 .toast-danger {
