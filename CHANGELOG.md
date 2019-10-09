@@ -1,13 +1,13 @@
-#### 0.11.8 (2019-10-09)
+# 0.11.8 (2019-10-09)
 
-##### Documentation Changes
-
-* **Table:**  add Modal trigger example ([dd506123](https://github.com/SynetoNet/compass-react/commit/dd506123a8c4c817433c387d4eb69e288089ab46))
-
-##### New Features
+### New Features
 
 * **Table:**  add possibility for custom actions dropdown ([2c557293](https://github.com/SynetoNet/compass-react/commit/2c5572930d5a36cf68d52b15c370391560fc42d7))
 * **Toast:**  update Toast header colors ([293afab9](https://github.com/SynetoNet/compass-react/commit/293afab9a443881fc1056c824bd71d2195266824))
+
+### Documentation Changes
+
+* **Table:**  add Modal trigger example ([dd506123](https://github.com/SynetoNet/compass-react/commit/dd506123a8c4c817433c387d4eb69e288089ab46))
 
 # 0.11.7 (2019-10-08)
 
