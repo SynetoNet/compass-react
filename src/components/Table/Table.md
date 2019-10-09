@@ -135,6 +135,42 @@ import { data, columns } from "./Table.utils";
 />;
 ```
 
+#### **Custom actions**
+
+```jsx
+import { data, columns } from "./Table.utils";
+import Dropdown from "../Dropdown/Dropdown";
+import Badge from "../Badge/Badge";
+
+<Table
+  data={data}
+  columns={columns}
+  keyField="id"
+  selectable="multiple"
+  actions={<Dropdown label="Actions" onSelect={eventKey => console.log(eventKey)}>
+  <Dropdown.Menu>
+    <Dropdown.Header>Section header</Dropdown.Header>
+    <Dropdown.Item eventKey="action">Action</Dropdown.Item>
+    <Dropdown.Item disabled eventKey="disabled">
+      Disabled action
+    </Dropdown.Item>
+
+    <Dropdown.Divider />
+
+    <Dropdown.Header>Separate actions</Dropdown.Header>
+    <Dropdown.Item eventKey="normal">
+      <Badge block>Normal action</Badge>
+    </Dropdown.Item>
+    <Dropdown.Item eventKey="success">
+      <Badge color="success" block>
+        Success action
+      </Badge>
+    </Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>}
+/>;
+```
+
 #### **Pagination**
 
 ```jsx

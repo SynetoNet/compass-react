@@ -145,27 +145,31 @@ const Table = ({
       return null;
     }
 
-    return (
-      <Dropdown label="Actions" className="mr-5">
-        <Dropdown.Menu>
-          {actions.map(action => (
-            <Dropdown.Item
-              key={action.label}
-              eventKey="unselect"
-              onSelect={() => action.onClick(getSelected())}
-            >
-              {action.label}
+    if (Array.isArray(actions)) {
+      return (
+        <Dropdown label="Actions" className="mr-5">
+          <Dropdown.Menu>
+            {actions.map(action => (
+              <Dropdown.Item
+                key={action.label}
+                eventKey="unselect"
+                onSelect={() => action.onClick(getSelected())}
+              >
+                {action.label}
+              </Dropdown.Item>
+            ))}
+
+            <Dropdown.Divider />
+
+            <Dropdown.Item eventKey="unselect" onSelect={clearSelection}>
+              Unselect all
             </Dropdown.Item>
-          ))}
+          </Dropdown.Menu>
+        </Dropdown>
+      );
+    }
 
-          <Dropdown.Divider />
-
-          <Dropdown.Item eventKey="unselect" onSelect={clearSelection}>
-            Unselect all
-          </Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-    );
+    return actions;
   }
 };
 
@@ -215,12 +219,7 @@ Table.propTypes = {
   wrapperClassName: PropTypes.string,
   /** additional CSS classes to be set on the table component */
   className: PropTypes.string,
-  actions: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      onClick: PropTypes.func
-    })
-  ),
+  actions: PropTypes.node,
   extra: PropTypes.element
 };
 
