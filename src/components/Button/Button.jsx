@@ -81,8 +81,8 @@ const Button = ({
     setLoadingIndex(-1);
   }
 
-  function _onClick() {
-    !_disabled && onClick && onClick();
+  function _onClick(e) {
+    !_disabled && onClick && onClick(e);
   }
 
   return (

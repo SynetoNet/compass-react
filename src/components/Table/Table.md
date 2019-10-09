@@ -246,90 +246,119 @@ const columns = [
 
 #### **Complex table**
 
+Example includes triggering a Modal on the second Row on Row click;
+
 ```jsx
 import { dataBig, columns } from "./Table.utils";
 import Badge from "../Badge/Badge";
 import Button from "../Button/Button";
 import Form from "../Form/Form";
+import Modal from "../Modal/Modal";
+import { useState } from 'react'
 
-function renderPrice(cell, row) {
-  let color = "";
-  if (row.age < 30) {
-    color = "success";
-  } else if (row.age < 80) {
-    color = "info";
-  } else {
-    color = "secondary";
+const Example = () => {
+  const [showModal, toggleModal] = useState(false);
+
+  function renderPrice(cell, row) {
+    let color = "";
+    if (row.age < 30) {
+      color = "success";
+    } else if (row.age < 80) {
+      color = "info";
+    } else {
+      color = "secondary";
+    }
+
+    return (
+      <Badge color={color} style={{ verticalAlign: "baseline" }}>
+        {cell}
+      </Badge>
+    );
   }
 
-  return (
-    <Badge color={color} style={{ verticalAlign: "baseline" }}>
-      {cell}
-    </Badge>
-  );
-}
+  function renderCellActions(cell, row) {
+    return (
+      <>
+        <Button variant="tertiary" onClick={() => console.log(row)}>
+          Edit
+        </Button>
+        <Button variant="tertiary" onClick={(e) => e.stopPropagation()}>
+          Delete
+        </Button>
+      </>
+    );
+  }
 
-function renderCellActions(cell, row) {
+  const actions = [
+    {
+      label: "Delete selected",
+      onClick: selected => console.log(selected)
+    },
+    {
+      label: "Move to trash",
+      onClick: selected => console.log(selected)
+    }
+  ];
+
   return (
     <>
-      <Button variant="tertiary" onClick={() => console.log(row)}>
-        Edit
-      </Button>
-      <Button variant="tertiary" onClick={() => console.log(row)}>
-        Delete
-      </Button>
+      <Modal
+        show={showModal}
+        onHide={() => toggleModal(false)}
+        content="Modal content"
+        title="Modal title"
+      />
+      <Table
+        data={dataBig}
+        keyField="id"
+        pagination={{ sizePerPageList: [10, 15, 30], showTotal: true, withFirstAndLast: true }}
+        search
+        actions={actions}
+        selectable="multiple"
+        extra={
+          <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
+            <Form.Control placeholder="Extra" className="mr-2" />
+            <Form.Switch checked />
+          </div>
+        }
+        rowEvents={ {
+          onClick: (e, row, rowIndex) => {
+            if (rowIndex === 1) {
+              toggleModal(true);
+            }
+          },
+        } }
+        scrollable
+        onSelect={({ item, isSelected }) => console.log(item, isSelected)}
+
+      >
+        <Table.Col field="name" align="left" filter="text" />
+        <Table.Col field="id" align="center">
+          User ID
+        </Table.Col>
+        <Table.Col
+          field="status"
+          align="center"
+          filter="select"
+          filterOptions={[
+            { value: "good", label: "good" },
+            { value: "bad", label: "bad" },
+            { value: "unknown", label: "unknown" }
+          ]}
+        >
+          Status
+        </Table.Col>
+        <Table.Col field="age" align="right" sort renderCell={renderPrice}>
+          User Age
+        </Table.Col>
+        <Table.Col align="center" renderCell={renderCellActions}>
+          Actions
+        </Table.Col>
+      </Table>
     </>
   );
 }
 
-const actions = [
-  {
-    label: "Delete selected",
-    onClick: selected => console.log(selected)
-  },
-  {
-    label: "Move to trash",
-    onClick: selected => console.log(selected)
-  }
-];
+<Example />
 
-<Table
-  data={dataBig}
-  keyField="id"
-  pagination={{ sizePerPageList: [10, 15, 30], showTotal: true, withFirstAndLast: true }}
-  search
-  actions={actions}
-  selectable="multiple"
-  extra={
-    <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
-      <Form.Control placeholder="Extra" className="mr-2" />
-      <Form.Switch checked />
-    </div>
-  }
-  scrollable
-  onSelect={({ item, isSelected }) => console.log(item, isSelected)}
->
-  <Table.Col field="name" align="left" filter="text" />
-  <Table.Col field="id" align="center">
-    User ID
-  </Table.Col>
-  <Table.Col
-    field="status"
-    align="center"
-    filter="select"
-    filterOptions={[
-      { value: "good", label: "good" },
-      { value: "bad", label: "bad" },
-      { value: "unknown", label: "unknown" }
-    ]}
-  >
-    Status
-  </Table.Col>
-  <Table.Col field="age" align="right" sort renderCell={renderPrice}>
-    User Age
-  </Table.Col>
-  <Table.Col align="center" renderCell={renderCellActions}>
-    Actions
-  </Table.Col>
-</Table>;
 ```
