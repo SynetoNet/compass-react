@@ -52,19 +52,19 @@ export default [
         sourcemap: true
       })
     ]
-  },
-  // build base css separately
-  {
-    input: "src/base/styles.scss",
-    output: {
-      file: "lib/styles.css",
-      format: "esm"
-    },
-    plugins: [
-      postcss({
-        extract: true,
-        plugins: [autoprefixer]
-      })
-    ]
   }
+  // build base css separately
+  // {
+  //   input: "src/base/styles.scss",
+  //   output: {
+  //     file: "lib/styles.css",
+  //     format: "esm"
+  //   },
+  //   plugins: [
+  //     postcss({
+  //       extract: true,
+  //       plugins: [autoprefixer]
+  //     })
+  //   ]
+  // }
 ];
