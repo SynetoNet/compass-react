@@ -1,49 +1,49 @@
-#### **Default Buttons**
-
-```jsx
-<Button>Default Button</Button>
-<i className="pr-2" />
-<Button color="success">Success</Button>
-<i className="pr-2" />
-<Button color="danger">Danger</Button>
-<i className="pr-2" />
-<Button color="warning">Warning</Button>
-<i className="pr-2" />
-<Button color="info">Info</Button>
-```
-
 #### **Primary Buttons**
 
 ```jsx
-<Button variant="primary">Primary</Button>
+<Button >Primary</Button>
 <i className="pr-2" />
-<Button variant="primary" color="success">Success</Button>
+<Button  appearance="success">Success</Button>
 <i className="pr-2" />
-<Button variant="primary" color="danger">Danger</Button>
+<Button  appearance="danger">Danger</Button>
 <i className="pr-2" />
-<Button variant="primary" color="warning">Warning</Button>
+<Button  appearance="warning">Warning</Button>
 <i className="pr-2" />
-<Button variant="primary" color="info">Info</Button>
+<Button  appearance="info">Info</Button>
+```
+
+#### **Secondary Buttons**
+
+```jsx
+<Button role="secondary">Secondary Button</Button>
+<i className="pr-2" />
+<Button role="secondary" appearance="success">Success</Button>
+<i className="pr-2" />
+<Button role="secondary" appearance="danger">Danger</Button>
+<i className="pr-2" />
+<Button role="secondary" appearance="warning">Warning</Button>
+<i className="pr-2" />
+<Button role="secondary" appearance="info">Info</Button>
 ```
 
 #### **Tertiary Buttons**
 
 ```jsx
-<Button variant="tertiary">Tertiary</Button>
+<Button role="tertiary">Tertiary</Button>
 <i className="pr-2" />
-<Button variant="tertiary" color="success">Success</Button>
+<Button role="tertiary" appearance="success">Success</Button>
 <i className="pr-2" />
-<Button variant="tertiary" color="danger">Danger</Button>
+<Button role="tertiary" appearance="danger">Danger</Button>
 <i className="pr-2" />
-<Button variant="tertiary" color="warning">Warning</Button>
+<Button role="tertiary" appearance="warning">Warning</Button>
 <i className="pr-2" />
-<Button variant="tertiary" color="info">Info</Button>
+<Button role="tertiary" appearance="info">Info</Button>
 ```
 
 #### **Link**
 
 ```jsx
-<Button variant="link" href="https://github.com/SynetoNet/compass-react">
+<Button role="link" href="https://github.com/SynetoNet/compass-react">
   Link
 </Button>
 ```
@@ -64,37 +64,37 @@
 <div>
   <Button disabled>Disabled</Button>
   <i className="pr-2" />
-  <Button disabled color="success">Success</Button>
+  <Button disabled appearance="success">Success</Button>
   <i className="pr-2" />
-  <Button disabled color="danger">Danger</Button>
+  <Button disabled appearance="danger">Danger</Button>
   <i className="pr-2" />
-  <Button disabled color="warning">Warning</Button>
+  <Button disabled appearance="warning">Warning</Button>
   <i className="pr-2" />
-  <Button disabled color="info">Info</Button>
+  <Button disabled appearance="info">Info</Button>
 </div>
 
 <div className="mt-2">
-  <Button disabled variant="primary">Disabled</Button>
+  <Button disabled role="secondary">Disabled</Button>
   <i className="pr-2" />
-  <Button disabled variant="primary" color="success">Success</Button>
+  <Button disabled role="secondary" appearance="success">Success</Button>
   <i className="pr-2" />
-  <Button disabled variant="primary" color="danger">Danger</Button>
+  <Button disabled role="secondary" appearance="danger">Danger</Button>
   <i className="pr-2" />
-  <Button disabled variant="primary" color="warning">Warning</Button>
+  <Button disabled role="secondary" appearance="warning">Warning</Button>
   <i className="pr-2" />
-  <Button disabled variant="primary" color="info">Info</Button>
+  <Button disabled role="secondary" appearance="info">Info</Button>
 </div>
 
 <div className="mt-2">
-  <Button disabled variant="tertiary">Disabled</Button>
+  <Button disabled role="tertiary">Disabled</Button>
   <i className="pr-2" />
-  <Button disabled variant="tertiary" color="success">Success</Button>
+  <Button disabled role="tertiary" appearance="success">Success</Button>
   <i className="pr-2" />
-  <Button disabled variant="tertiary" color="danger">Danger</Button>
+  <Button disabled role="tertiary" appearance="danger">Danger</Button>
   <i className="pr-2" />
-  <Button disabled variant="tertiary" color="warning">Warning</Button>
+  <Button disabled role="tertiary" appearance="warning">Warning</Button>
   <i className="pr-2" />
-  <Button disabled variant="tertiary" color="info">Info</Button>
+  <Button disabled role="tertiary" appearance="info">Info</Button>
 </div>
 ```
 
@@ -131,7 +131,7 @@ const LoadingExample = () => {
 
   return (
     <Button
-      variant="primary"
+      role="primary"
       disabled={isLoading}
       onClick={!isLoading ? handleClick : null}
     >
@@ -162,7 +162,7 @@ const LoadingExample = () => {
   };
 
   return (
-    <Button variant="primary" loading={loading} onClick={handleClick}>
+    <Button role="primary" loading={loading} onClick={handleClick}>
       {"Click to load"}
     </Button>
   );

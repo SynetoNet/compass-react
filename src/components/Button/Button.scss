@@ -13,8 +13,6 @@
 }
 
 .btn-primary {
-  background-color: $accent;
-
   &:hover:not(:disabled) {
     background-color: $semantic-accent-dark-20;
   }
@@ -172,7 +170,10 @@
 .btn-tertiary {
   color: $semantic-accent-contrast;
   border-color: transparent !important;
-
+  background: none;
+  &:disabled {
+    background: none;
+  }
   &:hover:not(:disabled) {
     background-color: $semantic-accent-light-85;
     color: $semantic-accent-dark-30;
@@ -239,5 +240,21 @@
       background-color: $semantic-info-light-60 !important;
       color: $semantic-info-dark-30 !important;
     }
+  }
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  &:hover:not(:disabled) {
+    background-color: $semantic-accent-light-85;
+    color: $semantic-accent-dark-30;
+  }
+  &:active:not(:disabled) {
+    background-color: $semantic-accent-light-60;
+    color: $semantic-accent-dark-30;
+  }
+  &:disabled {
+    color: $semantic-accent-contrast;
   }
 }

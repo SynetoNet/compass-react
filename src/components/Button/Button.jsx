@@ -18,12 +18,13 @@ const LOADING_TEXTS = [
 const LOADING_DELAY = 10000;
 
 const Button = ({
-  color,
+  appearance,
   width,
   loading,
   disabled,
   children,
   onClick,
+  role,
   ...props
 }) => {
   const initialText = children;
@@ -33,7 +34,7 @@ const Button = ({
   const _disabled = loading || disabled;
 
   let classes = classNames({
-    ["btn-" + color]: color,
+    ["btn-" + appearance]: appearance,
     ["width-" + width]: width,
     disabled: _disabled
   });
@@ -87,10 +88,11 @@ const Button = ({
 
   return (
     <BootstrapButton
-      variant={color}
+      variant={role}
       className={classes}
       disabled={_disabled}
       onClick={_onClick}
+      color={appearance}
       {...props}
     >
       {text}
@@ -100,8 +102,8 @@ const Button = ({
 };
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(["primary", "tertiary", "secondary", "link"]),
-  color: PropTypes.oneOf(["accent", "success", "danger", "warning", "info"]),
+  role: PropTypes.oneOf(["primary", "tertiary", "secondary", "link"]),
+  appearance: PropTypes.oneOf(["primary", "success", "danger", "warning", "info"]),
   width: PropTypes.oneOf([32, 64, 96, 128, "auto"]),
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   disabled: PropTypes.bool,
@@ -111,8 +113,8 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  variant: "secondary",
-  color: "accent",
+  role: "primary",
+  appearance: "primary",
   type: "button",
   width: "auto",
   disabled: false
