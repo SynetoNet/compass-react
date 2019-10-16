@@ -1,3 +1,17 @@
+#### 0.12.0 (2019-10-16)
+
+##### Breaking Changes
+
+*  change props of Button and Badge ([4e1a1ce0](https://github.com/SynetoNet/compass-react/commit/4e1a1ce08a02de619d7d8902763284c5bbcb5899))
+
+##### Documentation Changes
+
+*  update the documentation with changed props ([5ed4e16a](https://github.com/SynetoNet/compass-react/commit/5ed4e16a6aba1320a5445aa9ffbc9fdc575e488e))
+
+##### New Features
+
+* **Button:**  update props ([b0520346](https://github.com/SynetoNet/compass-react/commit/b0520346a65ad471a8bf695a7a39bcc2295b6b0e))
+
 # 0.11.8 (2019-10-09)
 
 ### New Features
