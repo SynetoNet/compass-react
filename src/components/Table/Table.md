@@ -162,7 +162,7 @@ import Badge from "../Badge/Badge";
       <Badge block>Normal action</Badge>
     </Dropdown.Item>
     <Dropdown.Item eventKey="success">
-      <Badge color="success" block>
+      <Badge appearance="success" block>
         Success action
       </Badge>
     </Dropdown.Item>
@@ -191,17 +191,17 @@ import Badge from "../Badge/Badge";
 import Button from "../Button/Button";
 
 function renderPrice(cell, row) {
-  let color = "";
+  let appearance = "";
   if (row.age < 30) {
-    color = "success";
+    appearance = "success";
   } else if (row.age < 80) {
-    color = "info";
+    appearance = "info";
   } else {
-    color = "secondary";
+    appearance = "secondary";
   }
 
   return (
-    <Badge color={color} style={{ verticalAlign: "baseline" }}>
+    <Badge appearance={appearance} style={{ verticalAlign: "baseline" }}>
       {cell}
     </Badge>
   );
@@ -210,10 +210,10 @@ function renderPrice(cell, row) {
 function renderActions(cell, row) {
   return (
     <>
-      <Button variant="tertiary" onClick={() => console.log(row)}>
+      <Button role="tertiary" onClick={() => console.log(row)}>
         Edit
       </Button>
-      <Button variant="tertiary" onClick={() => console.log(row)}>
+      <Button role="tertiary" onClick={() => console.log(row)}>
         Delete
       </Button>
     </>
@@ -296,17 +296,17 @@ const Example = () => {
   const [showModal, toggleModal] = useState(false);
 
   function renderPrice(cell, row) {
-    let color = "";
+    let appearance = "";
     if (row.age < 30) {
-      color = "success";
+      appearance = "success";
     } else if (row.age < 80) {
-      color = "info";
+      appearance = "info";
     } else {
-      color = "secondary";
+      appearance = "secondary";
     }
 
     return (
-      <Badge color={color} style={{ verticalAlign: "baseline" }}>
+      <Badge appearance={appearance} style={{ verticalAlign: "baseline" }}>
         {cell}
       </Badge>
     );
@@ -315,10 +315,10 @@ const Example = () => {
   function renderCellActions(cell, row) {
     return (
       <>
-        <Button variant="tertiary" onClick={() => console.log(row)}>
+        <Button role="tertiary" onClick={() => console.log(row)}>
           Edit
         </Button>
-        <Button variant="tertiary" onClick={(e) => e.stopPropagation()}>
+        <Button role="tertiary" onClick={(e) => e.stopPropagation()}>
           Delete
         </Button>
       </>

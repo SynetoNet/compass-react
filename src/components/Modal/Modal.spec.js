@@ -63,7 +63,7 @@ describe("Actions Modal", () => {
     expect(component.exists(".btn-secondary")).toBeTruthy();
     expect(component.find(".btn-secondary").text()).toEqual("Cancel");
     expect(component.exists(".btn-primary")).toBeTruthy();
-    expect(component.find(".btn-primary").text()).toEqual("Primary");
+    expect(component.find(".btn-primary").last().text()).toEqual("Primary");
     expect(component.exists(".btn-tertiary")).toBeTruthy();
     expect(component.find(".btn-tertiary").text()).toEqual("Tertiary");
   });

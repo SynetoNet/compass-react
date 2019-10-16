@@ -84,7 +84,7 @@ import Badge from "../Badge/Badge";
 const Inbox = (
   <>
     Inbox{" "}
-    <Badge color="success" variant="strong" width={32} className="ml-2">
+    <Badge appearance="success" role="strong" width={32} className="ml-2">
       2
     </Badge>
   </>
@@ -93,7 +93,7 @@ const Inbox = (
 const Urgent = (
   <>
     Urgent{" "}
-    <Badge color="danger" variant="strong" width={32} className="ml-2">
+    <Badge appearance="danger" role="strong" width={32} className="ml-2">
       2
     </Badge>
   </>
@@ -102,7 +102,7 @@ const Urgent = (
 const Trash = (
   <>
     Trash{" "}
-    <Badge variant="outline" width={32}>
+    <Badge role="outline" width={32}>
       99+
     </Badge>
   </>
@@ -138,7 +138,7 @@ import Button from "../Button/Button";
   extra={
     <>
       <strong style={{ flex: 1 }}>Extra title</strong>
-      <Button variant="link">Extra link</Button>
+      <Button role="link">Extra link</Button>
     </>
   }
   align="end"
@@ -205,7 +205,7 @@ const ControlledTabsWithDropdown = () => {
         extra={
           <Dropdown
             label="Dropdown"
-            variant="tertiary"
+            role="tertiary"
             onSelect={eventKey =>
               console.log("selected dropdown option", eventKey)
             }

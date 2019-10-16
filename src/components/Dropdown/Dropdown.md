@@ -39,12 +39,12 @@
 />
 ```
 
-#### **Variants**
+#### **Roles**
 
 ```jsx
 <Dropdown
   label="Primary Dropdown"
-  variant="primary"
+  role="primary"
   onSelect={eventKey => console.log(eventKey)}
   items={[{ label: "Option 1" }, { label: "Option 2" }]}
 />
@@ -53,7 +53,7 @@
 
 <Dropdown
   label="Tertiary Dropdown"
-  variant="tertiary"
+  role="tertiary"
   onSelect={eventKey => console.log(eventKey)}
   items={[{ label: "Option 1" }, { label: "Option 2" }]}
 />
@@ -79,7 +79,7 @@ import { Badge } from "../../index";
       <Badge block>Normal action</Badge>
     </Dropdown.Item>
     <Dropdown.Item eventKey="success">
-      <Badge color="success" block>
+      <Badge appearance="success" block>
         Success action
       </Badge>
     </Dropdown.Item>

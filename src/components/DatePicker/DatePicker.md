@@ -109,7 +109,7 @@ const ExampleModal = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={() => toggleModal(true)}>
+      <Button onClick={() => toggleModal(true)}>
         Open modal
       </Button>
 

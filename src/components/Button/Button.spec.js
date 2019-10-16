@@ -10,14 +10,14 @@ describe("Default Button", () => {
 
   test("primary Button", () => {
     const component = renderer.create(
-      <Button variant="primary">Primary</Button>
+      <Button role="primary">Primary</Button>
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test("tertiary Button", () => {
     const component = renderer.create(
-      <Button variant="tertiary">Tertiary</Button>
+      <Button role="tertiary">Tertiary</Button>
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
@@ -26,14 +26,14 @@ describe("Default Button", () => {
 describe("Accept Button", () => {
   test("secondary success Button", () => {
     const component = renderer.create(
-      <Button color="success">Secondary</Button>
+      <Button appearance="success">Secondary</Button>
     );
     expect(component.toJSON()).toMatchSnapshot();
   });
 
   test("primary success Button", () => {
     const component = renderer.create(
-      <Button color="success" variant="primary">
+      <Button appearance="success" role="primary">
         Primary
       </Button>
     );
@@ -42,7 +42,7 @@ describe("Accept Button", () => {
 
   test("tertiary success Button", () => {
     const component = renderer.create(
-      <Button color="success" variant="tertiary">
+      <Button appearance="success" role="tertiary">
         Primary
       </Button>
     );
@@ -58,7 +58,7 @@ describe("Disabled Button", () => {
 
   test("primary disabled Button", () => {
     const component = renderer.create(
-      <Button disabled variant="primary">
+      <Button disabled role="primary">
         Primary
       </Button>
     );
@@ -67,7 +67,7 @@ describe("Disabled Button", () => {
 
   test("tertiary disabled Button", () => {
     const component = renderer.create(
-      <Button disabled variant="tertiary">
+      <Button disabled role="tertiary">
         Primary
       </Button>
     );

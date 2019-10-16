@@ -16,52 +16,52 @@ Used to communicates various objects states or exceptional situations.
 #### **Colors**
 
 ```jsx
-<Badge color="success">Success</Badge>
+<Badge appearance="success">Success</Badge>
 <i className="pr-2" />
-<Badge color="danger">Error</Badge>
+<Badge appearance="danger">Error</Badge>
 <i className="pr-2" />
-<Badge color="warning">Warning</Badge>
+<Badge appearance="warning">Warning</Badge>
 <i className="pr-2" />
-<Badge color="info">Info</Badge>
+<Badge appearance="info">Info</Badge>
 <i className="pr-2" />
-<Badge color="secondary">Neutral</Badge>
+<Badge appearance="secondary">Neutral</Badge>
 ```
 
 #### **Strong**
 
 ```jsx
-<Badge color="success" variant="strong">Success</Badge>
+<Badge appearance="success" role="strong">Success</Badge>
 <i className="pr-2" />
-<Badge color="danger" variant="strong">Error</Badge>
+<Badge appearance="danger" role="strong">Error</Badge>
 <i className="pr-2" />
-<Badge color="warning" variant="strong">Warning</Badge>
+<Badge appearance="warning" role="strong">Warning</Badge>
 <i className="pr-2" />
-<Badge color="info" variant="strong">Info</Badge>
+<Badge appearance="info" role="strong">Info</Badge>
 <i className="pr-2" />
-<Badge variant="strong">Neutral</Badge>
+<Badge role="strong">Neutral</Badge>
 ```
 
 #### **Outline**
 
 ```jsx
-<Badge color="success" variant="outline">Success</Badge>
+<Badge appearance="success" role="outline">Success</Badge>
 <i className="pr-2" />
-<Badge color="danger" variant="outline">Error</Badge>
+<Badge appearance="danger" role="outline">Error</Badge>
 <i className="pr-2" />
-<Badge color="warning" variant="outline">Warning</Badge>
+<Badge appearance="warning" role="outline">Warning</Badge>
 <i className="pr-2" />
-<Badge color="info" variant="outline">Info</Badge>
+<Badge appearance="info" role="outline">Info</Badge>
 <i className="pr-2" />
-<Badge variant="outline">Neutral</Badge>
+<Badge role="outline">Neutral</Badge>
 ```
 
 #### **Stretch width**
 
 ```jsx
 <div style={{ width: '250px'}} className="pb-2">
-  <Badge color="success" block>250px container</Badge>
+  <Badge appearance="success" block>250px container</Badge>
 </div>
-<Badge color="danger" block>Full width</Badge>
+<Badge appearance="danger" block>Full width</Badge>
 ```
 
 #### **Modular width**
@@ -70,9 +70,9 @@ Used to communicates various objects states or exceptional situations.
 
 <Badge width={32}>32px</Badge>
 <div className="pt-2" />
-<Badge color="success" width={64}>64px</Badge>
+<Badge appearance="success" width={64}>64px</Badge>
 <div className="pt-2" />
-<Badge color="warning" width={96}>96px</Badge>
+<Badge appearance="warning" width={96}>96px</Badge>
 <div className="pt-2" />
-<Badge color="danger" width={128}>128px</Badge>
+<Badge appearance="danger" width={128}>128px</Badge>
 ```

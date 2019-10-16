@@ -12,33 +12,33 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       key="tertiary"
     >
       <Button
+        appearance="primary"
         className="px-0"
-        color="accent"
         disabled={false}
+        role="tertiary"
         type="button"
-        variant="tertiary"
         width="auto"
       >
         Tertiary
       </Button>
     </div>
     <Button
-      color="accent"
+      appearance="primary"
       disabled={false}
       key="secondary"
+      role="secondary"
       type="button"
-      variant="secondary"
       width="auto"
     >
       Cancel
     </Button>
     <Button
+      appearance="primary"
       className="ml-2"
-      color="accent"
       disabled={false}
       key="primary"
+      role="primary"
       type="button"
-      variant="primary"
       width="auto"
     >
       Primary
@@ -55,11 +55,11 @@ exports[`Default Modal modal without header or content snapshop 1`] = `
 >
   <ModalFooter>
     <Button
-      color="accent"
+      appearance="primary"
       disabled={false}
       key="secondary"
+      role="secondary"
       type="button"
-      variant="secondary"
       width="auto"
     >
       Close
@@ -120,11 +120,11 @@ exports[`Simple Modal modal with title and content snapshop 1`] = `
   </Component>
   <ModalFooter>
     <Button
-      color="accent"
+      appearance="primary"
       disabled={false}
       key="secondary"
+      role="secondary"
       type="button"
-      variant="secondary"
       width="auto"
     >
       Close

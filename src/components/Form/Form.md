@@ -79,7 +79,7 @@ import { Button } from "../../index";
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
 
-  <Button variant="primary" type="submit">
+  <Button type="submit">
     Submit
   </Button>
 </Form>;
@@ -156,7 +156,7 @@ import { Col, Button } from "../../index";
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group>
 
-  <Button variant="primary" type="submit">
+  <Button type="submit">
     Submit
   </Button>
 </Form>;
@@ -222,7 +222,7 @@ const FormValidation = () => {
         />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <Button type="submit">
         Submit
       </Button>
     </Form>

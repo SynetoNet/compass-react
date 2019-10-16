@@ -14,17 +14,17 @@ class Dropdown extends React.Component {
   static Divider = BSDropdown.Divider;
 
   render() {
-    const { items, label, variant, children, ...props } = this.props;
+    const { items, label, role, children, ...props } = this.props;
 
     return (
       <BSDropdown {...props}>
-        {this.renderTrigger(label, variant)}
+        {this.renderTrigger(label, role)}
         {items ? this.renderItems(items) : children}
       </BSDropdown>
     );
   }
 
-  renderTrigger = (label, variant) => {
+  renderTrigger = (label, role) => {
     if (typeof label !== "string") {
       const trigger = React.forwardRef((props, ref) => {
         return (
@@ -46,7 +46,7 @@ class Dropdown extends React.Component {
     }
 
     return (
-      <Dropdown.Toggle variant={variant}>
+      <Dropdown.Toggle variant={role}>
         {label}
         <Ink />
       </Dropdown.Toggle>
@@ -70,7 +70,7 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-  variant: PropTypes.string,
+  role: PropTypes.string,
   label: PropTypes.node.isRequired,
   alignRight: PropTypes.bool,
   items: PropTypes.arrayOf(
@@ -83,7 +83,7 @@ Dropdown.propTypes = {
 };
 
 Dropdown.defaultProps = {
-  variant: "secondary",
+  role: "secondary",
   alignRight: false
 };
 

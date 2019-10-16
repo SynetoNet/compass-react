@@ -11,7 +11,7 @@ configure({ adapter: new Adapter() });
 describe("Default Tooltip", () => {
   const defaultExample = (
     <Tooltip text="Some additional info">
-      <Badge variant="strong">Over over me!</Badge>
+      <Badge role="strong">Over over me!</Badge>
     </Tooltip>
   );
 

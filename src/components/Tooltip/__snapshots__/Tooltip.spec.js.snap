@@ -14,9 +14,10 @@ exports[`Default Tooltip popover snapshop 1`] = `
   trigger="hover"
 >
   <Badge
+    appearance="secondary"
     block={false}
-    color="secondary"
-    variant="strong"
+    role="strong"
+    varroleiant="default"
     width="auto"
   >
     Over over me!

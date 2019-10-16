@@ -7,30 +7,30 @@ import BootstrapBadge from "react-bootstrap/Badge";
 import "./Badge.scss";
 import "../../base/fixed-width.scss";
 
-const Badge = ({ color, variant, width, block, className = "", ...props }) => {
+const Badge = ({ appearance, role, width, block, className = "", ...props }) => {
   const classes = (
     classNames({
-      outline: variant === "outline",
-      strong: variant === "strong",
+      outline: role === "outline",
+      strong: role === "strong",
       ["width-" + width]: width,
       block
     }) + ` ${className}`
   ).trim();
 
-  return <BootstrapBadge variant={color} className={classes} {...props} pill />;
+  return <BootstrapBadge variant={appearance} className={classes} {...props} pill />;
 };
 
 Badge.propTypes = {
-  color: PropTypes.oneOf(["success", "danger", "warning", "info", "secondary"]),
-  variant: PropTypes.oneOf(["default", "strong", "outline"]),
+  appearance: PropTypes.oneOf(["success", "danger", "warning", "info", "secondary"]),
+  role: PropTypes.oneOf(["default", "strong", "outline"]),
   width: PropTypes.oneOf([32, 64, 96, 128, "auto"]),
   /** Makes badge stretch to the size of it's parent */
   block: PropTypes.bool
 };
 
 Badge.defaultProps = {
-  color: "secondary",
-  variant: "default",
+  appearance: "secondary",
+  varroleiant: "default",
   width: "auto",
   block: false
 };

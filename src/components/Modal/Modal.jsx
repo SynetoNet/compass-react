@@ -61,7 +61,7 @@ class Modal extends React.Component {
       elements.push(
         <div className="modal-footer_tertiary" key="tertiary">
           <Button
-            variant="tertiary"
+            role="tertiary"
             onClick={tertiary.onClick}
             className="px-0"
             disabled={tertiary.disabled ? true : false}
@@ -75,7 +75,7 @@ class Modal extends React.Component {
     if (secondary) {
       elements.push(
         <Button
-          variant="secondary"
+          role="secondary"
           onClick={secondary.onClick || this.props.onHide}
           key="secondary"
           disabled={secondary.disabled ? true : false}
@@ -88,7 +88,6 @@ class Modal extends React.Component {
     if (primary) {
       elements.push(
         <Button
-          variant="primary"
           onClick={primary.onClick}
           key="primary"
           className="ml-2"
