@@ -2,8 +2,7 @@
 
 exports[`Accept Button primary success Button 1`] = `
 <button
-  className="btn-success width-auto btn btn-primary"
-  color="success"
+  className="width-auto btn btn-success"
   disabled={false}
   onClick={[Function]}
   type="button"
@@ -32,8 +31,7 @@ exports[`Accept Button primary success Button 1`] = `
 
 exports[`Accept Button secondary success Button 1`] = `
 <button
-  className="btn-success width-auto btn btn-primary"
-  color="success"
+  className="width-auto btn btn-success"
   disabled={false}
   onClick={[Function]}
   type="button"
@@ -62,8 +60,7 @@ exports[`Accept Button secondary success Button 1`] = `
 
 exports[`Accept Button tertiary success Button 1`] = `
 <button
-  className="btn-success width-auto btn btn-tertiary"
-  color="success"
+  className="width-auto btn-success btn btn-link"
   disabled={false}
   onClick={[Function]}
   type="button"
@@ -92,8 +89,7 @@ exports[`Accept Button tertiary success Button 1`] = `
 
 exports[`Default Button primary Button 1`] = `
 <button
-  className="btn-primary width-auto btn btn-primary"
-  color="primary"
+  className="width-auto btn btn-primary"
   disabled={false}
   onClick={[Function]}
   type="button"
@@ -122,8 +118,7 @@ exports[`Default Button primary Button 1`] = `
 
 exports[`Default Button secondary Button 1`] = `
 <button
-  className="btn-primary width-auto btn btn-primary"
-  color="primary"
+  className="width-auto btn btn-primary"
   disabled={false}
   onClick={[Function]}
   type="button"
@@ -152,8 +147,7 @@ exports[`Default Button secondary Button 1`] = `
 
 exports[`Default Button tertiary Button 1`] = `
 <button
-  className="btn-primary width-auto btn btn-tertiary"
-  color="primary"
+  className="width-auto btn-primary btn btn-link"
   disabled={false}
   onClick={[Function]}
   type="button"
@@ -182,8 +176,7 @@ exports[`Default Button tertiary Button 1`] = `
 
 exports[`Disabled Button primary disabled Button 1`] = `
 <button
-  className="btn-primary width-auto disabled btn btn-primary"
-  color="primary"
+  className="width-auto disabled btn btn-primary"
   disabled={true}
   onClick={[Function]}
   type="button"
@@ -212,8 +205,7 @@ exports[`Disabled Button primary disabled Button 1`] = `
 
 exports[`Disabled Button secondary disabled Button 1`] = `
 <button
-  className="btn-primary width-auto disabled btn btn-primary"
-  color="primary"
+  className="width-auto disabled btn btn-primary"
   disabled={true}
   onClick={[Function]}
   type="button"
@@ -242,8 +234,7 @@ exports[`Disabled Button secondary disabled Button 1`] = `
 
 exports[`Disabled Button tertiary disabled Button 1`] = `
 <button
-  className="btn-primary width-auto disabled btn btn-tertiary"
-  color="primary"
+  className="width-auto disabled btn-primary btn btn-link"
   disabled={true}
   onClick={[Function]}
   type="button"

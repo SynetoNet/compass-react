@@ -13,8 +13,8 @@ describe("Default Modal", () => {
     const component = mount(example);
     expect(component.exists(".modal-header")).toBeFalsy();
     expect(component.exists(".modal-body")).toBeFalsy();
-    expect(component.exists(".btn-secondary")).toBeTruthy();
-    expect(component.find(".btn-secondary").text()).toEqual("Close");
+    expect(component.exists(".btn-outline-primary")).toBeTruthy();
+    expect(component.find(".btn-outline-primary").text()).toEqual("Close");
   });
 
   test("modal without header or content snapshop", () => {
@@ -60,12 +60,12 @@ describe("Actions Modal", () => {
 
   test("modal with actions", () => {
     const component = mount(example);
-    expect(component.exists(".btn-secondary")).toBeTruthy();
-    expect(component.find(".btn-secondary").text()).toEqual("Cancel");
+    expect(component.exists(".btn-outline-primary")).toBeTruthy();
+    expect(component.find(".btn-outline-primary").text()).toEqual("Cancel");
     expect(component.exists(".btn-primary")).toBeTruthy();
     expect(component.find(".btn-primary").last().text()).toEqual("Primary");
-    expect(component.exists(".btn-tertiary")).toBeTruthy();
-    expect(component.find(".btn-tertiary").text()).toEqual("Tertiary");
+    expect(component.exists(".btn-link")).toBeTruthy();
+    expect(component.find(".btn-link").text()).toEqual("Tertiary");
   });
 
   test("modal with actions snapshop", () => {

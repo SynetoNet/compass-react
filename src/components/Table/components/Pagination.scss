@@ -11,8 +11,8 @@
 
 .page-item {
   &:not(.active) .page-link:hover {
-    background: $accent-light-85;
-    color: $accent;
+    background: $primary-light-85;
+    color: $primary;
     z-index: 0;
     border-color: $neutral-24;
   }

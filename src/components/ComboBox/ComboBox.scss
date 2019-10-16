@@ -13,34 +13,34 @@
   background-color: $neutral-0 !important;
   color: #5b69e1 !important;
   &:hover {
-    background-color: $accent !important;
+    background-color: $primary !important;
     color: $neutral-0 !important;
   }
 }
 
 .combo-box__option--is-selected {
-  background-color: $accent-light-85 !important;
+  background-color: $primary-light-85 !important;
   color: $neutral-90 !important;
 }
 
 .combo-box__option--is-focused {
-  background-color: $accent !important;
+  background-color: $primary !important;
   color: $neutral-0 !important;
 }
 
 .combo-box__multi-value__label {
   font-size: $font-size-sm;
   color: $neutral-0 !important;
-  background-color: $accent;
+  background-color: $primary;
   padding: 3px 10px !important;
   &:hover {
-    background-color: darken($accent, 10%);
+    background-color: darken($primary, 10%);
   }
 }
 
 .combo-box__multi-value__remove {
   &:hover {
-    color: $accent !important;
-    background-color: $accent-light-85 !important;
+    color: $primary !important;
+    background-color: $primary-light-85 !important;
   }
 }

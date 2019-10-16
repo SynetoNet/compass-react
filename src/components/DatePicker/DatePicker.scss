@@ -53,10 +53,10 @@
     // padding-top: 8px;
   }
   .react-datepicker__time-list-item:hover:not(.react-datepicker__time-list-item--selected) {
-    background-color: $accent-light-85 !important;
+    background-color: $primary-light-85 !important;
   }
   .react-datepicker__time-list-item--selected {
-    background-color: $accent !important;
+    background-color: $primary !important;
   }
   .react-datepicker-time__header {
     padding: 0.5rem 0;
@@ -91,7 +91,7 @@
   color: $neutral-90;
   &:hover {
     border-radius: 1px;
-    background-color: $accent-light-85;
+    background-color: $primary-light-85;
     color: $neutral-90;
   }
   &.react-datepicker__day--disabled {
@@ -125,7 +125,7 @@
 .react-datepicker__day--today::after {
   position: absolute;
   content: "";
-  border: 2px solid $accent;
+  border: 2px solid $primary;
   border-radius: 2px;
   bottom: 6px;
   right: 45%;
@@ -145,11 +145,11 @@
 }
 
 .react-datepicker__day--selected {
-  background-color: $accent;
+  background-color: $primary;
   border-radius: 1px;
   color: $neutral-0;
   &:hover {
-    background-color: $accent;
+    background-color: $primary;
     border-radius: 1px;
     color: $neutral-0;
   }

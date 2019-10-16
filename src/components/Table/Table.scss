@@ -2,7 +2,7 @@
 @import "../../base/variables";
 
 .selected {
-  background-color: $accent-light-85 !important;
+  background-color: $primary-light-85 !important;
 }
 
 .table-pagination_total {
@@ -43,8 +43,8 @@
   color: $neutral-60;
 
   &:hover {
-    color: $accent;
-    background: $accent-light-85;
+    color: $primary;
+    background: $primary-light-85;
   }
 }
 
@@ -104,11 +104,11 @@
 
 .react-bootstrap-table th.sortable {
   &:hover {
-    color: $accent;
+    color: $primary;
   }
 
   & .caret-4-desc {
-    color: $accent;
+    color: $primary;
     &:before {
       display: none;
     }
@@ -117,7 +117,7 @@
     }
   }
   & .caret-4-asc {
-    color: $accent;
+    color: $primary;
     &:before {
       margin-left: 3.5px;
     }

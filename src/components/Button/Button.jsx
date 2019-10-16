@@ -34,7 +34,6 @@ const Button = ({
   const _disabled = loading || disabled;
 
   let classes = classNames({
-    ["btn-" + appearance]: appearance,
     ["width-" + width]: width,
     disabled: _disabled
   });
@@ -86,13 +85,21 @@ const Button = ({
     !_disabled && onClick && onClick(e);
   }
 
+  if (role === 'secondary') {
+    appearance = "outline-" + appearance;
+  }
+
+  if (role === 'tertiary' || role === 'link') {
+    classes += ' btn-' + appearance;
+    appearance = "link";
+  }
+
   return (
     <BootstrapButton
-      variant={role}
+      variant={appearance}
       className={classes}
       disabled={_disabled}
       onClick={_onClick}
-      color={appearance}
       {...props}
     >
       {text}

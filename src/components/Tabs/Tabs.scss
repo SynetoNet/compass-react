@@ -10,14 +10,14 @@
     position: relative;
 
     &.active {
-      color: $accent;
+      color: $primary;
       border-color: #dde3f0 #dde3f0 #fff;
     }
 
     &:hover::before,
     &.active::before {
       display: block;
-      background: $accent;
+      background: $primary;
       content: "";
       position: absolute;
     }
@@ -34,7 +34,7 @@
     // remove hover border
     &:hover:not(.active) {
       border-color: transparent;
-      color: $accent;
+      color: $primary;
     }
 
     &.active::before {
@@ -81,7 +81,7 @@
       // remove hover border
       &:hover:not(.active) {
         border-color: transparent;
-        color: $accent;
+        color: $primary;
       }
       &.active {
         border-right: none;
