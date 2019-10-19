@@ -1,3 +1,22 @@
+#### 0.12.1 (2019-10-19)
+
+##### New Features
+
+* **Button:**  add block button ([13f46634](https://github.com/SynetoNet/compass-react/commit/13f46634d6468a1e049003f728d62c49cfe63b45))
+* **Popover:**  add width prop ([d152d4f2](https://github.com/SynetoNet/compass-react/commit/d152d4f293038dbc71b53e76884d037c8dbe0578))
+* **Table:**
+  *  add pointer cursor on rows that have events ([aff6b5ec](https://github.com/SynetoNet/compass-react/commit/aff6b5eca1541aac280fc9d0c415a94519a6e262))
+  *  add default search ([09de8f00](https://github.com/SynetoNet/compass-react/commit/09de8f008776b7b233db3d24ffc3833ddc3ea921))
+
+##### Bug Fixes
+
+* **Tooltip:**  fix prop types ([67e06842](https://github.com/SynetoNet/compass-react/commit/67e0684283134ced29bdcf21411fb4b8205eb4cc))
+* **Table:**  fix prop types ([77f1bbc5](https://github.com/SynetoNet/compass-react/commit/77f1bbc5b41b654e7c8c60103f4b77c7ef06682a))
+
+##### Tests
+
+*  update test snapshots ([4eaed114](https://github.com/SynetoNet/compass-react/commit/4eaed114ff066852ae98b7712a3f582fd211c696))
+
 # 0.12.0 (2019-10-16)
 
 ### Breaking Changes
