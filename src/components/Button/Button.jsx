@@ -111,7 +111,7 @@ const Button = ({
 Button.propTypes = {
   role: PropTypes.oneOf(["primary", "tertiary", "secondary", "link"]),
   appearance: PropTypes.oneOf(["primary", "success", "danger", "warning", "info"]),
-  width: PropTypes.oneOf([32, 64, 96, 128, "auto"]),
+  width: PropTypes.oneOf([32, 64, 96, 128, "100%"]),
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   disabled: PropTypes.bool,
   loading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
@@ -123,7 +123,7 @@ Button.defaultProps = {
   role: "primary",
   appearance: "primary",
   type: "button",
-  width: "auto",
+  width: "100%",
   disabled: false
 };
 

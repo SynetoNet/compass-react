@@ -48,6 +48,15 @@
 </Button>
 ```
 
+#### **Block Buttons**
+
+```jsx
+<Button block>Primary</Button>
+<i className="pr-2" />
+<Button block appearance="success">Success</Button>
+<i className="pr-2" />
+```
+
 #### **Button types**
 
 ```jsx
