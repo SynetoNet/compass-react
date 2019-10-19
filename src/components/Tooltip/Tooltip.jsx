@@ -39,7 +39,7 @@ function getTriggerProp(trigger) {
 
 Tooltip.propTypes = {
   theme: PropTypes.oneOf(["light", "dark"]),
-  text: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.node.isRequired]),
   placement: PropTypes.oneOf(["top", "bottom", "left", "right", "auto"]),
   trigger: PropTypes.oneOf(["focus", "click", "hover"])
 };
