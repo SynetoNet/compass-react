@@ -372,6 +372,11 @@ const Example = () => {
             }
           },
         } }
+        rowClasses={(row, rowIndex) => {
+          if (rowIndex === 1) {
+            return 'hasEvent';
+          }
+        }}
         scrollable
         onSelect={({ item, isSelected }) => console.log(item, isSelected)}
 

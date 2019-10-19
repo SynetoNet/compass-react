@@ -93,7 +93,7 @@ const Table = ({
           if (initialProps.onSearch) {
             props.searchProps.onSearch = initialProps.onSearch;
           }
-          console.log(props.searchProps)
+
           return (
           <>
             {_actions || extra || search ? (
