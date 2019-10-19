@@ -17,7 +17,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
         disabled={false}
         role="tertiary"
         type="button"
-        width="auto"
+        width="100%"
       >
         Tertiary
       </Button>
@@ -28,7 +28,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       key="secondary"
       role="secondary"
       type="button"
-      width="auto"
+      width="100%"
     >
       Cancel
     </Button>
@@ -39,7 +39,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       key="primary"
       role="primary"
       type="button"
-      width="auto"
+      width="100%"
     >
       Primary
     </Button>
@@ -60,7 +60,7 @@ exports[`Default Modal modal without header or content snapshop 1`] = `
       key="secondary"
       role="secondary"
       type="button"
-      width="auto"
+      width="100%"
     >
       Close
     </Button>
@@ -125,7 +125,7 @@ exports[`Simple Modal modal with title and content snapshop 1`] = `
       key="secondary"
       role="secondary"
       type="button"
-      width="auto"
+      width="100%"
     >
       Close
     </Button>

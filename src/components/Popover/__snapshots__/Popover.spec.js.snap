@@ -63,6 +63,7 @@ exports[`Default Popover popover snapshop 1`] = `
                 defaultOverlayShown={false}
                 overlay={
                   <ForwardRef(render)
+                    style={null}
                     title="title"
                   >
                     content
@@ -86,6 +87,7 @@ exports[`Default Popover popover snapshop 1`] = `
     defaultOverlayShown={false}
     overlay={
       <ForwardRef(render)
+        style={null}
         title="title"
       >
         content
