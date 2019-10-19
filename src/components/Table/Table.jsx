@@ -86,14 +86,14 @@ const Table = ({
         data={data}
         columns={_columns}
         bootstrap4={true}
-        search
+        search={search}
       >
         {props => {
           // Here
           if (initialProps.onSearch) {
             props.searchProps.onSearch = initialProps.onSearch;
           }
-
+          console.log(props.searchProps)
           return (
           <>
             {_actions || extra || search ? (

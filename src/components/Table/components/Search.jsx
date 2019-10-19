@@ -17,6 +17,7 @@ const Search = props => {
           onChange={handleClick}
           placeholder="Search..."
           style={{ width: "200px" }}
+          value={props.searchText ? props.searchText : ""}
         />
 
         {props.searchText && (

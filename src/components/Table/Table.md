@@ -244,6 +244,14 @@ import { data, columns } from "./Table.utils";
 <Table data={data} columns={columns} keyField="id" search />;
 ```
 
+#### **Default Search**
+
+```jsx
+import { data, columns } from "./Table.utils";
+
+<Table data={data} columns={columns} keyField="id" search={{ defaultSearch:'al' }} />;
+```
+
 #### **Scrollable table**
 
 By default, a **`scrollable`** table has a fixed **250px** height on **`tbody`**. If you need to adjust this height, you should pass a custom CSS class on the table wrapper:
