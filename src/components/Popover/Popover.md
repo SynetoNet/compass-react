@@ -75,6 +75,7 @@ import Button from "../Button/Button";
     trigger="click"
     title="Title"
     content="Lorem Ipsum is simply dummy text."
+    width={500}
   >
     <Button>Click me!</Button>
   </Popover>
