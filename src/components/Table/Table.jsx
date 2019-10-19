@@ -198,7 +198,7 @@ Table.propTypes = {
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       field: PropTypes.string,
-      header: PropTypes.string,
+      header: PropTypes.oneOfType([PropTypes.string, PropTypes.node, PropTypes.object]),
       oneline: PropTypes.bool,
       width: PropTypes.string,
       /** `"bool", "function"` */
@@ -219,7 +219,7 @@ Table.propTypes = {
   wrapperClassName: PropTypes.string,
   /** additional CSS classes to be set on the table component */
   className: PropTypes.string,
-  actions: PropTypes.node,
+  actions:PropTypes.oneOfType([PropTypes.node, PropTypes.array]),
   extra: PropTypes.element
 };
 

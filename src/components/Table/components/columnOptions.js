@@ -1,4 +1,5 @@
 import { textFilter, selectFilter } from "react-bootstrap-table2-filter";
+import React from "react";
 
 function capitalize(s) {
   if (typeof s !== "string") return "";
@@ -21,7 +22,6 @@ export function getColumn(column, key) {
     filterOptions,
     ...otherProps
   } = column;
-
   const _style = {
     ...style
   };
@@ -48,10 +48,17 @@ export function getColumn(column, key) {
       flex: "none"
     });
   }
+
+  let headerFormatter;
+  if (React.isValidElement(children)) {
+    headerFormatter = () => children;
+  }
+
   return {
     dataField: field || "",
-    text: children || capitalize(header) || "",
+    text: (headerFormatter === '') ? children || capitalize(header) : "",
     sort: !!sort,
+    headerFormatter: headerFormatter ? headerFormatter : null,
     filter: filter
       ? filter === "text"
         ? textFilter()
