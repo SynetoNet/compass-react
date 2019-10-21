@@ -1,10 +1,10 @@
-#### 0.12.2 (2019-10-21)
+# 0.12.2 (2019-10-21)
 
-##### New Features
+### New Features
 
 * **Popover:**  remove force close on click outside ([b85ff524](https://github.com/SynetoNet/compass-react/commit/b85ff524e49210bd938edb3b0c2866c6bec1819f))
 
-##### Bug Fixes
+### Bug Fixes
 
 * **Table:**  fix header display ([782b5ac4](https://github.com/SynetoNet/compass-react/commit/782b5ac4a28163282bd39a38dd9f09e5cc55a185))
 
