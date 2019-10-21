@@ -56,7 +56,7 @@ export function getColumn(column, key) {
 
   return {
     dataField: field || "",
-    text: (headerFormatter === '') ? children || capitalize(header) : "",
+    text: !headerFormatter ? (children ? children : capitalize(header)) : "",
     sort: !!sort,
     headerFormatter: headerFormatter ? headerFormatter : null,
     filter: filter
