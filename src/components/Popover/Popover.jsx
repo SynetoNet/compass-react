@@ -13,10 +13,11 @@ class Popover extends React.Component {
       <div className="popover-container">
         <OverlayTrigger
           placement={placement}
-          {...getTriggerProp(trigger)}
+          trigger={trigger}
           container={this}
+
           overlay={
-            <BSPopover title={title} style={style} {...props}>
+            <BSPopover title={title} style={style}  {...props} >
               {content}
             </BSPopover>
           }
@@ -26,14 +27,6 @@ class Popover extends React.Component {
       </div>
     );
   }
-}
-
-function getTriggerProp(trigger) {
-  // force close on click outside
-  if (trigger === "click") {
-    return { trigger, rootClose: true };
-  }
-  return { trigger };
 }
 
 Popover.propTypes = {
