@@ -110,7 +110,7 @@ const Table = ({
               classes={classes}
               bordered={false}
               hover={true}
-              noDataIndication="No items"
+              noDataIndication={initialProps.noDataIndication}
               ref={tableRef}
               filter={filterFactory()}
               {..._selectable}
@@ -220,7 +220,8 @@ Table.propTypes = {
   /** additional CSS classes to be set on the table component */
   className: PropTypes.string,
   actions:PropTypes.oneOfType([PropTypes.node, PropTypes.array]),
-  extra: PropTypes.element
+  extra: PropTypes.element,
+  noDataIndication: PropTypes.string
 };
 
 export default Table;
