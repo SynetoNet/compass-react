@@ -1,6 +1,6 @@
-#### 0.12.4 (2019-10-24)
+# 0.12.4 (2019-10-24)
 
-##### Bug Fixes
+### Bug Fixes
 
 * **Popover:**  revert focus behavior on click ([7c86a96b](https://github.com/SynetoNet/compass-react/commit/7c86a96b5ea0b7e0b60eb1c57c130217338c1722))
 * **Table:**  set noDataIndication to incoming prop ([1bf27443](https://github.com/SynetoNet/compass-react/commit/1bf27443ff41697f245774d1ce488d3fc2b01c0a))
