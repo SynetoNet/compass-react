@@ -1,3 +1,9 @@
+# 0.12.5 (2019-10-29)
+
+### Bug Fixes
+
+* **Card:**  Add cardActions only if they are specified in props ([46ce0f25](https://github.com/SynetoNet/compass-react/commit/46ce0f255e0ae37fa153454948ce10f4495d2fdc))
+
 # 0.12.4 (2019-10-24)
 
 ### Bug Fixes
