@@ -12,7 +12,8 @@ const Card = ({ title, content, dropdown, icon, ...props }) => {
         <BSCard.Title>{title}</BSCard.Title>
         <BSCard.Text as={"div"}>{content}</BSCard.Text>
       </BSCard.Body>
-      <div className="cardActions">{dropdown}</div>
+      
+      {dropdown ? <div className="cardActions">{dropdown}</div> : null}
     </BSCard>
   );
 };
