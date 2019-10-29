@@ -1,3 +1,6 @@
+# 1.0.0 (2019-10-29)
+First major release of @syneto/compass-react
+
 # 0.12.5 (2019-10-29)
 
 ### Bug Fixes
