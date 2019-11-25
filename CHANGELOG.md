@@ -1,3 +1,9 @@
+#### 1.0.1 (2019-11-25)
+
+##### Tests
+
+*  update test snapshots ([c2792c0b](https://github.com/SynetoNet/compass-react/commit/c2792c0bfc5ef06870c992bffe88a5eb1f150f99))
+
 # 1.0.0 (2019-10-29)
 First major release of @syneto/compass-react
 
