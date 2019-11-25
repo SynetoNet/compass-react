@@ -1,11 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Default Toast popover snapshop 1`] = `
-<Bootstrap(Toast)
+<Toast
+  animation={true}
   autohide={false}
   className="toast-secondary"
   delay={3000}
   show={true}
+  transition={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "appear": false,
+        "in": false,
+        "mountOnEnter": false,
+        "timeout": 300,
+        "unmountOnExit": false,
+      },
+      "displayName": "Fade",
+      "render": [Function],
+    }
+  }
 >
   <ToastHeader
     closeButton={true}
@@ -23,5 +38,5 @@ exports[`Default Toast popover snapshop 1`] = `
   <ToastBody>
     Hello, world! This is a toast message.
   </ToastBody>
-</Bootstrap(Toast)>
+</Toast>
 `;

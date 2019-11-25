@@ -6,7 +6,7 @@ exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
   navbar={false}
   show={true}
 >
-  <Bootstrap(DropdownToggle)
+  <DropdownToggle
     variant="secondary"
   >
     Dropdown Label
@@ -18,13 +18,19 @@ exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
       radius={150}
       recenter={true}
     />
-  </Bootstrap(DropdownToggle)>
+  </DropdownToggle>
   <DropdownMenu
     alignRight={false}
     flip={true}
   >
     <DropdownItem
-      as={[Function]}
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "SafeAnchor",
+          "render": [Function],
+        }
+      }
       disabled={false}
       eventKey="option1"
       key="option1"
@@ -32,7 +38,13 @@ exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
       option1
     </DropdownItem>
     <DropdownItem
-      as={[Function]}
+      as={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "SafeAnchor",
+          "render": [Function],
+        }
+      }
       disabled={false}
       eventKey="option2"
       key="option2"
