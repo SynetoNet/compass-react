@@ -8,17 +8,16 @@ import "./Popover.scss";
 class Popover extends React.Component {
   render() {
     const { content, placement, trigger, title, width, ...props } = this.props;
-    const style = width ? { width, maxWidth: "none" } : null
+    const style = width ? { width, maxWidth: "none" } : null;
     return (
       <div className="popover-container">
         <OverlayTrigger
           placement={placement}
           {...getTriggerProp(trigger)}
-          container={this}
-
           overlay={
-            <BSPopover title={title} style={style} {...props} >
-              {content}
+            <BSPopover style={style} {...props}>
+              <BSPopover.Title>{title}</BSPopover.Title>
+              <BSPopover.Content>{content}</BSPopover.Content>
             </BSPopover>
           }
         >

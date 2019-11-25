@@ -5,7 +5,20 @@ exports[`Default Alert popover snapshop 1`] = `
   closeLabel="Close alert"
   dismissible={false}
   show={true}
-  transition={[Function]}
+  transition={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "appear": false,
+        "in": false,
+        "mountOnEnter": false,
+        "timeout": 300,
+        "unmountOnExit": false,
+      },
+      "displayName": "Fade",
+      "render": [Function],
+    }
+  }
   variant="primary"
 >
   This is a primary alert—check it out!
