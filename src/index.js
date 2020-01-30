@@ -15,8 +15,9 @@ export { default as Overlay } from "./components/Overlay/Overlay.jsx";
 export { default as Card } from "./components/Card/Card.jsx";
 export { default as Alert } from "./components/Alert/Alert.jsx";
 export { default as Toast } from "./components/Toast/Toast.jsx";
-export { default as OverlayTrigger } from "./components/OverlayTrigger/OverlayTrigger.jsx";
-
-export { Container } from "./layout/Container.jsx";
-export { Row } from "./layout/Row.jsx";
-export { Col } from "./layout/Col.jsx";
+export {
+  default as OverlayTrigger
+} from "./components/OverlayTrigger/OverlayTrigger.jsx";
+export { default as Container } from "./layout/Container/Container.jsx";
+export { default as Row } from "./layout/Row/Row.jsx";
+export { default as Col } from "./layout/Col/Col.jsx";
