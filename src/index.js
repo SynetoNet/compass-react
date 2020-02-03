@@ -18,6 +18,6 @@ export { default as Toast } from "./components/Toast/Toast.jsx";
 export {
   default as OverlayTrigger
 } from "./components/OverlayTrigger/OverlayTrigger.jsx";
-export { default as Container } from "./layout/Container/Container.jsx";
-export { default as Row } from "./layout/Row/Row.jsx";
-export { default as Col } from "./layout/Col/Col.jsx";
+export { default as Container } from "./Layout/Grid/Container/Container.jsx";
+export { default as Row } from "./Layout/Grid/Row/Row.jsx";
+export { default as Col } from "./Layout/Grid/Col/Col.jsx";

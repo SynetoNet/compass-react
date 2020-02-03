@@ -30,10 +30,18 @@ module.exports = {
     },
     {
       name: "Layout",
-      content: "src/layout/Layout.md",
-      components: "src/layout/**/*.jsx",
-      usageMode: "expand",
-      sectionDepth: 1
+      sections: [
+        {
+          name: "Layout",
+          content: "src/Layout/Layout/Layout.md"
+        },
+        {
+          name: "Grid",
+          content: "src/Layout/Grid/Grid.md",
+          components: "src/Layout/Grid/**/*.jsx",
+          usageMode: "collapse"
+        }
+      ]
     },
     {
       name: "UI Components",
