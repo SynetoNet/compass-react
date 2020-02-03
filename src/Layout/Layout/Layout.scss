@@ -1,0 +1,29 @@
+@import "../../base/colors";
+
+.compass-layout-has-drawer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100px;
+}
+
+.compass-layout {
+  width: 100%;
+  min-height: 100px;
+}
+
+.compass-layout-drawer {
+  background-color: $semantic-accent-light-60;
+  width: 251px;
+  height: 100%;
+}
+
+.compass-layout-header {
+  background-color: $neutral-24;
+  width: 100%;
+  height: 48px;
+}
+
+.compass-layout-content {
+  background-color: $secondary;
+}
