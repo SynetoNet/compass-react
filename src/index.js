@@ -21,3 +21,4 @@ export {
 export { default as Container } from "./Layout/Grid/Container/Container.jsx";
 export { default as Row } from "./Layout/Grid/Row/Row.jsx";
 export { default as Col } from "./Layout/Grid/Col/Col.jsx";
+export { default as TitleBar } from "./Layout/TitleBar/TitleBar.jsx";

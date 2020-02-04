@@ -40,6 +40,10 @@ module.exports = {
           content: "src/Layout/Grid/Grid.md",
           components: "src/Layout/Grid/**/*.jsx",
           usageMode: "collapse"
+        },
+        {
+          name: "TitleBar",
+          content: "src/Layout/TitleBar/TitleBar.md"
         }
       ]
     },
