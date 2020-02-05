@@ -3,12 +3,13 @@
 
 ### **Global settings** ###
 Compass sets basic global display, typography, and link styles.
-When more control is needed, check out [utility classes](src/base/Utilities.md).
+When more control is needed, check out Compass custom [utility classes](src/base/Utilities.md) or use the inherited
+ [Bootstrap Typography classes](https://getbootstrap.com/docs/4.4/content/typography/)
 
 Defaults:
 - font-family: `Roboto`
 - font-size: `13px`
-- we use `px`
+- all sizes use `px`
 
 ### **Headings** ###
 ```jsx
@@ -16,7 +17,7 @@ Defaults:
     <thead>
         <tr>
             <th>Heading</th>
-            <th>Size</th>
+            <th>Font size</th>
             <th>Line height</th>
             <th>Example</th>
         </tr>
@@ -66,6 +67,82 @@ Defaults:
         </tr>
     </tbody>
 </table>
+```
+
+### **Size scale** ###
+```jsx
+<table className="table">
+    <thead>
+        <tr>
+            <th>Class</th>
+            <th>Font size</th>
+            <th>Line height</th>
+            <th>Example</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>font-size-26</td>
+            <td>24px</td>
+            <td>30px</td>
+            <td><p className="font-size-26">Example</p></td>
+        </tr>
+
+        <tr>
+            <td>font-size-24</td>
+            <td>24px</td>
+            <td>28px</td>
+            <td><p className="font-size-24">Example</p></td>
+        </tr>
+
+        <tr>
+            <td>font-size-20</td>
+            <td>20px</td>
+            <td>24px</td>
+            <td><p className="font-size-20">Example</p></td>
+        </tr>
+
+        <tr>
+            <td>font-size-17</td>
+            <td>17px</td>
+            <td>20px</td>
+            <td><p className="font-size-17">Example</p></td>
+        </tr>
+
+        <tr>
+            <td>font-size-15</td>
+            <td>15px</td>
+            <td>18px</td>
+            <td><p className="font-size-15">Example</p></td>
+        </tr>
+
+        <tr>
+            <td>font-size-23</td>
+            <td>13px</td>
+            <td>15px</td>
+            <td><p className="font-size-13">Example</p></td>
+        </tr>
+
+        <tr>
+            <td>font-size-12</td>
+            <td>12px</td>
+            <td>14px</td>
+            <td><p className="font-size-12">Example</p></td>
+        </tr>
+    </tbody>
+</table>
+```
+
+### **Font weight** ###
+```jsx
+<p className="font-weight-bold">Bold text.</p>
+<p className="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
+<p className="font-weight-medium">Medium bold weight text</p>
+<p className="font-weight-normal">Normal weight text.</p>
+<p className="font-weight-light">Light weight text.</p>
+<p className="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
+<p className="font-italic">Italic text.</p>
 ```
 
 ```jsx

@@ -63,6 +63,49 @@ h6 {
   line-height: 15px;
 }
 
+.font-size-26 {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.font-size-24 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.font-size-17 {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.font-size-15 {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.font-size-13 {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+p {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
 .text-muted {
   color: $neutral-60 !important;
 }
@@ -74,13 +117,24 @@ h6 {
 @font-face {
   font-family: "Roboto";
   src: url("./assets/fonts/Roboto-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Roboto";
   src: url("./assets/fonts/Roboto-Italic.ttf") format("ttf");
+  font-weight: normal;
   font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -88,6 +142,7 @@ h6 {
   font-family: "Roboto";
   src: url("./assets/fonts/Roboto-Bold.ttf") format("ttf");
   font-weight: bold;
+  font-style: normal;
   font-display: swap;
 }
 
