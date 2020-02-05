@@ -1,11 +1,15 @@
 // BRAND
-$brand: #d21d86;
+$brand-dark-80: #570936;
+$brand-dark-40: #ad0f6c;
+$brand-highlight: #d21d86;
+$brand-light-40: #cf6ea7;
+$brand-light-80: #efcfe2;
 
-// ACCENT COLORS
+// ACCENT
 $accent: #5b69e1;
-$primary-light-85: #ebf2ff;
+$accent-light-85: #ebf2ff;
 
-// NEUTRAL COLORS
+// NEUTRAL
 $neutral-100: #181c37;
 $neutral-90: #343855;
 $neutral-60: #7a8095;
@@ -14,10 +18,12 @@ $neutral-24: #c8d6eb;
 $neutral-12: #e1e8f1;
 $neutral-6: #eff2f9;
 $neutral-3: #f6fafb;
-$neutral-0: #ffffff;
-// $neutral-90-vivid: #2c3a67;
+$neutral-0: #fff;
 
-// SEMANTIC COLORS
+// ADJUSTED NEUTRALS
+$neutral-90-vivid: #2c3a67;
+
+// SEMANTIC
 // info
 $semantic-info: #22a0e9;
 $semantic-info-dark-20: #2b93cf;
@@ -46,12 +52,32 @@ $semantic-danger-dark-30: #a63d47;
 $semantic-danger-light-60: #f5bfc5;
 $semantic-danger-light-85: #fbe8e9;
 
-// danger
+// accent
 $semantic-accent-contrast: #4f5ed7;
 $semantic-accent-dark-20: #4552c0;
-$semantic-accent-dark-30: #3646c4;
+$semantic-accent-dark-30: #2e3aa2;
 $semantic-accent-light-60: #b1b9ff;
 $semantic-accent-light-85: #dadefd;
+
+// CHARTING
+$chart-red: #e76974;
+$chart-red-light-85: #fceaec;
+$chart-orange: #f4a83b;
+$chart-orange-light-85: #fdf2e4;
+$chart-yellow: #fad250;
+$chart-yellow-light-85: #fdf8e8;
+$chart-lime: #aabf1c;
+$chart-lime-light-85: #f3f6e3;
+$chart-green: #1bba80;
+$chart-green-light-85: #e1f5ec;
+$chart-blue: #3daced;
+$chart-blue-light-85: #e5f3fc;
+$chart-indigo: #7884e7;
+$chart-indigo-light-85: #eceefb;
+$chart-purple: #a85ce4;
+$chart-purple-light-85: #f4e8fa;
+$chart-magenta: #d54bc6;
+$chart-magenta-light-85: #f9e7f6;
 
 // override Bootstrap semantic color variables
 $primary: $accent;

@@ -26,7 +26,22 @@ module.exports = {
     },
     {
       name: "Base",
-      content: "src/base/Base.md"
+      content: "src/base/Base.md",
+      sectionDepth: 1,
+      sections: [
+        {
+          name: "Typography",
+          content: "src/base/Typography.md"
+        },
+        {
+          name: "Colors",
+          content: "src/base/Colors.md"
+        },
+        {
+          name: "Utilities",
+          content: "src/base/Utilities.md"
+        }
+      ]
     },
     {
       name: "Layout",
