@@ -19,7 +19,7 @@
 }
 
 .combo-box__option--is-selected {
-  background-color: $primary-light-85 !important;
+  background-color: $accent-light-85 !important;
   color: $neutral-90 !important;
 }
 
@@ -41,6 +41,6 @@
 .combo-box__multi-value__remove {
   &:hover {
     color: $primary !important;
-    background-color: $primary-light-85 !important;
+    background-color: $accent-light-85 !important;
   }
 }

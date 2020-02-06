@@ -2,7 +2,7 @@
 @import "../../base/variables";
 
 .selected {
-  background-color: $primary-light-85 !important;
+  background-color: $accent-light-85 !important;
 }
 
 .table-pagination_total {
@@ -44,7 +44,7 @@
 
   &:hover {
     color: $primary;
-    background: $primary-light-85;
+    background: $accent-light-85;
   }
 }
 
