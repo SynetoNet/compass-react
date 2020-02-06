@@ -2,32 +2,12 @@
 
 ##### Documentation Changes
 
-* **Typography:**
-  *  Add Font weight & docs(Utilities) ([46464299](https://github.com/SynetoNet/compass-react/commit/4646429954241cd24b9fb563910dd9b6196452a9))
-  *  Add font weight, scale size ([ec555126](https://github.com/SynetoNet/compass-react/commit/ec555126aff28455e2d1902e1f52bada2d8f0009))
-  *  Add Headers table. Modify headers styles accordingly ([8ce989c3](https://github.com/SynetoNet/compass-react/commit/8ce989c3b209053a3c15f914df23cfc709f15f37))
-*  Add Typography and Colors sections ([318c9411](https://github.com/SynetoNet/compass-react/commit/318c9411a95dc727788947eaa8914e99ec536488))
-* **Layout:**  Add Layout documentation. Style the documentation ([910192c7](https://github.com/SynetoNet/compass-react/commit/910192c701f770228e0bdee9d22ae2ec1654a241))
+*  Add Typography, Colors and Utilities sections
 
 ##### New Features
 
-* **TitleBar:**  New TitleBar component ([c3086f59](https://github.com/SynetoNet/compass-react/commit/c3086f595ca1a525233d44c128a4cf9a637d79ad))
-* **Layout:**
-  *  Remove some styling ([82199433](https://github.com/SynetoNet/compass-react/commit/82199433e4fa0f687ec82d7510db5d05176aafda))
-  *  New layout component ([0d482b7c](https://github.com/SynetoNet/compass-react/commit/0d482b7c61411dd4871c7af1f8474e525e212a8b))
-
-##### Bug Fixes
-
-*  Layout warnings regarding case sensitive ([eaa1df29](https://github.com/SynetoNet/compass-react/commit/eaa1df291cde0c439e0491a79aef5f381dd4cf6f))
-* **TitleBar:**  Styling ([370bb7a2](https://github.com/SynetoNet/compass-react/commit/370bb7a2c6246c5d52573a7f168ca9c5806818bb))
-
-##### Other Changes
-
-* **SlidingPanel:**  Add description for SlidingPanel component ([9e6343b1](https://github.com/SynetoNet/compass-react/commit/9e6343b15d90eca007a28c6836ca55c0a3659b19))
-
-##### Refactors
-
-* **SlidingPanel:**  Refactor color styles of SlidingPanel component ([61d922f9](https://github.com/SynetoNet/compass-react/commit/61d922f939833c11d30d9592dc69fab4a1edf08b))
+* **TitleBar** ([c3086f59](https://github.com/SynetoNet/compass-react/commit/c3086f595ca1a525233d44c128a4cf9a637d79ad))
+* **Layout**
 
 # 1.0.1 (2019-11-25)
 
