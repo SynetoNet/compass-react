@@ -1,3 +1,14 @@
+#### 1.1.0 (2020-02-06)
+
+##### Documentation Changes
+
+*  Add Typography, Colors and Utilities sections
+
+##### New Features
+
+* **TitleBar** ([c3086f59](https://github.com/SynetoNet/compass-react/commit/c3086f595ca1a525233d44c128a4cf9a637d79ad))
+* **Layout**
+
 # 1.0.1 (2019-11-25)
 
 ### Update dependencies

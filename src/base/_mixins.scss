@@ -1,5 +1,78 @@
+@import "colors";
+
 @mixin fixed-width($width) {
   width: $width;
   padding-left: 0;
   padding-right: 0;
+}
+
+$colors: (
+  brand-dark-80: $brand-dark-80,
+  brand-dark-40: $brand-dark-40,
+  brand-highlight: $brand-highlight,
+  brand-light-40: $brand-light-40,
+  brand-light-80: $brand-light-80,
+  accent: $accent,
+  accent-light-85: $accent-light-85,
+  neutral-100: $neutral-100,
+  neutral-90: $neutral-90,
+  neutral-60: $neutral-60,
+  neutral-40: $neutral-40,
+  neutral-24: $neutral-24,
+  neutral-12: $neutral-12,
+  neutral-6: $neutral-6,
+  neutral-3: $neutral-3,
+  neutral-0: $neutral-0,
+  neutral-90-vivid: $neutral-90-vivid,
+  semantic-info: $semantic-info,
+  semantic-info-dark-20: $semantic-info-dark-20,
+  semantic-info-dark-30: $semantic-info-dark-30,
+  semantic-info-light-60: $semantic-info-light-60,
+  semantic-info-light-85: $semantic-info-light-85,
+  semantic-confirm: $semantic-confirm,
+  semantic-confirm-dark-20: $semantic-confirm-dark-20,
+  semantic-confirm-dark-30: $semantic-confirm-dark-30,
+  semantic-confirm-light-60: $semantic-confirm-light-60,
+  semantic-confirm-light-85: $semantic-confirm-light-85,
+  semantic-warn: $semantic-warn,
+  semantic-warn-dark-20: $semantic-warn-dark-20,
+  semantic-warn-dark-30: $semantic-warn-dark-30,
+  semantic-warn-light-60: $semantic-warn-light-60,
+  semantic-warn-light-85: $semantic-warn-light-85,
+  semantic-danger: $semantic-danger,
+  semantic-danger-dark-20: $semantic-danger-dark-20,
+  semantic-danger-dark-30: $semantic-danger-dark-30,
+  semantic-danger-light-60: $semantic-danger-light-60,
+  semantic-danger-light-85: $semantic-danger-light-85,
+  semantic-accent-contrast: $semantic-accent-contrast,
+  semantic-accent-dark-20: $semantic-accent-dark-20,
+  semantic-accent-dark-30: $semantic-accent-dark-30,
+  semantic-accent-light-60: $semantic-accent-light-60,
+  semantic-accent-light-85: $semantic-accent-light-85,
+  chart-red: $chart-red,
+  chart-red-light-85: $chart-red-light-85,
+  chart-orange: $chart-orange,
+  chart-orange-light-85: $chart-orange-light-85,
+  chart-yellow: $chart-yellow,
+  chart-yellow-light-85: $chart-yellow-light-85,
+  chart-lime: $chart-lime,
+  chart-lime-light-85: $chart-lime-light-85,
+  chart-green: $chart-green,
+  chart-green-light-85: $chart-green-light-85,
+  chart-blue: $chart-blue,
+  chart-blue-light-85: $chart-blue-light-85,
+  chart-indigo: $chart-indigo,
+  chart-indigo-light-85: $chart-indigo-light-85,
+  chart-purple: $chart-purple,
+  chart-purple-light-85: $chart-purple-light-85,
+  chart-magenta: $chart-magenta,
+  chart-magenta-light-85: $chart-magenta-light-85
+);
+
+@mixin gen-props($prefix, $property) {
+  @each $color-name, $color in $colors {
+    .#{$prefix}-#{$color-name} {
+      #{$property}: $color;
+    }
+  }
 }

@@ -1,29 +1,66 @@
-// const path = require("path");
+const path = require("path");
 const pkg = require("./package.json");
 
 module.exports = {
   skipComponentsWithoutExample: true,
-  // change build folder so we can deploy to Github Pages
-  styleguideDir: "docs",
-  // show only one section per page
-  pagePerSection: true,
+  styleguideDir: "docs", // change build folder so we can deploy to Github Pages
+  pagePerSection: true, // show only one section per page
   version: pkg.version,
   require: [
-    // include base styles
-    "./src/base/styles.scss"
+    "./src/base/styles.scss" // include base styles
   ],
   ribbon: {
     url: "https://github.com/SynetoNet/compass-react",
     text: "Fork me on GitHub"
   },
+  theme: {
+    color: {
+      sidebarBackground: "#F4E8Fa"
+    },
+    sidebarWidth: 260
+  },
   sections: [
     {
       name: "Setup",
-      content: "docs/Setup.md"
+      content: "src/Setup.md"
     },
     {
       name: "Base",
-      content: "docs/Base.md"
+      content: "src/base/Base.md",
+      sectionDepth: 1,
+      sections: [
+        {
+          name: "Typography",
+          content: "src/base/Typography.md"
+        },
+        {
+          name: "Colors",
+          content: "src/base/Colors.md"
+        },
+        {
+          name: "Utilities",
+          content: "src/base/Utilities.md"
+        }
+      ]
+    },
+    {
+      name: "Layout",
+      sections: [
+        {
+          name: "Layout",
+          content: "src/layout/Layout/Layout.md"
+        },
+        {
+          name: "Grid",
+          content: "src/layout/Grid/Grid.md",
+          components: "src/layout/Grid/**/*.jsx",
+          usageMode: "collapse"
+        },
+        {
+          name: "TitleBar",
+          content: "src/layout/TitleBar/TitleBar.md"
+        }
+      ]
     },
     {
       name: "UI Components",
@@ -41,6 +78,10 @@ module.exports = {
       sectionDepth: 1
     }
   ],
+  // Override Styleguidist components
+  styleguideComponents: {
+    // LinkRenderer: path.join(__dirname, "src/Styleguide/LinkRendererWrapper")
+  },
   webpackConfig: {
     module: {
       rules: [

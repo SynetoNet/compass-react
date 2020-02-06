@@ -1,6 +1,6 @@
 {
   "name": "@syneto/compass-react",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "files": [
     "lib/"
   ],
@@ -87,6 +87,7 @@
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
     "classnames": "^2.2.6",
+    "clsx": "^1.0.4",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
     "enzyme-to-json": "^3.3.5",
@@ -108,8 +109,8 @@
     "prettier": "^1.16.4",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-styleguidist": "^9.0.4",
     "react-select": "^3.0.4",
+    "react-styleguidist": "^10.6.1",
     "react-test-renderer": "^16.8.6",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
