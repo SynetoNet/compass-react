@@ -33,12 +33,12 @@ module.exports = {
       sections: [
         {
           name: "Layout",
-          content: "src/Layout/Layout/Layout.md"
+          content: "src/layout/Layout/Layout.md"
         },
         {
           name: "Grid",
-          content: "src/Layout/Grid/Grid.md",
-          components: "src/Layout/Grid/**/*.jsx",
+          content: "src/layout/Grid/Grid.md",
+          components: "src/layout/Grid/**/*.jsx",
           usageMode: "collapse"
         },
         {
