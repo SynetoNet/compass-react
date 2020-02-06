@@ -58,7 +58,7 @@ module.exports = {
         },
         {
           name: "TitleBar",
-          content: "src/Layout/TitleBar/TitleBar.md"
+          content: "src/layout/TitleBar/TitleBar.md"
         }
       ]
     },

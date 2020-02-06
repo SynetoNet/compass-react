@@ -23,7 +23,7 @@ import TitleBar from "./TitleBar.jsx";
 <TitleBar
         title="Title"
         actions={[
-          { icon: "fas fa-bell", link: "/another-page" },
+          { icon: "fas fa-bell", link: "https://github.com/SynetoNet/compass-react" },
           {
             icon: "fas fa-question-circle",
             menuItems: [
