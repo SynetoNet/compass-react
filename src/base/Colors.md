@@ -55,14 +55,14 @@ For ease of use, we also support the Bootstrap classes:
   'accent-light-85'
 ].map(color => (
     <div style={{display: "inline-block"}}>
-    <div
-        className={`bg-${color}`}
-        style={{
-            width: 100,
-            height: 100,
-            margin: 10
-        }}
-    />
+        <div
+            className={`bg-${color}`}
+            style={{
+                width: 100,
+                height: 100,
+                margin: 10
+            }}
+        />
         <p style={{marginLeft: 10}}>{color}</p>
     </div>
 ))

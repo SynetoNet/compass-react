@@ -1,4 +1,4 @@
-### Documentation and examples for Compass typography, including global settings, headings ###
+### Documentation and examples for Compass typography, including global settings, headings, size scale, font weight and links. ###
 <br/>
 
 ### **Global settings** ###
@@ -137,48 +137,12 @@ Defaults:
 ### **Font weight** ###
 ```jsx
 <p className="font-weight-bold">Bold text.</p>
-<p className="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
-<p className="font-weight-medium">Medium bold weight text</p>
-<p className="font-weight-normal">Normal weight text.</p>
+<p>Normal weight text.</p>
 <p className="font-weight-light">Light weight text.</p>
-<p className="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
 <p className="font-italic">Italic text.</p>
 ```
 
+### **Links** ###
 ```jsx
 <a href="https://github.com/SynetoNet/compass-react">Link</a>
-
-<br />
-<br />
-
-<p>Paragraph text</p>
-
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
-```
-
-### **Text colors**
-
-The following text colors are available as CSS classes:
-
-```jsx
-<p className="text-primary">Primary text</p>
-<p className="text-success">Success text</p>
-<p className="text-danger">Danger text</p>
-<p className="text-warning">Warning text</p>
-<p className="text-info">Info text</p>
-<p className="text-muted">Muted text</p>
-<p className="text-disabled">Disabled text</p>
-```
-
-<br/>
-
-
-### **Spacing**
-
-For a comprehensive documentation on margins and paddings, please checkout Bootstrap's [Spacing System](https://getbootstrap.com/docs/4.3/utilities/spacing/).
-
-```jsx
-<span className="p-3 bg-primary text-white">Padded text</span>
-<span className="ml-3 py-3 bg-info text-white">Margin left, padded vertical</span>
 ```

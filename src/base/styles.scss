@@ -9,9 +9,10 @@
 @import "assets/fontAwesome/css/brands.css";
 @import "mixins";
 
+@include gen-props('text', 'color');
+@include gen-props('bg', 'background');
+
 html {
-  // make base font 13px, as defined in Compass
-  // everything else is relative to this value
   font-size: 13px;
 }
 
@@ -98,14 +99,6 @@ h6 {
   line-height: 14px;
 }
 
-p {
-  font-family: "Roboto", sans-serif !important;
-}
-
-.font-weight-medium {
-  font-weight: 500;
-}
-
 .text-muted {
   color: $neutral-60 !important;
 }
@@ -121,38 +114,35 @@ p {
   font-style: normal;
   font-display: swap;
 }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-Italic.ttf") format("ttf");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-Medium.ttf") format("ttf");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-Bold.ttf") format("ttf");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-BoldItalic.ttf") format("ttf");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@include gen-props('text', 'color');
-@include gen-props('bg', 'background');
+//
+//@font-face {
+//  font-family: "Roboto";
+//  src: url("./assets/fonts/Roboto-Italic.ttf") format("ttf");
+//  font-weight: normal;
+//  font-style: italic;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: "Roboto-Medium";
+//  src: url("./assets/fonts/Roboto-Medium.ttf") format("ttf");
+//  font-weight: 500;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: "Roboto-Bold";
+//  src: url("./assets/fonts/Roboto-Bold.ttf") format("ttf");
+//  font-weight: bold;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: "Roboto";
+//  src: url("./assets/fonts/Roboto-BoldItalic.ttf") format("ttf");
+//  font-weight: bold;
+//  font-style: italic;
+//  font-display: swap;
+//}
