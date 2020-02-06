@@ -18,6 +18,7 @@ export { default as Toast } from "./components/Toast/Toast.jsx";
 export {
   default as OverlayTrigger
 } from "./components/OverlayTrigger/OverlayTrigger.jsx";
+export { default as Spinner } from "./components/Spinner/Spinner";
 export { default as Container } from "./layout/Grid/Container/Container.jsx";
 export { default as Row } from "./layout/Grid/Row/Row.jsx";
 export { default as Col } from "./layout/Grid/Col/Col.jsx";
