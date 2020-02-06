@@ -1,10 +1,16 @@
+# 1.2.0 (2020-02-06)
+
+### New Features
+
+* **Spinner:**  Add Spinner component ([3c4557a2](https://github.com/SynetoNet/compass-react/commit/3c4557a2d308825f5daee7dc0015e340e664f288))
+
 # 1.1.0 (2020-02-06)
 
-##### Documentation Changes
+### Documentation Changes
 
 * Add Typography, Colors and Utilities sections
 
-##### New Features
+### New Features
 
 * **TitleBar** ([c3086f59](https://github.com/SynetoNet/compass-react/commit/c3086f595ca1a525233d44c128a4cf9a637d79ad))
 * **Layout**
