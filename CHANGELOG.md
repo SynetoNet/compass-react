@@ -1,3 +1,9 @@
+#### 1.2.0 (2020-02-06)
+
+##### New Features
+
+* **Spinner:**  Add Spinner component ([3c4557a2](https://github.com/SynetoNet/compass-react/commit/3c4557a2d308825f5daee7dc0015e340e664f288))
+
 # 1.1.0 (2020-02-06)
 
 ##### Documentation Changes
