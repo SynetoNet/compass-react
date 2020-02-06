@@ -29,6 +29,7 @@ class Modal extends React.Component {
       content,
       actions,
       closeButton,
+      slidingPanel,
       ...props
     } = this.props;
     // const classes = classNames({});
@@ -42,7 +43,7 @@ class Modal extends React.Component {
     }
 
     return (
-      <BSModal {...props} onEntering={this.onEnter}>
+      <BSModal {...props} onEntering={this.onEnter} className={slidingPanel ? 'right' : ''}>
         {title && (
           <Modal.Header closeButton={closeButton}>
             <Modal.Title>{title}</Modal.Title>
@@ -140,7 +141,8 @@ Modal.propTypes = {
   /** String or any component to be rendered */
   title: PropTypes.node,
   backdrop: PropTypes.oneOf([false, true, "static"]),
-  size: PropTypes.oneOf(["sm", "lg"])
+  size: PropTypes.oneOf(["sm", "lg"]),
+  slidingPanel: PropTypes.bool
 };
 
 Modal.defaultProps = {
@@ -149,7 +151,8 @@ Modal.defaultProps = {
       label: "Close"
     }
   },
-  backdrop: "static"
+  backdrop: "static",
+  slidingPanel: false
 };
 
 export default Modal;
