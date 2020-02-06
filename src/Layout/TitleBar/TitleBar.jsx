@@ -43,4 +43,8 @@ TitleBar.propTypes = {
   actions: PropTypes.array
 }
 
+TitleBar.defaultProps = {
+  actions: []
+}
+
 export default TitleBar
