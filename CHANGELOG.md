@@ -1,8 +1,8 @@
-#### 1.1.0 (2020-02-06)
+# 1.1.0 (2020-02-06)
 
 ##### Documentation Changes
 
-*  Add Typography, Colors and Utilities sections
+* Add Typography, Colors and Utilities sections
 
 ##### New Features
 
