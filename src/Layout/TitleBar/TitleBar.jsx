@@ -1,11 +1,11 @@
-import React     from "react"
-import Dropdown  from "../../components/Dropdown/Dropdown"
-import Icon      from "../../components/Icon/Icon"
-import PropTypes from "prop-types"
-import "./TitleBar.scss"
+import React from "react";
+import Dropdown from "../../components/Dropdown/Dropdown";
+import Icon from "../../components/Icon/Icon";
+import PropTypes from "prop-types";
+import "./TitleBar.scss";
 
 const TitleBar = props => {
-  const { actions, title } = props
+  const { actions, title } = props;
 
   return (
     <div className="title-bar">
@@ -24,27 +24,27 @@ const TitleBar = props => {
                 return {
                   label: menuItem.label,
                   onSelect: menuItem.onSelect
-                }
+                };
               })}
             />
           ) : (
-                   <a key={index} className="title-icon" href={action.link}>
-                     <Icon name={action.icon} />
-                   </a>
-                 )
+            <a key={index} className="title-icon" href={action.link}>
+              <Icon name={action.icon} />
+            </a>
+          );
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 TitleBar.propTypes = {
   title: PropTypes.string,
   actions: PropTypes.array
-}
+};
 
 TitleBar.defaultProps = {
   actions: []
-}
+};
 
-export default TitleBar
+export default TitleBar;
