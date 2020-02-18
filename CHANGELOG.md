@@ -1,3 +1,9 @@
+# 1.3.0 (2020-02-18)
+
+### New Features
+
+*  New SideNavigation component ([70155b01](https://github.com/SynetoNet/compass-react/commit/70155b019de8d851cab7f481d5b6e205c12a222f))
+
 # 1.2.0 (2020-02-06)
 
 ### New Features

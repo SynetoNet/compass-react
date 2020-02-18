@@ -10,7 +10,7 @@ const TitleBar = props => {
   return (
     <div className="title-bar">
       <div className="title-text">{title}</div>
-      <ul className="list-group list-group-horizontal mr-4">
+      <ul className="list-group list-group-horizontal mr-5">
         {actions.map((action, index) => {
           return action.menuItems ? (
             <Dropdown
