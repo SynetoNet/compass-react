@@ -3,6 +3,7 @@
 exports[`Actions Modal modal with actions snapshop 1`] = `
 <Bootstrap(Modal)
   backdrop="static"
+  className=""
   onEntering={[Function]}
   show={true}
 >
@@ -50,6 +51,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
 exports[`Default Modal modal without header or content snapshop 1`] = `
 <Bootstrap(Modal)
   backdrop="static"
+  className=""
   onEntering={[Function]}
   show={true}
 >
@@ -104,6 +106,7 @@ exports[`Extended Modal extended modal snapshop 1`] = `
 exports[`Simple Modal modal with title and content snapshop 1`] = `
 <Bootstrap(Modal)
   backdrop="static"
+  className=""
   onEntering={[Function]}
   show={true}
 >
