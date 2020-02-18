@@ -23,6 +23,32 @@ const SimpleModal = () => {
 <SimpleModal />;
 ```
 
+#### **Sliding Modal**
+
+```jsx
+import { useState } from "react";
+import { Button } from "../../index";
+
+const SimpleModal = () => {
+  const [showModal, toggleModal] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => toggleModal(true)}>Toggle modal</Button>
+      <Modal
+        slidingPanel={true}
+        show={showModal}
+        onHide={() => toggleModal(false)}
+        content="Modal content"
+        title="Modal title"
+      />
+    </>
+  );
+};
+
+<SimpleModal />;
+```
+
 #### **Action buttons**
 
 ```jsx
