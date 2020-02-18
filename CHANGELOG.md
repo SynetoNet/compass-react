@@ -1,3 +1,13 @@
+#### 1.3.0 (2020-02-18)
+
+##### New Features
+
+*  New SideNavigation component ([70155b01](https://github.com/SynetoNet/compass-react/commit/70155b019de8d851cab7f481d5b6e205c12a222f))
+
+##### Bug Fixes
+
+* **TitleBar:**  fix TitleBar spacing between icons ([fff605a4](https://github.com/SynetoNet/compass-react/commit/fff605a4bc4e1527382a7665a68916755b2ae521))
+
 # 1.2.0 (2020-02-06)
 
 ### New Features
