@@ -1,3 +1,13 @@
+#### 1.4.0 (2020-02-18)
+
+##### New Features
+
+* **SlidingPanel:**  New SlidingPanel component ([148213eb](https://github.com/SynetoNet/compass-react/commit/148213ebd4cb5e0bdd7eaa8165988f436d25caa8))
+
+##### Tests
+
+* **Modal:**  Update tests ([18880cb3](https://github.com/SynetoNet/compass-react/commit/18880cb3d9a3ddacc7d08538754c72834c2ad22d))
+
 # 1.3.0 (2020-02-18)
 
 ### New Features
