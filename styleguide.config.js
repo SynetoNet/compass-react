@@ -59,6 +59,10 @@ module.exports = {
         {
           name: "TitleBar",
           content: "src/layout/TitleBar/TitleBar.md"
+        },
+        {
+          name: "Side Navigation",
+          content: "src/layout/SideNavigation/SideNavigation.md"
         }
       ]
     },

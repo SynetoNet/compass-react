@@ -1,0 +1,186 @@
+@import "../../base/colors";
+
+.gn-menu-main,
+.gn-menu-main nav ul {
+  list-style: none;
+  width: 260px;
+  line-height: 24px;
+  color: $neutral-100;
+  font-weight: 300;
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gn-menu-main {
+  z-index: 798;
+  position: relative;
+  width: 72px;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  background-color: $neutral-0;
+
+  > li {
+    display: block;
+    float: left;
+    line-height: 48px;
+    height: 100%;
+    text-align: center;
+
+    a {
+      position: relative;
+      display: block;
+      height: 100%;
+      color: $neutral-0;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a:hover {
+      color: $brand-dark-40;
+    }
+  }
+
+  nav {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: $neutral-100;
+    border-collapse: separate;
+    -webkit-transform: translateX(-72px) translate3d(0, 0, 0);
+    -moz-transform: translateX(-72px) translate3d(0, 0, 0);
+    transform: translateX(-72px) translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.2s, width 0.2s;
+    -moz-transition: -moz-transform 0.2s, width 0.2s;
+    transition: transform 0.2s, width 0.2s;
+
+    &.gn-open-all .gn-scroller {
+      width: 280px;
+    }
+
+    &.gn-open-part {
+      width: 72px;
+      height: 100%;
+      .brand &::after {
+        content: "";
+      }
+    }
+
+    &.gn-open-all {
+      width: 260px;
+    }
+
+    &.gn-open-all,
+    &.gn-open-part {
+      -webkit-transform: translateX(0) translate3d(0, 0, 0);
+      -moz-transform: translateX(0) translate3d(0, 0, 0);
+      transform: translateX(0) translate3d(0, 0, 0);
+    }
+
+    .gn-scroller {
+      width: 87px;
+    }
+  }
+
+  .brand {
+    width: 260px;
+    height: 48px;
+    background-color: $brand-dark-40;
+    background-image: url('../../base/assets/icons/syneto.svg');
+    background-repeat: no-repeat;
+    background-position: 15px 50%;
+    background-size: 100px;
+    border: 0;
+    padding: 0;
+    -webkit-transition: -webkit-transform 0.2s, width 0.2s;
+    -moz-transition: -moz-transform 0.2s, width 0.2s;
+    transition: transform 0.2s, width 0.2s;
+    display: block;
+    cursor: pointer;
+
+    &:not(.gn-selected) {
+      width: 72px;
+      background-image: url('../../base/assets/icons/syneto-icon.svg');
+      background-position: -52px 50%;
+    }
+    &::not(.gn-selected)::after {
+      display: none;
+    }
+
+    .headerName {
+      position: relative;
+      left: 40px;
+      color: $neutral-0;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 200;
+      font-size: 16px;
+    }
+  }
+}
+
+.gn-scroller {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.2s, width 0.2s;
+  -moz-transition: -moz-transform 0.2s, width 0.2s;
+  transition: transform 0.2s, width 0.2s;
+}
+
+.gn-menu {
+  font-size: 14px;
+  text-align: left;
+
+  .gn-icon:hover,
+  .gn-selected {
+    color: $neutral-0;
+  }
+  .gn-icon {
+    .fa,
+    .fas,
+    .far,
+    .fal,
+    .fad {
+      font-size: 18px;
+      padding: 16px 26px;
+      margin-right: 4px;
+    }
+    .gn-left-icon {
+      color: $neutral-40;
+    }
+  }
+
+  li {
+    line-height: 24px;
+    li {
+      box-shadow: none !important;
+    }
+  }
+}
+
+.gn-submenu {
+  display: none;
+  li {
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
+    a {
+      padding: 11px 0 11px 74px;
+    }
+  }
+}
+
+.gn-menu .gn-icon:hover,
+.gn-menu .gn-icon.gn-selected,
+.gn-menu .gn-icon.gn-selected:hover,
+.gn-submenu a:hover {
+  color: $neutral-0;
+  background: $brand-dark-40;
+  .gn-left-icon {
+    color: $neutral-0;
+    background: $brand-dark-40;
+  }
+}
