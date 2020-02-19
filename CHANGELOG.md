@@ -1,3 +1,13 @@
+#### 1.4.1 (2020-02-19)
+
+##### Documentation Changes
+
+* **Changelog:**  Change sliding modal on Changelog ([b8a9e763](https://github.com/SynetoNet/compass-react/commit/b8a9e763f9dcece527836e6b234232ec84a638e9))
+
+##### Bug Fixes
+
+* **SideNavigation:**  export SideNavigation ([d76675e1](https://github.com/SynetoNet/compass-react/commit/d76675e1f841b442f6ce18e10863cffc52c50f2c))
+
 # 1.4.0 (2020-02-18)
 
 ### New Features
