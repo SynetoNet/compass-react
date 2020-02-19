@@ -1,91 +1,44 @@
-import React, {useState} from "react";
-import PropTypes         from "prop-types";
-import PieChart          from 'react-minimal-pie-chart';
+import React          from "react";
+import PropTypes      from "prop-types";
+import { DonutChart } from "./components/DonutChart"
 import "./Chart.scss"
 
-const dataMock = [
-  {
-    color: '#1bba80',
-    title: 'One',
-    value: 60
-  },
-  {
-    color: '#E1E8F1',
-    title: 'Two',
-    value: 20
-  },
-  {
-    color: '#e76974',
-    title: 'Three',
-    value: 20
-  }
-]
-
 const Chart = (props) => {
-  const [data, setData] = useState(
-    dataMock.map(entry => ({
-      ...entry,
-      ...{ style: { strokeWidth: 6 } },
-    }))
-  )
+  const {type, data, donutLabel, multipleLabels} = props
 
-  const onMouseOver = (event, propsData, index) => {
-    const dataSet = propsData.map((entry, i) => {
-      return i === index
-             ? {
-          ...entry,
-          color: 'grey',
-        }
-             : entry;
-    });
-
-    setData(dataSet);
+  switch (type) {
+    case 'donut':
+      return <DonutChart data={data} donutLabel={donutLabel} multipleLabels={multipleLabels} />
+    default:
+      return null
   }
-
-  const onMouseOut = (event, propsData, index) => {
-    const dataSet = propsData.map((entry, i) => {
-      return i === index
-             ? {
-          ...entry,
-          color: dataMock[index].color,
-        }
-             : entry;
-    });
-
-    setData(dataSet);
-  }
-
-  return (
-    <PieChart
-      animate={false}
-      animationDuration={500}
-      animationEasing="ease-out"
-      cx={50}
-      cy={50}
-      data={data}
-      label
-      labelPosition={70}
-      lengthAngle={360}
-      lineWidth={15}
-      onClick={undefined}
-      onMouseOut={(event, propsData, index) => onMouseOut(event, propsData, index)}
-      onMouseOver={(event, propsData, index) => onMouseOver(event, propsData, index)}
-      paddingAngle={0}
-      radius={50}
-      rounded={false}
-      startAngle={0}
-      viewBoxSize={[
-        100,
-        100
-      ]}
-    />
-  );
 };
 
 Chart.propTypes = {
-  type: PropTypes.string,
+  /**
+   * [
+   {
+                color: '#1bba80',
+                value: 60
+            },
+   {
+                color: '#E1E8F1',
+                value: 20
+            },
+   {
+                color: '#e76974',
+                value: 20
+            }
+   ]
+   */
+  data: PropTypes.array,
+  type: PropTypes.oneOf(["donut"]),
+  donutLabel: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
+  multipleLabels: PropTypes.bool
 };
 
-Chart.defaultProps = {};
+Chart.defaultProps = {
+  multipleLabels: false
+};
 
 export default Chart;
