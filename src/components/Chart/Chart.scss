@@ -1,0 +1,19 @@
+@import "../../base/colors";
+
+.donut-chart {
+  position: relative;
+  height: 100px;
+  width: 100px;
+
+  .donut-chart-border {
+    position: absolute;
+    z-index: 0;
+  }
+
+  .donut-chart-label {
+    z-index: 1;
+    text-align: center;
+    line-height: 100px;
+    color: $neutral-60;
+  }
+}

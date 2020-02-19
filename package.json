@@ -1,6 +1,6 @@
 {
   "name": "@syneto/compass-react",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "files": [
     "lib/"
   ],
@@ -74,6 +74,7 @@
     "react-bootstrap-table2-toolkit": "^2.1.0",
     "react-datepicker": "^2.10.1",
     "react-ink": "^6.4.0",
+    "react-minimal-pie-chart": "^6.0.1",
     "react-switch": "^5.0.1"
   },
   "devDependencies": {

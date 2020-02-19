@@ -1,3 +1,13 @@
+# 1.5.0 (2020-02-19)
+
+### New Features
+
+* **Chart:**  New Chart component ([41dc7146](https://github.com/SynetoNet/compass-react/commit/41dc71465f29b2897bdaf97f80517afb05d7f09c))
+
+### Bug Fixes
+
+* **Layout:**  Change min-height to height 100% ([a382d4df](https://github.com/SynetoNet/compass-react/commit/a382d4df5bef7b2c02d0b816d28d21b053abc656))
+
 # 1.4.1 (2020-02-19)
 
 ### Bug Fixes
