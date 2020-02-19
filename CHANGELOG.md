@@ -1,8 +1,14 @@
+# 1.4.1 (2020-02-19)
+
+### Bug Fixes
+
+* **SideNavigation:**  export SideNavigation ([d76675e1](https://github.com/SynetoNet/compass-react/commit/d76675e1f841b442f6ce18e10863cffc52c50f2c))
+
 # 1.4.0 (2020-02-18)
 
 ### New Features
 
-* **SlidingPanel:**  New SlidingPanel component ([148213eb](https://github.com/SynetoNet/compass-react/commit/148213ebd4cb5e0bdd7eaa8165988f436d25caa8))
+* **Modal:**  Add sliding modal feature ([148213eb](https://github.com/SynetoNet/compass-react/commit/148213ebd4cb5e0bdd7eaa8165988f436d25caa8))
 
 # 1.3.0 (2020-02-18)
 
