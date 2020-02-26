@@ -11,7 +11,13 @@ import Image from '../../base/assets/icons/syneto.svg';
 import Logo from '../../base/assets/icons/syneto-icon.svg';
 import SideNavigation from "./SideNavigation.jsx";
 
-<div style={{height: 500, width: 68}}>
+<div style={{
+    /* This wrapper div is only for Styleguidist demo purposes, to keep the component inside this frame */
+    height: 500,
+    position: "relative",
+    transform: "translate3d(0, 0, 0)"
+}}
+>
     <SideNavigation
         defaultEventKey="dashboard"
         items={[

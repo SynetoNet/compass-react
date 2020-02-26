@@ -1,5 +1,6 @@
 import React, { useState }                         from 'react'
 import PropTypes                                   from "prop-types"
+import Icon                                        from "../../components/Icon/Icon"
 import SideNav, { Nav, NavItem, NavIcon, NavText } from './components/StyledSideNav'
 import { Brand }                                   from "./components/Brand"
 import '@trendmicro/react-sidenav/dist/react-sidenav.css'
@@ -37,14 +38,14 @@ const SideNavigation = (props) => {
 
             return (
               <NavItem eventKey={ item.eventKey } key={ index }>
-                <NavIcon><i className={ item.icon } style={ { fontSize: '18px', color: "#7A8095" } }/></NavIcon>
-                <NavText style={ { color: "#fff" } }>{ item.title }</NavText>
+                <NavIcon><Icon name={ item.icon }/></NavIcon>
+                <NavText>{ item.title }</NavText>
 
                 {
                   item.subItems && item.subItems.length ? item.subItems.map((subitem, index) => {
                     return (
                       <NavItem eventKey={ subitem.eventKey } key={ index }>
-                        <NavText style={ { color: "#fff" } }>{ subitem.title }</NavText>
+                        <NavText>{ subitem.title }</NavText>
                       </NavItem>
                     )
                   }) : null

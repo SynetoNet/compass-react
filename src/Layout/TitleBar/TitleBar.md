@@ -10,7 +10,16 @@ TitleBar is a navigation component that display actions and information related 
 ```jsx
 import TitleBar from "./TitleBar.jsx";
 
-<TitleBar title="Title"/>
+<div
+    style={{
+        /* This wrapper div is only for Styleguidist demo purposes, to keep the component inside this frame */
+        height: 70,
+        position: "relative",
+        transform: "translate3d(0, 0, 0)"
+    }}
+>
+    <TitleBar title="Title"/>
+</div>
 ```
 
 #### **TitleBar with navigation icons**
@@ -20,7 +29,15 @@ In this case, you have to provide the array of actions, in which are defined the
 ```jsx
 import TitleBar from "./TitleBar.jsx";
 
-<TitleBar
+<div
+    style={{
+        /* This wrapper div is only for Styleguidist demo purposes, to keep the component inside this frame */
+        height: 70,
+        position: "relative",
+        transform: "translate3d(0, 0, 0)"
+    }}
+>
+    <TitleBar
         title="Title"
         actions={[
           { icon: "fas fa-bell", link: "https://github.com/SynetoNet/compass-react" },
@@ -65,4 +82,5 @@ import TitleBar from "./TitleBar.jsx";
           }
         ]}
       />
+</div>
 ```

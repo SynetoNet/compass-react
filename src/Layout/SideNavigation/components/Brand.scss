@@ -1,10 +1,18 @@
 .brandItem {
   [class*="sidenav---navitem--"] {
-    background-color: #AD0F6C !important;
-    color: #fff !important;
+    background-color: #AD0F6C;
   }
 
-  [class*="sidenav---navicon-"] {
-    color: #fff !important;
+  .brandLogoContainer {
+  }
+
+  .brandLogo {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .brandImage {
+    height: 22px;
+    margin-left: 27px;
   }
 }
