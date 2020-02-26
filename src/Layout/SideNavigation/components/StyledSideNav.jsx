@@ -7,7 +7,7 @@ import SideNav, {
 import styled from 'styled-components';
 
 // SideNav
-const StyledSideNav = styled(SideNav)`
+export const StyledSideNav = styled(SideNav)`
   border-right: 1px solid #ddd;
   background-color: #181C37;
   position: fixed;
@@ -18,7 +18,7 @@ const StyledSideNav = styled(SideNav)`
 StyledSideNav.defaultProps = SideNav.defaultProps;
 
 // Nav
-const StyledNav = styled(Nav)`
+export const StyledNav = styled(Nav)`
   && > [class*="sidenav-navitem--"] {
     background-color: #181C37;
 
@@ -98,25 +98,16 @@ const StyledNav = styled(Nav)`
 StyledNav.defaultProps = Nav.defaultProps;
 
 // NavItem
-const StyledNavItem = styled(NavItem)`
+export const StyledNavItem = styled(NavItem)`
 `;
 StyledNavItem.defaultProps = NavItem.defaultProps;
 
 // NavIcon
-const StyledNavIcon = styled(NavIcon)`
+export const StyledNavIcon = styled(NavIcon)`
 `;
 StyledNavIcon.defaultProps = NavIcon.defaultProps;
 
 // NavText
-const StyledNavText = styled(NavText)`
+export const StyledNavText = styled(NavText)`
 `;
 StyledNavText.defaultProps = NavText.defaultProps;
-
-export {
-  StyledNav as Nav,
-  StyledNavItem as NavItem,
-  StyledNavIcon as NavIcon,
-  StyledNavText as NavText
-};
-
-export default StyledSideNav;

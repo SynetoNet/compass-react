@@ -1,25 +1,25 @@
-import React                         from 'react'
-import PropTypes                     from "prop-types"
-import { NavItem, NavIcon, NavText } from './StyledSideNav'
+import React                                           from 'react'
+import PropTypes                                       from "prop-types"
+import { StyledNavItem, StyledNavIcon, StyledNavText } from './StyledSideNav'
 import "./Brand.scss"
 
 export const Brand = (props) => {
   const { eventKey, expanded, brandLogo, brandImage, brandTitle, onClick } = props
 
   return (
-    <NavItem eventKey={ eventKey } className="brandItem" onClick={ onClick }>
+    <StyledNavItem eventKey={ eventKey } className="brandItem" onClick={ onClick }>
       {
         !expanded ?
-        <NavIcon className="brandLogoContainer">
+        <StyledNavIcon className="brandLogoContainer">
           <img src={ brandLogo } alt="brandLogo" className="brandLogo"/>
-        </NavIcon> : null
+        </StyledNavIcon> : null
       }
 
-      <NavText style={ { color: "#fff" } }>
+      <StyledNavText style={ { color: "#fff" } }>
         <img src={ brandImage } alt="brandImage" className="brandImage"/>
         &nbsp; | { brandTitle }
-      </NavText>
-    </NavItem>
+      </StyledNavText>
+    </StyledNavItem>
   )
 }
 

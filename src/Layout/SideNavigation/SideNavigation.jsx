@@ -1,8 +1,14 @@
-import React, { useState }                         from 'react'
-import PropTypes                                   from "prop-types"
-import Icon                                        from "../../components/Icon/Icon"
-import SideNav, { Nav, NavItem, NavIcon, NavText } from './components/StyledSideNav'
-import { Brand }                                   from "./components/Brand"
+import React, { useState } from 'react'
+import PropTypes           from "prop-types"
+import Icon                from "../../components/Icon/Icon"
+import { Brand }           from "./components/Brand"
+import {
+  StyledSideNav,
+  StyledNav,
+  StyledNavItem,
+  StyledNavIcon,
+  StyledNavText
+}                          from './components/StyledSideNav'
 import '@trendmicro/react-sidenav/dist/react-sidenav.css'
 
 const SideNavigation = (props) => {
@@ -13,14 +19,14 @@ const SideNavigation = (props) => {
   const toggleExpanded = () => setExpanded(!expanded)
 
   return (
-    <SideNav
+    <StyledSideNav
       onSelect={ (selected) => { console.log(selected) } }
       onToggle={ toggleExpanded }
       expanded={ expanded }
       onMouseOver={ () => setExpanded(true) }
       onMouseLeave={ () => setExpanded(false) }
     >
-      <Nav defaultSelected="dashboard">
+      <StyledNav defaultSelected="dashboard">
         {
           items && items.length ? items.map((item, index) => {
             if ( item.eventKey === 'brand' ) {
@@ -37,25 +43,25 @@ const SideNavigation = (props) => {
             }
 
             return (
-              <NavItem eventKey={ item.eventKey } key={ index }>
-                <NavIcon><Icon name={ item.icon }/></NavIcon>
-                <NavText>{ item.title }</NavText>
+              <StyledNavItem eventKey={ item.eventKey } key={ index }>
+                <StyledNavIcon><Icon name={ item.icon }/></StyledNavIcon>
+                <StyledNavText>{ item.title }</StyledNavText>
 
                 {
                   item.subItems && item.subItems.length ? item.subItems.map((subitem, index) => {
                     return (
-                      <NavItem eventKey={ subitem.eventKey } key={ index }>
-                        <NavText>{ subitem.title }</NavText>
-                      </NavItem>
+                      <StyledNavItem eventKey={ subitem.eventKey } key={ index }>
+                        <StyledNavText>{ subitem.title }</StyledNavText>
+                      </StyledNavItem>
                     )
                   }) : null
                 }
-              </NavItem>
+              </StyledNavItem>
             )
           }) : null
         }
-      </Nav>
-    </SideNav>
+      </StyledNav>
+    </StyledSideNav>
   )
 }
 
