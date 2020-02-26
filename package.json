@@ -64,6 +64,7 @@
     ]
   },
   "dependencies": {
+    "@trendmicro/react-sidenav": "^0.5.0",
     "bootstrap": "^4.3.1",
     "date-fns": "^2.0.0-alpha.23",
     "prop-types": "^15.7.2",
@@ -121,6 +122,7 @@
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-visualizer": "^1.1.1",
     "sass-loader": "^7.1.0",
+    "styled-components": "^5.0.1",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.3.0",
     "webpack": "^4.29.6",
