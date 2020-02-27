@@ -1,6 +1,6 @@
-#### 1.6.1 (2020-02-27)
+# 1.6.1 (2020-02-27)
 
-##### Bug Fixes
+### Bug Fixes
 
 * **SideNavigation:**  Fix exposing the onSelect prop ([d2335b7f](https://github.com/SynetoNet/compass-react/commit/d2335b7f8f1789195136083b322e3ea762960175))
 
