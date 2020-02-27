@@ -2,10 +2,9 @@ import autoprefixer from "autoprefixer";
 import babel from "rollup-plugin-babel";
 import postcss from "rollup-plugin-postcss";
 import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
+import commonjs from "@rollup/plugin-commonjs";
 import copy from "rollup-plugin-copy";
 import visualizer from "rollup-plugin-visualizer";
-// import pkg from "./package.json";
 
 export default [
   {
@@ -31,7 +30,10 @@ export default [
         plugins: [autoprefixer]
       }),
       commonjs({
-        include: /node_modules/
+        include: /node_modules/,
+        namedExports: {
+          '@trendmicro/react-sidenav': ['Nav', 'NavItem', 'NavIcon', 'NavText']
+        }
       }),
       resolve({
         extensions: [".js", ".jsx"],
