@@ -1,12 +1,11 @@
-### **Description**
-Side navigation panel slides to right when the mouse hovers over it.
+### Description
+Side navigation panel slides to the right side at mouse **hover**. By default the panel is closed.
 <br/>
-By default the panel is closed.
+It supports **menu** and **submenu** objects.
 <br/>
-It supports menu and submenu.
+The **brand** item should have a different object then the others, as presented in the code below.
 
 ```jsx
-
 import Image from '../../base/assets/icons/syneto.svg';
 import Logo from '../../base/assets/icons/syneto-icon.svg';
 import SideNavigation from "./SideNavigation.jsx";
@@ -20,6 +19,7 @@ import SideNavigation from "./SideNavigation.jsx";
 >
     <SideNavigation
         defaultEventKey="dashboard"
+        onSelect={ (selected) => {console.log(selected)}}
         items={[
             {
                 eventKey: 'brand',
@@ -32,7 +32,6 @@ import SideNavigation from "./SideNavigation.jsx";
                 icon: 'fas fa-tachometer-alt',
                 title: 'Dashboard',
                 eventKey: 'dashboard',
-                onClick: () => {console.log('Dashboard')}
             },
             {
                 icon: 'fas fa-window-maximize',
@@ -42,12 +41,10 @@ import SideNavigation from "./SideNavigation.jsx";
                     {
                         title: 'Machine 1',
                         eventKey: 'virtual-machines/machine-1',
-                        onClick: () => {console.log('Machine 1')}
                     },
                     {
                         title: 'Machine 2',
                         eventKey: 'virtual-machines/machine-2',
-                        onClick: () => {console.log('Machine 2')}
                     }
                 ]
             },
@@ -55,19 +52,16 @@ import SideNavigation from "./SideNavigation.jsx";
                 icon: 'fas fa-database',
                 title: 'Datastores',
                 eventKey: 'datastores',
-                onClick: () => {console.log('Datastores')}
             },
             {
                 icon: 'fas fa-exchange-alt',
                 title: 'Shares',
                 eventKey: 'shares',
-                onClick: () => {console.log('Shares')}
             },
             {
                 icon: 'fas fa-layer-group',
                 title: 'Volumes',
                 eventKey: 'volumes',
-                onClick: () => {console.log('Volumes')}
             },
             {
                 icon: 'fas fa-shield-alt',
@@ -77,17 +71,14 @@ import SideNavigation from "./SideNavigation.jsx";
                     {
                         title: 'Volumes',
                         eventKey: 'data-protection/volumes',
-                        onClick: () => {console.log('Volumes')}
                     },
                     {
                         title: 'External VMs',
                         eventKey: 'data-protection/external-vms',
-                        onClick: () => {console.log('External VMs')}
                     }
                 ]
             },
         ]}
     />
 </div>
-
 ```
