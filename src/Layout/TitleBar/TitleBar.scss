@@ -3,10 +3,17 @@
 .title-bar {
   height: 48px;
   width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding-left: 86px;
+  z-index: 797;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12);
   background-color: $neutral-0;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
 }
 
 .title-text {

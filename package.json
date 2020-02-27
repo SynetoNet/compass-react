@@ -1,6 +1,6 @@
 {
   "name": "@syneto/compass-react",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "files": [
     "lib/"
   ],
@@ -64,6 +64,7 @@
     ]
   },
   "dependencies": {
+    "@trendmicro/react-sidenav": "^0.5.0",
     "bootstrap": "^4.3.1",
     "date-fns": "^2.0.0-alpha.23",
     "prop-types": "^15.7.2",
@@ -83,6 +84,7 @@
     "@babel/plugin-syntax-class-properties": "^7.2.0",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
     "autoprefixer": "^9.4.7",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
@@ -113,14 +115,14 @@
     "react-select": "^3.0.4",
     "react-styleguidist": "^10.6.1",
     "react-test-renderer": "^16.8.6",
-    "rollup": "^1.1.2",
+    "rollup": "^1.31.1",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-copy": "^2.0.1",
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-visualizer": "^1.1.1",
     "sass-loader": "^7.1.0",
+    "styled-components": "^5.0.1",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.3.0",
     "webpack": "^4.29.6",

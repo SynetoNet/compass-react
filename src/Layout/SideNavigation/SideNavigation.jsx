@@ -1,69 +1,76 @@
-import React, { useState } from "react";
-import Icon from "../../components/Icon/Icon";
-import "./SideNavigation.scss";
+import React, { useState } from 'react'
+import PropTypes           from "prop-types"
+import Icon                from "../../components/Icon/Icon"
+import { Brand }           from "./components/Brand"
+import {
+  StyledSideNav,
+  StyledNav,
+  StyledNavItem,
+  StyledNavIcon,
+  StyledNavText
+}                          from './components/StyledSideNav'
+import '@trendmicro/react-sidenav/dist/react-sidenav.css'
 
-const SideNavivation = props => {
-  const { headerName, items } = props;
-  const [openedNav, toggleNav] = useState(false);
+const SideNavigation = (props) => {
+  const { items } = props
 
-  const toggleSubMenuNav = index => {
-    document.getElementById(index).classList.toggle("d-block");
-    toggleNav(true);
-  };
+  const [ expanded, setExpanded ] = useState(false)
+
+  const toggleExpanded = () => setExpanded(!expanded)
 
   return (
-    <ul className="gn-menu-main">
-      <li className={`brand ${openedNav ? "gn-selected" : ""}`}>
-        {openedNav ? (
-          <div className="headerName">| &nbsp; {headerName}</div>
-        ) : null}
-      </li>
+    <StyledSideNav
+      onSelect={ (selected) => { console.log(selected) } }
+      onToggle={ toggleExpanded }
+      expanded={ expanded }
+      onMouseOver={ () => setExpanded(true) }
+      onMouseLeave={ () => setExpanded(false) }
+    >
+      <StyledNav defaultSelected="dashboard">
+        {
+          items && items.length ? items.map((item, index) => {
+            if ( item.eventKey === 'brand' ) {
+              return (
+                <Brand
+                  key={ index }
+                  expanded={ expanded }
+                  brandImage={ item.brandImage }
+                  brandLogo={ item.brandLogo }
+                  brandTitle={ item.brandTitle }
+                  onClick={ item.onClick }
+                />
+              )
+            }
 
-      <li
-        onMouseOver={() => toggleNav(true)}
-        onMouseOut={() => toggleNav(false)}
-      >
-        <nav className={`gn-open-part ${openedNav ? "gn-open-all" : ""}`}>
-          <div className="gn-scroller">
-            <ul className="gn-menu">
-              {items.map((navItem, index) => {
-                return navItem.subItems ? (
-                  <li key={index} onClick={() => toggleSubMenuNav(index)}>
-                    <a href="javascript:void(0);" className="gn-icon">
-                      <Icon name={navItem.icon} className="gn-left-icon" />
-                      {navItem.text}
-                      <Icon
-                        name="fas fa-caret-down"
-                        style={{ position: "absolute", right: "0" }}
-                      />
-                    </a>
-                    <ul id={index} className="gn-submenu">
-                      {navItem.subItems.map((subItem, index) => {
-                        return (
-                          <li key={index}>
-                            <a href={subItem.link} className="gn-icon">
-                              {subItem.text}
-                            </a>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </li>
-                ) : (
-                  <li key={index}>
-                    <a href={navItem.link} className="gn-icon">
-                      <Icon name={navItem.icon} className="gn-left-icon" />
-                      {navItem.text}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </nav>
-      </li>
-    </ul>
-  );
-};
+            return (
+              <StyledNavItem eventKey={ item.eventKey } key={ index }>
+                <StyledNavIcon><Icon name={ item.icon }/></StyledNavIcon>
+                <StyledNavText>{ item.title }</StyledNavText>
 
-export default SideNavivation;
+                {
+                  item.subItems && item.subItems.length ? item.subItems.map((subitem, index) => {
+                    return (
+                      <StyledNavItem eventKey={ subitem.eventKey } key={ index }>
+                        <StyledNavText>{ subitem.title }</StyledNavText>
+                      </StyledNavItem>
+                    )
+                  }) : null
+                }
+              </StyledNavItem>
+            )
+          }) : null
+        }
+      </StyledNav>
+    </StyledSideNav>
+  )
+}
+
+SideNavigation.propTypes = {
+  items: PropTypes.array
+}
+
+SideNavigation.defaultProps = {
+  items: []
+}
+
+export default SideNavigation
