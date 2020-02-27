@@ -12,7 +12,7 @@ import {
 import '@trendmicro/react-sidenav/dist/react-sidenav.css'
 
 const SideNavigation = (props) => {
-  const { items } = props
+  const { items, defaultEventKey, onSelect } = props
 
   const [ expanded, setExpanded ] = useState(false)
 
@@ -20,13 +20,13 @@ const SideNavigation = (props) => {
 
   return (
     <StyledSideNav
-      onSelect={ (selected) => { console.log(selected) } }
+      onSelect={ onSelect }
       onToggle={ toggleExpanded }
       expanded={ expanded }
       onMouseOver={ () => setExpanded(true) }
       onMouseLeave={ () => setExpanded(false) }
     >
-      <StyledNav defaultSelected="dashboard">
+      <StyledNav defaultSelected={ defaultEventKey }>
         {
           items && items.length ? items.map((item, index) => {
             if ( item.eventKey === 'brand' ) {
@@ -66,7 +66,9 @@ const SideNavigation = (props) => {
 }
 
 SideNavigation.propTypes = {
-  items: PropTypes.array
+  items:           PropTypes.array,
+  defaultEventKey: PropTypes.string,
+  onSelect:        PropTypes.func
 }
 
 SideNavigation.defaultProps = {
