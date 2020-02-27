@@ -1,17 +1,19 @@
-#### 1.6.0 (2020-02-27)
+# 1.6.0 (2020-02-27)
 
-##### Build System / Dependencies
+### Refactor
+
+* **SideNavigation:**
+
+  *  Reimplement SideNavigation. ([8b381326](https://github.com/SynetoNet/compass-react/commit/8b3813266bed695d653c90115d4428d46335f567))
+* **Layout:**
+  * Change styling. ([c8799a99](https://github.com/SynetoNet/compass-react/commit/c8799a996f539daa21248fa9fe62aa0fdf460775)) ([8b381326](https://github.com/SynetoNet/compass-react/commit/8b3813266bed695d653c90115d4428d46335f567))
+
+
+### Build System / Dependencies
 
 * **Rollup:**
   *  Update rollup version ([f3b984c0](https://github.com/SynetoNet/compass-react/commit/f3b984c0afe5e6b1fb92e87430f875ceb9992df0))
   *  Add and configure @rollup/plugin-commonjs to import @trendmicro/react-sidenav ([750c1493](https://github.com/SynetoNet/compass-react/commit/750c1493cbf58227323daea5cacf92c4a30c4b5b))
-
-##### New Features
-
-* **SideNavigation:**
-  *  Change export method for styled components ([87bea8e8](https://github.com/SynetoNet/compass-react/commit/87bea8e8d7d261756187be3f357ae386e598c1f8))
-  *  More styling. feat(Layout): Change styling ([c8799a99](https://github.com/SynetoNet/compass-react/commit/c8799a996f539daa21248fa9fe62aa0fdf460775))
-  *  Reimplement SideNavigation. fix(Layout): Add 100% height to content ([8b381326](https://github.com/SynetoNet/compass-react/commit/8b3813266bed695d653c90115d4428d46335f567))
 
 # 1.5.0 (2020-02-19)
 
