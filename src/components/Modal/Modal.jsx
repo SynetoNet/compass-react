@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import classNames from "classnames";
 
 import BSModal from "react-bootstrap/Modal";
 import Button from "../Button/Button";
@@ -32,11 +31,10 @@ class Modal extends React.Component {
       slidingPanel,
       ...props
     } = this.props;
-    // const classes = classNames({});
 
     if (children) {
       return (
-        <BSModal {...props} onEntering={this.onEnter}>
+        <BSModal {...props} onEntering={this.onEnter} className={slidingPanel ? 'right' : ''}>
           {children}
         </BSModal>
       );
@@ -62,10 +60,11 @@ class Modal extends React.Component {
       elements.push(
         <div className="modal-footer_tertiary" key="tertiary">
           <Button
+            type={tertiary.type}
             role="tertiary"
             onClick={tertiary.onClick}
             className="px-0"
-            disabled={tertiary.disabled ? true : false}
+            disabled={!!tertiary.disabled}
           >
             {tertiary.label}
           </Button>
@@ -76,10 +75,11 @@ class Modal extends React.Component {
     if (secondary) {
       elements.push(
         <Button
+          type={secondary.type}
           role="secondary"
           onClick={secondary.onClick || this.props.onHide}
           key="secondary"
-          disabled={secondary.disabled ? true : false}
+          disabled={!!secondary.disabled}
         >
           {secondary.label}
         </Button>
@@ -89,10 +89,11 @@ class Modal extends React.Component {
     if (primary) {
       elements.push(
         <Button
+          type={primary.type}
           onClick={primary.onClick}
           key="primary"
           className="ml-2"
-          disabled={primary.disabled ? true : false}
+          disabled={!!primary.disabled}
         >
           {primary.label}
         </Button>
@@ -120,6 +121,7 @@ class Modal extends React.Component {
 
 const actionsShape = {
   label: PropTypes.string,
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
   onClick: PropTypes.func,
   disabled: PropTypes.bool
 };
