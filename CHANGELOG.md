@@ -1,3 +1,11 @@
+# 1.6.2 (2020-03-02)
+
+### Bug Fixes
+
+* **Modal:**
+    * Sliding feature available for extended modal also ([e6b2408e](https://github.com/SynetoNet/compass-react/commit/e6b2408ef60c9628cb7b8817a033b8d10b48f6b4))
+    * Add option to change the button type in action object ([e6b2408e](https://github.com/SynetoNet/compass-react/commit/e6b2408ef60c9628cb7b8817a033b8d10b48f6b4))
+
 # 1.6.1 (2020-02-27)
 
 ### Bug Fixes
