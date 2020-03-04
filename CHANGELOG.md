@@ -1,3 +1,13 @@
+#### 1.6.3 (2020-03-04)
+
+##### New Features
+
+* **Modal:**  Add button appearance to modal action buttons ([dca8a8a3](https://github.com/SynetoNet/compass-react/commit/dca8a8a3d875014b0cd2deb55eb72a23c417b334))
+
+##### Bug Fixes
+
+* **Chart:**  Export Chart component ([5309ae4d](https://github.com/SynetoNet/compass-react/commit/5309ae4dc8fac9a1195428772b2e04dcec4bf86f))
+
 # 1.6.2 (2020-03-02)
 
 ### Bug Fixes
