@@ -61,6 +61,7 @@ class Modal extends React.Component {
         <div className="modal-footer_tertiary" key="tertiary">
           <Button
             type={tertiary.type}
+            appearance={tertiary.appearance}
             role="tertiary"
             onClick={tertiary.onClick}
             className="px-0"
@@ -76,6 +77,7 @@ class Modal extends React.Component {
       elements.push(
         <Button
           type={secondary.type}
+          appearance={secondary.appearance}
           role="secondary"
           onClick={secondary.onClick || this.props.onHide}
           key="secondary"
@@ -90,6 +92,7 @@ class Modal extends React.Component {
       elements.push(
         <Button
           type={primary.type}
+          appearance={primary.appearance}
           onClick={primary.onClick}
           key="primary"
           className="ml-2"
@@ -122,9 +125,11 @@ class Modal extends React.Component {
 const actionsShape = {
   label: PropTypes.string,
   type: PropTypes.oneOf(["button", "submit", "reset"]),
+  appearance: PropTypes.oneOf(["primary", "success", "danger", "warning", "info"]),
   onClick: PropTypes.func,
   disabled: PropTypes.bool
 };
+
 Modal.propTypes = {
   /**
    * Footer actions buttons: tertiary (left aligned), secondary & primary (right-aligned) in the form of:
