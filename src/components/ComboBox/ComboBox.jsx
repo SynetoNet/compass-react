@@ -25,6 +25,7 @@ const ComboBox = ({
       closeMenuOnSelect={!multiSelect}
       classNamePrefix={"combo-box"}
       className={"combo-box"}
+      {...props}
     />
   );
 };
