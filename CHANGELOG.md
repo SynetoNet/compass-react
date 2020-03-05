@@ -1,3 +1,9 @@
+#### 1.6.4 (2020-03-05)
+
+##### Bug Fixes
+
+* **Modal:**  Make modal-body-inner height: 100%. fix(ComboBox): Expose react-select props ([bf7991b6](https://github.com/SynetoNet/compass-react/commit/bf7991b62fa941dca2c35904c0cbda3c80c7f134))
+
 # 1.6.3 (2020-03-04)
 
 ### New Features
