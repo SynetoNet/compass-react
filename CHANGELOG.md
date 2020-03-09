@@ -1,3 +1,9 @@
+# 1.6.5 (2020-03-09)
+
+### New Features
+
+* **ComboBox:**  Forward all props to react-select library, instead of our custom logic ([b149e1e9](https://github.com/SynetoNet/compass-react/commit/b149e1e9b7bf981cf3848a4322d482e9c92ebe4a))
+
 # 1.6.4 (2020-03-05)
 
 ### Bug Fixes

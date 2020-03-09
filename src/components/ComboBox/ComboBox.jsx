@@ -1,28 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import RSelect from "react-select";
 
 import "./ComboBox.scss";
 
-const ComboBox = ({
-  options,
-  placeholder,
-  selected,
-  multiSelect,
-  ...props
-}) => {
-  const [selectedOption, setSelectedOption] = useState(selected);
-  const handleChange = selected => {
-    setSelectedOption(selected);
-  };
+const ComboBox = ({ options, isMulti, ...props }) => {
   return (
     <RSelect
-      placeholder={placeholder}
-      value={selectedOption}
-      onChange={handleChange}
       options={options}
-      isMulti={multiSelect}
-      closeMenuOnSelect={!multiSelect}
+      isMulti={isMulti}
+      closeMenuOnSelect={!isMulti}
       classNamePrefix={"combo-box"}
       className={"combo-box"}
       {...props}
@@ -37,16 +24,10 @@ ComboBox.propTypes = {
       label: PropTypes.string
     })
   ),
-  placeholder: PropTypes.string,
-  selected: PropTypes.shape({
-    value: PropTypes.string,
-    label: PropTypes.string
-  })
 };
 
 ComboBox.defaultProps = {
   options: [],
-  placeholder: "Select...",
-  selected: null
 };
+
 export default ComboBox;
