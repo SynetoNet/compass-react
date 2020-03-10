@@ -1,3 +1,9 @@
+# 1.6.6 (2020-03-10)
+
+### Build System / Dependencies
+
+*  Add rollup-plugin-sass-variables ([d342798d](https://github.com/SynetoNet/compass-react/commit/d342798db7f66667f3b8b4f80f8cf9ac3a1b8c19))
+
 # 1.6.5 (2020-03-09)
 
 ### New Features
