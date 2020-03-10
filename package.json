@@ -120,6 +120,7 @@
     "rollup-plugin-copy": "^2.0.1",
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-sass-variables": "^0.1.1",
     "rollup-plugin-visualizer": "^1.1.1",
     "sass-loader": "^7.1.0",
     "styled-components": "^5.0.1",
