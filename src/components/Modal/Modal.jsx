@@ -65,6 +65,7 @@ class Modal extends React.Component {
             role="tertiary"
             onClick={tertiary.onClick}
             className="px-0"
+            width={tertiary.width}
             disabled={!!tertiary.disabled}
           >
             {tertiary.label}
@@ -81,6 +82,7 @@ class Modal extends React.Component {
           role="secondary"
           onClick={secondary.onClick || this.props.onHide}
           key="secondary"
+          width={secondary.width}
           disabled={!!secondary.disabled}
         >
           {secondary.label}
@@ -96,6 +98,7 @@ class Modal extends React.Component {
           onClick={primary.onClick}
           key="primary"
           className="ml-2"
+          width={primary.width}
           disabled={!!primary.disabled}
         >
           {primary.label}
@@ -126,6 +129,7 @@ const actionsShape = {
   label: PropTypes.string,
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   appearance: PropTypes.oneOf(["primary", "success", "danger", "warning", "info"]),
+  width: PropTypes.oneOf([32, 64, 96, 128, "100%"]),
   onClick: PropTypes.func,
   disabled: PropTypes.bool
 };
