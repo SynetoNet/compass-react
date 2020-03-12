@@ -1,6 +1,6 @@
-#### 1.6.7 (2020-03-12)
+# 1.6.7 (2020-03-12)
 
-##### New Features
+### New Features
 
 * **Modal:**  Add width prop to Modal actions Buttons ([900a4b87](https://github.com/SynetoNet/compass-react/commit/900a4b874c6da70ac169c33f3f1868335efc5f29))
 
