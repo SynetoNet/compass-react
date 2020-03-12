@@ -25,6 +25,7 @@ const Button = ({
   children,
   onClick,
   role,
+  className,
   ...props
 }) => {
   const initialText = children;
@@ -35,7 +36,8 @@ const Button = ({
 
   let classes = classNames({
     ["width-" + width]: width,
-    disabled: _disabled
+    disabled: _disabled,
+    ...className
   });
 
   let buttonTexts = [];
