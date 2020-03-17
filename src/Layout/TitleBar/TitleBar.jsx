@@ -5,11 +5,15 @@ import PropTypes from "prop-types";
 import "./TitleBar.scss";
 
 const TitleBar = props => {
-  const { actions, title } = props;
+  const { brand, actions, title } = props;
 
   return (
     <div className="title-bar">
-      <div className="title-text">{title}</div>
+      <div className="title-bar-brand-text">
+        <div className="title-brand">{brand}</div>
+        <div className="title-text">{title}</div>
+      </div>
+
       <ul className="list-group list-group-horizontal mr-5">
         {actions.map((action, index) => {
           return action.menuItems ? (
@@ -39,6 +43,7 @@ const TitleBar = props => {
 };
 
 TitleBar.propTypes = {
+  brand: PropTypes.node,
   title: PropTypes.string,
   actions: PropTypes.array
 };

@@ -16,6 +16,16 @@
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
 }
 
+.title-bar-brand-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title-brand {
+  height: 100%;
+}
+
 .title-text {
   font-size: 17px;
   line-height: 20px;
