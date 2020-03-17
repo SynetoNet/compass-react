@@ -1,6 +1,6 @@
-#### 1.6.8 (2020-03-17)
+# 1.6.8 (2020-03-17)
 
-##### New Features
+### New Features
 
 * **TitleBar:**  Add brand component prop ([dd91ce16](https://github.com/SynetoNet/compass-react/commit/dd91ce1688365d78e9f1bfb24d7f2d86561b4454))
 
