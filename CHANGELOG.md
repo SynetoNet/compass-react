@@ -1,3 +1,9 @@
+# 1.7.2 (2020-03-26)
+
+### Bug Fixes
+
+* **Nav:**  Export Nav, Navbar components ([2cec594d](https://github.com/SynetoNet/compass-react/commit/2cec594d4d0b09bb514e7775c37303cc02a5e848))
+
 # 1.7.1 (2020-03-26)
 
 ### Bug Fixes
