@@ -1,3 +1,13 @@
+# 1.7.0 (2020-03-26)
+
+### New Features
+
+* **Nav:**  Add Nav and Navbar component ([657d5c64](https://github.com/SynetoNet/compass-react/commit/657d5c6473677ee115576cd9d0c6b3158dfd3944))
+
+### Bug Fixes
+
+* **Button:**  Fix Button classname ([8372c0b2](https://github.com/SynetoNet/compass-react/commit/8372c0b209e46115c807428da6f6948b230b4136))
+([issue33](https://github.com/SynetoNet/compass-react/issues/33))
 # 1.6.8 (2020-03-17)
 
 ### New Features

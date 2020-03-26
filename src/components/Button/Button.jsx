@@ -34,10 +34,9 @@ const Button = ({
   const prevLoading = usePrevious(loading);
   const _disabled = loading || disabled;
 
-  let classes = classNames({
+  let classes = classNames(className, {
     ["width-" + width]: width,
     disabled: _disabled,
-    ...className
   });
 
   let buttonTexts = [];
