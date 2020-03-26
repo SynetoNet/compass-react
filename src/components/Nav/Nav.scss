@@ -1,0 +1,32 @@
+@import "../../base/colors";
+
+.syneto {
+  .nav-item {
+    margin-right: 20px;
+
+    a {
+      color: $neutral-60;
+    }
+
+    a:hover {
+      color: white;
+      background-color: $brand-highlight;
+    }
+
+    .nav-link.active {
+      background-color: $brand-highlight;
+    }
+
+    .nav-link.disabled {
+      color: $neutral-40;
+    }
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      a:focus {
+        background-color: $brand-highlight;
+      }
+    }
+  }
+}
