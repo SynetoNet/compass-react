@@ -45,7 +45,8 @@ import Logo from '../../base/assets/icons/syneto-icon.svg';
 ```
 
 #### **Navbar with Syneto Nav**
-- just add the class `syneto` for Syneto styling
+- add the class `syneto` to Navbar component
+- for icon nav.item add the class `syneto-icon-link`
 
 ```jsx
 import Nav from "../Nav/Nav.jsx";
@@ -55,7 +56,7 @@ import Logo from '../../base/assets/icons/syneto-icon.svg';
 import Icon from "../Icon/Icon.jsx";
 import Dropdown from "../Dropdown/Dropdown.jsx";
 
-<Navbar bg="white" expand="lg">
+<Navbar bg="white" expand="lg" className="syneto">
   <Navbar.Brand href="#home">
     Syneto Compass
   </Navbar.Brand>
@@ -65,12 +66,12 @@ import Dropdown from "../Dropdown/Dropdown.jsx";
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="ml-auto syneto" variant="pills" defaultActiveKey="#">
       <Nav.Item>
-        <Nav.Link href="#">
+        <Nav.Link href="#" className="syneto-icon-link">
           <Icon name="fas fa-user" size="md"/>
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1">
+        <Nav.Link eventKey="link-1" className="syneto-icon-link">
           <Icon name="fas fa-user" size="md"/>
         </Nav.Link>
       </Nav.Item>
