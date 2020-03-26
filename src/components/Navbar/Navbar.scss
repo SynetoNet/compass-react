@@ -1,7 +1,22 @@
 @import "../../base/colors";
 
-.navbar {
+.navbar.syneto {
+  height: 48px;
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+
+  .navbar-brand {
+    font-size: 17px;
+  }
+
   .syneto {
+    .nav-link.syneto-icon-link {
+      padding-right: 10px;
+      padding-left: 10px;
+      border-radius: 50%;
+    }
+
     .nav-link.active {
       color: white !important;
       background-color: $brand-highlight;

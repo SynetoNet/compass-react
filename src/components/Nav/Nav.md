@@ -133,8 +133,8 @@ import Dropdown from "../Dropdown/Dropdown.jsx";
 ```
 
 #### **Syneto variant**
-- just add the class `syneto`
-
+- add the class `syneto` to Nav component
+- for icon nav.item add the class `syneto-icon-link`
 ```jsx
 import Icon from "../Icon/Icon.jsx";
 import Dropdown from "../Dropdown/Dropdown.jsx";
@@ -142,12 +142,12 @@ import Button from "../Button/Button.jsx";
 
 <Nav className="syneto" variant="pills" defaultActiveKey="#">
   <Nav.Item>
-    <Nav.Link href="#">
+    <Nav.Link href="#" className="syneto-icon-link">
       <Icon name="fas fa-user" size="md"/>
     </Nav.Link>
   </Nav.Item>
   <Nav.Item>
-    <Nav.Link eventKey="link-1">
+    <Nav.Link eventKey="link-1" className="syneto-icon-link">
       <Icon name="fas fa-user" size="md"/>
     </Nav.Link>
   </Nav.Item>
