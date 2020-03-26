@@ -1,6 +1,6 @@
-#### 1.7.1 (2020-03-26)
+# 1.7.1 (2020-03-26)
 
-##### Bug Fixes
+### Bug Fixes
 
 * **Nav:**  Add syneto styling to nav, navbar icon menu items ([0570f579](https://github.com/SynetoNet/compass-react/commit/0570f5790e28de9f375cf3833d346a172463487c))
 
