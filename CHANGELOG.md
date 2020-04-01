@@ -1,6 +1,6 @@
-#### 1.7.3 (2020-04-01)
+# 1.7.3 (2020-04-01)
 
-##### New Features
+### New Features
 
 * **SideNavigation:**  Add buttom items to menu ([f9147eec](https://github.com/SynetoNet/compass-react/commit/f9147eecf46926c0389a9fa360bd964be66e97b1))
 
