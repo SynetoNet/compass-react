@@ -49,22 +49,8 @@ object-assign
  * @license MIT
  */
 
-/**
- * Checks if an event is supported in the current execution environment.
- *
- * NOTE: This will not work correctly for non-generic events such as `change`,
- * `reset`, `load`, `error`, and `select`.
- *
- * Borrows from Modernizr.
- *
- * @param {string} eventNameSuffix Event name, e.g. "click".
- * @return {boolean} True if the event is supported.
- * @internal
- * @license Modernizr 3.0.0pre (Custom Build) | MIT
- */
-
 /** @license React v0.13.6
- * scheduler-tracing.development.js
+ * scheduler.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -73,7 +59,7 @@ object-assign
  */
 
 /** @license React v16.8.6
- * react-dom.development.js
+ * react-dom.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -82,7 +68,7 @@ object-assign
  */
 
 /** @license React v16.8.6
- * react-is.development.js
+ * react-is.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -91,7 +77,7 @@ object-assign
  */
 
 /** @license React v16.8.6
- * react.development.js
+ * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *

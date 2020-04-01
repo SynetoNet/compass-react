@@ -7,7 +7,8 @@ import {
   StyledNav,
   StyledNavItem,
   StyledNavIcon,
-  StyledNavText
+  StyledNavText,
+  StyledBottomNavItem
 }                          from './components/StyledSideNav'
 import '@trendmicro/react-sidenav/dist/react-sidenav.css'
 
@@ -63,11 +64,32 @@ const SideNavigation = (props) => {
 
         {
           bottomItems && bottomItems.length ? bottomItems.map((item, index) => {
+            if (index === 0) {
+              return (
+                <StyledBottomNavItem
+                  eventKey={item.eventKey}
+                  key={index}
+                >
+                  <StyledNavIcon><Icon name={item.icon}/></StyledNavIcon>
+                  <StyledNavText>{item.title}</StyledNavText>
+
+                  {
+                    item.subItems && item.subItems.length ? item.subItems.map((subitem, index) => {
+                      return (
+                        <StyledNavItem eventKey={subitem.eventKey} key={index}>
+                          <StyledNavText>{subitem.title}</StyledNavText>
+                        </StyledNavItem>
+                      )
+                    }) : null
+                  }
+                </StyledBottomNavItem>
+              )
+            }
+
             return (
               <StyledNavItem
                 eventKey={item.eventKey}
                 key={index}
-                navitemStyle={index === 0 ? {marginTop: "auto"} : null}
               >
                 <StyledNavIcon><Icon name={item.icon}/></StyledNavIcon>
                 <StyledNavText>{item.title}</StyledNavText>
