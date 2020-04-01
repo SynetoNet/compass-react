@@ -57,26 +57,18 @@ import SideNavigation from "./SideNavigation.jsx";
                 icon: 'fas fa-exchange-alt',
                 title: 'Shares',
                 eventKey: 'shares',
-            },
+            }
+        ]}
+        bottomItems={[
             {
                 icon: 'fas fa-layer-group',
-                title: 'Volumes',
-                eventKey: 'volumes',
+                title: 'Virtual Appliance',
+                eventKey: 'virtual-appliance',
             },
             {
                 icon: 'fas fa-shield-alt',
-                title: 'Data Protection',
-                eventKey: 'data-protection',
-                subItems: [
-                    {
-                        title: 'Volumes',
-                        eventKey: 'data-protection/volumes',
-                    },
-                    {
-                        title: 'External VMs',
-                        eventKey: 'data-protection/external-vms',
-                    }
-                ]
+                title: 'Support',
+                eventKey: 'support',
             },
         ]}
     />

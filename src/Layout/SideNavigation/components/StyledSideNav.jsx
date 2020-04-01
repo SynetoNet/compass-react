@@ -8,6 +8,7 @@ import styled from 'styled-components';
 
 // SideNav
 export const StyledSideNav = styled(SideNav)`
+  display: flex;
   border-right: 1px solid #ddd;
   background-color: #181C37;
   position: fixed;
@@ -19,7 +20,10 @@ StyledSideNav.defaultProps = SideNav.defaultProps;
 
 // Nav
 export const StyledNav = styled(Nav)`
-  && > [class*="sidenav-navitem--"] {
+  display: flex;
+  flex-direction: column;
+
+ [class*="sidenav-navitem--"] {
     background-color: #181C37;
 
     > [class*="navitem--"] {
@@ -43,7 +47,7 @@ export const StyledNav = styled(Nav)`
       }
   }
 
-  && > [class*="sidenav-navitem--"][class*="selected--"] {
+  [class*="sidenav-navitem--"][class*="selected--"] {
     > [class*="navitem--"] {
       background-color: #AD0F6C;
       color: #fff;
@@ -56,7 +60,7 @@ export const StyledNav = styled(Nav)`
     }
   }
 
-  && > [class*="sidenav-navitem--"]:hover {
+  [class*="sidenav-navitem--"]:hover {
     > [class*="navitem--"] {
         background-color: #AD0F6C;
     }
@@ -68,7 +72,7 @@ export const StyledNav = styled(Nav)`
     }
   }
 
-  &&[class*="expanded--"] {
+  [class*="expanded--"] {
   background-color: #181C37;
 
     [class*="sidenav-subnav--"] {
