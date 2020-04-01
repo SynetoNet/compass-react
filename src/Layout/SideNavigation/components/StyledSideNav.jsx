@@ -115,3 +115,9 @@ StyledNavIcon.defaultProps = NavIcon.defaultProps;
 export const StyledNavText = styled(NavText)`
 `;
 StyledNavText.defaultProps = NavText.defaultProps;
+
+// BottomNavItem
+export const StyledBottomNavItem = styled(NavItem)`
+  margin-top: auto;
+`;
+StyledBottomNavItem.defaultProps = NavItem.defaultProps;
