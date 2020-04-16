@@ -9,15 +9,6 @@
   }
 }
 
-.combo-box__option {
-  background-color: $neutral-0 !important;
-  color: #5b69e1 !important;
-  &:hover {
-    background-color: $primary !important;
-    color: $neutral-0 !important;
-  }
-}
-
 .combo-box__option--is-selected {
   background-color: $accent-light-85 !important;
   color: $neutral-90 !important;
