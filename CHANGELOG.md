@@ -1,6 +1,6 @@
-#### 1.7.5 (2020-04-16)
+# 1.7.5 (2020-04-16)
 
-##### Bug Fixes
+### Bug Fixes
 
 * **ComboBox:**  Allow disabled option to be displayed by the default styling ([26c38db0](https://github.com/SynetoNet/compass-react/commit/26c38db08899756fd15f13704635161524ca7909))
 
