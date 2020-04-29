@@ -13,7 +13,7 @@ import {
 import '@trendmicro/react-sidenav/dist/react-sidenav.css'
 
 const SideNavigation = (props) => {
-  const { items, bottomItems, defaultEventKey, onSelect } = props
+  const { items, bottomItems, defaultEventKey, selected, onSelect } = props
 
   const [ expanded, setExpanded ] = useState(false)
 
@@ -21,13 +21,13 @@ const SideNavigation = (props) => {
 
   return (
     <StyledSideNav
-      onSelect={onSelect}
+      onSelect={ onSelect }
       onToggle={ toggleExpanded }
       expanded={ expanded }
       onMouseOver={ () => setExpanded(true) }
       onMouseLeave={ () => setExpanded(false) }
     >
-      <StyledNav defaultSelected={ defaultEventKey }>
+      <StyledNav defaultSelected={ defaultEventKey } selected={ selected }>
         {
           items && items.length ? items.map((item, index) => {
             if ( item.eventKey === 'brand' ) {
@@ -64,20 +64,20 @@ const SideNavigation = (props) => {
 
         {
           bottomItems && bottomItems.length ? bottomItems.map((item, index) => {
-            if (index === 0) {
+            if ( index === 0 ) {
               return (
                 <StyledBottomNavItem
-                  eventKey={item.eventKey}
-                  key={index}
+                  eventKey={ item.eventKey }
+                  key={ index }
                 >
-                  <StyledNavIcon><Icon name={item.icon}/></StyledNavIcon>
-                  <StyledNavText>{item.title}</StyledNavText>
+                  <StyledNavIcon><Icon name={ item.icon }/></StyledNavIcon>
+                  <StyledNavText>{ item.title }</StyledNavText>
 
                   {
                     item.subItems && item.subItems.length ? item.subItems.map((subitem, index) => {
                       return (
-                        <StyledNavItem eventKey={subitem.eventKey} key={index}>
-                          <StyledNavText>{subitem.title}</StyledNavText>
+                        <StyledNavItem eventKey={ subitem.eventKey } key={ index }>
+                          <StyledNavText>{ subitem.title }</StyledNavText>
                         </StyledNavItem>
                       )
                     }) : null
@@ -88,17 +88,17 @@ const SideNavigation = (props) => {
 
             return (
               <StyledNavItem
-                eventKey={item.eventKey}
-                key={index}
+                eventKey={ item.eventKey }
+                key={ index }
               >
-                <StyledNavIcon><Icon name={item.icon}/></StyledNavIcon>
-                <StyledNavText>{item.title}</StyledNavText>
+                <StyledNavIcon><Icon name={ item.icon }/></StyledNavIcon>
+                <StyledNavText>{ item.title }</StyledNavText>
 
                 {
                   item.subItems && item.subItems.length ? item.subItems.map((subitem, index) => {
                     return (
-                      <StyledNavItem eventKey={subitem.eventKey} key={index}>
-                        <StyledNavText>{subitem.title}</StyledNavText>
+                      <StyledNavItem eventKey={ subitem.eventKey } key={ index }>
+                        <StyledNavText>{ subitem.title }</StyledNavText>
                       </StyledNavItem>
                     )
                   }) : null
@@ -114,12 +114,15 @@ const SideNavigation = (props) => {
 
 SideNavigation.propTypes = {
   items:           PropTypes.array,
+  bottomItems:     PropTypes.array,
   defaultEventKey: PropTypes.string,
+  selected:        PropTypes.string,
   onSelect:        PropTypes.func
 }
 
 SideNavigation.defaultProps = {
-  items: []
+  items: [],
+  bottomItems: []
 }
 
 export default SideNavigation
