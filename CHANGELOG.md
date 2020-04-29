@@ -1,3 +1,9 @@
+# 1.7.6 (2020-04-29)
+
+### Bug Fixes
+
+* **SideNav:**  Expose selected prop ([167b5b10](https://github.com/SynetoNet/compass-react/commit/167b5b10836c703113f4bad3d6b4fa1336d107c1))
+
 # 1.7.5 (2020-04-16)
 
 ### Bug Fixes
