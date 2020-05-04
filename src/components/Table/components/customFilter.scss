@@ -1,0 +1,21 @@
+.custom-filter {
+  display: inline;
+  height: 15px;
+  width: 15px;
+  border: none;
+  color: transparent;
+  background-image: url("../../../base/assets/icons/filter.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.custom-filter:hover {
+  background-image: url("../../../base/assets/icons/filter-hover.svg");
+}
+
+.custom-filter:focus {
+  border: none;
+  color: transparent;
+}

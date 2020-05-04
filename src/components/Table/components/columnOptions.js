@@ -1,5 +1,6 @@
-import { textFilter, selectFilter } from "react-bootstrap-table2-filter";
-import React from "react";
+import React                          from "react";
+import { textFilter, customFilter }   from "react-bootstrap-table2-filter";
+import { ColumnFilter }               from "./columnFilter"
 
 function capitalize(s) {
   if (typeof s !== "string") return "";
@@ -22,12 +23,9 @@ export function getColumn(column, key) {
     filterOptions,
     ...otherProps
   } = column;
-  const _style = {
-    ...style
-  };
-  const _headerStyle = {
-    ...headerStyle
-  };
+
+  const _style = { ...style };
+  const _headerStyle = { ...headerStyle };
 
   if (oneline) {
     Object.assign(_style, {
@@ -63,9 +61,17 @@ export function getColumn(column, key) {
       ? filter === "text"
         ? textFilter()
         : filter === "select"
-        ? selectFilter({ options: filterOptions })
+        ? customFilter()
         : null
       : null,
+    filterRenderer: filter === "select"
+                    ? (onFilter, column) => (
+                      <ColumnFilter
+                        onFilter={ onFilter }
+                        column={ column }
+                        filterOptions={filterOptions}
+                      />
+                    ): null,
     headerAlign: align,
     align: align,
     formatter: renderCell,
