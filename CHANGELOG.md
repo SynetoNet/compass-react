@@ -1,6 +1,6 @@
-#### 1.7.7 (2020-05-04)
+# 1.7.7 (2020-05-04)
 
-##### Bug Fixes
+### Bug Fixes
 
 * **Table:**  Change filter select trigger to an icon ([6d50f870](https://github.com/SynetoNet/compass-react/commit/6d50f870be4d46351a7a3cbd759f1d608c4eed4b))
 
