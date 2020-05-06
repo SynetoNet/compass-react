@@ -1,6 +1,6 @@
-#### 1.7.9 (2020-05-06)
+# 1.7.9 (2020-05-06)
 
-##### Build System / Dependencies
+### Build System / Dependencies
 
 *  Add rollup image plugin ([1e7ad960](https://github.com/SynetoNet/compass-react/commit/1e7ad96088fb6b76dde0ba097755c5f3409f15ca))
 
