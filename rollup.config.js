@@ -6,6 +6,7 @@ import scssVariable from 'rollup-plugin-sass-variables';
 import commonjs from "@rollup/plugin-commonjs";
 import copy from "rollup-plugin-copy";
 import visualizer from "rollup-plugin-visualizer";
+import image from '@rollup/plugin-image';
 
 export default [
   {
@@ -27,6 +28,7 @@ export default [
     ],
     external: ["react", "react-dom", "prop-types", "react-select"],
     plugins: [
+      image(),
       postcss({
         plugins: [autoprefixer]
       }),
