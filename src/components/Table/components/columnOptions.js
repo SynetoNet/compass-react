@@ -21,6 +21,7 @@ export function getColumn(column, key) {
     oneline,
     filter,
     filterOptions,
+    filterDefault,
     ...otherProps
   } = column;
 
@@ -70,6 +71,7 @@ export function getColumn(column, key) {
                         onFilter={ onFilter }
                         column={ column }
                         filterOptions={filterOptions}
+                        filterDefault={filterDefault}
                       />
                     ): null,
     headerAlign: align,

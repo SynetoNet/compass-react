@@ -3,9 +3,13 @@ import {Form} from "../../../index"
 import "./customFilter.scss"
 
 export const ColumnFilter = (props) => {
-  const {onFilter, column, filterOptions } = props
+  const {onFilter, column, filterOptions, filterDefault } = props
 
   const [selectedOption, setSelectedOption] = useState(null)
+
+  useEffect(() => {
+    if (filterDefault) setSelectedOption(filterDefault)
+  }, [])
 
   useEffect(() => {
     onFilter(selectedOption)

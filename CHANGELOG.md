@@ -1,3 +1,9 @@
+# 1.7.8 (2020-05-06)
+
+### Bug Fixes
+
+* **Table:**  Add prop for default filter ([5ce98dc6](https://github.com/SynetoNet/compass-react/commit/5ce98dc6b3720b18e675bd79739f7ae98676ec7d))
+
 # 1.7.7 (2020-05-04)
 
 ### Bug Fixes
