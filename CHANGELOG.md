@@ -1,6 +1,6 @@
-#### 1.7.10 (2020-05-07)
+# 1.7.10 (2020-05-07)
 
-##### Bug Fixes
+### Bug Fixes
 
 * **Table:**  Change icon asset to base64 string ([abbbec76](https://github.com/SynetoNet/compass-react/commit/abbbec761d13a7066b02e05ebdcd81ef0eb6a7d4))
 
