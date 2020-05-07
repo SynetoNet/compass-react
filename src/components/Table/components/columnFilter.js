@@ -5,7 +5,7 @@ import "./customFilter.scss"
 export const ColumnFilter = (props) => {
   const {onFilter, column, filterOptions, filterDefault } = props
 
-  const [selectedOption, setSelectedOption] = useState(null)
+  const [selectedOption, setSelectedOption] = useState(undefined)
 
   useEffect(() => {
     if (filterDefault) setSelectedOption(filterDefault)
@@ -24,6 +24,7 @@ export const ColumnFilter = (props) => {
       as="select"
       onChange={handleChange}
       className="custom-filter"
+      value={selectedOption}
       key={Math.random()}
     >
       <option value="">Select {column.text}</option>
