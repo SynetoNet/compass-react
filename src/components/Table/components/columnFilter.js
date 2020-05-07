@@ -19,19 +19,20 @@ export const ColumnFilter = (props) => {
     setSelectedOption(event.target.value)
   }
 
-  return [
-      <Form.Control
-        as="select"
-        onChange={handleChange}
-        className="custom-filter"
-      >
-        <option value="">Select {column.text}</option>
+  return (
+    <Form.Control
+      as="select"
+      onChange={handleChange}
+      className="custom-filter"
+      key={Math.random()}
+    >
+      <option value="">Select {column.text}</option>
 
-        {
-          filterOptions && filterOptions.length && filterOptions.map((option, index) => {
-            return <option key={index} value={option.value}>{option.label}</option>
-          })
-        }
-      </Form.Control>
-  ];
+      {
+        filterOptions && filterOptions.length && filterOptions.map((option, index) => {
+          return <option key={index} value={option.value}>{option.label}</option>
+        })
+      }
+    </Form.Control>
+  )
 }
