@@ -1,3 +1,9 @@
+#### 1.7.11 (2020-05-07)
+
+##### Bug Fixes
+
+* **Table:**  Set table filter selected option arrow ([cee5d214](https://github.com/SynetoNet/compass-react/commit/cee5d214f899c03751c4f5fd5b2f71754e8796e5))
+
 # 1.7.10 (2020-05-07)
 
 ### Bug Fixes
