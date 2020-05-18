@@ -1,3 +1,9 @@
+#### 1.7.12 (2020-05-18)
+
+##### Bug Fixes
+
+* **SideNavigation:**  Remove right border ([ba4e1998](https://github.com/SynetoNet/compass-react/commit/ba4e1998c54dbb0df2e5d56e9e0ca929c9634a10))
+
 # 1.7.11 (2020-05-07)
 
 ### Bug Fixes
