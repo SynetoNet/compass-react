@@ -9,7 +9,6 @@ import styled from 'styled-components';
 // SideNav
 export const StyledSideNav = styled(SideNav)`
   display: flex;
-  border-right: 1px solid #ddd;
   background-color: #181C37;
   position: fixed;
   width: 86px;
