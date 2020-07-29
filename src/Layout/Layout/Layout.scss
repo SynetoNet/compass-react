@@ -2,18 +2,18 @@
 
 .compass-layout {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .compass-layout-drawer {
   width: 86px;
-  height: 100%;
+  height: 100vh;
   float: left;
 }
 
 .compass-layout-with-drawer {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding-left: 86px;
 }
 
@@ -24,5 +24,5 @@
 
 .compass-layout-content {
   width: 100%;
-  height: 100%;
+  height: 90vh;
 }
