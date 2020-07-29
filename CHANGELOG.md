@@ -1,6 +1,6 @@
-#### 1.7.14 (2020-07-29)
+# 1.7.14 (2020-07-29)
 
-##### Build System / Dependencies
+### Build System / Dependencies
 
 * **Update npm pkg:**  Update bootstrap and react-bootstrap ([335c19c6](https://github.com/SynetoNet/compass-react/commit/335c19c6abbbe89ac0fba70f3bda0bd78822ce96))
 
