@@ -2,7 +2,7 @@
 
 exports[`Default Tooltip popover snapshop 1`] = `
 <OverlayTrigger
-  defaultOverlayShown={false}
+  defaultShow={false}
   overlay={
     <ForwardRef
       className="tooltip-dark"

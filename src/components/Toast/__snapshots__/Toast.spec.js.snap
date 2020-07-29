@@ -2,25 +2,10 @@
 
 exports[`Default Toast popover snapshop 1`] = `
 <Toast
-  animation={true}
   autohide={false}
   className="toast-secondary"
   delay={3000}
   show={true}
-  transition={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "defaultProps": Object {
-        "appear": false,
-        "in": false,
-        "mountOnEnter": false,
-        "timeout": 300,
-        "unmountOnExit": false,
-      },
-      "displayName": "Fade",
-      "render": [Function],
-    }
-  }
 >
   <ToastHeader
     closeButton={true}
