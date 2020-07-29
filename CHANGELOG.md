@@ -1,3 +1,9 @@
+#### 1.7.13 (2020-07-29)
+
+##### Bug Fixes
+
+* **Layout:**  Replace procentual height with vh ([c4e30179](https://github.com/SynetoNet/compass-react/commit/c4e301791e80258d2d0f3383e635a67cf4756c7f))
+
 #### 1.7.12 (2020-05-18)
 
 ##### Bug Fixes
