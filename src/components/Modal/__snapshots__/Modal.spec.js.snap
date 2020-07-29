@@ -1,10 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Actions Modal modal with actions snapshop 1`] = `
-<Bootstrap(Modal)
+<Modal
+  animation={true}
+  autoFocus={true}
   backdrop="static"
   className=""
+  dialogAs={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "displayName": "ModalDialog",
+      "render": [Function],
+    }
+  }
+  enforceFocus={true}
+  keyboard={true}
   onEntering={[Function]}
+  restoreFocus={true}
   show={true}
 >
   <ModalFooter>
@@ -45,14 +57,26 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       Primary
     </Button>
   </ModalFooter>
-</Bootstrap(Modal)>
+</Modal>
 `;
 
 exports[`Default Modal modal without header or content snapshop 1`] = `
-<Bootstrap(Modal)
+<Modal
+  animation={true}
+  autoFocus={true}
   backdrop="static"
   className=""
+  dialogAs={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "displayName": "ModalDialog",
+      "render": [Function],
+    }
+  }
+  enforceFocus={true}
+  keyboard={true}
   onEntering={[Function]}
+  restoreFocus={true}
   show={true}
 >
   <ModalFooter>
@@ -67,14 +91,26 @@ exports[`Default Modal modal without header or content snapshop 1`] = `
       Close
     </Button>
   </ModalFooter>
-</Bootstrap(Modal)>
+</Modal>
 `;
 
 exports[`Extended Modal extended modal snapshop 1`] = `
-<Bootstrap(Modal)
+<Modal
+  animation={true}
+  autoFocus={true}
   backdrop="static"
   className=""
+  dialogAs={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "displayName": "ModalDialog",
+      "render": [Function],
+    }
+  }
+  enforceFocus={true}
+  keyboard={true}
   onEntering={[Function]}
+  restoreFocus={true}
   show={true}
 >
   <ModalHeader
@@ -101,14 +137,26 @@ exports[`Extended Modal extended modal snapshop 1`] = `
       footer
     </div>
   </ModalFooter>
-</Bootstrap(Modal)>
+</Modal>
 `;
 
 exports[`Simple Modal modal with title and content snapshop 1`] = `
-<Bootstrap(Modal)
+<Modal
+  animation={true}
+  autoFocus={true}
   backdrop="static"
   className=""
+  dialogAs={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "displayName": "ModalDialog",
+      "render": [Function],
+    }
+  }
+  enforceFocus={true}
+  keyboard={true}
   onEntering={[Function]}
+  restoreFocus={true}
   show={true}
 >
   <ModalHeader
@@ -134,5 +182,5 @@ exports[`Simple Modal modal with title and content snapshop 1`] = `
       Close
     </Button>
   </ModalFooter>
-</Bootstrap(Modal)>
+</Modal>
 `;

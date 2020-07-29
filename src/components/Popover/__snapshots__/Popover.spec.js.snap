@@ -5,7 +5,7 @@ exports[`Default Popover popover snapshop 1`] = `
   className="popover-container"
 >
   <OverlayTrigger
-    defaultOverlayShown={false}
+    defaultShow={false}
     overlay={
       <ForwardRef
         placement="right"

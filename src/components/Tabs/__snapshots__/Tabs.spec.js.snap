@@ -13,12 +13,10 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls={null}
         aria-selected={true}
         className="nav-link active"
         data-rb-event-key="tab1"
         href="#"
-        id={null}
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
@@ -34,12 +32,10 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls={null}
         aria-selected={false}
         className="nav-link"
         data-rb-event-key="tab2"
         href="#"
-        id={null}
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
@@ -56,12 +52,10 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls={null}
         aria-selected={false}
         className="nav-link"
         data-rb-event-key="tab3"
         href="#"
-        id={null}
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
@@ -125,12 +119,10 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls={null}
         aria-selected={true}
         className="nav-link active"
         data-rb-event-key="tab1"
         href="#"
-        id={null}
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
@@ -146,12 +138,10 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls={null}
         aria-selected={false}
         className="nav-link"
         data-rb-event-key="tab2"
         href="#"
-        id={null}
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
@@ -168,12 +158,10 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls={null}
         aria-selected={false}
         className="nav-link"
         data-rb-event-key="tab3"
         href="#"
-        id={null}
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
