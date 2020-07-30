@@ -83,21 +83,10 @@ import Button from "../Button/Button";
   <i className="mx-1" />
 
   <Popover
-    trigger="hover"
     title="Title"
     content="Lorem Ipsum is simply dummy text."
   >
     <Button>Hover over me!</Button>
-  </Popover>
-
-  <i className="mx-1" />
-
-  <Popover
-    trigger="focus"
-    title="Title"
-    content="Lorem Ipsum is simply dummy text."
-  >
-    <Button>Focus me!</Button>
   </Popover>
 </>;
 ```
