@@ -45,8 +45,7 @@ Popover.propTypes = {
 };
 
 Popover.defaultProps = {
-  placement: "auto",
-  trigger: "hover"
+  placement: "auto"
 };
 
 export default Popover;

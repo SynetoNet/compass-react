@@ -1,3 +1,9 @@
+# 1.7.15 (2020-07-30)
+
+### Bug Fixes
+
+* **Popover:**  Remove warning cause by trigger hover ([a4359809](https://github.com/SynetoNet/compass-react/commit/a4359809b532a865b26640f8a54e03f1adc2494b))
+
 # 1.7.14 (2020-07-29)
 
 ### Build System / Dependencies

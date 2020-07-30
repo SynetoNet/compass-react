@@ -20,7 +20,12 @@ exports[`Default Popover popover snapshop 1`] = `
       </ForwardRef>
     }
     placement="auto"
-    trigger="hover"
+    trigger={
+      Array [
+        "hover",
+        "focus",
+      ]
+    }
   >
     <span>
       trigger
