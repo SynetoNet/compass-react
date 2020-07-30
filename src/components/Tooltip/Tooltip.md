@@ -51,14 +51,8 @@ import Button from "../Button/Button";
 
   <i className="mx-1" />
 
-  <Tooltip text="Some additional info" trigger="hover">
+  <Tooltip text="Some additional info">
     <Button>Hover over me!</Button>
-  </Tooltip>
-
-  <i className="mx-1" />
-
-  <Tooltip text="Some additional info" trigger="focus">
-    <Button>Focus me!</Button>
   </Tooltip>
 </>;
 ```
