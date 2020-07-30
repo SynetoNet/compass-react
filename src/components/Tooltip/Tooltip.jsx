@@ -46,8 +46,7 @@ Tooltip.propTypes = {
 
 Tooltip.defaultProps = {
   theme: "dark",
-  placement: "auto",
-  trigger: "hover"
+  placement: "auto"
 };
 
 export default Tooltip;
