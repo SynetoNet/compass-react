@@ -1,3 +1,9 @@
+#### 1.7.16 (2020-07-30)
+
+##### Bug Fixes
+
+* **Tooltip:**  Remove warning cause by trigger hover ([8bbef2f2](https://github.com/SynetoNet/compass-react/commit/8bbef2f2de3db4885c8c1c6c1b5a47b3e845b602))
+
 # 1.7.15 (2020-07-30)
 
 ### Bug Fixes
