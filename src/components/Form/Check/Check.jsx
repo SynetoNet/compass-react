@@ -11,7 +11,7 @@ const Check = React.forwardRef(({ indeterminate, ...props }, ref) => {
     checkboxRef.current.indeterminate = indeterminate;
   });
 
-  return <BSForm.Check ref={checkboxRef} custom {...props} />;
+  return <BSForm.Check ref={indeterminate ? checkboxRef : ref} custom {...props} />;
 });
 
 Check.propTypes = {
