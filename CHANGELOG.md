@@ -1,3 +1,9 @@
+# 1.7.18 (2020-08-11)
+
+### Bug Fixes
+
+* **Form.Check:**  Revert - Forward the ref ([c269277d](https://github.com/SynetoNet/compass-react/commit/c269277d2ea892c3facf11d5706274b86baff985))
+
 # 1.7.17 (2020-08-10)
 
 ### Bug Fixes
