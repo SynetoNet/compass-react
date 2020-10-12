@@ -7,6 +7,7 @@ exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
   show={true}
 >
   <DropdownToggle
+    disabled={false}
     variant="secondary"
   >
     Dropdown Label
