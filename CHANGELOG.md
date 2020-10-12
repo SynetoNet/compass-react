@@ -1,6 +1,6 @@
-#### 1.7.19 (2020-10-12)
+# 1.7.19 (2020-10-12)
 
-##### New Features
+### New Features
 
 * **Dropdown:**  Add disabledToggle prop ([11a87044](https://github.com/SynetoNet/compass-react/commit/11a8704465d908e632cdcdccd0fd3a5a4e65478a))
 
