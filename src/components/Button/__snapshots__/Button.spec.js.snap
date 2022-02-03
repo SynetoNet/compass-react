@@ -9,6 +9,7 @@ exports[`Accept Button primary success Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
@@ -38,6 +39,7 @@ exports[`Accept Button secondary success Button 1`] = `
 >
   Secondary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
@@ -67,6 +69,7 @@ exports[`Accept Button tertiary success Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
@@ -96,6 +99,7 @@ exports[`Default Button primary Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
@@ -125,6 +129,7 @@ exports[`Default Button secondary Button 1`] = `
 >
   Secondary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
@@ -154,6 +159,7 @@ exports[`Default Button tertiary Button 1`] = `
 >
   Tertiary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
@@ -183,6 +189,7 @@ exports[`Disabled Button primary disabled Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
@@ -212,6 +219,7 @@ exports[`Disabled Button secondary disabled Button 1`] = `
 >
   Secondary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
@@ -241,6 +249,7 @@ exports[`Disabled Button tertiary disabled Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}

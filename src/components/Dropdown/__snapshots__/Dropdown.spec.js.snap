@@ -11,16 +11,16 @@ exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
     variant="secondary"
   >
     Dropdown Label
-    <e
+    <t
       background={true}
       className="ink"
       duration={1000}
       opacity={0.25}
-      radius={150}
       recenter={true}
     />
   </DropdownToggle>
   <DropdownMenu
+    align="left"
     alignRight={false}
     flip={true}
   >
