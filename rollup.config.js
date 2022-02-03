@@ -1,7 +1,7 @@
 import autoprefixer from "autoprefixer";
-import babel from "rollup-plugin-babel";
+import babel from "@rollup/plugin-babel";
 import postcss from "rollup-plugin-postcss";
-import resolve from "rollup-plugin-node-resolve";
+import resolve from "@rollup/plugin-node-resolve";
 import scssVariable from 'rollup-plugin-sass-variables';
 import commonjs from "@rollup/plugin-commonjs";
 import copy from "rollup-plugin-copy";
@@ -34,9 +34,9 @@ export default [
       }),
       commonjs({
         include: /node_modules/,
-        namedExports: {
-          '@trendmicro/react-sidenav': ['Nav', 'NavItem', 'NavIcon', 'NavText']
-        }
+        // namedExports: {
+        //   '@trendmicro/react-sidenav': ['Nav', 'NavItem', 'NavIcon', 'NavText']
+        // }
       }),
       resolve({
         extensions: [".js", ".jsx"],
@@ -45,11 +45,10 @@ export default [
       }),
       babel({
         exclude: "node_modules/**",
-        externalHelpers: true
+        babelHelpers: 'inline'
       }),
       copy({
-        targets: ["src/base/assets"],
-        outputFolder: "lib"
+        targets: [{ src: "src/base/assets", dest: "lib"} ]
       }),
       visualizer({
         filename: "./docs/statistics.html",
