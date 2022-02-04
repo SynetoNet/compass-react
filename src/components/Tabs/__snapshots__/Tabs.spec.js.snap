@@ -13,12 +13,13 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
+        aria-controls="react-aria7945437888-1-tabpane-tab1"
         aria-selected={true}
         className="nav-link active"
-        data-rb-event-key="tab1"
-        href="#"
+        data-rr-ui-event-key="tab1"
+        disabled={false}
+        id="react-aria7945437888-1-tab-tab1"
         onClick={[Function]}
-        onKeyDown={[Function]}
         role="tab"
       >
         <div
@@ -32,13 +33,14 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-selected={false}
+        aria-controls="react-aria7945437888-1-tabpane-tab2"
         className="nav-link"
-        data-rb-event-key="tab2"
-        href="#"
+        data-rr-ui-event-key="tab2"
+        disabled={false}
+        id="react-aria7945437888-1-tab-tab2"
         onClick={[Function]}
-        onKeyDown={[Function]}
         role="tab"
+        tabIndex={-1}
       >
         <div
           className="nav-link_content"
@@ -51,13 +53,14 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-selected={false}
+        aria-controls="react-aria7945437888-1-tabpane-tab3"
         className="nav-link"
-        data-rb-event-key="tab3"
-        href="#"
+        data-rr-ui-event-key="tab3"
+        disabled={false}
+        id="react-aria7945437888-1-tab-tab3"
         onClick={[Function]}
-        onKeyDown={[Function]}
         role="tab"
+        tabIndex={-1}
       >
         <div
           className="nav-link_content"
@@ -71,30 +74,27 @@ exports[`renders Horizontal Tabs 1`] = `
     className="tab-content"
   >
     <div
-      aria-hidden={false}
-      aria-labelledby={null}
-      className="fade tab-pane active show"
-      id={null}
+      aria-labelledby="react-aria7945437888-1-tab-tab1"
+      className="tab-pane active"
+      id="react-aria7945437888-1-tabpane-tab1"
       role="tabpanel"
       title="tab1 title"
     >
       tab1 content
     </div>
     <div
-      aria-hidden={true}
-      aria-labelledby={null}
-      className="fade tab-pane"
-      id={null}
+      aria-labelledby="react-aria7945437888-1-tab-tab2"
+      className="tab-pane"
+      id="react-aria7945437888-1-tabpane-tab2"
       role="tabpanel"
       title="tab2 title"
     >
       tab2 content
     </div>
     <div
-      aria-hidden={true}
-      aria-labelledby={null}
-      className="fade tab-pane"
-      id={null}
+      aria-labelledby="react-aria7945437888-1-tab-tab3"
+      className="tab-pane"
+      id="react-aria7945437888-1-tabpane-tab3"
       role="tabpanel"
       title="tab3 title"
     >
@@ -117,12 +117,13 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
+        aria-controls="react-aria7945437888-2-tabpane-tab1"
         aria-selected={true}
         className="nav-link active"
-        data-rb-event-key="tab1"
-        href="#"
+        data-rr-ui-event-key="tab1"
+        disabled={false}
+        id="react-aria7945437888-2-tab-tab1"
         onClick={[Function]}
-        onKeyDown={[Function]}
         role="tab"
       >
         <div
@@ -136,13 +137,14 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-selected={false}
+        aria-controls="react-aria7945437888-2-tabpane-tab2"
         className="nav-link"
-        data-rb-event-key="tab2"
-        href="#"
+        data-rr-ui-event-key="tab2"
+        disabled={false}
+        id="react-aria7945437888-2-tab-tab2"
         onClick={[Function]}
-        onKeyDown={[Function]}
         role="tab"
+        tabIndex={-1}
       >
         <div
           className="nav-link_content"
@@ -155,13 +157,14 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-selected={false}
+        aria-controls="react-aria7945437888-2-tabpane-tab3"
         className="nav-link"
-        data-rb-event-key="tab3"
-        href="#"
+        data-rr-ui-event-key="tab3"
+        disabled={false}
+        id="react-aria7945437888-2-tab-tab3"
         onClick={[Function]}
-        onKeyDown={[Function]}
         role="tab"
+        tabIndex={-1}
       >
         <div
           className="nav-link_content"
@@ -175,30 +178,27 @@ exports[`renders Vertical Tabs 1`] = `
     className="tab-content"
   >
     <div
-      aria-hidden={false}
-      aria-labelledby={null}
-      className="fade tab-pane active show"
-      id={null}
+      aria-labelledby="react-aria7945437888-2-tab-tab1"
+      className="tab-pane active"
+      id="react-aria7945437888-2-tabpane-tab1"
       role="tabpanel"
       title="tab1 title"
     >
       tab1 content
     </div>
     <div
-      aria-hidden={true}
-      aria-labelledby={null}
-      className="fade tab-pane"
-      id={null}
+      aria-labelledby="react-aria7945437888-2-tab-tab2"
+      className="tab-pane"
+      id="react-aria7945437888-2-tabpane-tab2"
       role="tabpanel"
       title="tab2 title"
     >
       tab2 content
     </div>
     <div
-      aria-hidden={true}
-      aria-labelledby={null}
-      className="fade tab-pane"
-      id={null}
+      aria-labelledby="react-aria7945437888-2-tab-tab3"
+      className="tab-pane"
+      id="react-aria7945437888-2-tabpane-tab3"
       role="tabpanel"
       title="tab3 title"
     >

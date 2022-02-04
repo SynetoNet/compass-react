@@ -47,7 +47,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
     </Button>
     <Button
       appearance="primary"
-      className="ml-2"
+      className="ms-2"
       disabled={false}
       key="primary"
       role="primary"

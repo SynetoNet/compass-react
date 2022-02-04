@@ -72,7 +72,7 @@ class Dropdown extends React.Component {
 Dropdown.propTypes = {
   role: PropTypes.string,
   label: PropTypes.node.isRequired,
-  alignRight: PropTypes.bool,
+  align: PropTypes.string,
   disabledToggle: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -85,7 +85,6 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   role: "secondary",
-  alignRight: false,
   disabledToggle: false
 };
 

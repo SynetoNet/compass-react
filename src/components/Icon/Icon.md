@@ -20,13 +20,13 @@ All free sets are included:
 
 ```jsx
 <Icon name="fas fa-user" size="xs"/>
-<span className="mr-2"/>
+<span className="me-2"/>
 
 <Icon name="fas fa-user" size="sm"/>
-<span className="mr-2"/>
+<span className="me-2"/>
 
 <Icon name="fas fa-user" size="md"/>
-<span className="mr-2"/>
+<span className="me-2"/>
 
 <Icon name="fas fa-user" size="lg"/>
 ```

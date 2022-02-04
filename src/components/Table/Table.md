@@ -361,7 +361,7 @@ const Example = () => {
         selectable="multiple"
         extra={
           <div style={{ display: "flex", flex: 1, alignItems: "center" }}>
-            <Form.Control placeholder="Extra" className="mr-2" />
+            <Form.Control placeholder="Extra" className="me-2" />
             <Form.Switch checked />
           </div>
         }

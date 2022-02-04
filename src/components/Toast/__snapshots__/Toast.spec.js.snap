@@ -12,7 +12,7 @@ exports[`Default Toast popover snapshop 1`] = `
     closeLabel="Close"
   >
     <strong
-      className="mr-auto"
+      className="me-auto"
     >
       Bootstrap
     </strong>

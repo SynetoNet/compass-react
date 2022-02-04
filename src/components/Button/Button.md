@@ -2,13 +2,13 @@
 
 ```jsx
 <Button >Primary</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button  appearance="success">Success</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button  appearance="danger">Danger</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button  appearance="warning">Warning</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button  appearance="info">Info</Button>
 ```
 
@@ -16,13 +16,13 @@
 
 ```jsx
 <Button role="secondary">Secondary Button</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button role="secondary" appearance="success">Success</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button role="secondary" appearance="danger">Danger</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button role="secondary" appearance="warning">Warning</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button role="secondary" appearance="info">Info</Button>
 ```
 
@@ -30,13 +30,13 @@
 
 ```jsx
 <Button role="tertiary">Tertiary</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button role="tertiary" appearance="success">Success</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button role="tertiary" appearance="danger">Danger</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button role="tertiary" appearance="warning">Warning</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button role="tertiary" appearance="info">Info</Button>
 ```
 
@@ -52,18 +52,18 @@
 
 ```jsx
 <Button block>Primary</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button block appearance="success">Success</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 ```
 
 #### **Button types**
 
 ```jsx
 <Button>Normal button</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button type="submit">Submit button</Button>
-<i className="pr-2" />
+<i className="pe-2" />
 <Button type="reset">Reset button</Button>
 ```
 
@@ -72,37 +72,37 @@
 ```jsx
 <div>
   <Button disabled>Disabled</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled appearance="success">Success</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled appearance="danger">Danger</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled appearance="warning">Warning</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled appearance="info">Info</Button>
 </div>
 
 <div className="mt-2">
   <Button disabled role="secondary">Disabled</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled role="secondary" appearance="success">Success</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled role="secondary" appearance="danger">Danger</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled role="secondary" appearance="warning">Warning</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled role="secondary" appearance="info">Info</Button>
 </div>
 
 <div className="mt-2">
   <Button disabled role="tertiary">Disabled</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled role="tertiary" appearance="success">Success</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled role="tertiary" appearance="danger">Danger</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled role="tertiary" appearance="warning">Warning</Button>
-  <i className="pr-2" />
+  <i className="pe-2" />
   <Button disabled role="tertiary" appearance="info">Info</Button>
 </div>
 ```

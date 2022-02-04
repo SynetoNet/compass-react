@@ -2,7 +2,8 @@
 
 exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
 <Dropdown
-  alignRight={false}
+  align="start"
+  autoClose={true}
   navbar={false}
   show={true}
 >
@@ -20,33 +21,15 @@ exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
     />
   </DropdownToggle>
   <DropdownMenu
-    align="left"
-    alignRight={false}
     flip={true}
   >
     <DropdownItem
-      as={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "displayName": "SafeAnchor",
-          "render": [Function],
-        }
-      }
-      disabled={false}
       eventKey="option1"
       key="option1"
     >
       option1
     </DropdownItem>
     <DropdownItem
-      as={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "displayName": "SafeAnchor",
-          "render": [Function],
-        }
-      }
-      disabled={false}
       eventKey="option2"
       key="option2"
     >

@@ -14,7 +14,7 @@ const TitleBar = props => {
         <div className="title-text">{title}</div>
       </div>
 
-      <ul className="list-group list-group-horizontal mr-5">
+      <ul className="list-group list-group-horizontal me-5">
         {actions.map((action, index) => {
           return action.menuItems ? (
             <Dropdown

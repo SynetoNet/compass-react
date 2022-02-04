@@ -97,7 +97,7 @@ class Modal extends React.Component {
           appearance={primary.appearance}
           onClick={primary.onClick}
           key="primary"
-          className="ml-2"
+          className="ms-2"
           width={primary.width}
           disabled={!!primary.disabled}
         >

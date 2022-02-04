@@ -17,7 +17,10 @@ module.exports = {
     color: {
       sidebarBackground: "#F4E8Fa"
     },
-    sidebarWidth: 260
+    sidebarWidth: 260,
+    fontSize: {
+      text: 13
+    }
   },
   sections: [
     {

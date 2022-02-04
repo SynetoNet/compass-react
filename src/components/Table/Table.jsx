@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import BootstrapTable from "react-bootstrap-table-next";
-import ToolkitProvider from "react-bootstrap-table2-toolkit";
+import ToolkitProvider from "react-bootstrap-table2-toolkit/dist/react-bootstrap-table2-toolkit";
 
 import Search from "./components/Search";
 import Dropdown from "../Dropdown/Dropdown";
@@ -147,7 +147,7 @@ const Table = ({
 
     if (Array.isArray(actions)) {
       return (
-        <Dropdown label="Actions" className="mr-5">
+        <Dropdown label="Actions" className="me-5">
           <Dropdown.Menu>
             {actions.map(action => (
               <Dropdown.Item

@@ -28,7 +28,7 @@
 
 ```jsx
 <Dropdown
-  alignRight
+  align="end"
   label="Toggle Dropdown"
   onSelect={eventKey => console.log(eventKey)}
   items={[

@@ -31,7 +31,6 @@ describe("Default Dropdown", () => {
 
 test("calls onSelect() handlers", () => {
   const selectHandler = jest.fn();
-  const additionalHandler = jest.fn();
 
   const example = (
     <Dropdown
@@ -41,13 +40,11 @@ test("calls onSelect() handlers", () => {
       items={[
         {
           label: "option1",
-          eventKey: "option1-key",
-          onSelect: additionalHandler
+          eventKey: "option1-key"
         },
         {
           label: "option2",
-          eventKey: "option2-key",
-          onSelect: additionalHandler
+          eventKey: "option2-key"
         }
       ]}
     />
@@ -75,5 +72,5 @@ test("calls onSelect() handlers", () => {
     "option2-key",
     expect.anything()
   );
-  expect(additionalHandler).toHaveBeenCalledTimes(2);
+  expect(selectHandler).toHaveBeenCalledTimes(2);
 });

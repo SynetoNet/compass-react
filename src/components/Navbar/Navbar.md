@@ -25,7 +25,7 @@ import Logo from '../../base/assets/icons/syneto-icon.svg';
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
   <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
+    <Nav className="me-auto">
       <Nav.Link href="#home">Home</Nav.Link>
       <Nav.Link href="#link">Link</Nav.Link>
       <Nav.NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -37,7 +37,7 @@ import Logo from '../../base/assets/icons/syneto-icon.svg';
       </Nav.NavDropdown>
     </Nav>
     <Form inline>
-      <Form.Control type="text" placeholder="Search" className="mr-sm-2" />
+      <Form.Control type="text" placeholder="Search" className="me-sm-2" />
       <Button>Search</Button>
     </Form>
   </Navbar.Collapse>
@@ -64,7 +64,7 @@ import Dropdown from "../Dropdown/Dropdown.jsx";
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
   <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="ml-auto syneto" variant="pills" defaultActiveKey="#">
+    <Nav className="ms-auto syneto" variant="pills" defaultActiveKey="#">
       <Nav.Item>
         <Nav.Link href="#" className="syneto-icon-link">
           <Icon name="fas fa-user" size="md"/>
