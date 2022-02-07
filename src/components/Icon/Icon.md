@@ -1,6 +1,6 @@
 #### **Basic usage**
 
-Compass uses [Font Awesome 5.9.0](https://fontawesome.com/icons) for its standard icon set.
+Compass uses [Font Awesome 5.15.4](https://fontawesome.com/icons) for its standard icon set.
 
 All free sets are included:
 
