@@ -22,6 +22,7 @@ const Button = ({
   width,
   loading,
   disabled,
+  block,
   children,
   onClick,
   role,
@@ -95,7 +96,7 @@ const Button = ({
     appearance = "link";
   }
 
-  return (
+  const bootstrapBtn = (
     <BootstrapButton
       variant={appearance}
       className={classes}
@@ -107,6 +108,12 @@ const Button = ({
       <Ink />
     </BootstrapButton>
   );
+
+  if (!block) {
+    return bootstrapBtn;
+  }
+  
+  return <div className="d-grid">{bootstrapBtn}</div> 
 };
 
 Button.propTypes = {
@@ -115,6 +122,7 @@ Button.propTypes = {
   width: PropTypes.oneOf([32, 64, 96, 128, "100%"]),
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   disabled: PropTypes.bool,
+  block: PropTypes.bool,
   loading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   children: PropTypes.node,
   onClick: PropTypes.func
@@ -125,7 +133,8 @@ Button.defaultProps = {
   appearance: "primary",
   type: "button",
   width: "100%",
-  disabled: false
+  disabled: false,
+  block: false
 };
 
 function usePrevious(value) {

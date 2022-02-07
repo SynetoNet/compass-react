@@ -10,6 +10,12 @@
     cursor: not-allowed;
     opacity: 0.5;
   }
+
+  &.btn-success,
+  &.btn-danger,
+  &.btn-info {
+    color: $neutral-0;
+  }
 }
 
 .btn-primary {
@@ -171,6 +177,7 @@
   color: $semantic-accent-contrast;
   border-color: transparent !important;
   background: none;
+  text-decoration: none;
   &:disabled {
     background: none;
   }
