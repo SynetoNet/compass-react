@@ -105,6 +105,7 @@
 .react-datepicker__day-names {
   display: flex;
   justify-content: space-evenly;
+  margin: 0;
 }
 
 .react-datepicker__day--today {
@@ -166,7 +167,7 @@
 
 .react-datepicker__navigation {
   outline: none;
-  top: 4px;
+  top: 0px;
 }
 
 .react-datepicker__navigation--next {
