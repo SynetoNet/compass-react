@@ -23,7 +23,6 @@ exports[`Default Tooltip popover snapshop 1`] = `
     appearance="secondary"
     block={false}
     role="strong"
-    varroleiant="default"
     width="auto"
   >
     Over over me!

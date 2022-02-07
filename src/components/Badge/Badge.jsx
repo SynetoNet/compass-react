@@ -13,11 +13,12 @@ const Badge = ({ appearance, role, width, block, className = "", ...props }) => 
       outline: role === "outline",
       strong: role === "strong",
       ["width-" + width]: width,
-      block
+      block,
+      [`badge-${appearance}`]: true,
     }) + ` ${className}`
   ).trim();
 
-  return <BootstrapBadge variant={appearance} className={classes} {...props} pill />;
+  return <BootstrapBadge bg={role === 'strong' ? appearance : null} className={classes} {...props} pill />;
 };
 
 Badge.propTypes = {
@@ -30,7 +31,7 @@ Badge.propTypes = {
 
 Badge.defaultProps = {
   appearance: "secondary",
-  varroleiant: "default",
+  role: "default",
   width: "auto",
   block: false
 };

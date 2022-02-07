@@ -2,16 +2,12 @@
 
 exports[`renders a Badge with custom className 1`] = `
 <span
-  className="width-auto custom-class badge rounded-pill bg-primary"
-  variant="secondary"
-  varroleiant="default"
+  className="width-auto badge-secondary custom-class badge rounded-pill"
 />
 `;
 
 exports[`renders default Badge 1`] = `
 <span
-  className="width-auto badge rounded-pill bg-primary"
-  variant="secondary"
-  varroleiant="default"
+  className="width-auto badge-secondary badge rounded-pill"
 />
 `;
