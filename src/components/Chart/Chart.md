@@ -2,12 +2,11 @@
 #### Donut Chart can be used to display some values in a circular way, with different colors. ####
 
 - In the middle of the Donut Chart, it can be displayed a single or multiple labels.
-<br/>
 - It needs an array of objects and the sum of values should be **100** = (60+20+20).
 
 <br/>
 
-##### ** Multiple Values with single label** #####
+##### **Multiple Values with single label** #####
 ```jsx
 <div style={{width: 100, height: 100}}>
     <Chart
@@ -31,7 +30,7 @@
 </div>
 ```
 
-##### ** Multiple Values with multiple labels** #####
+##### **Multiple Values with multiple labels** #####
 ```jsx
 <div style={{width: 100, height: 100}}>
     <Chart
@@ -55,7 +54,7 @@
 </div>
 ```
 
-##### ** Multiple Values without label** #####
+##### **Multiple Values without label** #####
 ```jsx
 <div style={{width: 100, height: 100}}>
     <Chart
@@ -78,7 +77,7 @@
 </div>
 ```
 
-##### ** Single Value with label ** #####
+##### **Single Value with label** #####
 ```jsx
 <div style={{width: 100, height: 100}}>
     <Chart
