@@ -11,7 +11,7 @@ import { Icon } from "../../index.js";
 />;
 ```
 
-#### **Card with img **
+#### **Card with img**
 
 In this case, you have to specify the external svg url.
 
