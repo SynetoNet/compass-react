@@ -1,6 +1,10 @@
 @import "../../base/colors";
 @import "../../base/variables";
 
+.toast:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
 .toast-success {
   border: 1px solid $semantic-confirm-light-60;
   background-color: $semantic-confirm-light-85;
