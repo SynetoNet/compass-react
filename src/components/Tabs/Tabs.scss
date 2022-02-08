@@ -8,6 +8,7 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     position: relative;
+    cursor: pointer;
 
     &.active {
       color: $primary;
@@ -50,6 +51,7 @@
     // we need to align items to bottom
     text-align: center;
     display: flex;
+    margin-bottom: -1px;
     &.tabs-extra {
       align-self: stretch;
     }
