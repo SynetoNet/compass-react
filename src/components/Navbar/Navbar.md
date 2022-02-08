@@ -6,8 +6,7 @@
 - Navbars and their contents are fluid by default. Use optional containers to limit their horizontal width.
 
 ```jsx
-import Container from "../../layout/Grid/Container/Container.jsx";
-import Col from "../../layout/Grid/Col/Col.jsx";
+import { Col, Container } from "../../index";
 import Nav from "../Nav/Nav.jsx";
 import Form from "../Form/Form.jsx";
 import Button from "../Button/Button.jsx";
