@@ -8,11 +8,9 @@
     {
       label: "Action",
       eventKey: "action-key",
-      onSelect: () => console.log("Additional handler")
     },
     {
       label: "No event key",
-      onSelect: () => console.log("eventKey is the label")
     },
     {
       label: "No additional handler"
