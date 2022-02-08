@@ -55,6 +55,15 @@ const Table = ({
     setSelected([]);
   }
 
+  function handleDropdownSelect(eventKey) {
+    if (eventKey === 'unselect') {
+      clearSelection();
+      return;
+    }
+    const action = actions.find(action => action.label === eventKey);
+    action.onClick(getSelected());
+  }
+
   // can be memoized
   const _columns = columns
     ? getColumnsProp(columns)
@@ -147,13 +156,12 @@ const Table = ({
 
     if (Array.isArray(actions)) {
       return (
-        <Dropdown label="Actions" className="me-5">
+        <Dropdown label="Actions" className="me-5" onSelect={handleDropdownSelect}>
           <Dropdown.Menu>
             {actions.map(action => (
               <Dropdown.Item
                 key={action.label}
-                eventKey="unselect"
-                onSelect={() => action.onClick(getSelected())}
+                eventKey={action.label}
               >
                 {action.label}
               </Dropdown.Item>
@@ -161,7 +169,7 @@ const Table = ({
 
             <Dropdown.Divider />
 
-            <Dropdown.Item eventKey="unselect" onSelect={clearSelection}>
+            <Dropdown.Item eventKey="unselect">
               Unselect all
             </Dropdown.Item>
           </Dropdown.Menu>

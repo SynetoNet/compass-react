@@ -97,6 +97,15 @@
 .table tr:not(:last-child) td {
   border-bottom: 1px $neutral-6 solid;
 }
+.table > tbody {
+  vertical-align: middle;
+}
+.table > :not(:first-child) {
+  border-top: none;
+}
+.table > :not(caption) > * > * {
+  padding: 0.75rem;
+}
 
 .react-bootstrap-table {
   border-bottom: 1px $neutral-24 solid;
