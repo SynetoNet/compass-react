@@ -10,6 +10,7 @@ class Form extends React.Component {
   static Group = BSForm.Group;
   static Label = BSForm.Label;
   static Control = BSForm.Control;
+  static Select = BSForm.Select;
   static Check = CompassCheck;
   static Text = BSForm.Text;
   static Row = BSForm.Row;
