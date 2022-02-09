@@ -5,10 +5,10 @@ exports[`renders List with title 1`] = `
   className="list-wrapper"
 >
   <header
-    className="list_header"
+    className="list-header"
   >
     <h4
-      className="list_title"
+      className="list-title"
     >
       list title
     </h4>
@@ -17,29 +17,29 @@ exports[`renders List with title 1`] = `
     className="list"
   >
     <li
-      className="list_item"
+      className="list-item"
     >
       <div
-        className="list_label"
+        className="list-label"
       >
         label 1
       </div>
       <div
-        className="list_value"
+        className="list-value"
       >
         value 1
       </div>
     </li>
     <li
-      className="list_item"
+      className="list-item"
     >
       <div
-        className="list_label"
+        className="list-label"
       >
         label 2
       </div>
       <div
-        className="list_value"
+        className="list-value"
       >
         value 2
       </div>
@@ -56,29 +56,29 @@ exports[`renders tabbled List 1`] = `
     className="list"
   >
     <li
-      className="list_item"
+      className="list-item"
     >
       <div
-        className="list_label"
+        className="list-label"
       >
         label 1
       </div>
       <div
-        className="list_value"
+        className="list-value"
       >
         value 1
       </div>
     </li>
     <li
-      className="list_item"
+      className="list-item"
     >
       <div
-        className="list_label"
+        className="list-label"
       >
         label 2
       </div>
       <div
-        className="list_value"
+        className="list-value"
       >
         value 2
       </div>

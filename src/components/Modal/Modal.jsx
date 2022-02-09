@@ -58,7 +58,7 @@ class Modal extends React.Component {
 
     if (tertiary) {
       elements.push(
-        <div className="modal-footer_tertiary" key="tertiary">
+        <div className="modal-footer-tertiary" key="tertiary">
           <Button
             type={tertiary.type}
             appearance={tertiary.appearance}

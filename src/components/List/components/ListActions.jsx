@@ -8,8 +8,8 @@ import Icon from "../../Icon/Icon";
 const ListActions = ({ single, actions }) => {
   const classes =
     classNames({
-      ["list_actions--single"]: single
-    }) + ` list_actions`;
+      ["list-actions--single"]: single
+    }) + ` list-actions`;
 
   return (
     <div className={classes}>

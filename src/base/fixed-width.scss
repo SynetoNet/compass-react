@@ -3,18 +3,23 @@
 .width-32 {
   @include fixed-width(32px);
 }
+
 .width-64 {
   @include fixed-width(64px);
 }
+
 .width-96 {
   @include fixed-width(96px);
 }
+
 .width-128 {
   @include fixed-width(128px);
 }
+
 .width-160 {
   @include fixed-width(160px);
 }
+
 .width-auto {
   width: auto;
 }

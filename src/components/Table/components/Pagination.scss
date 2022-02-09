@@ -10,12 +10,6 @@
 }
 
 .page-item {
-  &:not(.active) .page-link:hover {
-    background: $accent-light-85;
-    color: $primary;
-    z-index: 0;
-    border-color: $neutral-24;
-  }
   &.disabled .page-link {
     color: $neutral-24;
   }
@@ -23,5 +17,12 @@
   &:last-child .page-link,
   &:first-child .page-link {
     border-radius: 2px;
+  }
+
+  &:not(.active) .page-link:hover {
+    background: $accent-light-85;
+    color: $primary;
+    z-index: 0;
+    border-color: $neutral-24;
   }
 }

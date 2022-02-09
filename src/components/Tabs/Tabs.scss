@@ -52,9 +52,11 @@
     text-align: center;
     display: flex;
     margin-bottom: -1px;
+
     &.tabs-extra {
       align-self: stretch;
     }
+
     .nav-link.active {
       height: 100%;
     }
@@ -85,6 +87,7 @@
         border-color: transparent;
         color: $primary;
       }
+
       &.active {
         border-right: none;
         border-bottom: 1px solid $neutral-12;
@@ -107,6 +110,7 @@
   align-self: stretch;
   display: flex;
   align-items: center;
+
   // this is to accomodate the top border of tab buttons
   // so content is vertically centered
   padding-top: 1px;

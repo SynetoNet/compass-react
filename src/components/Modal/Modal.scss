@@ -9,9 +9,6 @@
   margin: auto;
   width: 500px;
   height: 100%;
-  -webkit-transform: translate3d(0%, 0, 0);
-  -ms-transform: translate3d(0%, 0, 0);
-  -o-transform: translate3d(0%, 0, 0);
   transform: translate3d(0%, 0, 0);
 }
 
@@ -23,9 +20,6 @@
 
 .fade.right.modal .modal-dialog {
   right: -320px;
-  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
-  -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
-  -o-transition: opacity 0.3s linear, right 0.3s ease-out;
   transition: opacity 0.3s linear, right 0.3s ease-out;
 }
 
@@ -55,15 +49,16 @@
 
   &::before {
     top: 0;
-    background: linear-gradient(#ffffff 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(#fff 50%, rgb(255 255 255 / 0%) 100%);
   }
+
   &::after {
     bottom: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0) 0%, #ffffff 50%);
+    background: linear-gradient(rgb(255 255 255 / 0%) 0%, #fff 50%);
   }
 }
 
-.modal-footer_tertiary {
+.modal-footer-tertiary {
   display: flex;
   flex: 1;
 }
@@ -79,15 +74,18 @@
 
 .modal-shadow-top {
   margin-bottom: -10px;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(255, 255, 255, 0) 50%
-  );
+  background:
+    linear-gradient(
+      rgb(0 0 0 / 10%) 0%,
+      rgb(255 255 255 / 0%) 50%
+    );
 }
+
 .modal-shadow-bottom {
   margin-top: -10px;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0) 50%,
-    rgba(0, 0, 0, 0.1) 100%
-  );
+  background:
+    linear-gradient(
+      rgb(255 255 255 / 0%) 50%,
+      rgb(0 0 0 / 10%) 100%
+    );
 }

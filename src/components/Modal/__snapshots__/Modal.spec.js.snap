@@ -21,7 +21,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
 >
   <ModalFooter>
     <div
-      className="modal-footer_tertiary"
+      className="modal-footer-tertiary"
       key="tertiary"
     >
       <Button

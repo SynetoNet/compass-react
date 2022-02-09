@@ -11771,7 +11771,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   color: #343855;
 }
 
@@ -11867,7 +11867,7 @@ a:not(:hover) {
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: Roboto;
   src: url("./assets/fonts/Roboto-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;

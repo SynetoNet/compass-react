@@ -9,6 +9,7 @@
   border: 1px solid $semantic-confirm-light-60;
   background-color: $semantic-confirm-light-85;
   color: $neutral-90;
+
   & .toast-header {
     color: $semantic-confirm-dark-30;
   }
@@ -18,6 +19,7 @@
   border: 1px solid $semantic-warn-light-60;
   background-color: $semantic-warn-light-85;
   color: $semantic-warn-dark-30;
+
   & .toast-header {
     color: $semantic-warn-dark-30;
   }
@@ -27,6 +29,7 @@
   border: 1px solid $semantic-info-light-60;
   background-color: $semantic-info-light-85;
   color: $neutral-90;
+
   & .toast-header {
     color: $semantic-info-dark-30;
   }
@@ -36,6 +39,7 @@
   border: 1px solid $semantic-danger-light-60;
   background-color: $semantic-danger-light-85;
   color: $semantic-danger-dark-30;
+
   & .toast-header {
     color: $semantic-danger-dark-30;
   }

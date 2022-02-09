@@ -12,13 +12,17 @@
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 
   &.outline {
     // it contains borders, so content is only 22px height
     line-height: 18px;
   }
+
   &.block {
     display: block;
   }
@@ -27,58 +31,72 @@
 .badge-success {
   background-color: $semantic-confirm-light-85;
   color: $semantic-confirm-dark-30;
+
   &.strong {
     background-color: $semantic-confirm;
     color: $neutral-0;
   }
+
   &.outline {
     background-color: $neutral-0;
     border: 1px solid $semantic-confirm-light-60;
   }
 }
+
 .badge-danger {
   background-color: $semantic-danger-light-85;
   color: $semantic-danger-dark-30;
+
   &.strong {
     background-color: $semantic-danger;
     color: $neutral-0;
   }
+
   &.outline {
     background-color: $neutral-0;
     border: 1px solid $semantic-danger-light-60;
   }
 }
+
 .badge-info {
   background-color: $semantic-info-light-85;
   color: $semantic-info-dark-30;
+
   &.strong {
     background-color: $semantic-info;
     color: $neutral-0;
   }
+
   &.outline {
     border: 1px solid $semantic-info-light-60;
     background-color: $neutral-0;
   }
 }
+
 .badge-warning {
   background-color: $semantic-warn-light-85;
   color: $semantic-warn-dark-30;
+
   &.strong {
     background-color: $semantic-warn-dark-20;
     color: $neutral-0;
   }
+
   &.outline {
     background-color: $neutral-0;
     border: 1px solid $semantic-warn-light-60;
   }
 }
+
 .badge-secondary {
   background-color: $neutral-12;
   color: $neutral-90;
+
   &.strong {
     background-color: $neutral-60;
     color: $neutral-0;
   }
+
   &.outline {
     background-color: $neutral-0;
     border: 1px solid $neutral-12;

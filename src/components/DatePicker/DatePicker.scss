@@ -30,34 +30,42 @@
 }
 
 .react-datepicker {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: normal;
   font-size: $font-size-base;
   border-radius: 2px;
   border: 1px solid $neutral-12;
-  box-shadow: 0px 2px 10px 2px $neutral-12;
+  box-shadow: 0 2px 10px 2px $neutral-12;
+
   // display: inline-flex;
 }
 
 .react-datepicker__month-container {
-  padding: 0px 8px 8px;
+  padding: 0 8px 8px;
+
   // float: none;
 }
+
 .react-datepicker__time-container {
   // float: none;
   width: auto;
+
   // padding: 0px 8px 8px;
 
   .react-datepicker__time .react-datepicker__time-box {
     width: auto;
+
     // padding-top: 8px;
   }
+
   .react-datepicker__time-list-item:hover:not(.react-datepicker__time-list-item--selected) {
     background-color: $accent-light-85 !important;
   }
+
   .react-datepicker__time-list-item--selected {
     background-color: $primary !important;
   }
+
   .react-datepicker-time__header {
     padding: 0.5rem 0;
   }
@@ -67,6 +75,7 @@
   background: $neutral-0;
   border-bottom: 1px solid $neutral-12;
   padding: 0;
+
   .react-datepicker__current-month {
     color: $neutral-90;
     margin-bottom: 11px;
@@ -89,13 +98,16 @@
   line-height: 30px;
   position: relative;
   color: $neutral-90;
+
   &:hover {
     border-radius: 1px;
     background-color: $accent-light-85;
     color: $neutral-90;
   }
+
   &.react-datepicker__day--disabled {
     opacity: 0.5;
+
     &:hover {
       background-color: $neutral-0;
     }
@@ -113,6 +125,7 @@
   border-radius: 1px;
   color: $neutral-90;
   position: relative;
+
   &.react-datepicker__day--selected::after {
     position: absolute;
     content: "";
@@ -149,16 +162,19 @@
   background-color: $primary;
   border-radius: 1px;
   color: $neutral-0;
+
   &:hover {
     background-color: $primary;
     border-radius: 1px;
     color: $neutral-0;
   }
+
   &.react-datepicker__day--disabled {
     opacity: 0.5;
     background-color: $neutral-0;
     color: #2e324b;
     font-weight: normal;
+
     &:hover {
       background-color: $neutral-0;
     }
@@ -167,7 +183,7 @@
 
 .react-datepicker__navigation {
   outline: none;
-  top: 0px;
+  top: 0;
 }
 
 .react-datepicker__navigation--next {
@@ -186,6 +202,7 @@
   background: none;
   outline: none;
   border: none;
+
   &.datepicker-year-dropdown {
     margin-right: 10px;
   }

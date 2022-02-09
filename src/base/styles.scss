@@ -5,9 +5,8 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "assets/fontAwesome/css/all.css";
 @import "mixins";
-
-@include gen-props('text', 'color');
-@include gen-props('bg', 'background');
+@include gen-props("text", "color");
+@include gen-props("bg", "background");
 
 html {
   font-size: 13px;
@@ -18,7 +17,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Roboto", sans-serif;
+  font-family: Roboto, sans-serif;
   color: $neutral-90;
 }
 
@@ -109,41 +108,9 @@ a:not(:hover) {
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: Roboto;
   src: url("./assets/fonts/Roboto-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-//
-//@font-face {
-//  font-family: "Roboto";
-//  src: url("./assets/fonts/Roboto-Italic.ttf") format("ttf");
-//  font-weight: normal;
-//  font-style: italic;
-//  font-display: swap;
-//}
-//
-//@font-face {
-//  font-family: "Roboto-Medium";
-//  src: url("./assets/fonts/Roboto-Medium.ttf") format("ttf");
-//  font-weight: 500;
-//  font-style: normal;
-//  font-display: swap;
-//}
-//
-//@font-face {
-//  font-family: "Roboto-Bold";
-//  src: url("./assets/fonts/Roboto-Bold.ttf") format("ttf");
-//  font-weight: bold;
-//  font-style: normal;
-//  font-display: swap;
-//}
-//
-//@font-face {
-//  font-family: "Roboto";
-//  src: url("./assets/fonts/Roboto-BoldItalic.ttf") format("ttf");
-//  font-weight: bold;
-//  font-style: italic;
-//  font-display: swap;
-//}
