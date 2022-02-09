@@ -30,18 +30,14 @@ import { Badge } from "@syneto/compass-react";
 
 ### **4. Include fonts**
 
-If you use **webpack**, you would have to handle font files as well, using [file-loader](https://webpack.js.org/loaders/file-loader):
+If you use **webpack**, you would have to handle font files as well, using `type: 'asset/resource'`:
 
 ```jsx static
 // webpack.config.js
 rules: [
   ...{
     test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-    use: [
-      {
-        loader: "file-loader"
-      }
-    ]
+    type: 'asset/resource'
   }
 ];
 ```
