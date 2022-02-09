@@ -101,12 +101,7 @@ module.exports = {
         // Other loaders that are needed for your components
         {
           test: /\.css$/,
-          use: [
-            "style-loader",
-            {
-              loader: "css-loader"
-            }
-          ]
+          use: ["style-loader", "css-loader"]
         },
         {
           test: /\.scss$/,

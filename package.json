@@ -6,6 +6,10 @@
   ],
   "main": "lib/index.js",
   "module": "lib/index.es.js",
+  "engines": {
+		"npm": ">=8.0.0",
+		"node": ">=16.0.0"
+	},
   "scripts": {
     "build": "run-s build:*",
     "build:test": "npm run test",
@@ -94,6 +98,7 @@
     "babel-loader": "^8.2.3",
     "classnames": "^2.3.1",
     "clsx": "^1.0.4",
+    "css-loader": "^6.6.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
     "enzyme-to-json": "^3.3.5",
@@ -109,7 +114,6 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.7.1",
     "lint-staged": "^12.3.3",
-    "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
@@ -117,23 +121,23 @@
     "react-dom": "^16.14.0",
     "react-select": "^5.2.2",
     "react-styleguidist": "^11.2.0",
-    "react-test-renderer": "^16.8.6",
-    "rollup": "^2.67.0",
+    "react-test-renderer": "^16.14.0",
+    "rollup": "^2.67.1",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-sass-variables": "^0.1.1",
     "rollup-plugin-visualizer": "^5.5.4",
     "sass": "^1.49.7",
     "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
     "styled-components": "^5.0.1",
     "stylelint": "^14.3.0",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-config-standard-scss": "^3.0.0",
-    "webpack": "^5.68.0",
-    "webpack-blocks": "^2.0.0"
+    "webpack": "^5.68.0"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
+    "react": "^16.14.0",
     "react-select": "^3.0.4"
   },
   "description": "React implementation of Syneto's Compass Design System: https://synetonet.github.io/compass-react/",
