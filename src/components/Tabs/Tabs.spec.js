@@ -4,7 +4,7 @@ import renderer from "react-test-renderer";
 
 test("renders Horizontal Tabs", () => {
   const component = renderer.create(
-    <Tabs>
+    <Tabs id="horizontal-tabs">
       <Tabs.Tab eventKey="tab1" title="tab1 title">
         tab1 content
       </Tabs.Tab>
@@ -21,7 +21,7 @@ test("renders Horizontal Tabs", () => {
 
 test("renders Vertical Tabs", () => {
   const component = renderer.create(
-    <Tabs vertical>
+    <Tabs id="vertical-tabs" vertical>
       <Tabs.Tab eventKey="tab1" title="tab1 title">
         tab1 content
       </Tabs.Tab>

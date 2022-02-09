@@ -19,13 +19,13 @@ exports[`Default Tooltip popover snapshop 1`] = `
     ]
   }
 >
-  <Badge
+  <ForwardRef
     appearance="secondary"
     block={false}
     role="strong"
     width="auto"
   >
     Over over me!
-  </Badge>
+  </ForwardRef>
 </OverlayTrigger>
 `;

@@ -24,8 +24,9 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       className="modal-footer-tertiary"
       key="tertiary"
     >
-      <Button
+      <ForwardRef
         appearance="primary"
+        block={false}
         className="px-0"
         disabled={false}
         role="tertiary"
@@ -33,10 +34,11 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
         width="100%"
       >
         Tertiary
-      </Button>
+      </ForwardRef>
     </div>
-    <Button
+    <ForwardRef
       appearance="primary"
+      block={false}
       disabled={false}
       key="secondary"
       role="secondary"
@@ -44,9 +46,10 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       width="100%"
     >
       Cancel
-    </Button>
-    <Button
+    </ForwardRef>
+    <ForwardRef
       appearance="primary"
+      block={false}
       className="ms-2"
       disabled={false}
       key="primary"
@@ -55,7 +58,7 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
       width="100%"
     >
       Primary
-    </Button>
+    </ForwardRef>
   </ModalFooter>
 </Modal>
 `;
@@ -80,8 +83,9 @@ exports[`Default Modal modal without header or content snapshop 1`] = `
   show={true}
 >
   <ModalFooter>
-    <Button
+    <ForwardRef
       appearance="primary"
+      block={false}
       disabled={false}
       key="secondary"
       role="secondary"
@@ -89,7 +93,7 @@ exports[`Default Modal modal without header or content snapshop 1`] = `
       width="100%"
     >
       Close
-    </Button>
+    </ForwardRef>
   </ModalFooter>
 </Modal>
 `;
@@ -171,8 +175,9 @@ exports[`Simple Modal modal with title and content snapshop 1`] = `
     modal content
   </Component>
   <ModalFooter>
-    <Button
+    <ForwardRef
       appearance="primary"
+      block={false}
       disabled={false}
       key="secondary"
       role="secondary"
@@ -180,7 +185,7 @@ exports[`Simple Modal modal with title and content snapshop 1`] = `
       width="100%"
     >
       Close
-    </Button>
+    </ForwardRef>
   </ModalFooter>
 </Modal>
 `;

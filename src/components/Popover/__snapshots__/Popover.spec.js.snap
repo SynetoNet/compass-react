@@ -8,15 +8,14 @@ exports[`Default Popover popover snapshop 1`] = `
     defaultShow={false}
     overlay={
       <ForwardRef
+        content="content"
         placement="right"
         style={null}
       >
-        <UNDEFINED>
+        <ForwardRef>
           title
-        </UNDEFINED>
-        <UNDEFINED>
-          content
-        </UNDEFINED>
+        </ForwardRef>
+        <ForwardRef />
       </ForwardRef>
     }
     placement="auto"

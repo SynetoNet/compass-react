@@ -13,12 +13,12 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls="react-aria6124923371-1-tabpane-tab1"
+        aria-controls="horizontal-tabs-tabpane-tab1"
         aria-selected={true}
         className="nav-link active"
         data-rr-ui-event-key="tab1"
         disabled={false}
-        id="react-aria6124923371-1-tab-tab1"
+        id="horizontal-tabs-tab-tab1"
         onClick={[Function]}
         role="tab"
       >
@@ -33,11 +33,11 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls="react-aria6124923371-1-tabpane-tab2"
+        aria-controls="horizontal-tabs-tabpane-tab2"
         className="nav-link"
         data-rr-ui-event-key="tab2"
         disabled={false}
-        id="react-aria6124923371-1-tab-tab2"
+        id="horizontal-tabs-tab-tab2"
         onClick={[Function]}
         role="tab"
         tabIndex={-1}
@@ -53,11 +53,11 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls="react-aria6124923371-1-tabpane-tab3"
+        aria-controls="horizontal-tabs-tabpane-tab3"
         className="nav-link"
         data-rr-ui-event-key="tab3"
         disabled={false}
-        id="react-aria6124923371-1-tab-tab3"
+        id="horizontal-tabs-tab-tab3"
         onClick={[Function]}
         role="tab"
         tabIndex={-1}
@@ -74,27 +74,27 @@ exports[`renders Horizontal Tabs 1`] = `
     className="tab-content"
   >
     <div
-      aria-labelledby="react-aria6124923371-1-tab-tab1"
+      aria-labelledby="horizontal-tabs-tab-tab1"
       className="tab-pane active"
-      id="react-aria6124923371-1-tabpane-tab1"
+      id="horizontal-tabs-tabpane-tab1"
       role="tabpanel"
       title="tab1 title"
     >
       tab1 content
     </div>
     <div
-      aria-labelledby="react-aria6124923371-1-tab-tab2"
+      aria-labelledby="horizontal-tabs-tab-tab2"
       className="tab-pane"
-      id="react-aria6124923371-1-tabpane-tab2"
+      id="horizontal-tabs-tabpane-tab2"
       role="tabpanel"
       title="tab2 title"
     >
       tab2 content
     </div>
     <div
-      aria-labelledby="react-aria6124923371-1-tab-tab3"
+      aria-labelledby="horizontal-tabs-tab-tab3"
       className="tab-pane"
-      id="react-aria6124923371-1-tabpane-tab3"
+      id="horizontal-tabs-tabpane-tab3"
       role="tabpanel"
       title="tab3 title"
     >
@@ -117,12 +117,12 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls="react-aria6124923371-2-tabpane-tab1"
+        aria-controls="vertical-tabs-tabpane-tab1"
         aria-selected={true}
         className="nav-link active"
         data-rr-ui-event-key="tab1"
         disabled={false}
-        id="react-aria6124923371-2-tab-tab1"
+        id="vertical-tabs-tab-tab1"
         onClick={[Function]}
         role="tab"
       >
@@ -137,11 +137,11 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls="react-aria6124923371-2-tabpane-tab2"
+        aria-controls="vertical-tabs-tabpane-tab2"
         className="nav-link"
         data-rr-ui-event-key="tab2"
         disabled={false}
-        id="react-aria6124923371-2-tab-tab2"
+        id="vertical-tabs-tab-tab2"
         onClick={[Function]}
         role="tab"
         tabIndex={-1}
@@ -157,11 +157,11 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
-        aria-controls="react-aria6124923371-2-tabpane-tab3"
+        aria-controls="vertical-tabs-tabpane-tab3"
         className="nav-link"
         data-rr-ui-event-key="tab3"
         disabled={false}
-        id="react-aria6124923371-2-tab-tab3"
+        id="vertical-tabs-tab-tab3"
         onClick={[Function]}
         role="tab"
         tabIndex={-1}
@@ -178,27 +178,27 @@ exports[`renders Vertical Tabs 1`] = `
     className="tab-content"
   >
     <div
-      aria-labelledby="react-aria6124923371-2-tab-tab1"
+      aria-labelledby="vertical-tabs-tab-tab1"
       className="tab-pane active"
-      id="react-aria6124923371-2-tabpane-tab1"
+      id="vertical-tabs-tabpane-tab1"
       role="tabpanel"
       title="tab1 title"
     >
       tab1 content
     </div>
     <div
-      aria-labelledby="react-aria6124923371-2-tab-tab2"
+      aria-labelledby="vertical-tabs-tab-tab2"
       className="tab-pane"
-      id="react-aria6124923371-2-tabpane-tab2"
+      id="vertical-tabs-tabpane-tab2"
       role="tabpanel"
       title="tab2 title"
     >
       tab2 content
     </div>
     <div
-      aria-labelledby="react-aria6124923371-2-tab-tab3"
+      aria-labelledby="vertical-tabs-tab-tab3"
       className="tab-pane"
-      id="react-aria6124923371-2-tabpane-tab3"
+      id="vertical-tabs-tabpane-tab3"
       role="tabpanel"
       title="tab3 title"
     >
