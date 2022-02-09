@@ -17,7 +17,7 @@ const LOADING_TEXTS = [
 
 const LOADING_DELAY = 10000;
 
-const Button = ({
+const Button = React.forwardRef(({
   appearance,
   width,
   loading,
@@ -28,7 +28,7 @@ const Button = ({
   role,
   className,
   ...props
-}) => {
+}, ref) => {
   const initialText = children;
   const [text, setText] = useState(initialText);
   const [loadingIndex, setLoadingIndex] = useState(-1);
@@ -98,6 +98,7 @@ const Button = ({
 
   const bootstrapBtn = (
     <BootstrapButton
+      ref={ref}
       variant={appearance}
       className={classes}
       disabled={_disabled}
@@ -114,7 +115,7 @@ const Button = ({
   }
   
   return <div className="d-grid">{bootstrapBtn}</div> 
-};
+});
 
 Button.propTypes = {
   role: PropTypes.oneOf(["primary", "tertiary", "secondary", "link"]),
