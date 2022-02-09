@@ -3,10 +3,7 @@
 @import "colors";
 @import "variables";
 @import "node_modules/bootstrap/scss/bootstrap";
-@import "assets/fontAwesome/css/fontawesome.css";
-@import "assets/fontAwesome/css/solid.css";
-@import "assets/fontAwesome/css/regular.css";
-@import "assets/fontAwesome/css/brands.css";
+@import "assets/fontAwesome/css/all.css";
 @import "mixins";
 
 @include gen-props('text', 'color');

@@ -5,10 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import "assets/fontAwesome/css/fontawesome.css";
-@import "assets/fontAwesome/css/solid.css";
-@import "assets/fontAwesome/css/regular.css";
-@import "assets/fontAwesome/css/brands.css";
+@import "assets/fontAwesome/css/all.css";
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
