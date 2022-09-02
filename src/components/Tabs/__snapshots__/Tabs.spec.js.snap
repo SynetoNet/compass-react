@@ -17,10 +17,12 @@ exports[`renders Horizontal Tabs 1`] = `
         aria-selected={true}
         className="nav-link active"
         data-rr-ui-event-key="tab1"
-        disabled={false}
+        href="#"
         id="horizontal-tabs-tab-tab1"
         onClick={[Function]}
+        onKeyDown={[Function]}
         role="tab"
+        tabIndex={0}
       >
         <div
           className="nav-link_content"
@@ -34,11 +36,13 @@ exports[`renders Horizontal Tabs 1`] = `
     >
       <a
         aria-controls="horizontal-tabs-tabpane-tab2"
+        aria-selected={false}
         className="nav-link"
         data-rr-ui-event-key="tab2"
-        disabled={false}
+        href="#"
         id="horizontal-tabs-tab-tab2"
         onClick={[Function]}
+        onKeyDown={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -54,11 +58,13 @@ exports[`renders Horizontal Tabs 1`] = `
     >
       <a
         aria-controls="horizontal-tabs-tabpane-tab3"
+        aria-selected={false}
         className="nav-link"
         data-rr-ui-event-key="tab3"
-        disabled={false}
+        href="#"
         id="horizontal-tabs-tab-tab3"
         onClick={[Function]}
+        onKeyDown={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -75,7 +81,7 @@ exports[`renders Horizontal Tabs 1`] = `
   >
     <div
       aria-labelledby="horizontal-tabs-tab-tab1"
-      className="tab-pane active"
+      className="fade tab-pane active show"
       id="horizontal-tabs-tabpane-tab1"
       role="tabpanel"
       title="tab1 title"
@@ -84,7 +90,7 @@ exports[`renders Horizontal Tabs 1`] = `
     </div>
     <div
       aria-labelledby="horizontal-tabs-tab-tab2"
-      className="tab-pane"
+      className="fade tab-pane"
       id="horizontal-tabs-tabpane-tab2"
       role="tabpanel"
       title="tab2 title"
@@ -93,7 +99,7 @@ exports[`renders Horizontal Tabs 1`] = `
     </div>
     <div
       aria-labelledby="horizontal-tabs-tab-tab3"
-      className="tab-pane"
+      className="fade tab-pane"
       id="horizontal-tabs-tabpane-tab3"
       role="tabpanel"
       title="tab3 title"
@@ -121,10 +127,12 @@ exports[`renders Vertical Tabs 1`] = `
         aria-selected={true}
         className="nav-link active"
         data-rr-ui-event-key="tab1"
-        disabled={false}
+        href="#"
         id="vertical-tabs-tab-tab1"
         onClick={[Function]}
+        onKeyDown={[Function]}
         role="tab"
+        tabIndex={0}
       >
         <div
           className="nav-link_content"
@@ -138,11 +146,13 @@ exports[`renders Vertical Tabs 1`] = `
     >
       <a
         aria-controls="vertical-tabs-tabpane-tab2"
+        aria-selected={false}
         className="nav-link"
         data-rr-ui-event-key="tab2"
-        disabled={false}
+        href="#"
         id="vertical-tabs-tab-tab2"
         onClick={[Function]}
+        onKeyDown={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -158,11 +168,13 @@ exports[`renders Vertical Tabs 1`] = `
     >
       <a
         aria-controls="vertical-tabs-tabpane-tab3"
+        aria-selected={false}
         className="nav-link"
         data-rr-ui-event-key="tab3"
-        disabled={false}
+        href="#"
         id="vertical-tabs-tab-tab3"
         onClick={[Function]}
+        onKeyDown={[Function]}
         role="tab"
         tabIndex={-1}
       >
@@ -179,7 +191,7 @@ exports[`renders Vertical Tabs 1`] = `
   >
     <div
       aria-labelledby="vertical-tabs-tab-tab1"
-      className="tab-pane active"
+      className="fade tab-pane active show"
       id="vertical-tabs-tabpane-tab1"
       role="tabpanel"
       title="tab1 title"
@@ -188,7 +200,7 @@ exports[`renders Vertical Tabs 1`] = `
     </div>
     <div
       aria-labelledby="vertical-tabs-tab-tab2"
-      className="tab-pane"
+      className="fade tab-pane"
       id="vertical-tabs-tabpane-tab2"
       role="tabpanel"
       title="tab2 title"
@@ -197,7 +209,7 @@ exports[`renders Vertical Tabs 1`] = `
     </div>
     <div
       aria-labelledby="vertical-tabs-tab-tab3"
-      className="tab-pane"
+      className="fade tab-pane"
       id="vertical-tabs-tabpane-tab3"
       role="tabpanel"
       title="tab3 title"

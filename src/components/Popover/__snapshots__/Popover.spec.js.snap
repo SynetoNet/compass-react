@@ -12,10 +12,10 @@ exports[`Default Popover popover snapshop 1`] = `
         placement="right"
         style={null}
       >
-        <ForwardRef>
+        <ForwardRef(PopoverHeader)>
           title
-        </ForwardRef>
-        <ForwardRef />
+        </ForwardRef(PopoverHeader)>
+        <ForwardRef(PopoverBody) />
       </ForwardRef>
     }
     placement="auto"

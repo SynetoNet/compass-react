@@ -15,7 +15,6 @@ exports[`Default Alert popover snapshop 1`] = `
         "timeout": 300,
         "unmountOnExit": false,
       },
-      "displayName": "Fade",
       "render": [Function],
     }
   }

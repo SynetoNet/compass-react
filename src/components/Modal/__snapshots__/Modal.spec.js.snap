@@ -9,7 +9,6 @@ exports[`Actions Modal modal with actions snapshop 1`] = `
   dialogAs={
     Object {
       "$$typeof": Symbol(react.forward_ref),
-      "displayName": "ModalDialog",
       "render": [Function],
     }
   }
@@ -72,7 +71,6 @@ exports[`Default Modal modal without header or content snapshop 1`] = `
   dialogAs={
     Object {
       "$$typeof": Symbol(react.forward_ref),
-      "displayName": "ModalDialog",
       "render": [Function],
     }
   }
@@ -107,7 +105,6 @@ exports[`Extended Modal extended modal snapshop 1`] = `
   dialogAs={
     Object {
       "$$typeof": Symbol(react.forward_ref),
-      "displayName": "ModalDialog",
       "render": [Function],
     }
   }
@@ -153,7 +150,6 @@ exports[`Simple Modal modal with title and content snapshop 1`] = `
   dialogAs={
     Object {
       "$$typeof": Symbol(react.forward_ref),
-      "displayName": "ModalDialog",
       "render": [Function],
     }
   }
