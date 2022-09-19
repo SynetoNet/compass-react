@@ -7,8 +7,8 @@ const ListItem = ({ label, children, actions, tabbed }) => {
   if (tabbed) {
     return (
       <>
-        <dt className="list_item list_label">{label}</dt>
-        <dd className="list_item list_value">
+        <dt className="list-item list-label">{label}</dt>
+        <dd className="list-item list-value">
           {children}
           {renderActions()}
         </dd>
@@ -17,9 +17,9 @@ const ListItem = ({ label, children, actions, tabbed }) => {
   }
 
   return (
-    <li className="list_item">
-      <div className="list_label">{label}</div>
-      <div className="list_value">{children}</div>
+    <li className="list-item">
+      <div className="list-label">{label}</div>
+      <div className="list-value">{children}</div>
       {renderActions()}
     </li>
   );

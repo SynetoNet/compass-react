@@ -8,11 +8,9 @@
     {
       label: "Action",
       eventKey: "action-key",
-      onSelect: () => console.log("Additional handler")
     },
     {
       label: "No event key",
-      onSelect: () => console.log("eventKey is the label")
     },
     {
       label: "No additional handler"
@@ -28,7 +26,7 @@
 
 ```jsx
 <Dropdown
-  alignRight
+  align="end"
   label="Toggle Dropdown"
   onSelect={eventKey => console.log(eventKey)}
   items={[

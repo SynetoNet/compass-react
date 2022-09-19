@@ -7,16 +7,16 @@ export const Brand = (props) => {
   const { eventKey, expanded, brandLogo, brandImage, brandTitle, onClick } = props
 
   return (
-    <StyledNavItem eventKey={ eventKey } className="brandItem" onClick={ onClick }>
+    <StyledNavItem eventKey={ eventKey } className="brand-item" onClick={ onClick }>
       {
         !expanded ?
-        <StyledNavIcon className="brandLogoContainer">
-          <img src={ brandLogo } alt="brandLogo" className="brandLogo"/>
+        <StyledNavIcon className="brand-logo-container">
+          <img src={ brandLogo } alt="brandLogo" className="brand-logo"/>
         </StyledNavIcon> : null
       }
 
       <StyledNavText style={ { color: "#fff" } }>
-        <img src={ brandImage } alt="brandImage" className="brandImage"/>
+        <img src={ brandImage } alt="brandImage" className="brand-image"/>
         &nbsp; | { brandTitle }
       </StyledNavText>
     </StyledNavItem>

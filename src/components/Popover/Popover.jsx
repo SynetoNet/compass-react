@@ -7,19 +7,21 @@ import "./Popover.scss";
 
 class Popover extends React.Component {
   render() {
-    const { content, placement, trigger, title, width, ...props } = this.props;
+    const { body, placement, trigger, title, width, ...props } = this.props;
     const style = width ? { width, maxWidth: "none" } : null;
+
+    const popover = (
+      <BSPopover style={style} {...props}>
+        <BSPopover.Header>{title}</BSPopover.Header>
+        <BSPopover.Body>{body}</BSPopover.Body>
+      </BSPopover>
+    );
     return (
       <div className="popover-container">
         <OverlayTrigger
-          placement={placement}
           {...getTriggerProp(trigger)}
-          overlay={
-            <BSPopover style={style} {...props}>
-              <BSPopover.Title>{title}</BSPopover.Title>
-              <BSPopover.Content>{content}</BSPopover.Content>
-            </BSPopover>
-          }
+          placement={placement}
+          overlay={popover}
         >
           {this.props.children}
         </OverlayTrigger>
@@ -38,7 +40,7 @@ function getTriggerProp(trigger) {
 
 Popover.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.node.isRequired,
+  body: PropTypes.node.isRequired,
   placement: PropTypes.oneOf(["top", "bottom", "left", "right", "auto"]),
   trigger: PropTypes.oneOf(["focus", "click", "hover"]),
   width: PropTypes.number

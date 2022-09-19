@@ -5,12 +5,12 @@ exports[`renders default Badge 1`] = `
   className="card"
 >
   <div
-    className="cardIconContainer"
+    className="card-icon-container"
   >
     <i
       className="fas fa-user fa-md fa-md"
       style={
-        Object {
+        {
           "color": undefined,
         }
       }

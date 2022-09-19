@@ -9,7 +9,7 @@ Used to communicates various objects states or exceptional situations.
 
 ```jsx
 <Badge>Default Badge</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge>This is an example with longer text</Badge>
 ```
 
@@ -17,13 +17,13 @@ Used to communicates various objects states or exceptional situations.
 
 ```jsx
 <Badge appearance="success">Success</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="danger">Error</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="warning">Warning</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="info">Info</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="secondary">Neutral</Badge>
 ```
 
@@ -31,13 +31,13 @@ Used to communicates various objects states or exceptional situations.
 
 ```jsx
 <Badge appearance="success" role="strong">Success</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="danger" role="strong">Error</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="warning" role="strong">Warning</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="info" role="strong">Info</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge role="strong">Neutral</Badge>
 ```
 
@@ -45,13 +45,13 @@ Used to communicates various objects states or exceptional situations.
 
 ```jsx
 <Badge appearance="success" role="outline">Success</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="danger" role="outline">Error</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="warning" role="outline">Warning</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge appearance="info" role="outline">Info</Badge>
-<i className="pr-2" />
+<i className="pe-2" />
 <Badge role="outline">Neutral</Badge>
 ```
 

@@ -13,13 +13,16 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
+        aria-controls="horizontal-tabs-tabpane-tab1"
         aria-selected={true}
         className="nav-link active"
-        data-rb-event-key="tab1"
+        data-rr-ui-event-key="tab1"
         href="#"
+        id="horizontal-tabs-tab-tab1"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
+        tabIndex={0}
       >
         <div
           className="nav-link_content"
@@ -32,10 +35,12 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
+        aria-controls="horizontal-tabs-tabpane-tab2"
         aria-selected={false}
         className="nav-link"
-        data-rb-event-key="tab2"
+        data-rr-ui-event-key="tab2"
         href="#"
+        id="horizontal-tabs-tab-tab2"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
@@ -52,10 +57,12 @@ exports[`renders Horizontal Tabs 1`] = `
       className="nav-item"
     >
       <a
+        aria-controls="horizontal-tabs-tabpane-tab3"
         aria-selected={false}
         className="nav-link"
-        data-rb-event-key="tab3"
+        data-rr-ui-event-key="tab3"
         href="#"
+        id="horizontal-tabs-tab-tab3"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
@@ -73,30 +80,27 @@ exports[`renders Horizontal Tabs 1`] = `
     className="tab-content"
   >
     <div
-      aria-hidden={false}
-      aria-labelledby={null}
+      aria-labelledby="horizontal-tabs-tab-tab1"
       className="fade tab-pane active show"
-      id={null}
+      id="horizontal-tabs-tabpane-tab1"
       role="tabpanel"
       title="tab1 title"
     >
       tab1 content
     </div>
     <div
-      aria-hidden={true}
-      aria-labelledby={null}
+      aria-labelledby="horizontal-tabs-tab-tab2"
       className="fade tab-pane"
-      id={null}
+      id="horizontal-tabs-tabpane-tab2"
       role="tabpanel"
       title="tab2 title"
     >
       tab2 content
     </div>
     <div
-      aria-hidden={true}
-      aria-labelledby={null}
+      aria-labelledby="horizontal-tabs-tab-tab3"
       className="fade tab-pane"
-      id={null}
+      id="horizontal-tabs-tabpane-tab3"
       role="tabpanel"
       title="tab3 title"
     >
@@ -119,13 +123,16 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
+        aria-controls="vertical-tabs-tabpane-tab1"
         aria-selected={true}
         className="nav-link active"
-        data-rb-event-key="tab1"
+        data-rr-ui-event-key="tab1"
         href="#"
+        id="vertical-tabs-tab-tab1"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
+        tabIndex={0}
       >
         <div
           className="nav-link_content"
@@ -138,10 +145,12 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
+        aria-controls="vertical-tabs-tabpane-tab2"
         aria-selected={false}
         className="nav-link"
-        data-rb-event-key="tab2"
+        data-rr-ui-event-key="tab2"
         href="#"
+        id="vertical-tabs-tab-tab2"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
@@ -158,10 +167,12 @@ exports[`renders Vertical Tabs 1`] = `
       className="nav-item"
     >
       <a
+        aria-controls="vertical-tabs-tabpane-tab3"
         aria-selected={false}
         className="nav-link"
-        data-rb-event-key="tab3"
+        data-rr-ui-event-key="tab3"
         href="#"
+        id="vertical-tabs-tab-tab3"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="tab"
@@ -179,30 +190,27 @@ exports[`renders Vertical Tabs 1`] = `
     className="tab-content"
   >
     <div
-      aria-hidden={false}
-      aria-labelledby={null}
+      aria-labelledby="vertical-tabs-tab-tab1"
       className="fade tab-pane active show"
-      id={null}
+      id="vertical-tabs-tabpane-tab1"
       role="tabpanel"
       title="tab1 title"
     >
       tab1 content
     </div>
     <div
-      aria-hidden={true}
-      aria-labelledby={null}
+      aria-labelledby="vertical-tabs-tab-tab2"
       className="fade tab-pane"
-      id={null}
+      id="vertical-tabs-tabpane-tab2"
       role="tabpanel"
       title="tab2 title"
     >
       tab2 content
     </div>
     <div
-      aria-hidden={true}
-      aria-labelledby={null}
+      aria-labelledby="vertical-tabs-tab-tab3"
       className="fade tab-pane"
-      id={null}
+      id="vertical-tabs-tabpane-tab3"
       role="tabpanel"
       title="tab3 title"
     >

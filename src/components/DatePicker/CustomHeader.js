@@ -44,7 +44,9 @@ const CustomHeader = ({
         className="react-datepicker__navigation react-datepicker__navigation--previous"
         onClick={decreaseMonth}
         disabled={prevMonthButtonDisabled}
-      />
+      >
+        <span className="react-datepicker__navigation-icon react-datepicker__navigation-icon--previous">Previous Month</span>
+      </button>
       <select
         value={getYear(date)}
         onChange={({ target: { value } }) => changeYear(value)}
@@ -73,7 +75,9 @@ const CustomHeader = ({
         className="react-datepicker__navigation react-datepicker__navigation--next"
         onClick={increaseMonth}
         disabled={nextMonthButtonDisabled}
-      />
+      >
+        <span className="react-datepicker__navigation-icon react-datepicker__navigation-icon--next">Next Month</span>
+      </button>
     </div>
   );
 };

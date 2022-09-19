@@ -7,18 +7,19 @@ import BootstrapBadge from "react-bootstrap/Badge";
 import "./Badge.scss";
 import "../../base/fixed-width.scss";
 
-const Badge = ({ appearance, role, width, block, className = "", ...props }) => {
+const Badge = React.forwardRef(({ appearance, role, width, block, className = "", ...props }, ref) => {
   const classes = (
     classNames({
       outline: role === "outline",
       strong: role === "strong",
       ["width-" + width]: width,
-      block
+      block,
+      [`badge-${appearance}`]: true,
     }) + ` ${className}`
   ).trim();
 
-  return <BootstrapBadge variant={appearance} className={classes} {...props} pill />;
-};
+  return <BootstrapBadge ref={ref} bg={role === 'strong' ? appearance : null} className={classes} {...props} pill />;
+});
 
 Badge.propTypes = {
   appearance: PropTypes.oneOf(["success", "danger", "warning", "info", "secondary"]),
@@ -30,7 +31,7 @@ Badge.propTypes = {
 
 Badge.defaultProps = {
   appearance: "secondary",
-  varroleiant: "default",
+  role: "default",
   width: "auto",
   block: false
 };

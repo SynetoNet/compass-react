@@ -1,57 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
-<Dropdown
-  alignRight={false}
-  navbar={false}
-  show={true}
+<div
+  className="show dropdown"
 >
-  <DropdownToggle
+  <button
+    aria-expanded={true}
+    className="dropdown-toggle btn btn-secondary"
     disabled={false}
-    variant="secondary"
+    id="dropdown-toggle"
+    onClick={[Function]}
+    type="button"
   >
     Dropdown Label
-    <e
-      background={true}
+    <canvas
       className="ink"
-      duration={1000}
-      opacity={0.25}
-      radius={150}
-      recenter={true}
-    />
-  </DropdownToggle>
-  <DropdownMenu
-    alignRight={false}
-    flip={true}
-  >
-    <DropdownItem
-      as={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "displayName": "SafeAnchor",
-          "render": [Function],
+      height={0}
+      onDragOver={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      style={
+        {
+          "borderRadius": "inherit",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
         }
       }
-      disabled={false}
-      eventKey="option1"
-      key="option1"
+      width={0}
+    />
+  </button>
+  <div
+    className="dropdown-menu show"
+    style={{}}
+    x-placement="bottom-start"
+  >
+    <a
+      aria-selected={false}
+      className="dropdown-item"
+      data-rr-ui-dropdown-item=""
+      href="#"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex={0}
     >
       option1
-    </DropdownItem>
-    <DropdownItem
-      as={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "displayName": "SafeAnchor",
-          "render": [Function],
-        }
-      }
-      disabled={false}
-      eventKey="option2"
-      key="option2"
+    </a>
+    <a
+      aria-selected={false}
+      className="dropdown-item"
+      data-rr-ui-dropdown-item=""
+      href="#"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex={0}
     >
       option2
-    </DropdownItem>
-  </DropdownMenu>
-</Dropdown>
+    </a>
+  </div>
+</div>
 `;

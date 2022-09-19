@@ -1,3 +1,49 @@
+#### 2.0.0 (2022-09-19)
+
+##### Build System / Dependencies
+
+* **deps:**
+  *  update to React 18.2.0 ([778ebc23](https://github.com/SynetoNet/compass-react/commit/778ebc236bbd04f356bcabfdc08a93d04aed5761))
+  *  update stylelint-config-standard to v25.0.0 ([56aac701](https://github.com/SynetoNet/compass-react/commit/56aac70178d5653ceff812ffc330680bf5074055))
+  *  update to Bootstrap 5 Updated multiple dependencies. ([5f4d2eca](https://github.com/SynetoNet/compass-react/commit/5f4d2ecaf3e908749cb8046f0793fb8d26181e39))
+  *  update multiple dev dependencies ([3603eaaf](https://github.com/SynetoNet/compass-react/commit/3603eaaffc0bc7cf303a0e826ac020bcb330dc1c))
+*  update font awesome to v5.15.4 PRO ([e0d82fc9](https://github.com/SynetoNet/compass-react/commit/e0d82fc9bd7bb9eada56d5a941499c5c35d8c4c8))
+* **dependencies:**  update to node >16 ([5d01a8f5](https://github.com/SynetoNet/compass-react/commit/5d01a8f5aa447eb9635c689ba37b4faa93844bcb))
+
+##### Documentation Changes
+
+*  update Setup doc for fonts ([67ae3521](https://github.com/SynetoNet/compass-react/commit/67ae3521506c00d8d69c3b7e0738464978dda24e))
+*  remove deprecated onSelect on Dropdown items ([38a530d7](https://github.com/SynetoNet/compass-react/commit/38a530d7046fed277ce8e3dc2b9a38a67a9e595b))
+* **Navbar:**
+  *  fix layout components import ([a668dbf3](https://github.com/SynetoNet/compass-react/commit/a668dbf3b333b7709ac180a3b0c7f15ea80c6ac9))
+  *  fix Navbar styleguide for Bootstrap 5 ([51636a10](https://github.com/SynetoNet/compass-react/commit/51636a10bf1f26f672a8d4f2f143e1c89e705bc4))
+* **Styleguide:**  fix Card styleguide page ([8b15f38e](https://github.com/SynetoNet/compass-react/commit/8b15f38e27febae9a06895172c39555a4873507c))
+
+##### New Features
+
+* **fa:**  update font awesome dependency to 5.15.4 ([5e695704](https://github.com/SynetoNet/compass-react/commit/5e695704915e7070525badb8282fbfbe680607fc))
+
+##### Bug Fixes
+
+* **fonts:**  fix webpack config for loading fonts ([189b0ad7](https://github.com/SynetoNet/compass-react/commit/189b0ad762b7a8559e9df52fc6e4ffab6e375400))
+* **Popover+Tooltip:**  fix Popover+Tooltip styling for Bootstrap 5 ([6ade4c8d](https://github.com/SynetoNet/compass-react/commit/6ade4c8d3cf11e4f32ca1c118a720966d5e72f00))
+* **Form:**  fix Form styling for Bootstrap 5 ([0cb3c453](https://github.com/SynetoNet/compass-react/commit/0cb3c453fe60a38d1684d7d9c3e8a19233d86f9e))
+* **Toast:**  fix Toast styling for Bootstrap 5 ([92578a7c](https://github.com/SynetoNet/compass-react/commit/92578a7c991c0a257749580d17718e4442672089))
+* **Tabs:**  fix Tabs styling for Bootstrap 5 ([0f350303](https://github.com/SynetoNet/compass-react/commit/0f350303509710343df00f340d64c7590cf375dc))
+* **Table:**  fix Table styling for Bootstrap 5 ([d7a68bd6](https://github.com/SynetoNet/compass-react/commit/d7a68bd6537735c604f4cc59121d68fe773f9a32))
+* **DatePicker:**  fix DatePicker styling for Bootstrap 5 ([d21927ba](https://github.com/SynetoNet/compass-react/commit/d21927badea802e0a4b61da00d6c6b4e75645f89))
+* **link:**  fix <a> links styling for Bootstrap 5 ([34078c24](https://github.com/SynetoNet/compass-react/commit/34078c2402f71b4a41efe24a25209369f854c042))
+* **Alert:**  fix Alert styling for Bootstrap 5 ([5a5987ea](https://github.com/SynetoNet/compass-react/commit/5a5987ea06216365c535007c5b4c498dd68e701a))
+* **Chart:**  fix Chart styling for Bootstrap 5 ([bcbf5d58](https://github.com/SynetoNet/compass-react/commit/bcbf5d5870f057a88f1b11260e4935619a2f78d2))
+* **Button:**  fix Button styling for Bootstrap 5 ([1bb72e04](https://github.com/SynetoNet/compass-react/commit/1bb72e04c5c62daa4d9f7e4b7fc70265900afcad))
+* **Badge:**  fix Badge styling for Bootstrap 5 ([87b807ae](https://github.com/SynetoNet/compass-react/commit/87b807ae62d981b4968fbf0e3c1da6a0e81d4bf4))
+
+##### Tests
+
+*  remove enzyme as a dependency and remove useless test Using react-testing-library instead ([2a15a6d3](https://github.com/SynetoNet/compass-react/commit/2a15a6d3f120b916dea33f0cd3269250fcf020de))
+*  fix Tabs component test ([851ba53d](https://github.com/SynetoNet/compass-react/commit/851ba53d11ab8f4459c2ecb3fdd0e2770120e286))
+* **snapshots:**  update component snapshots ([7ddbb310](https://github.com/SynetoNet/compass-react/commit/7ddbb310bb7705cf6985dcc3e33f01d856f8a3a3))
+
 # 1.7.19 (2020-10-12)
 
 ### New Features

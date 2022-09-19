@@ -4,6 +4,7 @@
 .combo-box__control {
   border-radius: 0.25rem !important;
   border-color: $neutral-12 !important;
+
   &:hover {
     border-color: $neutral-12 !important;
   }
@@ -24,6 +25,7 @@
   color: $neutral-0 !important;
   background-color: $primary;
   padding: 3px 10px !important;
+
   &:hover {
     background-color: darken($primary, 10%);
   }

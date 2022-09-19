@@ -55,8 +55,8 @@ const List = ({
 
   function renderTitle() {
     return title ? (
-      <header className="list_header">
-        <h4 className="list_title">{title}</h4>
+      <header className="list-header">
+        <h4 className="list-title">{title}</h4>
       </header>
     ) : null;
   }

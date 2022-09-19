@@ -48,54 +48,49 @@
   }
 }
 
-.react-bootstrap-table--scrollable {
-  position: relative;
-  max-height: 250px;
-  overflow: auto;
-
-  thead th {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-}
-
 // overrides
-.react-bootstrap-table-pagination {
-  justify-content: space-between;
-  margin-top: 1em;
-}
-
-.react-bootstrap-table-pagination-list {
-  flex: 0;
+.table {
+  color: inherit;
+  margin: 0;
 }
 
 .table-hover tbody tr:hover {
   background-color: $neutral-3;
 }
 
-.table {
-  color: inherit;
-  margin: 0;
-}
-.table thead th {
-  border: 0;
-  text-align: left;
-  background: linear-gradient(
-    to bottom,
-    $neutral-24 0 1px,
-    white 1px calc(100% - 1px),
-    $neutral-24 calc(100% - 1px) 100%
-  );
-}
 .table th,
 .table td {
   border: 0;
   vertical-align: inherit;
   word-break: break-all;
 }
+
+.table thead th {
+  border: 0;
+  text-align: left;
+  background:
+    linear-gradient(
+      to bottom,
+      $neutral-24 0 1px,
+      white 1px calc(100% - 1px),
+      $neutral-24 calc(100% - 1px) 100%
+    );
+}
+
 .table tr:not(:last-child) td {
   border-bottom: 1px $neutral-6 solid;
+}
+
+.table > tbody {
+  vertical-align: middle;
+}
+
+.table > :not(:first-child) {
+  border-top: none;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.75rem;
 }
 
 .react-bootstrap-table {
@@ -109,29 +104,56 @@
 
   & .caret-4-desc {
     color: $primary;
-    &:before {
+
+    &::before {
       display: none;
     }
-    &:after {
+
+    &::after {
       margin-left: 3.5px;
     }
   }
+
   & .caret-4-asc {
     color: $primary;
-    &:before {
+
+    &::before {
       margin-left: 3.5px;
     }
-    &:after {
+
+    &::after {
       display: none;
     }
   }
-  & .order-4:before {
+
+  & .order-4::before {
     letter-spacing: -2px;
   }
 }
 
 .react-bootstrap-table .filter-label {
   margin-bottom: 0;
+}
+
+.react-bootstrap-table-pagination {
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.react-bootstrap-table-pagination-list {
+  flex: 0;
+}
+
+.react-bootstrap-table--scrollable {
+  position: relative;
+  max-height: 250px;
+  overflow: auto;
+
+  thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
 }
 
 .table .custom-control {

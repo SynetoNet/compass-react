@@ -4,7 +4,7 @@ exports[`renders default Icon 1`] = `
 <i
   className="fas fa-user fa-md"
   style={
-    Object {
+    {
       "color": undefined,
     }
   }

@@ -136,10 +136,10 @@ Defaults:
 
 ### **Font weight** ###
 ```jsx
-<p className="font-weight-bold">Bold text.</p>
+<p className="fw-bold">Bold text.</p>
 <p>Normal weight text.</p>
-<p className="font-weight-light">Light weight text.</p>
-<p className="font-italic">Italic text.</p>
+<p className="fw-light">Light weight text.</p>
+<p className="fst-italic">Italic text.</p>
 ```
 
 ### **Links** ###

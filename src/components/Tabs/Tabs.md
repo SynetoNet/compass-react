@@ -84,7 +84,7 @@ import Badge from "../Badge/Badge";
 const Inbox = (
   <>
     Inbox{" "}
-    <Badge appearance="success" role="strong" width={32} className="ml-2">
+    <Badge appearance="success" role="strong" width={32} className="ms-2">
       2
     </Badge>
   </>
@@ -93,7 +93,7 @@ const Inbox = (
 const Urgent = (
   <>
     Urgent{" "}
-    <Badge appearance="danger" role="strong" width={32} className="ml-2">
+    <Badge appearance="danger" role="strong" width={32} className="ms-2">
       2
     </Badge>
   </>

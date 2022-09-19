@@ -11,9 +11,7 @@
   display: flex;
   justify-content: space-between;
   background-color: $neutral-0;
-  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 6px -6px rgb(0 0 0 / 40%);
 }
 
 .title-bar-brand-text {

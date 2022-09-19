@@ -9,13 +9,14 @@ exports[`Accept Button primary success Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
     style={
-      Object {
+      {
         "borderRadius": "inherit",
         "height": "100%",
         "left": 0,
@@ -38,13 +39,14 @@ exports[`Accept Button secondary success Button 1`] = `
 >
   Secondary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
     style={
-      Object {
+      {
         "borderRadius": "inherit",
         "height": "100%",
         "left": 0,
@@ -67,13 +69,14 @@ exports[`Accept Button tertiary success Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
     style={
-      Object {
+      {
         "borderRadius": "inherit",
         "height": "100%",
         "left": 0,
@@ -96,13 +99,14 @@ exports[`Default Button primary Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
     style={
-      Object {
+      {
         "borderRadius": "inherit",
         "height": "100%",
         "left": 0,
@@ -125,13 +129,14 @@ exports[`Default Button secondary Button 1`] = `
 >
   Secondary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
     style={
-      Object {
+      {
         "borderRadius": "inherit",
         "height": "100%",
         "left": 0,
@@ -154,13 +159,14 @@ exports[`Default Button tertiary Button 1`] = `
 >
   Tertiary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
     style={
-      Object {
+      {
         "borderRadius": "inherit",
         "height": "100%",
         "left": 0,
@@ -183,13 +189,14 @@ exports[`Disabled Button primary disabled Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
     style={
-      Object {
+      {
         "borderRadius": "inherit",
         "height": "100%",
         "left": 0,
@@ -212,13 +219,14 @@ exports[`Disabled Button secondary disabled Button 1`] = `
 >
   Secondary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
     style={
-      Object {
+      {
         "borderRadius": "inherit",
         "height": "100%",
         "left": 0,
@@ -241,13 +249,14 @@ exports[`Disabled Button tertiary disabled Button 1`] = `
 >
   Primary
   <canvas
+    className="ink"
     height={0}
     onDragOver={[Function]}
     onMouseDown={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
     style={
-      Object {
+      {
         "borderRadius": "inherit",
         "height": "100%",
         "left": 0,

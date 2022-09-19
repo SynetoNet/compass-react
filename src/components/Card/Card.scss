@@ -4,29 +4,36 @@
 .card {
   flex-direction: row;
 }
-.cardIconContainer {
+
+.card-icon-container {
   display: flex;
   align-items: center;
+
   & img,
   & i {
     font-size: 32px;
     padding: 0 16px;
   }
 }
-.cardActions {
+
+.card-actions {
   display: flex;
   margin-top: 18px;
   margin-right: 18px;
   font-weight: bold;
   font-size: 32px;
+
   & button {
     color: $neutral-100;
+
     &:hover {
       background-color: $neutral-24 !important;
       color: $neutral-90 !important;
     }
+
     &:focus {
       box-shadow: none;
+
       &:active {
         background-color: $neutral-24 !important;
         color: $neutral-90 !important;

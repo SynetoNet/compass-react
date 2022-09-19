@@ -52,5 +52,5 @@ For a comprehensive documentation on margins and paddings, please checkout Boots
 
 ```jsx
 <span className="p-3 bg-primary text-white">Padded text</span>
-<span className="ml-3 py-3 bg-info text-white">Margin left, padded vertical</span>
+<span className="ms-3 py-3 bg-info text-white">Margin left, padded vertical</span>
 ```

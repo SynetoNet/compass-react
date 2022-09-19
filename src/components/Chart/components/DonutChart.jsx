@@ -1,8 +1,26 @@
-import React    from 'react'
-import PieChart from "react-minimal-pie-chart"
+import React    from "react"
+import { PieChart } from "react-minimal-pie-chart"
 
 export const DonutChart = (props) => {
   const {data, donutLabel, multipleLabels} = props
+
+  const renderLabel = (props) => {
+    const { dataEntry, dx, dy, textAnchor, x, y } = props;
+    
+    return (
+      <text
+        text-anchor={textAnchor}
+        dominant-baseline="middle"
+        fill={dataEntry.color}
+        x={x}
+        y={y}
+        dx={dx}
+        dy={dy}
+      >
+        {dataEntry.value}
+      </text>
+    );
+  }
 
   return (
     <div className="donut-chart">
@@ -14,7 +32,7 @@ export const DonutChart = (props) => {
           cx={50}
           cy={50}
           data={data}
-          label={multipleLabels}
+          label={multipleLabels ? renderLabel : null}
           labelPosition={65}
           lengthAngle={360}
           lineWidth={18}

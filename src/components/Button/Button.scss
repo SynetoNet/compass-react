@@ -10,49 +10,67 @@
     cursor: not-allowed;
     opacity: 0.5;
   }
+
+  &.btn-success,
+  &.btn-danger,
+  &.btn-info {
+    color: $neutral-0;
+  }
 }
 
 .btn-primary {
   &:hover:not(:disabled) {
     background-color: $semantic-accent-dark-20;
   }
+
   &:active:not(:disabled) {
     background-color: $semantic-accent-dark-30;
   }
 
   &.btn-success {
     background-color: $semantic-confirm;
+
     &:hover:not(:disabled) {
       background-color: $semantic-confirm-dark-20;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-confirm-dark-30;
     }
   }
+
   &.btn-danger {
     background-color: $semantic-danger;
+
     &:hover:not(:disabled) {
       background-color: $semantic-danger-dark-20;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-danger-dark-30;
     }
   }
+
   &.btn-info {
     background-color: $semantic-info;
+
     &:hover:not(:disabled) {
       background-color: $semantic-info-dark-20;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-info-dark-30;
     }
   }
+
   &.btn-warning {
     background-color: $semantic-warn;
     color: $neutral-0;
+
     &:hover:not(:disabled) {
       background-color: $semantic-warn-dark-20;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-warn-dark-30;
     }
@@ -67,23 +85,26 @@
   border: 1px solid $semantic-accent-contrast;
   color: $semantic-accent-contrast;
 
+  &:focus {
+    box-shadow: 0 0 0 0.2rem $semantic-accent-light-60 !important;
+  }
+
+  &:disabled {
+    border-color: $semantic-accent-contrast;
+    color: $semantic-accent-contrast;
+    background-color: $neutral-0;
+  }
+
   &:hover:not(:disabled) {
     background-color: $semantic-accent-dark-20;
     border-color: $semantic-accent-dark-20;
     color: $neutral-0;
   }
+
   &:active:not(:disabled) {
     background-color: $semantic-accent-dark-30 !important;
     border-color: $semantic-accent-dark-30 !important;
     color: $neutral-0;
-  }
-  &:focus {
-    box-shadow: 0 0 0 0.2rem $semantic-accent-light-60 !important;
-  }
-  &:disabled {
-    border-color: $semantic-accent-contrast;
-    color: $semantic-accent-contrast;
-    background-color: $neutral-0;
   }
 
   &.btn-success {
@@ -91,18 +112,20 @@
     border-color: $semantic-confirm;
     color: $semantic-confirm-dark-30;
 
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $semantic-confirm-light-60 !important;
+    }
+
     &:hover:not(:disabled) {
       background-color: $semantic-confirm-dark-20;
       border-color: $semantic-confirm-dark-20;
       color: $neutral-0;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-confirm-dark-30 !important;
       border-color: $semantic-confirm-dark-30 !important;
       color: $neutral-0;
-    }
-    &:focus {
-      box-shadow: 0 0 0 0.2rem $semantic-confirm-light-60 !important;
     }
   }
 
@@ -111,18 +134,20 @@
     border-color: $semantic-danger;
     color: $semantic-danger-dark-30;
 
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $semantic-danger-light-60 !important;
+    }
+
     &:hover:not(:disabled) {
       background-color: $semantic-danger-dark-20;
       border-color: $semantic-danger-dark-20;
       color: $neutral-0;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-danger-dark-30 !important;
       border-color: $semantic-danger-dark-30 !important;
       color: $neutral-0;
-    }
-    &:focus {
-      box-shadow: 0 0 0 0.2rem $semantic-danger-light-60 !important;
     }
   }
 
@@ -131,18 +156,20 @@
     border-color: $semantic-warn;
     color: $semantic-warn-dark-30;
 
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $semantic-warn-light-60 !important;
+    }
+
     &:hover:not(:disabled) {
       background-color: $semantic-warn-dark-20;
       border-color: $semantic-warn-dark-20;
       color: $neutral-0;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-warn-dark-30 !important;
       border-color: $semantic-warn-dark-30 !important;
       color: $neutral-0;
-    }
-    &:focus {
-      box-shadow: 0 0 0 0.2rem $semantic-warn-light-60 !important;
     }
   }
 
@@ -151,18 +178,20 @@
     border-color: $semantic-info;
     color: $semantic-info-dark-30;
 
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $semantic-info-light-60 !important;
+    }
+
     &:hover:not(:disabled) {
       background-color: $semantic-info-dark-20;
       border-color: $semantic-info-dark-20;
       color: $neutral-0;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-info-dark-30 !important;
       border-color: $semantic-info-dark-30 !important;
       color: $neutral-0;
-    }
-    &:focus {
-      box-shadow: 0 0 0 0.2rem $semantic-info-light-60 !important;
     }
   }
 }
@@ -171,19 +200,21 @@
   color: $semantic-accent-contrast;
   border-color: transparent !important;
   background: none;
+  text-decoration: none;
+
   &:disabled {
     background: none;
+    color: $semantic-accent-contrast;
   }
+
   &:hover:not(:disabled) {
     background-color: $semantic-accent-light-85;
     color: $semantic-accent-dark-30;
   }
+
   &:active:not(:disabled) {
     background-color: $semantic-accent-light-60;
     color: $semantic-accent-dark-30;
-  }
-  &:disabled {
-    color: $semantic-accent-contrast;
   }
 
   &.btn-success {
@@ -194,6 +225,7 @@
       background-color: $semantic-confirm-light-85;
       color: $semantic-confirm-dark-30;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-confirm-light-60 !important;
       color: $semantic-confirm-dark-30 !important;
@@ -208,6 +240,7 @@
       background-color: $semantic-danger-light-85;
       color: $semantic-danger-dark-30;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-danger-light-60 !important;
       color: $semantic-danger-dark-30 !important;
@@ -222,6 +255,7 @@
       background-color: $semantic-warn-light-85;
       color: $semantic-warn-dark-30;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-warn-light-60 !important;
       color: $semantic-warn-dark-30 !important;
@@ -236,6 +270,7 @@
       background-color: $semantic-info-light-85;
       color: $semantic-info-dark-30;
     }
+
     &:active:not(:disabled) {
       background-color: $semantic-info-light-60 !important;
       color: $semantic-info-dark-30 !important;

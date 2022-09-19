@@ -17,7 +17,7 @@ dl.list {
   margin: 0;
 }
 
-.list_header {
+.list-header {
   display: flex;
   align-items: center;
   padding-bottom: 0.75rem;
@@ -27,12 +27,12 @@ dl.list {
   }
 }
 
-.list_title {
+.list-title {
   flex: 1;
   margin: 0;
 }
 
-.list_item {
+.list-item {
   margin: 0;
   padding: 0.15rem 0;
 
@@ -45,32 +45,35 @@ dl.list {
     max-width: calc(100% - 30px);
   }
 }
-.list-wrapper:not(.compact) .list_item:not(:last-of-type) {
+
+.list-wrapper:not(.compact) .list-item:not(:last-of-type) {
   border-bottom: 1px $neutral-6 solid;
 }
 
-li.list_item {
+.list-value {
+  padding-left: 1em;
+  color: $neutral-40;
+}
+
+li.list-item {
   display: flex;
   align-items: center;
 
-  .list_value {
+  .list-value {
     flex: 1;
   }
 }
 
-.list_label {
+.list-label {
   font-weight: bold;
 }
-.list_value {
-  padding-left: 1em;
-  color: $neutral-40;
-}
-dd.list_value {
+
+dd.list-value {
   display: flex;
   justify-content: space-between;
 }
 
-.list_actions {
+.list-actions {
   visibility: hidden;
   padding-left: 1em;
 
@@ -78,12 +81,12 @@ dd.list_value {
     visibility: visible;
   }
 
-  .list-wrapper.actions .list_item:hover & {
+  .list-wrapper.actions .list-item:hover & {
     visibility: visible;
   }
 }
 
-.list_actions--single {
+.list-actions--single {
   position: absolute;
   top: 0.25em;
   right: 0;

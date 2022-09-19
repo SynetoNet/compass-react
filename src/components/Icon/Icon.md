@@ -1,6 +1,6 @@
 #### **Basic usage**
 
-Compass uses [Font Awesome 5.9.0](https://fontawesome.com/icons) for its standard icon set.
+Compass uses [Font Awesome 5.15.4](https://fontawesome.com/icons) for its standard icon set.
 
 All free sets are included:
 
@@ -20,13 +20,13 @@ All free sets are included:
 
 ```jsx
 <Icon name="fas fa-user" size="xs"/>
-<span className="mr-2"/>
+<span className="me-2"/>
 
 <Icon name="fas fa-user" size="sm"/>
-<span className="mr-2"/>
+<span className="me-2"/>
 
 <Icon name="fas fa-user" size="md"/>
-<span className="mr-2"/>
+<span className="me-2"/>
 
 <Icon name="fas fa-user" size="lg"/>
 ```

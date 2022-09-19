@@ -17,17 +17,18 @@ const LOADING_TEXTS = [
 
 const LOADING_DELAY = 10000;
 
-const Button = ({
+const Button = React.forwardRef(({
   appearance,
   width,
   loading,
   disabled,
+  block,
   children,
   onClick,
   role,
   className,
   ...props
-}) => {
+}, ref) => {
   const initialText = children;
   const [text, setText] = useState(initialText);
   const [loadingIndex, setLoadingIndex] = useState(-1);
@@ -95,8 +96,9 @@ const Button = ({
     appearance = "link";
   }
 
-  return (
+  const bootstrapBtn = (
     <BootstrapButton
+      ref={ref}
       variant={appearance}
       className={classes}
       disabled={_disabled}
@@ -107,7 +109,13 @@ const Button = ({
       <Ink />
     </BootstrapButton>
   );
-};
+
+  if (!block) {
+    return bootstrapBtn;
+  }
+  
+  return <div className="d-grid">{bootstrapBtn}</div> 
+});
 
 Button.propTypes = {
   role: PropTypes.oneOf(["primary", "tertiary", "secondary", "link"]),
@@ -115,6 +123,7 @@ Button.propTypes = {
   width: PropTypes.oneOf([32, 64, 96, 128, "100%"]),
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   disabled: PropTypes.bool,
+  block: PropTypes.bool,
   loading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   children: PropTypes.node,
   onClick: PropTypes.func
@@ -125,7 +134,8 @@ Button.defaultProps = {
   appearance: "primary",
   type: "button",
   width: "100%",
-  disabled: false
+  disabled: false,
+  block: false
 };
 
 function usePrevious(value) {

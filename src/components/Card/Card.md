@@ -11,7 +11,7 @@ import { Icon } from "../../index.js";
 />;
 ```
 
-#### **Card with img **
+#### **Card with img**
 
 In this case, you have to specify the external svg url.
 
@@ -48,11 +48,9 @@ import { Badge, Dropdown } from "../../index.js";
         {
           label: "Action",
           eventKey: "action-key",
-          onSelect: () => console.log("Additional handler")
         },
         {
           label: "No event key",
-          onSelect: () => console.log("eventKey is the label")
         },
         {
           label: "No additional handler"

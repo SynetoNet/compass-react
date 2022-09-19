@@ -1,4 +1,3 @@
-const path = require("path");
 const pkg = require("./package.json");
 
 module.exports = {
@@ -17,7 +16,10 @@ module.exports = {
     color: {
       sidebarBackground: "#F4E8Fa"
     },
-    sidebarWidth: 260
+    sidebarWidth: 260,
+    fontSize: {
+      text: 13
+    }
   },
   sections: [
     {
@@ -98,12 +100,7 @@ module.exports = {
         // Other loaders that are needed for your components
         {
           test: /\.css$/,
-          use: [
-            "style-loader",
-            {
-              loader: "css-loader"
-            }
-          ]
+          use: ["style-loader", "css-loader"]
         },
         {
           test: /\.scss$/,
@@ -111,11 +108,7 @@ module.exports = {
         },
         {
           test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [
-            {
-              loader: "file-loader"
-            }
-          ]
+          type: 'asset/resource'
         }
       ]
     }

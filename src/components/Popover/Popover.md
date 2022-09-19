@@ -3,7 +3,7 @@
 ```jsx
 import Badge from "../Badge/Badge";
 
-<Popover content="Popover content. Lorem Ipsum is simply dummy text.">
+<Popover body="Popover content. Lorem Ipsum is simply dummy text.">
   <Badge>Hover over me!</Badge>
 </Popover>;
 ```
@@ -15,7 +15,7 @@ import Badge from "../Badge/Badge";
 
 <Popover
   title="Popover title"
-  content="Popover content. Lorem Ipsum is simply dummy text."
+  body="Popover content. Lorem Ipsum is simply dummy text."
 >
   <Badge>Hover over me!</Badge>
 </Popover>;
@@ -29,7 +29,7 @@ import Badge from "../Badge/Badge";
   <Popover
     placement="left"
     title="Title"
-    content="Lorem Ipsum is simply dummy text."
+    body="Lorem Ipsum is simply dummy text."
   >
     <Badge>Left</Badge>
   </Popover>
@@ -39,7 +39,7 @@ import Badge from "../Badge/Badge";
   <Popover
     placement="top"
     title="Title"
-    content="Lorem Ipsum is simply dummy text."
+    body="Lorem Ipsum is simply dummy text."
   >
     <Badge>Top</Badge>
   </Popover>
@@ -49,7 +49,7 @@ import Badge from "../Badge/Badge";
   <Popover
     placement="bottom"
     title="Title"
-    content="Lorem Ipsum is simply dummy text."
+    body="Lorem Ipsum is simply dummy text."
   >
     <Badge>Bottom</Badge>
   </Popover>
@@ -59,7 +59,7 @@ import Badge from "../Badge/Badge";
   <Popover
     placement="right"
     title="Title"
-    content="Lorem Ipsum is simply dummy text."
+    body="Lorem Ipsum is simply dummy text."
   >
     <Badge>Right</Badge>
   </Popover>
@@ -74,7 +74,7 @@ import Button from "../Button/Button";
   <Popover
     trigger="click"
     title="Title"
-    content="Lorem Ipsum is simply dummy text."
+    body="Lorem Ipsum is simply dummy text."
     width={500}
   >
     <Button>Click me!</Button>
@@ -84,7 +84,7 @@ import Button from "../Button/Button";
 
   <Popover
     title="Title"
-    content="Lorem Ipsum is simply dummy text."
+    body="Lorem Ipsum is simply dummy text."
   >
     <Button>Hover over me!</Button>
   </Popover>
@@ -98,17 +98,17 @@ import Button from "../Button/Button";
 
 <Popover
   title="First popover"
-  content={
+  body={
     <div>
       <p>Lorem Ipsum is simply dummy text.</p>
       <Popover
         title="Second popover"
-        content={
+        body={
           <div>
             <p>Lorem Ipsum is simply dummy text. </p>
             <Popover
               title="Third popover"
-              content={<div>Lorem Ipsum is simply dummy text.</div>}
+              body={<div>Lorem Ipsum is simply dummy text.</div>}
               trigger="click"
             >
               <Button>Click to open #3</Button>
