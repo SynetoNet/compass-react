@@ -20,6 +20,10 @@
   display: block;
 }
 
+.react-datepicker-popper {
+  z-index: 10;
+}
+
 .react-datepicker-popper[data-placement^="bottom"] {
   margin-top: 0;
 }
