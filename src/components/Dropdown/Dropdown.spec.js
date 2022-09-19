@@ -1,10 +1,9 @@
 import React from "react";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
 import Dropdown from "./Dropdown";
-
-import { configure, mount, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-
-configure({ adapter: new Adapter() });
 
 describe("Default Dropdown", () => {
   const defaultExample = (
@@ -16,20 +15,21 @@ describe("Default Dropdown", () => {
   );
 
   test("renders modal with items prop", () => {
-    const component = mount(defaultExample);
+    render(defaultExample);
 
-    expect(component.contains("Dropdown Label")).toBeTruthy();
-    expect(component.contains("option1")).toBeTruthy();
-    expect(component.contains("option2")).toBeTruthy();
+    expect(screen.getByLabelText("Dropdown Label")).toBeTruthy();
+    expect(screen.getByText("option1")).toBeTruthy();
+    expect(screen.getByText("option2")).toBeTruthy();
   });
 
   test("dropdown with items prop snapshop", () => {
-    const component = shallow(defaultExample);
-    expect(component).toMatchSnapshot();
+    const component = renderer.create(defaultExample);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
 
-test("calls onSelect() handlers", () => {
+test("calls onSelect() handlers", async () => {
   const selectHandler = jest.fn();
 
   const example = (
@@ -50,17 +50,12 @@ test("calls onSelect() handlers", () => {
     />
   );
 
-  const component = mount(example);
+  const user = userEvent.setup();
 
-  component
-    .find(".dropdown-item")
-    .at(1)
-    .simulate("click");
+  render(example);
 
-  component
-    .find(".dropdown-item")
-    .at(2)
-    .simulate("click");
+  await user.click(screen.getAllByRole('button')[1]);
+  await user.click(screen.getAllByRole('button')[2]);
 
   expect(selectHandler).toHaveBeenNthCalledWith(
     1,

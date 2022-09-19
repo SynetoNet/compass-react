@@ -2,11 +2,6 @@ import React from "react";
 import Toast from "./Toast";
 import renderer from "react-test-renderer";
 
-import { configure, mount, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-
-configure({ adapter: new Adapter() });
-
 describe("Default Toast", () => {
   const defaultExample = (
     <Toast>
@@ -19,7 +14,8 @@ describe("Default Toast", () => {
   );
 
   test("popover snapshop", () => {
-    const component = shallow(defaultExample);
-    expect(component).toMatchSnapshot();
+    const component = renderer.create(defaultExample);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

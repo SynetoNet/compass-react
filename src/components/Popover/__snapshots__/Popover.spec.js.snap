@@ -4,31 +4,13 @@ exports[`Default Popover popover snapshop 1`] = `
 <div
   className="popover-container"
 >
-  <OverlayTrigger
-    defaultShow={false}
-    overlay={
-      <ForwardRef
-        content="content"
-        placement="right"
-        style={null}
-      >
-        <ForwardRef(PopoverHeader)>
-          title
-        </ForwardRef(PopoverHeader)>
-        <ForwardRef(PopoverBody) />
-      </ForwardRef>
-    }
-    placement="auto"
-    trigger={
-      Array [
-        "hover",
-        "focus",
-      ]
-    }
+  <span
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
   >
-    <span>
-      trigger
-    </span>
-  </OverlayTrigger>
+    trigger
+  </span>
 </div>
 `;

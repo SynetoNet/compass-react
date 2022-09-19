@@ -3,11 +3,6 @@ import Tooltip from "./Tooltip";
 import Badge from "../Badge/Badge.jsx";
 import renderer from "react-test-renderer";
 
-import { configure, mount, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-
-configure({ adapter: new Adapter() });
-
 describe("Default Tooltip", () => {
   const defaultExample = (
     <Tooltip text="Some additional info">
@@ -15,8 +10,9 @@ describe("Default Tooltip", () => {
     </Tooltip>
   );
 
-  test("popover snapshop", () => {
-    const component = shallow(defaultExample);
-    expect(component).toMatchSnapshot();
+  test("tooltip snapshop", () => {
+    const component = renderer.create(defaultExample);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

@@ -14,17 +14,17 @@ class Dropdown extends React.Component {
   static Divider = BSDropdown.Divider;
 
   render() {
-    const { items, label, role, disabledToggle, children, ...props } = this.props;
+    const { id, items, label, role, disabledToggle, children, ...props } = this.props;
 
     return (
       <BSDropdown {...props}>
-        {this.renderTrigger(label, role, disabledToggle)}
+        {this.renderTrigger(id, label, role, disabledToggle)}
         {items ? this.renderItems(items) : children}
       </BSDropdown>
     );
   }
 
-  renderTrigger = (label, role, disabledToggle) => {
+  renderTrigger = (id, label, role, disabledToggle) => {
     if (typeof label !== "string") {
       const trigger = React.forwardRef((props, ref) => {
         return (
@@ -39,14 +39,14 @@ class Dropdown extends React.Component {
       });
 
       return (
-        <Dropdown.Toggle as={trigger} className="dropdown-no-caret" disabled={disabledToggle}>
+        <Dropdown.Toggle id={`${id || 'dropdown'}-toggle`} as={trigger} className="dropdown-no-caret" disabled={disabledToggle}>
           {label}
         </Dropdown.Toggle>
       );
     }
 
     return (
-      <Dropdown.Toggle variant={role} disabled={disabledToggle}>
+      <Dropdown.Toggle id={`${id || 'dropdown'}-toggle`} variant={role} disabled={disabledToggle}>
         {label}
         <Ink />
       </Dropdown.Toggle>
@@ -70,6 +70,7 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
+  id: PropTypes.string,
   role: PropTypes.string,
   label: PropTypes.node.isRequired,
   align: PropTypes.string,

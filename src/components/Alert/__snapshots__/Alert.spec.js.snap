@@ -1,25 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Default Alert popover snapshop 1`] = `
-<Alert
-  closeLabel="Close alert"
-  dismissible={false}
-  show={true}
-  transition={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "defaultProps": Object {
-        "appear": false,
-        "in": false,
-        "mountOnEnter": false,
-        "timeout": 300,
-        "unmountOnExit": false,
-      },
-      "render": [Function],
-    }
-  }
-  variant="primary"
+<div
+  className="fade alert alert-primary show"
+  role="alert"
 >
   This is a primary alert—check it out!
-</Alert>
+</div>
 `;

@@ -1,31 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Default Tooltip popover snapshop 1`] = `
-<OverlayTrigger
-  defaultShow={false}
-  overlay={
-    <ForwardRef(Tooltip)
-      className="tooltip-dark"
-      placement="right"
-    >
-      Some additional info
-    </ForwardRef(Tooltip)>
-  }
-  placement="auto"
-  trigger={
-    Array [
-      "hover",
-      "focus",
-    ]
-  }
+exports[`Default Tooltip tooltip snapshop 1`] = `
+<span
+  className="strong width-auto badge-secondary badge rounded-pill bg-secondary"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
 >
-  <ForwardRef
-    appearance="secondary"
-    block={false}
-    role="strong"
-    width="auto"
-  >
-    Over over me!
-  </ForwardRef>
-</OverlayTrigger>
+  Over over me!
+</span>
 `;

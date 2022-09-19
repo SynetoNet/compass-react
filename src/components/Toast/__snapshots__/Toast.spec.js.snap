@@ -1,15 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Default Toast popover snapshop 1`] = `
-<Toast
-  autohide={false}
-  className="toast-secondary"
-  delay={3000}
-  show={true}
+<div
+  aria-atomic="true"
+  aria-live="assertive"
+  className="fade toast toast-secondary show"
+  role="alert"
 >
-  <ToastHeader
-    closeButton={true}
-    closeLabel="Close"
+  <div
+    className="toast-header"
   >
     <strong
       className="me-auto"
@@ -19,9 +18,18 @@ exports[`Default Toast popover snapshop 1`] = `
     <small>
       11 mins ago
     </small>
-  </ToastHeader>
-  <ToastBody>
+    <button
+      aria-label="Close"
+      className="btn-close"
+      data-dismiss="toast"
+      onClick={[Function]}
+      type="button"
+    />
+  </div>
+  <div
+    className="toast-body"
+  >
     Hello, world! This is a toast message.
-  </ToastBody>
-</Toast>
+  </div>
+</div>
 `;

@@ -10,7 +10,7 @@ exports[`renders default Badge 1`] = `
     <i
       className="fas fa-user fa-md fa-md"
       style={
-        Object {
+        {
           "color": undefined,
         }
       }
