@@ -1,8 +1,9 @@
-#### 1.8.0 (2022-09-02)
+#### 2.0.0 (2022-09-19)
 
 ##### Build System / Dependencies
 
 * **deps:**
+  *  update to React 18.2.0 ([778ebc23](https://github.com/SynetoNet/compass-react/commit/778ebc236bbd04f356bcabfdc08a93d04aed5761))
   *  update stylelint-config-standard to v25.0.0 ([56aac701](https://github.com/SynetoNet/compass-react/commit/56aac70178d5653ceff812ffc330680bf5074055))
   *  update to Bootstrap 5 Updated multiple dependencies. ([5f4d2eca](https://github.com/SynetoNet/compass-react/commit/5f4d2ecaf3e908749cb8046f0793fb8d26181e39))
   *  update multiple dev dependencies ([3603eaaf](https://github.com/SynetoNet/compass-react/commit/3603eaaffc0bc7cf303a0e826ac020bcb330dc1c))
@@ -39,6 +40,7 @@
 
 ##### Tests
 
+*  remove enzyme as a dependency and remove useless test Using react-testing-library instead ([2a15a6d3](https://github.com/SynetoNet/compass-react/commit/2a15a6d3f120b916dea33f0cd3269250fcf020de))
 *  fix Tabs component test ([851ba53d](https://github.com/SynetoNet/compass-react/commit/851ba53d11ab8f4459c2ecb3fdd0e2770120e286))
 * **snapshots:**  update component snapshots ([7ddbb310](https://github.com/SynetoNet/compass-react/commit/7ddbb310bb7705cf6985dcc3e33f01d856f8a3a3))
 
