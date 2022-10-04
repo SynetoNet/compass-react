@@ -22,7 +22,8 @@ export default [
     output: [
       {
         dir: "lib",
-        format: "cjs",
+        format: "umd",
+        name: "compass-react",
         sourcemap: true
       }
     ],
