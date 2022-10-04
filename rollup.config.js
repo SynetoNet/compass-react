@@ -27,7 +27,7 @@ export default [
         sourcemap: true
       }
     ],
-    external: ["react", "react-dom", "prop-types", "react-select"],
+    external: ["react", "react-dom", "prop-types"],
     plugins: [
       image(),
       postcss({
