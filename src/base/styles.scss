@@ -2,7 +2,7 @@
 // Bootstrap and its default variables
 @import "colors";
 @import "variables";
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 @import "assets/fontAwesome/css/all.css";
 @import "mixins";
 @include gen-props("text", "color");

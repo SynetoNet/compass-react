@@ -13,7 +13,7 @@ import Form from "../Form/Form";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
 
-const DatePicker = ({ selected, appendToBody, customInput, placement, ...props }) => {
+const DatePicker = ({ selected = undefined, dateFormat = "dd/MM/yyyy", appendToBody, customInput, placement = "auto", ...props }) => {
   const [internalDate, setInternalDate] = useState(selected);
   const [showDatePicker, toggleDatePicker] = useState(false);
   const inputRef = useRef(null);
@@ -48,7 +48,7 @@ const DatePicker = ({ selected, appendToBody, customInput, placement, ...props }
       // the actual update is handled when a date is selected
       onChange: () => { },
       // format the value, so it appears properly on the input
-      value: formatDate(internalDate, props.dateFormat)
+      value: formatDate(internalDate, dateFormat)
     },
     null
   );
@@ -123,12 +123,6 @@ DatePicker.propTypes = {
   timeIntervals: PropTypes.number,
   placement: PropTypes.oneOf(["auto", "right", "left", "top", "bottom"])
   // appendToBody: PropTypes.bool
-};
-
-DatePicker.defaultProps = {
-  selected: undefined,
-  dateFormat: "dd/MM/yyyy",
-  placement: "auto"
 };
 
 function formatDate(dateObject, dateFormat) {
