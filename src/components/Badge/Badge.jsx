@@ -7,7 +7,7 @@ import BootstrapBadge from "react-bootstrap/Badge";
 import "./Badge.scss";
 import "../../base/fixed-width.scss";
 
-const Badge = React.forwardRef(({ appearance, role, width, block, className = "", ...props }, ref) => {
+const Badge = React.forwardRef(({ appearance = "secondary", role = "default", width = "auto", block = false, className = "", ...props }, ref) => {
   const classes = (
     classNames({
       outline: role === "outline",
@@ -27,13 +27,6 @@ Badge.propTypes = {
   width: PropTypes.oneOf([32, 64, 96, 128, "auto"]),
   /** Makes badge stretch to the size of it's parent */
   block: PropTypes.bool
-};
-
-Badge.defaultProps = {
-  appearance: "secondary",
-  role: "default",
-  width: "auto",
-  block: false
 };
 
 export default Badge;

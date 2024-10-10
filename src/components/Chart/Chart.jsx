@@ -4,7 +4,7 @@ import { DonutChart } from "./components/DonutChart"
 import "./Chart.scss"
 
 const Chart = (props) => {
-  const {type, data, donutLabel, multipleLabels} = props
+  const {type, data, donutLabel, multipleLabels = false} = props
 
   switch (type) {
     case 'donut':
@@ -35,10 +35,6 @@ Chart.propTypes = {
   type: PropTypes.oneOf(["donut"]),
   donutLabel: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
   multipleLabels: PropTypes.bool
-};
-
-Chart.defaultProps = {
-  multipleLabels: false
 };
 
 export default Chart;

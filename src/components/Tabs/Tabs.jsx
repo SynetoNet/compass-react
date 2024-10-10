@@ -8,6 +8,10 @@ import "./Tabs.scss";
 
 class Tabs extends React.Component {
   static Tab = Tab;
+  static defaultProps = {
+    layout: "horizontal",
+    align: "start"
+  };
 
   render() {
     const { layout, align, children, extra, ...props } = this.props;
@@ -105,11 +109,6 @@ Tabs.propTypes = {
    * @param {String} eventKey
    */
   onSelect: PropTypes.func
-};
-
-Tabs.defaultProps = {
-  layout: "horizontal",
-  align: "start"
 };
 
 export default Tabs;

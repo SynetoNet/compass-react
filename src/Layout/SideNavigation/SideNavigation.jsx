@@ -13,8 +13,7 @@ import {
 import '@trendmicro/react-sidenav/dist/react-sidenav.css'
 
 const SideNavigation = (props) => {
-  const { items, bottomItems, defaultEventKey, selected, onSelect } = props
-
+  const { items = [], bottomItems = [], defaultEventKey, selected, onSelect } = props
   const [ expanded, setExpanded ] = useState(false)
 
   const toggleExpanded = () => setExpanded(!expanded)
@@ -118,11 +117,6 @@ SideNavigation.propTypes = {
   defaultEventKey: PropTypes.string,
   selected:        PropTypes.string,
   onSelect:        PropTypes.func
-}
-
-SideNavigation.defaultProps = {
-  items: [],
-  bottomItems: []
 }
 
 export default SideNavigation

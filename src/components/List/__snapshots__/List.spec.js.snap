@@ -15,6 +15,7 @@ exports[`renders List with title 1`] = `
   </header>
   <ul
     className="list"
+    compact={false}
   >
     <li
       className="list-item"
@@ -54,6 +55,7 @@ exports[`renders tabbled List 1`] = `
 >
   <dl
     className="list"
+    compact={false}
   >
     <li
       className="list-item"

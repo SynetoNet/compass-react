@@ -4,14 +4,14 @@ import BSForm from "react-bootstrap/Form";
 
 import "./Check.scss";
 
-const Check = React.forwardRef(({ indeterminate, ...props }, ref) => {
+const Check = React.forwardRef(({ disabled = false, inline = false, type = "checkbox", indeterminate = false, ...props }, ref) => {
   const checkboxRef = React.createRef();
 
   useEffect(() => {
     checkboxRef.current.indeterminate = indeterminate;
   });
 
-  return <BSForm.Check ref={checkboxRef} custom {...props} />;
+  return <BSForm.Check ref={checkboxRef} disabled={disabled} inline={inline} type={type} indeterminate={indeterminate} custom {...props} />;
 });
 
 Check.propTypes = {
@@ -19,13 +19,6 @@ Check.propTypes = {
   inline: PropTypes.bool,
   type: PropTypes.oneOf(["radio", "checkbox"]),
   indeterminate: PropTypes.bool
-};
-
-Check.defaultProps = {
-  disabled: false,
-  inline: false,
-  type: "checkbox",
-  indeterminate: false
 };
 
 export default Check;

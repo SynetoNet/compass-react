@@ -9,8 +9,8 @@ import "./List.scss";
 
 const List = ({
   title,
-  tabbed,
-  compact,
+  tabbed = false,
+  compact = false,
   actions,
   items,
   children,
@@ -35,7 +35,7 @@ const List = ({
     <div className={classes}>
       {renderTitle()}
       {renderActions()}
-      <ListElement className="list" {...props}>
+      <ListElement className="list" compact={compact} {...props}>
         {content}
       </ListElement>
     </div>
@@ -98,11 +98,6 @@ List.propTypes = {
       onSelect: PropTypes.func
     })
   )
-};
-
-List.defaultProps = {
-  compact: false,
-  tabbed: false
 };
 
 export default List;

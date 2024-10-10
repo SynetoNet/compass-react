@@ -1,6 +1,6 @@
-import React from "react";
+import React, { act } from "react";
 import renderer from "react-test-renderer";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import Dropdown from "./Dropdown";
@@ -14,8 +14,10 @@ describe("Default Dropdown", () => {
     />
   );
 
-  test("renders modal with items prop", () => {
-    render(defaultExample);
+  test("renders modal with items prop", async () => {
+    await act(async () => {
+      render(defaultExample);
+    })
 
     expect(screen.getByLabelText("Dropdown Label")).toBeTruthy();
     expect(screen.getByText("option1")).toBeTruthy();
@@ -52,20 +54,26 @@ test("calls onSelect() handlers", async () => {
 
   const user = userEvent.setup();
 
-  render(example);
+  await act(async () => {
+    render(example);
+  })
+  
+  await act(async () => {
+    await user.click(screen.getAllByRole('button')[1]);
+    await user.click(screen.getAllByRole('button')[2]);
+  })
 
-  await user.click(screen.getAllByRole('button')[1]);
-  await user.click(screen.getAllByRole('button')[2]);
-
-  expect(selectHandler).toHaveBeenNthCalledWith(
-    1,
-    "option1-key",
-    expect.anything()
-  );
-  expect(selectHandler).toHaveBeenNthCalledWith(
-    2,
-    "option2-key",
-    expect.anything()
-  );
-  expect(selectHandler).toHaveBeenCalledTimes(2);
+  await waitFor(() => {
+    expect(selectHandler).toHaveBeenNthCalledWith(
+      1,
+      "option1-key",
+      expect.anything()
+    );
+    expect(selectHandler).toHaveBeenNthCalledWith(
+      2,
+      "option2-key",
+      expect.anything()
+    );
+    expect(selectHandler).toHaveBeenCalledTimes(2);
+  });
 });

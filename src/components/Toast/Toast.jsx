@@ -6,6 +6,12 @@ import "./Toast.scss";
 class Toast extends React.Component {
   static Header = BSToast.Header;
   static Body = BSToast.Body;
+  static defaultProps = {
+    color: "secondary",
+    show: true,
+    delay: 3000,
+    autohide: false
+  };
   render() {
     const { color, ...props } = this.props
     return <BSToast className={"toast-" + color} {...props} />;
@@ -19,7 +25,5 @@ Toast.propTypes = {
   delay: PropTypes.number,
   autohide: PropTypes.bool
 };
-
-Toast.defaultProps = { color: "secondary", show: true, delay: 3000, autohide: false };
 
 export default Toast;

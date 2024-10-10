@@ -8,6 +8,15 @@ import "./Modal.scss";
 class Modal extends React.Component {
   static Header = BSModal.Header;
   static Title = BSModal.Title;
+  static defaultProps = {
+    actions: {
+      secondary: {
+        label: "Close"
+      }
+    },
+    backdrop: "static",
+    slidingPanel: false
+  };
   static Body = ({ children, ...props }) => {
     return (
       <>
@@ -154,16 +163,6 @@ Modal.propTypes = {
   backdrop: PropTypes.oneOf([false, true, "static"]),
   size: PropTypes.oneOf(["sm", "lg"]),
   slidingPanel: PropTypes.bool
-};
-
-Modal.defaultProps = {
-  actions: {
-    secondary: {
-      label: "Close"
-    }
-  },
-  backdrop: "static",
-  slidingPanel: false
 };
 
 export default Modal;

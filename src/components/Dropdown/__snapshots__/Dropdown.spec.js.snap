@@ -6,7 +6,7 @@ exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
 >
   <button
     aria-expanded={true}
-    className="dropdown-toggle btn btn-secondary"
+    className="dropdown-toggle show btn btn-secondary"
     disabled={false}
     id="dropdown-toggle"
     onClick={[Function]}
@@ -14,6 +14,7 @@ exports[`Default Dropdown dropdown with items prop snapshop 1`] = `
   >
     Dropdown Label
     <canvas
+      aria-hidden={true}
       className="ink"
       height={0}
       onDragOver={[Function]}

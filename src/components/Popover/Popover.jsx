@@ -6,6 +6,9 @@ import BSPopover from "react-bootstrap/Popover";
 import "./Popover.scss";
 
 class Popover extends React.Component {
+  static defaultProps = {
+    placement: "auto"
+  };
   render() {
     const { body, placement, trigger, title, width, ...props } = this.props;
     const style = width ? { width, maxWidth: "none" } : null;
@@ -44,10 +47,6 @@ Popover.propTypes = {
   placement: PropTypes.oneOf(["top", "bottom", "left", "right", "auto"]),
   trigger: PropTypes.oneOf(["focus", "click", "hover"]),
   width: PropTypes.number
-};
-
-Popover.defaultProps = {
-  placement: "auto"
 };
 
 export default Popover;

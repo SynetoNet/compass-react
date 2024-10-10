@@ -6,6 +6,10 @@ import "./Alert.scss";
 class Alert extends React.Component {
   static Link = BSAlert.Link;
   static Heading = BSAlert.Heading;
+  static defaultProps = {
+    variant: "primary",
+    dismissible: false
+  };
   render() {
     return <BSAlert {...this.props} />;
   }
@@ -23,11 +27,6 @@ Alert.propTypes = {
     "light"
   ]),
   dismissible: PropTypes.bool
-};
-
-Alert.defaultProps = {
-  variant: "primary",
-  dismissible: false
 };
 
 export default Alert;

@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import "./TitleBar.scss";
 
 const TitleBar = props => {
-  const { brand, actions, title } = props;
+  const { brand, actions = [], title } = props;
 
   return (
     <div className="title-bar">
@@ -46,10 +46,6 @@ TitleBar.propTypes = {
   brand: PropTypes.node,
   title: PropTypes.string,
   actions: PropTypes.array
-};
-
-TitleBar.defaultProps = {
-  actions: []
 };
 
 export default TitleBar;
