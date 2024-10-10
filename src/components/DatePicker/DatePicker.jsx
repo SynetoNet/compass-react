@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 // import classNames from "classnames";
 import { format } from "date-fns";
-import { en } from "date-fns/locale";
+import { enUS } from "date-fns/locale";
 
 import ReactDatePicker from "react-datepicker";
 import Overlay from "react-bootstrap/Overlay";
@@ -28,7 +28,7 @@ const DatePicker = ({ selected = undefined, dateFormat = "dd/MM/yyyy", appendToB
         renderCustomHeader={headerProps => (
           <CustomHeader {...headerProps} {...props} />
         )}
-        locale={en}
+        locale={enUS}
         {...props}
         onChange={val => {
           setInternalDate(val);
