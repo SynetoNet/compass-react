@@ -1,3 +1,9 @@
+#### 2.0.2 (2024-10-10)
+
+##### Bug Fixes
+
+* **DatePicker:**  Fix locale, use international ([b024cd47](https://github.com/SynetoNet/compass-react/commit/b024cd4726d58c7bd6e348be985ba7810265aa2a))
+
 #### 2.0.1 (2024-10-10)
 
 ##### Build System / Dependencies
