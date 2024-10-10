@@ -71,7 +71,7 @@ const DatePicker = ({ selected = undefined, dateFormat = "dd/MM/yyyy", appendToB
             renderCustomHeader={headerProps => (
               <CustomHeader {...headerProps} {...props} />
             )}
-            locale={en}
+            locale={enUS}
             {...props}
             onChange={val => {
               setInternalDate(val);
