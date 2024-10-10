@@ -1,7 +1,6 @@
 import React from "react";
 
-import getMonth from "date-fns/getMonth";
-import getYear from "date-fns/getYear";
+import { getMonth, getYear } from "date-fns";
 import range from "lodash/range";
 import uniq from "lodash/uniq";
 

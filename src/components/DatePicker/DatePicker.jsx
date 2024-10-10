@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 // import classNames from "classnames";
-import format from "date-fns/format";
-import en from "date-fns/locale/en-GB";
+import { format } from "date-fns";
+import { en } from "date-fns/locale";
 
 import ReactDatePicker from "react-datepicker";
 import Overlay from "react-bootstrap/Overlay";
