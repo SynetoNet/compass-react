@@ -4,7 +4,7 @@ import RSelect from "react-select";
 
 import "./ComboBox.scss";
 
-const ComboBox = ({ options, isMulti, ...props }) => {
+const ComboBox = ({ options = [], isMulti, ...props }) => {
   return (
     <RSelect
       options={options}
@@ -24,10 +24,6 @@ ComboBox.propTypes = {
       label: PropTypes.string
     })
   ),
-};
-
-ComboBox.defaultProps = {
-  options: [],
 };
 
 export default ComboBox;

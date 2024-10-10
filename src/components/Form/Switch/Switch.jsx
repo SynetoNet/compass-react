@@ -5,6 +5,7 @@ import RSwitch from "react-switch";
 import "./Switch.scss";
 
 const Switch = props => {
+  const { disabled = false } = props;
   return (
     <RSwitch
       handleDiameter={22}
@@ -14,6 +15,7 @@ const Switch = props => {
       height={10}
       width={40}
       offColor="#e04c59"
+      disabled={disabled}
       {...props}
     />
   );
@@ -21,10 +23,6 @@ const Switch = props => {
 
 Switch.propTypes = {
   disabled: PropTypes.bool
-};
-
-Switch.defaultProps = {
-  disabled: false
 };
 
 export default Switch;

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "./Layout.scss"
 
 const Layout = props => {
-  const { hasDrawer, drawer, header, content, headerStyle, drawerStyle, contentStyle } = props
+  const { hasDrawer = false, drawer, header, content, headerStyle, drawerStyle, contentStyle } = props
 
   if ( hasDrawer ) {
     return (
@@ -24,10 +24,6 @@ const Layout = props => {
       <main className="compass-layout-content" style={ contentStyle }>{ content }</main>
     </section>
   )
-}
-
-Layout.defaultProps = {
-  hasDrawer: false
 }
 
 Layout.propTypes = {

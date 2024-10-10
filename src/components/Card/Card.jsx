@@ -25,6 +25,4 @@ Card.propTypes = {
   icon: PropTypes.node
 };
 
-Card.defaultProps = {};
-
 export default Card;

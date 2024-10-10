@@ -12,6 +12,10 @@ class Dropdown extends React.Component {
   static Menu = BSDropdown.Menu;
   static Header = BSDropdown.Header;
   static Divider = BSDropdown.Divider;
+  static defaultProps = {
+    role: "secondary",
+    disabledToggle: false
+  };
 
   render() {
     const { id, items, label, role, disabledToggle, children, ...props } = this.props;
@@ -82,11 +86,6 @@ Dropdown.propTypes = {
       onSelect: PropTypes.func
     })
   )
-};
-
-Dropdown.defaultProps = {
-  role: "secondary",
-  disabledToggle: false
 };
 
 export default Dropdown;

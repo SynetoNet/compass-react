@@ -26,7 +26,7 @@ exports[`renders default DatePicker 1`] = `
       onFocus={[Function]}
       onKeyDown={[Function]}
       readOnly={false}
-      value="23/05/2019"
+      value="05/23/2019"
     />
   </div>
 </div>

@@ -18,15 +18,16 @@ const LOADING_TEXTS = [
 const LOADING_DELAY = 10000;
 
 const Button = React.forwardRef(({
-  appearance,
-  width,
+  appearance = "primary",
+  width = "100%",
   loading,
-  disabled,
-  block,
+  disabled = false,
+  block = false,
   children,
   onClick,
-  role,
+  role = "primary",
   className,
+  type = "button",
   ...props
 }, ref) => {
   const initialText = children;
@@ -103,6 +104,7 @@ const Button = React.forwardRef(({
       className={classes}
       disabled={_disabled}
       onClick={_onClick}
+      type={type}
       {...props}
     >
       {text}
@@ -127,15 +129,6 @@ Button.propTypes = {
   loading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   children: PropTypes.node,
   onClick: PropTypes.func
-};
-
-Button.defaultProps = {
-  role: "primary",
-  appearance: "primary",
-  type: "button",
-  width: "100%",
-  disabled: false,
-  block: false
 };
 
 function usePrevious(value) {

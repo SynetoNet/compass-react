@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 // import classNames from "classnames";
-import format from "date-fns/format";
-import en from "date-fns/locale/en-GB";
+import { format } from "date-fns";
+import { enUS } from "date-fns/locale";
 
 import ReactDatePicker from "react-datepicker";
 import Overlay from "react-bootstrap/Overlay";
@@ -13,7 +13,7 @@ import Form from "../Form/Form";
 import "react-datepicker/dist/react-datepicker.css";
 import "./DatePicker.scss";
 
-const DatePicker = ({ selected, appendToBody, customInput, placement, ...props }) => {
+const DatePicker = ({ selected = undefined, dateFormat = "dd/MM/yyyy", appendToBody, customInput, placement = "auto", ...props }) => {
   const [internalDate, setInternalDate] = useState(selected);
   const [showDatePicker, toggleDatePicker] = useState(false);
   const inputRef = useRef(null);
@@ -28,7 +28,7 @@ const DatePicker = ({ selected, appendToBody, customInput, placement, ...props }
         renderCustomHeader={headerProps => (
           <CustomHeader {...headerProps} {...props} />
         )}
-        locale={en}
+        locale={enUS}
         {...props}
         onChange={val => {
           setInternalDate(val);
@@ -48,7 +48,7 @@ const DatePicker = ({ selected, appendToBody, customInput, placement, ...props }
       // the actual update is handled when a date is selected
       onChange: () => { },
       // format the value, so it appears properly on the input
-      value: formatDate(internalDate, props.dateFormat)
+      value: formatDate(internalDate, dateFormat)
     },
     null
   );
@@ -71,7 +71,7 @@ const DatePicker = ({ selected, appendToBody, customInput, placement, ...props }
             renderCustomHeader={headerProps => (
               <CustomHeader {...headerProps} {...props} />
             )}
-            locale={en}
+            locale={enUS}
             {...props}
             onChange={val => {
               setInternalDate(val);
@@ -123,12 +123,6 @@ DatePicker.propTypes = {
   timeIntervals: PropTypes.number,
   placement: PropTypes.oneOf(["auto", "right", "left", "top", "bottom"])
   // appendToBody: PropTypes.bool
-};
-
-DatePicker.defaultProps = {
-  selected: undefined,
-  dateFormat: "dd/MM/yyyy",
-  placement: "auto"
 };
 
 function formatDate(dateObject, dateFormat) {
