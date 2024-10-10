@@ -1,3 +1,9 @@
+#### 2.0.3 (2024-10-10)
+
+##### Bug Fixes
+
+* **DatePicker:**  date format now passed correctly ([6804a6b7](https://github.com/SynetoNet/compass-react/commit/6804a6b70ca17b727a020889c4186e9a952d6bbf))
+
 #### 2.0.2 (2024-10-10)
 
 ##### Bug Fixes
