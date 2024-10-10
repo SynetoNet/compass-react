@@ -90,9 +90,9 @@
     "@rollup/plugin-commonjs": "^28.0.0",
     "@rollup/plugin-image": "^3.0.3",
     "@rollup/plugin-node-resolve": "^15.3.0",
-    "@testing-library/dom": "^8.17.1",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.5.0",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
     "ajv": "^8.17.1",
     "autoprefixer": "^10.4.20",
@@ -103,7 +103,6 @@
     "clsx": "^2.1.1",
     "css-loader": "^7.1.2",
     "eslint": "^9.12.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
@@ -138,8 +137,13 @@
     "webpack": "^5.95.0"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-select": "^5.4.0"
+    "react": "^18.3.1",
+    "react-select": "^5.8.1"
+  },
+  "overrides": {
+    "date-fns": "^4.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "description": "React implementation of Syneto's Compass Design System: https://synetonet.github.io/compass-react/",
   "directories": {
