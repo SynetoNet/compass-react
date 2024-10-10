@@ -22,6 +22,8 @@ const DatePicker = ({ selected = undefined, dateFormat = "dd/MM/yyyy", appendToB
   if (!customInput && !appendToBody) {
     return (
       <ReactDatePicker
+        dateFormat={dateFormat}
+        placement={placement}
         selected={internalDate}
         customInput={<Form.Control placeholder={props.placeholderText} />}
         // className={classes}
